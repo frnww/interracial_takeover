@@ -35,7 +35,19 @@ is_curious_whitegirl = {
 }
 
 is_blacked_whitegirl = {
+	NOT = {
+		has_character_flag = bno_originally_black
+	}
 	is_whitegirl = yes
+	is_female = yes
+	is_elligible_partner = yes
+}
+
+is_mindless_bbc_slut = {
+	is_bno_mindless_bbc_slut = yes
+	NOT = {
+		has_character_flag = bno_originally_black
+	}
 	is_female = yes
 	is_elligible_partner = yes
 }
@@ -98,6 +110,9 @@ is_partner_bbc = {
 }
 
 is_pure_whitegirl = {
+	NOT = {
+		has_character_flag = bno_originally_black
+	}
 	is_whitegirl = no
 	is_female = yes
 	is_elligible_partner = yes

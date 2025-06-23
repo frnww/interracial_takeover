@@ -354,7 +354,7 @@ bno_bull.0003 = {
 	
 	immediate = {
 		root = {
-			every_courtier_or_guest = {
+			random_courtier_or_guest = {
 				limit = {
 					is_blacked_whitegirl = yes
 					OR = {
@@ -367,7 +367,7 @@ bno_bull.0003 = {
 				add_to_list = potential_cumsluts
 			}
 			liege = {
-				every_courtier_or_guest = {
+				random_courtier_or_guest = {
 					limit = {
 						is_blacked_whitegirl = yes
 						OR = {
@@ -1285,7 +1285,7 @@ bno_bull.0012 = {
 	}
 	immediate = {
 		root = {
-			every_courtier_or_guest = {				#find every courtier blacked woman married to someone who has a secret you don't know, add to list
+			random_courtier_or_guest = {				#find every courtier blacked woman married to someone who has a secret you don't know, add to list
 				limit = {
 					bno_whitegirl_husband_has_secret = yes
 				}

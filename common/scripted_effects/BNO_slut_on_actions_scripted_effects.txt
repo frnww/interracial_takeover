@@ -1,0 +1,16 @@
+﻿slut_random_events = {
+    random_list = {
+        100 = { trigger_event = { id = bno_slut.0001 } }
+        100 = { trigger_event = { id = bno_slut.0002 } }
+        100 = { trigger_event = { id = bno_slut.0003 } }
+        100 = { trigger_event = { id = bno_slut.0004 } }
+        100 = { trigger_event = { id = bno_slut.0005 } }
+        100 = { trigger_event = { id = bno_slut.0006 } }
+        100 = { trigger_event = { id = bno_slut.0007 } }
+        100 = { trigger_event = { id = bno_slut.0008 } }
+        100 = { trigger_event = { id = bno_slut.0010 } }
+        100 = { trigger_event = { id = bno_slut.0012 } }
+        100 = { trigger_event = { id = bno_slut.0013 } }
+        100 = { trigger_event = { id = bno_slut.0014 } }
+    }
+}

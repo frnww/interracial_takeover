@@ -256,7 +256,7 @@ bno_slut.0003 = {
 	
 	immediate = {
 		root = {
-			every_courtier_or_guest = {
+			random_courtier_or_guest = {
 				limit = {
 					has_trait = bno_bbc
 					is_adult = yes
@@ -266,7 +266,7 @@ bno_slut.0003 = {
 				add_to_list = potential_bbcs
 			}
 			liege = {
-				every_courtier_or_guest = {
+				random_courtier_or_guest = {
 					limit = {
 						has_trait = bno_bbc
 						is_adult = yes
@@ -824,10 +824,7 @@ bno_slut.0007 = {
 		}
 	}
 	trigger = {
-		has_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value > 95
-		}
+		is_mindless_bbc_slut = yes
 		NOT = {
 			exists = var:becoming_dark
 		}
@@ -1107,6 +1104,11 @@ bno_slut.0009 = {
 		animation = eavesdrop
 	}
 	cooldown = { months = 24 }
+	trigger = {
+		is_bno_snowbunny = yes
+		does_blackbull_exist = yes
+		does_pure_whitegirl_exist = yes
+	}
 	immediate = {
 		root = {
 			save_scope_as = slut
@@ -1297,7 +1299,7 @@ bno_slut.0012 = {
 	immediate = {
 		root = {
 			get_bbc_husband_scope = yes
-			every_courtier_or_guest = {
+			random_courtier_or_guest = {
 				limit = {
 					bno_whitegirl_husband_has_secret = yes
 				}
@@ -1312,7 +1314,7 @@ bno_slut.0012 = {
 				}
 			}
 			liege = {
-				every_courtier_or_guest = {
+				random_courtier_or_guest = {
 					limit = {
 						bno_whitegirl_husband_has_secret = yes
 					}
@@ -1517,6 +1519,7 @@ bno_slut.0014 = {
 					is_married = yes
 					primary_spouse = {
 						is_pure_whitegirl = yes
+						is_ai = yes
 						OR = {
 							has_trait = beauty_good_1
 							has_trait = beauty_good_2

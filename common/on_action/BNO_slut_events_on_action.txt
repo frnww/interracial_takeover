@@ -25,3 +25,52 @@
 #		100 = bno_slut.0014
 #	}
 #}
+random_yearly_playable_pulse = {
+    on_actions = {
+        bno_slut_yearly_random_pulse
+    }
+}
+
+bno_slut_yearly_random_pulse = {
+	trigger = {
+		is_ai = no
+		is_ruler = yes
+        is_female = yes
+        is_elligible_partner = yes
+	}
+	effect = {
+		# Player ruler
+		slut_random_events = yes
+
+		# Your courtiers and guests
+		random_courtier_or_guest = {
+            limit = {
+                is_female = yes
+                is_elligible_partner = yes
+            }
+			slut_random_events = yes
+		}
+
+		# Neighbor rulers and their courts
+		capital_county = {
+			every_neighboring_county = {
+				holder = {
+					limit = { 
+                        is_ruler = yes
+                        is_female = yes
+                        is_elligible_partner = yes 
+                    }
+					slut_random_events = yes
+					
+					random_courtier_or_guest = {
+                        limit = {
+                            is_female = yes
+                            is_elligible_partner = yes
+                        }
+						slut_random_events = yes
+					}
+				}
+			}
+		}
+	}
+}
