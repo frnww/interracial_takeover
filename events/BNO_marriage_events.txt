@@ -1,0 +1,533 @@
+﻿namespace = bno_marriage
+
+bno_marriage.0001 = {
+	hidden = yes
+	type = character_event
+	
+	cooldown = { months = 12 }
+	
+	trigger = {
+		is_blackbull = yes
+		is_married = no
+		is_ruler = no
+		liege_or_court_owner = {
+			any_courtier_or_guest = {
+				is_good_pure_whitegirl= yes
+				is_ai = yes
+			}
+		}
+	}
+	
+	immediate = {
+		root = {
+			liege_or_court_owner = {
+				every_courtier_or_guest = {
+					limit = {
+						is_good_pure_whitegirl = yes
+					}
+					add_to_list = sluts
+				}
+			}
+		}
+		random_in_list = {
+			list = sluts
+			save_scope_as = target1
+		}
+		carn_had_sex_with_effect_v2 = {
+			PARTNER = scope:target1
+		}
+		scope:target1 = {
+			add_trait_xp = {
+				trait = bno_lifestyle_whitegirl
+				value = 20
+			}
+		}
+		root = {
+			set_relation_lover = {
+				target = scope:target1
+				reason = bbc_too_good
+			}
+		}
+	}
+	
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		add_character_modifier = {
+			modifier = bno_took_unmarried_white_wife
+			years = 15
+		}
+		scope:target1 = {
+			set_character_faith = faith:bbcs
+			set_sexuality = heterosexual
+			add_opinion = {
+				modifier = taken_by_new_bull_master
+				target = root
+			}
+			add_character_modifier = {
+				modifier = bno_taken_as_bbc_wife
+				years = 15
+			}
+			if = { #bbc takes all of wife's gold if she had any
+				limit = { gold > 0 }
+				pay_short_term_gold = {
+					target = root
+					gold = scope:target1.gold
+				}
+			}
+		}
+		root = {
+			marry = scope:target1
+		}
+	}
+}
+
+#bull steals slut wife except liege's wife
+bno_marriage.0002 = {
+	hidden = yes
+	type = character_event
+	theme = realm
+	
+	override_background = {
+		reference = throne_room
+	}
+	left_portrait = {
+		character = scope:target1
+		animation = throne_room_curtsey_1
+		triggered_outfit = {
+			trigger = {
+				exists = scope:target1
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = root
+		animation = personality_content
+		triggered_outfit = {
+			trigger = {
+				exists = root
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	
+	cooldown = { months = 8 }
+	
+	trigger = {
+		is_blackbull = yes
+		is_ruler = no
+		liege_or_court_owner = {
+			any_courtier_or_guest = {
+				is_good_blacked_whitegirl = yes
+				is_ai = yes
+				primary_spouse = {
+					NOR = {
+						has_trait = bno_bbc
+						is_ruler = yes
+					}
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		root = {
+			liege_or_court_owner = {
+				every_courtier_or_guest = {
+					limit = {
+						is_good_blacked_whitegirl = yes
+						primary_spouse = {
+							NOR = {
+								has_trait = bno_bbc
+								is_ruler = yes
+							}
+						}
+					}
+					add_to_list = sluts
+				}
+			}
+		}
+		random_in_list = {
+			list = sluts
+			weight = {
+				base = 100
+				bno_good_female_modifier = yes
+			}
+			save_scope_as = target1
+		}
+		if = {
+			limit = {
+				scope:target1 = {
+					primary_spouse = {
+						NOT = { has_trait = bno_bbc }
+					}
+				}
+			}
+			scope:target1 = {
+				primary_spouse = {
+					change_trait_rank = {
+						trait = bno_whiteboi
+						rank = 4
+					}
+					add_character_modifier = {
+						modifier = bno_wife_stolen_by_bbc
+					}
+					add_trait = wounded_1
+				}
+			}
+		}
+		scope:target1 = {
+			add_opinion = {
+				modifier = previous_cuck_husband
+				target = primary_spouse
+			}
+			divorce = primary_spouse
+		}
+	}
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		add_stress = -100
+		carn_had_sex_with_effect_v2 = {
+			PARTNER = scope:target1
+		}
+		add_character_modifier = {
+			modifier = bno_stole_married_white_wife
+			years = 15
+		}
+		root = {
+			marry = scope:target1
+			set_relation_lover = {
+				target = scope:target1
+				reason = bbc_too_good
+			}
+		}
+		scope:target1 = {
+			set_character_faith = faith:bbcs
+			set_sexuality = heterosexual
+			add_opinion = {
+				modifier = stolen_by_new_bull_master
+				target = root
+			}
+			add_character_modifier = {
+				modifier = bno_stolen_as_bbc_wife
+				years = 15
+			}
+			if = { #bbc takes all of wife's gold if she had any
+				limit = { gold > 0 }
+				pay_short_term_gold = {
+					target = root
+					gold = scope:target1.gold
+				}
+			}
+		}
+	}
+}
+#checks if wife is too old, sick, crippled
+bno_marriage.0003 = {
+	hidden = yes
+	type = character_event
+	
+	trigger = {
+		is_blackbull = yes
+		primary_spouse = {
+			OR = {
+				if = {
+					limit = {
+						is_immortal = no
+					}
+				}
+				has_trait = disfigured
+				has_trait = infirm
+				has_trait = gout_ridden
+				has_trait = cancer
+				has_trait = consumption
+				has_trait = incapable
+				has_trait = typhus
+				has_trait = bubonic_plague
+				has_trait = smallpox
+				has_trait = one_legged
+				has_trait = one_eyed
+				has_trait = great_pox
+				has_trait = maimed
+				has_trait = leper
+				has_trait = early_great_pox
+				has_trait = lovers_pox
+				has_trait = scaly
+				has_trait = beauty_bad_1
+				has_trait = beauty_bad_2
+				has_trait = beauty_bad_3
+			}
+		}
+	}
+	immediate = {
+		root = {
+			primary_spouse = {
+				add_character_modifier = {
+					modifier = bno_no_longer_black_breedable
+					years = 1
+				}
+			}
+			add_character_modifier = {
+				modifier = bno_divorced_worthless_wife
+			}
+			remove_relation_lover = primary_spouse
+			
+			remove_character_modifier = bno_took_unmarried_white_wife 		#remove any marriage modifiers to prevent a character from stacking several from other marriages. doesn't address modifiers from spouses who die or are enslaved.
+			remove_character_modifier = bno_took_foreign_unmarried_white_wife
+			remove_character_modifier = bno_stole_married_white_wife
+			remove_character_modifier = bno_stole_foreign_married_white_wife
+		}
+		scope:target1 = {
+			if = { #bbc takes all of wife's gold if she had any
+				limit = { gold > 0 }
+				pay_short_term_gold = {
+					target = root
+					gold = scope:target1.gold
+				}
+			}
+		}
+	}
+	option = {
+		divorce = primary_spouse
+		trigger_event = bno_marriage.0001
+	}
+}
+
+bno_marriage.0004 = { #unmarried bbc looks to other realms for single woman
+	hidden = yes
+	type = character_event
+	
+	cooldown = { months = 12 }
+	
+	trigger = {
+		is_blackbull = yes
+		any_neighboring_and_across_water_top_liege_realm_owner = {
+			any_courtier_or_guest = {
+				is_good_pure_whitegirl = yes
+				is_ai = yes
+			}
+		}
+	}
+	
+	immediate = {
+		root = {
+			every_neighboring_and_across_water_top_liege_realm_owner = {
+				every_courtier_or_guest = {
+					limit = {
+						is_good_pure_whitegirl = yes
+					}
+					add_to_list = sluts
+				}
+			}
+		}
+		random_in_list = {
+			list = sluts
+			weight = {
+				base = 50
+				bno_good_female_modifier = yes
+			}
+			save_scope_as = target1
+		}
+		carn_had_sex_with_effect_v2 = {
+			PARTNER = scope:target1
+		}
+		scope:target1 = {
+			add_trait_xp = {
+				trait = bno_lifestyle_whitegirl
+				value = 20
+			}
+		}
+		root = {
+			set_relation_lover = {
+				target = scope:target1
+				reason = bbc_too_good
+			}
+		}
+	}
+	
+	option = { #arent you persuasive
+		ai_chance = {
+			base = 100
+		}
+		add_character_modifier = {
+			modifier = bno_took_foreign_unmarried_white_wife
+			years = 15
+		}
+		scope:target1 = {
+			set_character_faith = faith:bbcs
+			set_sexuality = heterosexual
+			add_opinion = {
+				modifier = taken_by_new_bull_master
+				target = root
+			}
+			add_character_modifier = {
+				modifier = bno_taken_as_bbc_wife
+				years = 15
+			}
+			if = { #bbc takes all of wife's gold if she had any
+				limit = { gold > 0 }
+				pay_short_term_gold = {
+					target = root
+					gold = scope:target1.gold
+				}
+			}
+		}
+		root = {
+			marry = scope:target1
+		}
+	}
+}
+#bull steals foreign slut wife
+bno_marriage.0005 = {
+	hidden = yes
+	type = character_event
+	
+	cooldown = { months = 8 }
+	
+	trigger = {
+		root = {
+			is_blackbull = yes
+			any_neighboring_and_across_water_top_liege_realm_owner = {
+				any_courtier_or_guest = {
+					is_married = yes
+					is_good_blacked_whitegirl = yes
+					is_ai = yes
+					primary_spouse = {
+						NOR = { has_trait = bno_bbc
+							is_ruler = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		root = {
+			every_neighboring_and_across_water_top_liege_realm_owner = {
+				every_courtier_or_guest = {
+					limit = {
+						is_married = yes
+						is_good_blacked_whitegirl = yes
+						primary_spouse = {
+							NOR = {
+								has_trait = bno_bbc
+								is_ruler = yes
+							}
+						}
+					}
+					add_to_list = sluts
+				}
+			}
+		}
+		random_in_list = {
+			list = sluts
+			weight = {
+				base = 100
+				bno_good_female_modifier = yes
+			}
+			save_scope_as = target1
+		}
+		if = {
+			limit = {
+				exists = scope:target1
+				scope:target1 = {
+					primary_spouse = {
+						NOT = { has_trait = bno_bbc }
+					}
+				}
+			}
+			scope:target1 = {
+				primary_spouse = {
+					change_trait_rank = {
+						trait = bno_whiteboi
+						rank = 4
+					}
+					add_character_modifier = {
+						modifier = bno_wife_stolen_by_bbc
+					}
+					add_trait = wounded_1
+				}
+				add_opinion = {
+					modifier = previous_cuck_husband
+					target = primary_spouse
+				}
+				divorce = primary_spouse
+			}
+		}
+	}
+	option = {
+		trigger = {
+			exists = scope:target1
+		}
+		ai_chance = {
+			base = 100
+		}
+		add_stress = -100
+		carn_had_sex_with_effect_v2 = {
+			PARTNER = scope:target1
+		}
+		add_character_modifier = {
+			modifier = bno_stole_foreign_married_white_wife
+			years = 15
+		}
+		root = {
+			marry = scope:target1
+			set_relation_lover = {
+				target = scope:target1
+				reason = bbc_too_good
+			}
+		}
+		scope:target1 = {
+			set_character_faith = faith:bbcs
+			set_sexuality = heterosexual
+			add_opinion = {
+				modifier = stolen_by_new_bull_master
+				target = root
+			}
+			add_character_modifier = {
+				modifier = bno_stolen_as_bbc_wife
+				years = 15
+			}
+			if = { #bbc takes all of wife's gold if she had any
+				limit = { gold > 0 }
+				pay_short_term_gold = {
+					target = root
+					gold = scope:target1.gold
+				}
+			}
+		}
+	}
+	option = {
+		trigger = {
+			NOT = {
+				exists = scope:target1
+			}
+		}
+	}
+}
+
+bno_marriage.0006 = {	#used to make sure bbc actually have children. Might be worthless/overburdening to have too many characters having kids, so not currently added to any event pulses
+	hidden = yes
+	
+	trigger = {
+		has_trait = bno_bbc
+		is_married = yes
+		bno_num_mixed_children_plus_dead <= 3
+	}
+	immediate = {
+		random_consort = {
+			make_pregnant = {
+				father = root
+			}
+		}
+	}
+}

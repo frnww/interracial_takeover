@@ -1,0 +1,6 @@
+spriteTypes = {
+    spriteType = {
+        name = "bno_african_warriors"
+        texturefile = "gfx/interface/icons/men_at_arms/bno_african_warriors.dds"
+    }
+}

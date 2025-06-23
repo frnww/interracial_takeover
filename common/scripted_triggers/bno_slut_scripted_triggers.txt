@@ -1,0 +1,241 @@
+﻿is_blackbull = {
+	is_bbc = yes
+	is_male = yes
+	is_full_black = yes
+	is_elligible_partner = yes
+}
+
+bno_whitegirl_husband_has_secret = {
+	is_blacked_whitegirl = yes
+	NOT = {
+		is_spouse_of = root
+	}
+	primary_spouse = {
+		has_any_secrets = yes
+		NOT = {
+			has_trait = bno_bbc
+		}
+		any_secret = {
+			NOT = {
+				is_known_by = root
+			}
+		}
+	}
+}
+
+is_curious_whitegirl = {
+	is_pure_whitegirl = yes
+	OR = {
+		has_trait = lustful
+		has_trait_xp = {
+			trait = bno_lifestyle_whitegirl
+			value < 25
+		}
+	}
+}
+
+is_blacked_whitegirl = {
+	is_whitegirl = yes
+	is_female = yes
+	is_elligible_partner = yes
+}
+
+is_good_blacked_whitegirl = {
+	is_blacked_whitegirl = yes
+	OR = {
+		has_trait = beauty_good_1
+		has_trait = beauty_good_2
+		has_trait = beauty_good_3
+		has_trait = lustful
+		has_trait = fecund
+		has_trait = intellect_good_1
+		has_trait = intellect_good_2
+		has_trait = intellect_good_3
+		has_trait = physique_good_1
+		has_trait = physique_good_2
+		has_trait = physique_good_3
+		has_trait = pure_blooded
+		has_trait = strong
+		has_trait = shrewd
+		has_trait = zealous
+	}
+	NOR = {
+		has_trait = beauty_bad_1
+		has_trait = beauty_bad_2
+		has_trait = beauty_bad_3
+		has_trait = disfigured
+		has_trait = infirm
+		has_trait = gout_ridden
+		has_trait = cancer
+		has_trait = consumption
+		has_trait = incapable
+		has_trait = typhus
+		has_trait = bubonic_plague
+		has_trait = smallpox
+		has_trait = one_legged
+		has_trait = one_eyed
+		has_trait = great_pox
+		has_trait = maimed
+		has_trait = leper
+		has_trait = early_great_pox
+		has_trait = lovers_pox
+		has_trait = scaly
+	}
+}
+
+is_partner_non_bbc = {
+	any_spouse = {
+		is_bbc = no
+		is_full_black = no
+	}
+}
+
+is_partner_bbc = {
+	any_spouse = {
+		is_bbc = yes
+		is_full_black = yes
+	}
+}
+
+is_pure_whitegirl = {
+	is_whitegirl = no
+	is_female = yes
+	is_elligible_partner = yes
+}
+
+is_bbc = {
+	has_trait = bno_bbc
+}
+
+does_blackbull_exist = {
+	OR = {
+		any_courtier_or_guest = {
+			is_blackbull = yes
+		}
+		liege = {
+			any_courtier_or_guest = {
+				is_blackbull = yes
+			}
+		}
+	}
+}
+
+does_pure_whitegirl_exist = {
+	OR = {
+		any_courtier_or_guest = {
+			is_pure_whitegirl = yes
+		}
+		liege = {
+			any_courtier_or_guest = {
+				is_pure_whitegirl = yes
+			}
+		}
+	}
+}
+
+is_prime_girl = {
+	is_adult = yes
+	is_female = yes
+	is_imprisoned = no
+}
+
+is_bno_curious = {
+	has_trait_xp = {
+		trait = bno_lifestyle_whitegirl
+		value >= 0
+	}
+}
+
+is_bno_blacked = {
+	has_trait_xp = {
+		trait = bno_lifestyle_whitegirl
+		value >= 25
+	}
+}
+
+is_bno_snowbunny = {
+	has_trait_xp = {
+		trait = bno_lifestyle_whitegirl
+		value >= 50
+	}
+}
+
+is_bno_qos = {
+	has_trait_xp = {
+		trait = bno_lifestyle_whitegirl
+		value >= 75
+	}
+}
+
+is_bno_mindless_bbc_slut = {
+	has_trait_xp = {
+		trait = bno_lifestyle_whitegirl
+		value >= 100
+	}
+}
+
+is_elligible_partner = {
+	is_slave = no
+	is_adult = yes
+	is_imprisoned = no
+}
+
+is_slave = {
+	has_trait = slave
+}
+
+is_whitegirl = {
+	has_trait = bno_lifestyle_whitegirl
+}
+
+is_full_black = {
+	AND = {
+		is_whitegirl = no
+		has_trait = bno_full_black
+	}
+}
+
+is_good_pure_whitegirl = {
+	is_pure_whitegirl = yes
+	is_married = no
+	is_concubine = no
+	OR = {
+		has_trait = beauty_good_1
+		has_trait = beauty_good_2
+		has_trait = beauty_good_3
+		has_trait = lustful
+		has_trait = fecund
+		has_trait = intellect_good_1
+		has_trait = intellect_good_2
+		has_trait = intellect_good_3
+		has_trait = physique_good_1
+		has_trait = physique_good_2
+		has_trait = physique_good_3
+		has_trait = pure_blooded
+		has_trait = strong
+		has_trait = shrewd
+		has_trait = zealous
+	}
+	NOR = {
+		has_trait = beauty_bad_1
+		has_trait = beauty_bad_2
+		has_trait = beauty_bad_3
+		has_trait = disfigured
+		has_trait = infirm
+		has_trait = gout_ridden
+		has_trait = cancer
+		has_trait = consumption
+		has_trait = incapable
+		has_trait = typhus
+		has_trait = bubonic_plague
+		has_trait = smallpox
+		has_trait = one_legged
+		has_trait = one_eyed
+		has_trait = great_pox
+		has_trait = maimed
+		has_trait = leper
+		has_trait = early_great_pox
+		has_trait = lovers_pox
+		has_trait = scaly
+	}
+}

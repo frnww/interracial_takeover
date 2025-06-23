@@ -1,0 +1,458 @@
+﻿becoming_darker = {
+	if = {
+		limit = {
+			OR = {
+				has_game_rule = bno_body_modification_yes
+				is_ai = yes
+			}
+		}
+		#change breast size
+		set_variable = {
+			name = breast_size_genetic
+			value = {
+				value = 25
+				multiply = $BECOMING_DARK$
+			}
+		}
+		#change butt size
+		set_variable = {
+			name = butt_size_genetic
+			value = {
+				value = 25
+				multiply = $BECOMING_DARK$
+			}
+		}
+		#change hip size
+		set_variable = {
+			name = hips_genetic
+			value = {
+				value = 37.5
+				multiply = $BECOMING_DARK$
+			}
+		}
+		#change waist size
+		set_variable = {
+			name = waist_genetic
+			value = {
+				value = 40
+				divide = $BECOMING_DARK$
+				add = -10
+			}
+		}
+	}
+}
+
+becoming_african = {
+	if = {
+		limit = {
+			has_trait = bno_mostly_black
+		}
+		remove_trait = bno_mostly_black
+		add_trait = bno_full_black
+	}
+	else_if = {
+		limit = {
+			has_trait = bno_mixed
+		}
+		remove_trait = bno_mixed
+		add_trait = bno_mostly_black
+	}
+	else_if = {
+		limit = {
+			has_trait = bno_barely_mixed
+		}
+		remove_trait = bno_barely_mixed
+		add_trait = bno_mixed
+	}
+	else = {
+		add_trait = bno_barely_mixed
+	}
+}
+
+find_5_sex_partner = {
+	random_pool_character = {
+		province = root.location
+		limit = {
+			is_male = yes
+		}
+		save_scope_as = sex_partner_1
+	}
+	random_pool_character = {
+		province = root.location
+		limit = {
+			is_male = yes
+		}
+		save_scope_as = sex_partner_2
+	}
+	random_pool_character = {
+		province = root.location
+		limit = {
+			is_male = yes
+		}
+		save_scope_as = sex_partner_3
+	}
+	random_pool_character = {
+		province = root.location
+		limit = {
+			is_male = yes
+		}
+		save_scope_as = sex_partner_4
+	}
+	random_pool_character = {
+		province = root.location
+		limit = {
+			is_male = yes
+		}
+		save_scope_as = sex_partner_5
+	}
+}
+
+sex_with_5_sex_partner = {
+	had_sex_with_effect = {
+		CHARACTER = scope:sex_partner_1
+		PREGNANCY_CHANCE = pregnancy_chance
+	}
+	add_gold = minor_gold_value
+	had_sex_with_effect = {
+		CHARACTER = scope:sex_partner_2
+		PREGNANCY_CHANCE = pregnancy_chance
+	}
+	add_gold = minor_gold_value
+	had_sex_with_effect = {
+		CHARACTER = scope:sex_partner_3
+		PREGNANCY_CHANCE = pregnancy_chance
+	}
+	add_gold = minor_gold_value
+	had_sex_with_effect = {
+		CHARACTER = scope:sex_partner_4
+		PREGNANCY_CHANCE = pregnancy_chance
+	}
+	add_gold = minor_gold_value
+	had_sex_with_effect = {
+		CHARACTER = scope:sex_partner_5
+		PREGNANCY_CHANCE = pregnancy_chance
+	}
+	add_gold = minor_gold_value
+}
+
+get_bbc_husband_scope = {
+	save_scope_as = whore
+	random_courtier_or_guest = {
+		limit = {
+			has_trait = bno_bbc
+			is_adult = yes
+			is_imprisoned = no
+			is_spouse_of = scope:whore
+		}
+		save_scope_as = bbc
+	}
+}
+
+get_bbc_scope = {
+	save_scope_as = whore
+	random_courtier_or_guest = {
+		limit = {
+			is_blackbull = yes
+		}
+		save_scope_as = bbc
+	}
+}
+
+service_fee = {
+	pay_gold = yes
+	pay_piety = yes
+	pay_prestige = yes
+}
+
+pay_gold = {
+	scope:local_bbc = {
+		if = {
+			limit = {
+				gold > 0
+			}
+			pay_short_term_gold = {
+				target = root
+				gold = {
+					value = minor_gold_value
+				}
+			}
+		}
+	}
+}
+
+pay_piety = {
+	scope:local_bbc = {
+		if = {
+			limit = {
+				piety > 0
+			}
+			add_piety = {
+				value = minor_piety_loss
+			}
+		}
+	}
+}
+
+pay_prestige = {
+	scope:local_bbc = {
+		if = {
+			limit = {
+				prestige > 0
+			}
+			add_prestige = {
+				value = minor_prestige_loss
+			}
+		}
+	}
+}
+
+prostitution = {
+	scope:whore = {
+		if = {
+			limit = {
+				faith = { has_doctrine = doctrine_adultery_women_crime }
+			}
+			add_piety = {
+				value = minor_piety_gain
+				add = { 5 10 }
+				add = { 1 5 }
+			}
+		}
+		else = {
+			add_piety = {
+				value = minor_piety_gain
+				add = { 5 10 }
+				add = { 1 5 }
+			}
+			add_prestige = {
+				value = minor_prestige_gain
+				add = { 5 10 }
+				add = { 1 5 }
+			}
+		}
+	}
+}
+
+fuck_random_local_bbc = {
+	random_ruler = {
+		limit = {
+			is_blackbull = yes
+			gold > 0
+			prestige > 0
+			piety > 0
+		}
+		save_scope_as = local_bbc
+	}
+	send_interface_message = {
+		type = bno_blacked_events
+		title = bno_slut_0015_notification.title
+		right_icon = root
+		service_fee = yes
+		prostitution = yes
+		had_sex_with_effect = {
+			CHARACTER = scope:local_bbc
+			PREGNANCY_CHANCE = pregnancy_chance
+		}
+		#impregnate = {
+			#	father = scope:local_bbc
+			#	mother = root
+			#}
+		desc = bno_slut_0015_notification.desc
+	}
+}
+
+sex_with_bbc = {
+	save_scope_as = slut
+	scope:slut = {
+		if = {
+			limit = {
+				is_spouse_of = scope:bbc
+			}
+			add_opinion = {
+				modifier = bull_husband_takes_me
+				target = scope:bbc
+			}
+		}
+		had_sex_with_effect = {
+			CHARACTER = scope:bbc
+			PREGNANCY_CHANCE = pregnancy_chance
+		}
+		add_character_modifier = {
+			modifier = bno_slut_stress_relieved
+			years = 1
+		}
+		add_character_modifier = {
+			modifier = bno_cumstuffed
+			months = 6
+		}
+		add_opinion = {
+			modifier = bno_bull_fucks_me
+			target = scope:bbc
+		}
+	}
+	scope:bbc = {
+		add_character_modifier = {
+			modifier = bno_stress_relieved
+			years = 2
+		}
+		add_opinion = {
+			modifier = bno_slut_fucks_me
+			target = scope:slut
+		}
+	}
+}
+be_smartest = {
+	remove_trait = intellect_good_1
+	remove_trait = intellect_good_2
+	remove_trait = intellect_bad_1
+	remove_trait = intellect_bad_2
+	remove_trait = intellect_bad_3
+	add_trait = intellect_good_3
+}
+
+be_prettiest = {
+	remove_trait = beauty_good_1
+	remove_trait = beauty_good_2
+	remove_trait = beauty_bad_1
+	remove_trait = beauty_bad_2
+	remove_trait = beauty_bad_3
+	add_trait = beauty_good_3
+}
+
+be_strongest = {
+	remove_trait = physique_good_1
+	remove_trait = physique_good_2
+	remove_trait = physique_bad_1
+	remove_trait = physique_bad_2
+	remove_trait = physique_bad_3
+	add_trait = physique_good_3
+}
+
+level_up_whitegirl_lifestyle = {
+	if = {
+		limit = {
+			has_trait = bno_lifestyle_whitegirl
+		}
+		add_trait_xp = {
+			trait = bno_lifestyle_whitegirl
+			value = $xp$
+		}
+	}
+	else = {
+		add_trait = bno_lifestyle_whitegirl
+		add_trait_xp = {
+			trait = bno_lifestyle_whitegirl
+			value = $xp$
+		}
+	}
+}
+get_random_cuck = {
+	random_courtier_or_guest = {
+		limit = {
+			NOT = {
+				has_trait = bno_bbc
+			}
+			NOT = {
+				is_spouse_of = root
+			}
+			is_adult = yes
+			is_male = yes
+			is_imprisoned = no
+			is_ai = yes
+		}
+		save_scope_as = cuck
+	}
+}
+
+get_cuck_husband_scope = {
+	random_spouse = {
+		limit = {
+			is_male = yes
+			is_spouse_of = root
+			is_adult = yes
+			is_ai = yes
+			NOT = {
+				has_trait = bno_full_black
+			}
+		}
+		save_scope_as = cuck
+	}
+}
+become_lover_with_bbc = {
+	set_relation_lover = {
+		target = scope:bbc
+		reason = bbc_too_good
+	}
+}
+
+get_whitegirl_scope = {
+	random_courtier_or_guest = {
+		limit = {
+			is_pure_whitegirl = yes
+		}
+		save_scope_as = whitegirl
+	}
+}
+
+slut_whoring = {
+	if = {
+		limit = {
+			OR = {
+				has_trait = beauty_good_1
+				has_trait = beauty_good_2
+				has_trait = beauty_good_3
+			}
+		}
+		add_character_modifier = {
+			modifier = bno_pretty_whore_for_bbc
+			months = 12
+		}
+		add_character_modifier = {
+			modifier = bno_pretty_slut_pimped
+			months = 12
+		}
+		add_gold = major_gold_value
+		add_prestige = major_prestige_gain
+	}
+	else = {
+		add_character_modifier = {
+			modifier = bno_whore_for_bbc
+			months = 12
+		}
+		add_character_modifier = {
+			modifier = bno_slut_pimped
+			months = 12
+		}
+		add_gold = tiny_gold_value
+		add_prestige = minor_prestige_gain
+	}
+}
+
+bbc_pimping = {
+	if = {
+		limit = {
+			scope:slut = {
+				is_lowborn = yes
+			}
+		}
+		add_character_modifier = {
+			modifier = bno_pimping_lowborn_white_whores
+			months = 12
+		}
+		add_gold = tiny_gold_value
+		add_prestige = minor_prestige_gain
+	}
+	else_if = {
+		limit = {
+			scope:slut = {
+				is_lowborn = no
+			}
+		}
+		add_character_modifier = {
+			modifier = bno_pimping_noble_white_whores
+			months = 12
+		}
+		add_gold = major_gold_value
+		add_prestige = major_prestige_gain
+	}
+}

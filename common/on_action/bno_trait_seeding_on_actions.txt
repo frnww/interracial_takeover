@@ -1,0 +1,13 @@
+﻿on_game_start_after_lobby = {
+	on_actions = {
+		bno_trait_initialization_pulse
+	}
+}
+
+bno_trait_initialization_pulse = {
+	effect = {
+		every_living_character = {
+			trigger_event = bno_trait_seeding.0001
+		}
+	}
+}

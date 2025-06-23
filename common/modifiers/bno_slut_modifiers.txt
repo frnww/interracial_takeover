@@ -1,0 +1,19 @@
+﻿bno_slut_stress_relieved = {
+	icon = stress_positive
+	stress_loss_mult = 0.1
+	stress_gain_mult = -0.1
+}
+bno_slut_pimped = {
+	icon = economy_positive
+	monthly_income = 1
+	monthly_prestige = 0.5
+	stress_loss_mult = 0.1
+	stress_gain_mult = -0.1
+}
+bno_pretty_slut_pimped = {
+	icon = economy_positive
+	monthly_income = 3
+	monthly_income_mult = .1
+	monthly_prestige = 1.5
+	monthly_dread = -1
+}

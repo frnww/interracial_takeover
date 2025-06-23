@@ -1,0 +1,48 @@
+﻿bno_becoming_bbc_slut = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	}
+	desc = bno_becoming_bbc_slut_desc
+	selection_tooltip = bno_becoming_bbc_slut_tooltip
+	is_shown = {
+		is_blacked_whitegirl = yes
+		NOT = {
+			has_character_flag = bno_slut.1015
+		}
+	}
+	effect = {
+		trigger_event = {
+			id = bno_slut.0015
+		}
+	}
+	ai_check_interval = 0
+	ai_potential = {
+		always = no
+	}
+	ai_will_do = {
+		base = 0
+	}
+}
+
+bno_stop_becoming_bbc_slut = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	}
+	desc = bno_stop_becoming_bbc_slut_desc
+	selection_tooltip = bno_stop_becoming_bbc_slut_tooltip
+	is_shown = {
+		is_blacked_whitegirl = yes
+		is_partner_bbc = yes
+		has_character_flag = bno_slut.1015
+	}
+	effect = {
+		remove_character_flag = bno_slut.1015
+	}
+	ai_check_interval = 0
+	ai_potential = {
+		always = no
+	}
+	ai_will_do = {
+		base = 0
+	}
+}

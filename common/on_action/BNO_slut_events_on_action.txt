@@ -1,0 +1,27 @@
+﻿#yearly pulse for slut events
+#random_yearly_everyone_pulse = {
+#	on_actions = {
+#		bno_slut_yearly_random_pulse
+#	}
+#}
+#
+#bno_slut_yearly_random_pulse = {
+#	trigger = {
+#		is_female = yes
+#		is_elligible_partner = yes
+#	}
+#	random_events = {
+#		100 = bno_slut.0001 #Slut lays with BBC
+#		100 = bno_slut.0002 #Slut anti stress event
+#		100 = bno_slut.0003 #Slut is on a cum only diet
+#		100 = bno_slut.0004 #Slut bring white girl to BBC
+#		100 = bno_slut.0005 #Slut eaves dropping a random girl talking to her BBC
+#		100 = bno_slut.0006 #Black Husband cages a courtier that Slut hates
+#		100 = bno_slut.0007 #Becoming darker skin
+#		100 = bno_slut.0008 #Becoming a pimp for BBC
+#		100 = bno_slut.0010
+#		100 = bno_slut.0012
+#		100 = bno_slut.0013
+#		100 = bno_slut.0014
+#	}
+#}

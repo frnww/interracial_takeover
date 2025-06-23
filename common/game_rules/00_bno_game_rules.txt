@@ -1,0 +1,36 @@
+﻿bno_prostitution_interval = {
+	
+	categories = {
+		interaccial_takeover
+	}
+	
+	default = bno_interval_one_month
+
+	bno_interval_one_month = {
+	
+	}
+	
+	bno_interval_three_months = {
+		
+	}
+
+	bno_interval_six_months = {
+
+	}
+}
+
+bno_body_modification = {
+	categories = {
+		interaccial_takeover
+	}
+
+	default = bno_body_modification_yes
+
+	bno_body_modification_yes = {
+
+	}
+
+	bno_body_modification_no = {
+		
+	}
+}

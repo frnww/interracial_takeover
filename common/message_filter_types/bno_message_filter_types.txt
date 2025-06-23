@@ -1,0 +1,7 @@
+﻿######################
+### BNO
+######################
+
+bno_breeding_outcomes = { display = feed }
+
+bno_blacked_events = { display = feed }

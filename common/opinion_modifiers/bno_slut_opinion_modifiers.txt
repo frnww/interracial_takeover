@@ -1,0 +1,5 @@
+﻿bno_slut_fucks_me = {
+	opinion = 25
+	decaying = yes
+	years = 1
+}
