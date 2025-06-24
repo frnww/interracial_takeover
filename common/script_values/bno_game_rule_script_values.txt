@@ -6,3 +6,6 @@
     fallback = { value = 1 }
   }
 }
+bno_random_days = {
+  value = { 1 90 }
+}

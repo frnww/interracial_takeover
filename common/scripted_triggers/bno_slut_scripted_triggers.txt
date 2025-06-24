@@ -54,6 +54,11 @@ is_mindless_bbc_slut = {
 
 is_good_blacked_whitegirl = {
 	is_blacked_whitegirl = yes
+	NOT = { is_close_or_extended_family_of = root }
+	OR = {
+		is_visibly_fertile = yes
+		is_immortal = yes
+	}
 	OR = {
 		has_trait = beauty_good_1
 		has_trait = beauty_good_2
@@ -116,6 +121,13 @@ is_pure_whitegirl = {
 	is_whitegirl = no
 	is_female = yes
 	is_elligible_partner = yes
+}
+
+is_mindless_bbc_slut_married_to_bbc = {
+	is_mindless_bbc_slut = yes
+	any_spouse = {
+		is_blackbull = yes
+	}
 }
 
 is_bbc = {
@@ -214,6 +226,11 @@ is_good_pure_whitegirl = {
 	is_pure_whitegirl = yes
 	is_married = no
 	is_concubine = no
+	OR = {
+		is_visibly_fertile = yes
+		is_immortal = yes
+	}
+	NOT = { is_close_or_extended_family_of = root }
 	OR = {
 		has_trait = beauty_good_1
 		has_trait = beauty_good_2

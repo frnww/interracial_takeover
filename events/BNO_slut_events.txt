@@ -1506,6 +1506,12 @@ bno_slut.0014 = {
 					has_trait = beauty_good_1
 					has_trait = beauty_good_2
 					has_trait = beauty_good_3
+					has_trait = tits_big_good_1
+					has_trait = tits_big_good_2
+					has_trait = tits_big_good_3
+					has_trait = tits_small_good_1
+					has_trait = tits_small_good_2
+					has_trait = tits_small_good_3
 				}
 			}
 		}
@@ -1778,6 +1784,7 @@ bno_slut.3014 = { #follow up event, fuck and steal as wife
 	option = {
 		name = bno_slut_3014.a
 		scope:whitegirl = {
+			divorce = scope:cuck
 			marry = scope:bbc
 			add_opinion = {
 				modifier = stolen_by_new_bull_master

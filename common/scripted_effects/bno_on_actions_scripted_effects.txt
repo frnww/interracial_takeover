@@ -1,0 +1,112 @@
+﻿bno_only_you_and_neighbour_on_actions = {
+    #Player
+    bno_on_actions_function = {
+        bno_on_actions_in_script = $bno_on_actions$
+    }
+    #Player's Courtier
+    every_courtier_or_guest = {
+        limit = {
+            is_elligible_partner = yes
+        }
+        add_to_list = player_courtier
+    }
+    every_in_list = {
+        list = player_courtier
+        bno_on_actions_function = {
+            bno_on_actions_in_script = $bno_on_actions$
+        }
+    }
+    #Player's Vassal
+    every_vassal_or_below = {
+        limit = {
+            is_alive = yes
+        }
+        add_to_list = player_vassal
+    }
+    every_in_list = {
+        list = player_vassal
+        every_courtier_or_guest = {
+            limit = {
+                is_elligible_partner = yes
+            }
+            add_to_list = player_vassal_courtier
+        }
+    }
+    every_in_list = {
+        list = player_vassal
+        bno_on_actions_function = {
+            bno_on_actions_in_script = $bno_on_actions$
+        }
+    }
+    every_in_list = {
+        list = player_vassal_courtier
+        bno_on_actions_function = {
+            bno_on_actions_in_script = $bno_on_actions$
+        }
+    }
+    #Player's Neighbour
+    every_neighboring_top_liege_realm_owner = {
+        limit = {
+            is_alive = yes
+        }
+        add_to_list = neighbour
+    }
+    every_in_list = {
+        list = neighbour
+        every_courtier_or_guest = {
+            limit = {
+                is_elligible_partner = yes
+            }
+            add_to_list = neighbour_courtier
+        }
+    }
+    every_in_list = {
+        list = neighbour
+        every_vassal_or_below = {
+            limit = {
+                is_alive = yes
+            }
+            add_to_list = neighbour_vassal
+        }
+    }
+    every_in_list = {
+        list = neighbour_vassal
+        every_courtier_or_guest = {
+            limit = {
+                is_elligible_partner = yes
+            }
+            add_to_list = neighbour_vassal_courtier
+        }
+    }
+    every_in_list = {
+        list = neighbour
+        bno_on_actions_function = {
+            bno_on_actions_in_script = $bno_on_actions$
+        }
+    }
+    every_in_list = {
+        list = neighbour_courtier
+        bno_on_actions_function = {
+            bno_on_actions_in_script = $bno_on_actions$
+        }
+    }
+    every_in_list = {
+        list = neighbour_vassal
+        bno_on_actions_function = {
+            bno_on_actions_in_script = $bno_on_actions$
+        }
+    }
+    every_in_list = {
+        list = neighbour_vassal_courtier
+        bno_on_actions_function = {
+            bno_on_actions_in_script = $bno_on_actions$
+        }
+    }
+}
+
+bno_on_actions_function = {
+    trigger_event = {
+        on_action = $bno_on_actions_in_script$
+        days = bno_random_days
+    }
+}

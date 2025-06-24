@@ -237,12 +237,13 @@ bno_marriage.0003 = {
 	
 	trigger = {
 		is_blackbull = yes
+		is_ai = yes
+		is_married = yes
 		primary_spouse = {
 			OR = {
-				if = {
-					limit = {
-						is_immortal = no
-					}
+				AND = {
+					is_visibly_fertile = no
+					is_immortal = no
 				}
 				has_trait = disfigured
 				has_trait = infirm
@@ -309,6 +310,8 @@ bno_marriage.0004 = { #unmarried bbc looks to other realms for single woman
 	
 	trigger = {
 		is_blackbull = yes
+		is_married = no
+		is_ruler = no
 		any_neighboring_and_across_water_top_liege_realm_owner = {
 			any_courtier_or_guest = {
 				is_good_pure_whitegirl = yes
@@ -323,6 +326,7 @@ bno_marriage.0004 = { #unmarried bbc looks to other realms for single woman
 				random_courtier_or_guest = {
 					limit = {
 						is_good_pure_whitegirl = yes
+						is_ai = yes
 					}
 					add_to_list = sluts
 				}
@@ -395,13 +399,16 @@ bno_marriage.0005 = {
 	trigger = {
 		root = {
 			is_blackbull = yes
+			is_married = no
+			is_ruler = no
 			any_neighboring_and_across_water_top_liege_realm_owner = {
 				any_courtier_or_guest = {
 					is_married = yes
 					is_good_blacked_whitegirl = yes
 					is_ai = yes
 					primary_spouse = {
-						NOR = { has_trait = bno_bbc
+						NOR = { 
+							is_bbc = yes
 							is_ruler = yes
 						}
 					}
@@ -417,9 +424,10 @@ bno_marriage.0005 = {
 					limit = {
 						is_married = yes
 						is_good_blacked_whitegirl = yes
+						is_ai = yes
 						primary_spouse = {
 							NOR = {
-								has_trait = bno_bbc
+								is_bbc = yes
 								is_ruler = yes
 							}
 						}
@@ -519,7 +527,7 @@ bno_marriage.0006 = {	#used to make sure bbc actually have children. Might be wo
 	hidden = yes
 	
 	trigger = {
-		has_trait = bno_bbc
+		is_blackbull = yes
 		is_married = yes
 		bno_num_mixed_children_plus_dead <= 3
 	}

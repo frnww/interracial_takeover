@@ -35,7 +35,10 @@ bno_war.0001 = {
 		character = scope:defender
 	}
 	trigger = {
-		has_trait = bno_bbc
+		OR = {
+			is_blackbull = yes
+			is_mindless_bbc_slut_married_to_bbc = yes
+		}
 		exists = scope:war
 		any_character_war = {
 			is_war_leader = root
@@ -164,7 +167,10 @@ bno_war.0002 = {
 		animation = war_defender
 	}
 	trigger = {
-		has_trait = bno_bbc
+		OR = {
+			is_blackbull = yes
+			is_mindless_bbc_slut_married_to_bbc = yes
+		}
 		exists = scope:war
 		is_adult = yes
 		any_character_war = {
