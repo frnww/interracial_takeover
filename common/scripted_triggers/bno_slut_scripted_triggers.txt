@@ -24,13 +24,13 @@ bno_whitegirl_husband_has_secret = {
 }
 
 is_curious_whitegirl = {
+	NOT = {
+		has_character_flag = bno_originally_black
+	}
 	is_pure_whitegirl = yes
 	OR = {
 		has_trait = lustful
-		has_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value < 25
-		}
+		is_bno_curious = yes
 	}
 }
 
@@ -38,7 +38,7 @@ is_blacked_whitegirl = {
 	NOT = {
 		has_character_flag = bno_originally_black
 	}
-	is_whitegirl = yes
+	is_bno_blacked = yes
 	is_female = yes
 	is_elligible_partner = yes
 }
@@ -55,10 +55,6 @@ is_mindless_bbc_slut = {
 is_good_blacked_whitegirl = {
 	is_blacked_whitegirl = yes
 	NOT = { is_close_or_extended_family_of = root }
-	OR = {
-		is_visibly_fertile = yes
-		is_immortal = yes
-	}
 	OR = {
 		has_trait = beauty_good_1
 		has_trait = beauty_good_2
@@ -118,10 +114,6 @@ is_pure_whitegirl = {
 	NOT = {
 		has_character_flag = bno_originally_black
 	}
-	OR = {
-		is_visibly_fertile = yes
-		is_immortal = yes
-	}
 	is_whitegirl = no
 	is_female = yes
 	is_elligible_partner = yes
@@ -141,11 +133,17 @@ is_bbc = {
 does_blackbull_exist = {
 	OR = {
 		any_courtier_or_guest = {
-			is_blackbull = yes
+			is_ai_blackbull = yes
+		}
+		any_vassal = {
+			is_ai_blackbull = yes
 		}
 		liege = {
 			any_courtier_or_guest = {
-				is_blackbull = yes
+				is_ai_blackbull = yes
+			}
+			any_vassal = {
+				is_ai_blackbull = yes
 			}
 		}
 	}
@@ -176,6 +174,10 @@ is_bno_curious = {
 		trait = bno_lifestyle_whitegirl
 		value >= 0
 	}
+	has_trait_xp = {
+		trait = bno_lifestyle_whitegirl
+		value < 25
+	}
 }
 
 is_bno_blacked = {
@@ -183,6 +185,10 @@ is_bno_blacked = {
 	has_trait_xp = {
 		trait = bno_lifestyle_whitegirl
 		value >= 25
+	}
+	has_trait_xp = {
+		trait = bno_lifestyle_whitegirl
+		value < 50
 	}
 }
 
@@ -192,6 +198,10 @@ is_bno_snowbunny = {
 		trait = bno_lifestyle_whitegirl
 		value >= 50
 	}
+	has_trait_xp = {
+		trait = bno_lifestyle_whitegirl
+		value < 75
+	}
 }
 
 is_bno_qos = {
@@ -199,6 +209,10 @@ is_bno_qos = {
 	has_trait_xp = {
 		trait = bno_lifestyle_whitegirl
 		value >= 75
+	}
+	has_trait_xp = {
+		trait = bno_lifestyle_whitegirl
+		value < 100
 	}
 }
 
@@ -214,6 +228,10 @@ is_elligible_partner = {
 	is_slave = no
 	is_adult = yes
 	is_imprisoned = no
+	OR = {
+		is_visibly_fertile = yes
+		is_immortal = yes
+	}
 }
 
 is_slave = {

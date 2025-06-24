@@ -162,16 +162,16 @@ great_replacement = {
 		value = 1
 		if = {
 			limit = {
-				is_bno_sissy = yes
-			}
-			add = 10
-		}
-		else_if = {
-			limit = {
 				is_bno_blacked = yes
 			}
 			add = 10
 		}
+		#else_if = {
+		#	limit = {
+		#		is_bno_sissy = yes
+		#	}
+		#	add = 10
+		#}
 		else_if = {
 			limit = {
 				is_bno_qos = yes

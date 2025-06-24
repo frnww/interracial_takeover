@@ -41,57 +41,25 @@ bno_cuck.0001 = {
 	
 	cooldown = { months = 24 }
 	trigger = {
-		root = {
-			any_courtier_or_guest = {
-				has_trait = bno_bbc
-				is_adult = yes
-				is_imprisoned = no
-				is_ai = yes
-				NOT = { is_close_or_extended_family_of = liege.primary_spouse }
-			}
-			any_courtier_or_guest = { #wife
-				is_adult = yes
-				is_female = yes
-				is_imprisoned = no
-				is_spouse_of = root
-				has_trait = bno_lifestyle_whitegirl
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value > 5
-				}
-			}
-			is_ruler = yes
-			is_married = yes
-			is_imprisoned = no
-			is_male = yes
-			NOT = { has_trait = bno_bbc }
-			
+		is_married_whiteboy = yes
+		does_blackbull_exist = yes
+		any_spouse = {
+			is_curious_whitegirl = yes
 		}
 	}
 	
 	immediate = {
 		random_courtier_or_guest = { #random bbc courtier
 			limit = {
-				has_trait = bno_bbc
-				is_adult = yes
-				is_imprisoned = no
+				is_blackbull = yes
 				is_ai = yes
 				NOT = { is_close_or_extended_family_of = liege.primary_spouse }
 			}
 			save_scope_as = target1
 		}
-		
-		random_courtier_or_guest = { #find wife
+		random_spouse = {
 			limit = {
-				is_adult = yes
-				is_female = yes
-				is_imprisoned = no
-				is_spouse_of = root
-				has_trait = bno_lifestyle_whitegirl
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value > 5
-				}
+				is_curious_whitegirl = yes
 			}
 			save_scope_as = target2
 		}
@@ -285,20 +253,14 @@ bno_cuck.0002 = {
 	cooldown = { months = 13 }
 	
 	trigger = {
-		root = {
-			OR = { 				#for now cuck can't be full JOS
-				has_trait = bno_cuckish
-				has_trait = bno_cuck
-				has_trait = bno_beta
-			}
-			is_male = yes
+		OR = { 				#for now cuck can't be full JOS
+			has_trait = bno_cuckish
+			has_trait = bno_cuck
+			has_trait = bno_beta
+		}
+		is_whiteboy = yes
+		primary_spouse = {
 			is_imprisoned = no
-			is_married = yes
-			NOT = { has_trait = bno_bbc }
-			is_adult = yes
-			primary_spouse = {
-				is_imprisoned = no
-			}
 		}
 	}
 	option = {
@@ -350,47 +312,23 @@ bno_cuck.0003 = {
 	cooldown = { months = 12 }
 	
 	trigger = {
-		root = {
-			any_courtier_or_guest = {
-				has_trait = bno_bbc
-				is_adult = yes
-				is_imprisoned = no
-				is_ai = yes
-				NOT = { is_close_or_extended_family_of = liege.primary_spouse }
-			}
-			any_courtier_or_guest = {
-				is_adult = yes
-				is_female = yes
-				is_spouse_of = root
-				is_imprisoned = no
-				has_trait = bno_lifestyle_whitegirl
-			}
-			is_male = yes
-			is_imprisoned = no
-			is_ruler = yes
-			is_married = yes
-			has_trait = bno_whiteboi
-			gold > 50
+		does_blackbull_exist = yes
+		any_spouse = {
+			is_curious_whitegirl = yes
 		}
+		is_cuck = yes
+		gold > 50
 	}
 	immediate = {
 		random_courtier_or_guest = {
 			limit = {
-				has_trait = bno_bbc
-				is_adult = yes
-				is_imprisoned = no
-				is_ai = yes
-				NOT = { is_close_or_extended_family_of = liege.primary_spouse }
+				is_ai_blackbull = yes
 			}
 			save_scope_as = target1
 		}
-		random_courtier_or_guest = {
+		random_spouse = {
 			limit = {
-				is_adult = yes
-				is_imprisoned = no
-				is_female = yes
-				is_spouse_of = root
-				has_trait = bno_lifestyle_whitegirl
+				is_curious_whitegirl = yes
 			}
 			save_scope_as = target2
 		}
@@ -478,28 +416,23 @@ bno_cuck.0004 = {
 	trigger = {
 		is_married_whiteboy = yes
 		any_spouse = {
-			is_prime_girl = yes
-			is_bno_blacked = yes
+			is_blacked_whitegirl = yes
 		} 
 		any_martial_councillor = {
-			is_blackbull = yes
-			is_ai = yes
+			is_ai_blackbull = yes
 		}
 	}
 	immediate = {
 		root = {
 			random_martial_councillor = {
 				limit = {
-					has_trait = bno_bbc
-					is_adult = yes
-					NOT = { is_close_or_extended_family_of = liege.primary_spouse }
+					is_ai_blackbull = yes
 				}
 				save_scope_as = target1
 			}
 			random_spouse = {
 				limit = {
-					is_prime_girl = yes
-					is_bno_blacked = yes
+					is_blacked_whitegirl = yes
 				}
 				save_scope_as = target2
 			}
@@ -845,26 +778,18 @@ bno_cuck.0005 = {
 		}
 	}
 	trigger = {
-		is_ruler = yes
-		is_adult = yes
-		NOR = {
-			has_trait = bno_bbc
+		is_normal_whiteboy = yes
+		NOT = {
 			has_trait = trusting
 		}
 		number_of_personality_traits > 4
-		any_courtier_or_guest = {
-			is_adult = yes
-			has_trait = bno_bbc
-			NOT = { is_close_or_extended_family_of = root }
-		}
+		does_blackbull_exist = yes
 	}
 	immediate = {
 		root = {
 			random_courtier_or_guest = {
 				limit = {
-					is_adult = yes
-					has_trait = bno_bbc
-					NOT = { is_close_or_extended_family_of = root }
+					is_ai_blackbull = yes
 				}
 				save_scope_as = target1
 			}
@@ -906,24 +831,15 @@ bno_cuck.0006 = { #Just cuck bonds with bbc, gives court position
 	cooldown = { months = 24 }
 	trigger = {
 		root = {
-			is_adult = yes
-			NOT = { has_trait = bno_bbc }
 			NOR = {
 				employs_court_position = bodyguard_court_position
 				employs_court_position = master_of_horse_court_position
 				employs_court_position = master_of_hunt_court_position
 			}
-			is_male = yes
-			is_ruler = yes
-			is_imprisoned = no
+			is_normal_whiteboy = yes
 			has_trait = just
 			any_courtier_or_guest = {
-				has_trait = bno_bbc
-				has_faith = faith:bbcs
-				is_adult = yes
-				NOT = { is_close_or_extended_family_of = root }
-				is_ai = yes
-				is_imprisoned = no
+				is_ai_blackbull = yes
 				OR = {
 					has_trait = zealous
 					has_trait = just
@@ -935,12 +851,7 @@ bno_cuck.0006 = { #Just cuck bonds with bbc, gives court position
 		root = {
 			random_courtier_or_guest = {
 				limit = {
-					has_trait = bno_bbc
-					has_faith = faith:bbcs
-					is_adult = yes
-					is_ai = yes
-					NOT = { is_close_or_extended_family_of = root }
-					is_imprisoned = no
+					is_ai_blackbull = yes
 					OR = {
 						has_trait = zealous
 						has_trait = just
@@ -1023,33 +934,18 @@ bno_cuck.0007 = {
 		animation = anger
 	}
 	trigger = {
-		root = {
-			OR = {
-				has_trait = bno_beta
-				has_trait = bno_jos
-			}
-			is_ruler = yes
-			OR = {
-				has_trait = brave
-				has_trait = strong
-			}
-			is_male = yes
-			any_courtier_or_guest = {
-				has_trait = bno_bbc
-				NOT = { is_close_or_extended_family_of = root }
-				is_adult = yes
-				is_imprisoned = no
-			}
+		is_cuck = yes
+		OR = {
+			has_trait = brave
+			has_trait = strong
 		}
+		does_blackbull_exist = yes
 	}
 	immediate = {
 		root = {
 			random_courtier_or_guest = {
 				limit = {
-					has_trait = bno_bbc
-					NOT = { is_close_or_extended_family_of = root }
-					is_adult = yes
-					is_imprisoned = no
+					is_ai_blackbull = yes
 				}
 				save_scope_as = target1
 			}
@@ -1098,45 +994,34 @@ bno_cuck.0008 = {
 	}
 	cooldown = { months = 25 }
 	trigger = {
-		root = {
-			is_ruler = yes
-			is_male = yes
-			is_married = yes
-			NOT = { has_trait = bno_bbc }
+		is_cuck = yes
+		any_spouse = {
 			OR = {
-				has_trait = bno_beta
-				has_trait = bno_jos
+				is_bno_snowbunny = yes
+				is_bno_qos = yes
 			}
-			primary_spouse = {
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value > 50
-				}
-			}
-			any_vassal = {
-				has_trait = bno_bbc
-				NOT = { is_close_or_extended_family_of = root }
-				is_imprisoned = no
-				is_ai = yes
-				is_adult = yes
-				NOT = { has_hook = root }
-			}
+		}
+		any_vassal = {
+			is_ai_blackbull = yes
+			NOT = { has_hook = root }
 		}
 	}
 	immediate = {
 		root = {
 			random_vassal = {
 				limit = {
-					has_trait = bno_bbc
-					NOT = { is_close_or_extended_family_of = root }
-					is_ai = yes
-					is_adult = yes
-					is_imprisoned = no
+					is_ai_blackbull = yes
 					NOT = { has_hook = root }
 				}
 				save_scope_as = target1
 			}
-			primary_spouse = {
+			random_spouse = {
+				limit = {
+					OR = {
+						is_bno_snowbunny = yes
+						is_bno_qos = yes
+					}
+				}
 				save_scope_as = target2
 			}
 		}
@@ -1220,44 +1105,26 @@ bno_cuck.0009 = {
 	}
 	cooldown = { months = 48 }
 	trigger = {
-		root = {
-			is_ruler = yes
-			is_male = yes
-			NOT = { has_trait = bno_bbc }
-			is_adult = yes
-			is_imprisoned = no
-			any_child = {
-				is_adult = yes
-				is_courtier_of = root
-				is_male = yes
-				is_imprisoned = no
-				is_married = yes
-				NOT = { has_trait = bno_bbc }
-			}
-			any_courtier_or_guest = {
-				is_adult = yes
-				has_trait = bno_bbc
-				is_imprisoned = no
-			}
+		is_normal_whiteboy = yes
+		any_child = {
+			is_courtier_of = root
+			is_whiteboy = yes
+		}
+		any_courtier_or_guest = {
+			is_ai_blackbull = yes
 		}
 	}
 	immediate = {
 		root = {
 			random_child = {
 				limit = {
-					is_adult = yes
-					is_male = yes
-					is_imprisoned = no
-					is_married = yes
-					NOT = { has_trait = bno_bbc }
+					is_whiteboy = yes
 				}
 				save_scope_as = cucked_son
 			}
 			random_courtier_or_guest = {
 				limit = {
-					is_adult = yes
-					has_trait = bno_bbc
-					is_imprisoned = no
+					is_ai_blackbull = yes
 				}
 				save_scope_as = target1
 			}
@@ -1346,65 +1213,34 @@ bno_cuck.0010 = {
 	}
 	cooldown = { months = 36 }
 	trigger = {
-		root = {
-			any_intrigue_councillor = {
-				has_trait = bno_bbc
-				is_adult = yes
-				is_ai = yes
-				NOT = { is_close_or_extended_family_of = root.primary_spouse }
-			}
-			any_courtier_or_guest = {
-				is_adult = yes
-				is_female = yes
-				is_spouse_of = root
-				is_imprisoned = no
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value > 25
-				}
-			}
-			any_vassal = {
-				NOT = { has_trait = bno_bbc }
-				is_adult = yes
-				is_imprisoned = no
-				is_male = yes
-			}
-			is_imprisoned = no
-			is_adult = yes
-			is_ruler = yes
-			is_married = yes
-			is_male = yes
-			NOT = { has_trait = bno_bbc }
+		any_intrigue_councillor = {
+			is_ai_blackbull = yes
 		}
+		any_spouse = {
+			is_blacked_whitegirl = yes
+		}
+		any_vassal = {
+			is_normal_whiteboy = yes
+		}
+		is_married_whiteboy = yes
 	}
 	immediate = {
 		root = {
 			random_intrigue_councillor = {
 				limit = {
-					has_trait = bno_bbc
-					is_adult = yes
-					NOT = { is_close_or_extended_family_of = root.primary_spouse }
+					is_ai_blackbull = yes
 				}
 				save_scope_as = target1
 			}
 			random_courtier_or_guest = {
 				limit = {
-					is_adult = yes
-					is_female = yes
-					is_spouse_of = root
-					is_imprisoned = no
-					has_trait_xp = {
-						trait = bno_lifestyle_whitegirl
-						value > 25	}
+					is_blacked_whitegirl = yes
 				}
 				save_scope_as = target2
 			}
 			random_vassal = {
 				limit = {
-					NOT = { has_trait = bno_bbc }
-					is_imprisoned = no
-					is_adult = yes
-					is_male = yes
+					is_normal_whiteboy = yes
 				}
 				save_scope_as = target3
 			}
@@ -1624,27 +1460,16 @@ bno_cuck.0011 = {
 		}
 	}
 	trigger = {
-		root = {
-			any_close_family_member = {
-				is_female = yes
-				is_adult = no
-				NOT = { has_trait = bno_blood }
-			}
-			any_vassal = {
-				has_trait = bno_bbc
-				is_adult = yes
-				is_ai = yes
-				allowed_more_spouses = yes
-				NOT = { is_close_or_extended_family_of = root }
-			}
-			is_ruler = yes
-			is_male = yes
+		any_close_family_member = {
+			is_female = yes
+			is_adult = no
 			NOT = { has_trait = bno_blood }
-			OR = {
-				has_trait = bno_beta
-				has_trait = bno_jos
-			}
 		}
+		any_vassal = {
+			allowed_more_spouses = yes
+			is_ai_blackbull = yes
+		}
+		is_cuck = yes
 	}
 	immediate = {
 		random_close_family_member = {
@@ -1657,11 +1482,8 @@ bno_cuck.0011 = {
 		}
 		random_vassal = {
 			limit = {
-				has_trait = bno_bbc
-				is_adult = yes
-				is_ai = yes
 				allowed_more_spouses = yes
-				NOT = { is_close_or_extended_family_of = root }
+				is_ai_blackbull = yes
 			}
 			save_scope_as = target2
 		}
@@ -1771,21 +1593,12 @@ bno_cuck.0013 = {
 			is_diarch_of_target = root
 			is_spouse_of = root
 			is_female = yes
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 75
+			OR = {
+				is_bno_qos = yes
+				is_bno_mindless_bbc_slut = yes
 			}
 		}
-		OR = {
-			any_courtier_or_guest = {
-				has_trait = bno_bbc
-				is_adult = yes
-			}
-			any_vassal = {
-				has_trait = bno_bbc
-				is_adult = yes
-			}
-		}
+		does_blackbull_exist = yes
 	}
 	immediate = {
 		diarch = {
@@ -1793,8 +1606,7 @@ bno_cuck.0013 = {
 		}
 		random_courtier_or_guest = {
 			limit = {
-				has_trait = bno_bbc
-				is_adult = yes
+				is_ai_blackbull = yes
 			}
 			save_scope_as = target2
 		}
@@ -1844,25 +1656,22 @@ bno_cuck.0014 = {
 	cooldown = { months = 36 }
 	
 	trigger = {
-		scope:root = {
-			any_courtier_or_guest = {
-				has_trait = bno_bbc
-				is_adult = yes
-				is_ai = yes
-			}
-			any_courtier_or_guest = {
-				is_adult = yes
-				is_ai = yes
-				is_female = yes
-				has_trait = bno_lifestyle_whitegirl
-				NOT = { is_spouse_of = root }
-			}
-			any_spouse = {
-				is_adult = yes
-				is_female = yes
-				is_ruler = no
-				is_ai = yes
-			}
+		is_married_whiteboy = yes
+		any_courtier_or_guest = {
+			is_ai_blackbull = yes
+		}
+		any_courtier_or_guest = {
+			is_adult = yes
+			is_ai = yes
+			is_female = yes
+			has_trait = bno_lifestyle_whitegirl
+			NOT = { is_spouse_of = root }
+		}
+		any_spouse = {
+			is_adult = yes
+			is_female = yes
+			is_ruler = no
+			is_ai = yes
 		}
 	}
 	immediate = {
@@ -1936,13 +1745,16 @@ bno_cuck.0015 = {
 			}
 		}
 	}
+	trigger = {
+		is_cuck = yes
+		any_spouse = {
+			is_mindless_bbc_slut = yes
+		}
+	}
 	immediate = {
 		primary_spouse = {
 			limit = {
-				is_adult = yes
-				is_female = yes
-				is_ruler = no
-				is_ai = yes
+				is_mindless_bbc_slut = yes
 			}
 			save_scope_as = target2
 		}
@@ -2008,17 +1820,22 @@ bno_cuck.0016 = {
 			}
 		}
 	}
+	trigger = {
+		is_cuck = yes
+		any_spouse = {
+			is_mindless_bbc_slut = yes
+			is_ai = yes
+		}
+	}
 	immediate = {
 		former_spouse = {
 			limit = {
-				is_adult = yes
-				is_female = yes
-				is_ruler = no
+				is_mindless_bbc_slut = yes
 				is_ai = yes
 			}
 			save_scope_as = target2
 		}
-		add_trait = bno_beta
+		become_more_cuck_effect = yes
 		add_stress = 50
 		add_prestige = -200
 		

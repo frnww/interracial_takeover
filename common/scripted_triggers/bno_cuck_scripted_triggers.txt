@@ -1,10 +1,22 @@
 ﻿is_married_whiteboy = {
-    is_adult = yes
+	is_married = yes
+	is_normal_whiteboy = yes
+}
+
+is_whiteboy = {
+	is_married = yes
+	is_adult = yes
+	is_bbc = no
+	is_male = yes
+	is_imprisoned = no
+}
+
+is_normal_whiteboy = {
 	is_imprisoned = no
 	is_ruler = yes
-	is_married = yes
+	is_adult = yes
 	is_male = yes
-	NOT = { has_trait = bno_bbc }
+	is_bbc = no
 }
 
 is_ruler_whiteboy = {
@@ -15,15 +27,23 @@ is_ruler_whiteboy = {
 	NOT = { has_trait = bno_bbc }
 }
 
+is_cuck = {
+	has_trait = bno_whiteboi
+	is_married = yes
+	is_ruler = yes
+	is_imprisoned = no
+	is_male = yes
+}
+
 is_ai_not_married_blackbull = {
 	is_ai_blackbull = yes
 	is_married = no
 }
 
 is_ai_blackbull = {
-	has_trait = bno_bbc
-	is_adult = yes
+	is_blackbull = yes
 	is_ai = yes
+	NOT = { is_close_or_extended_family_of = liege.primary_spouse }
 }
 
 is_ai_curious = {
