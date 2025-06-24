@@ -118,6 +118,10 @@ is_pure_whitegirl = {
 	NOT = {
 		has_character_flag = bno_originally_black
 	}
+	OR = {
+		is_visibly_fertile = yes
+		is_immortal = yes
+	}
 	is_whitegirl = no
 	is_female = yes
 	is_elligible_partner = yes
@@ -167,6 +171,7 @@ is_prime_girl = {
 }
 
 is_bno_curious = {
+	is_whitegirl = yes
 	has_trait_xp = {
 		trait = bno_lifestyle_whitegirl
 		value >= 0
@@ -174,6 +179,7 @@ is_bno_curious = {
 }
 
 is_bno_blacked = {
+	is_whitegirl = yes
 	has_trait_xp = {
 		trait = bno_lifestyle_whitegirl
 		value >= 25
@@ -181,6 +187,7 @@ is_bno_blacked = {
 }
 
 is_bno_snowbunny = {
+	is_whitegirl = yes
 	has_trait_xp = {
 		trait = bno_lifestyle_whitegirl
 		value >= 50
@@ -188,6 +195,7 @@ is_bno_snowbunny = {
 }
 
 is_bno_qos = {
+	is_whitegirl = yes
 	has_trait_xp = {
 		trait = bno_lifestyle_whitegirl
 		value >= 75
@@ -195,6 +203,7 @@ is_bno_qos = {
 }
 
 is_bno_mindless_bbc_slut = {
+	is_whitegirl = yes
 	has_trait_xp = {
 		trait = bno_lifestyle_whitegirl
 		value >= 100
@@ -226,10 +235,6 @@ is_good_pure_whitegirl = {
 	is_pure_whitegirl = yes
 	is_married = no
 	is_concubine = no
-	OR = {
-		is_visibly_fertile = yes
-		is_immortal = yes
-	}
 	NOT = { is_close_or_extended_family_of = root }
 	OR = {
 		has_trait = beauty_good_1

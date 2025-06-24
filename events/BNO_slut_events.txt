@@ -1031,9 +1031,10 @@ bno_slut.0008 = {
 		animation = personality_content
 	}
 	
-	cooldown = { months = 24 }
+	cooldown = { months = 36 }
 	trigger = {
-		is_blacked_whitegirl = yes
+		is_bno_curious = yes
+		is_bno_snowbunny = no
 		does_blackbull_exist = yes
 	}
 	immediate = {
@@ -1497,7 +1498,10 @@ bno_slut.0014 = {
 	trigger = {
 		is_blacked_whitegirl = yes
 		is_ruler = yes
-		does_blackbull_exist = yes
+		any_courtier_or_guest = {
+			is_blackbull = yes
+			is_married = no
+		}
 		any_neighboring_and_across_water_top_liege_realm_owner = {
 			primary_spouse = {
 				is_pure_whitegirl = yes
@@ -1519,6 +1523,13 @@ bno_slut.0014 = {
 	immediate = {
 		root = {
 			get_bbc_scope = yes
+			random_courtier_or_guest = {
+				limit = {
+					is_blackbull = yes
+					is_married = no
+				}
+				save_scope_as = bbc
+			}
 			every_neighboring_and_across_water_top_liege_realm_owner = {
 				limit = {
 					is_male = yes
