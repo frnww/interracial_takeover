@@ -3,7 +3,6 @@
 #yearly pulse for bno events
 random_yearly_everyone_pulse = {
 	on_actions = {
-		bno_yearly_random_pulse
 		bno_trait_maintenance_pulse
 	}
 }
@@ -22,102 +21,50 @@ random_yearly_everyone_pulse = {
 	}
 }
 
-# effect trigger_event = { on_action = bno_yearly_random_pulse }
+random_yearly_playable_pulse = {
+	on_actions = {
+		bno_yearly_random_pulse
+	}
+}
+
 
 bno_yearly_random_pulse = {
-	random_events = {
-		chance_to_happen = 100
-		chance_of_no_event = {
-			if = {
-				limit = { is_ai = yes }
-				value = 70
-			}
-			limit = {
-				NOT = {
-					has_trait = bno_full_black
-					is_female = yes
+	trigger = {
+		is_ai = no
+		is_ruler = yes
+        is_elligible_partner = yes
+	}
+	effect = {
+		# Player ruler
+		bno_random_random_events_lists = yes
+
+		# Your courtiers and guests
+		every_courtier_or_guest = {
+            limit = {
+                is_elligible_partner = yes
+            }
+			bno_random_random_events_lists = yes
+		}
+
+		# Neighbor rulers and their courts
+		capital_county = {
+			every_neighboring_county = {
+				holder = {
+					limit = { 
+                        is_ruler = yes
+                        is_elligible_partner = yes 
+                    }
+					bno_random_random_events_lists = yes
+					
+					every_courtier_or_guest = {
+                        limit = {
+                            is_elligible_partner = yes
+                        }
+						bno_random_random_events_lists = yes
+					}
 				}
 			}
 		}
-		25 = 0
-		50 = bno_random.0001 #spying on a courtier in the hallway
-		100 = bno_random.0002 #spotting mother
-		135 = bno_random.0003 #spotting sister
-		100 = bno_random.0004 #spotting liege
-		150 = bno_random.0005 #C event
-		150 = bno_random.0006 #C event
-		150 = bno_random.0007 #B event
-		150 = bno_random.0008 #B event
-		150 = bno_random.0009 #S event
-		150 = bno_random.0010 #S event
-		150 = bno_random.0011 #Q event
-		100 = bno_random.0012 #Q event
-		120 = bno_random.0013 #Q+ orgy
-		150 = bno_random.0014 #Married to bbc
-		125 = bno_random.0015 #Player + Family = Q/M+
-		100 = bno_random.0016 #Stumbling upon a courtier changing armor
-		125 = bno_random.0017 #bodyguard consensual. lured court position
-		100 = bno_random.0018 #bodyguard dubcon.
-		125 = bno_random.0019 #champion sex consensual,
-		100 = bno_random.0020 #liege dinner party, gives curious, can have sex
-		100 = bno_random.0021 #chastity/castrated event for snowbunny+
-		150 = bno_random.0022 #C event
-		150 = bno_random.0023 #C event
-		150 = bno_random.0024 #C event
-		50 = bno_random.0025 #B event
-		100 = bno_random.0026 #find your daughter, can join
-		150 = bno_random.0027 #B event
-		150 = bno_random.0028 #B event
-		145 = bno_random.0029 #B+ pregnant event
-		125 = bno_random.0030 #physician event
-		150 = bno_random.0031 #B event
-		150 = bno_random.0032 #S event
-		150 = bno_random.0033 #S event
-		150 = bno_random.0034 #S event
-		125 = bno_random.0035 #S+ spymaster event
-		150 = bno_random.0036 #Q+ event
-		150 = bno_random.0037 #Q+ event
-		150 = bno_random.0038 #Q+ event
-		110 = bno_random.0041 #wife curiosity
-		125 = bno_random.0042 #Wife fisrt BBC
-		100 = bno_random.0043 #Courtier blacked
-		80 = bno_random.0044 #concubine for men
-		125 = bno_random.0045 #Wife proposal
-		150 = bno_random.0046 #Interrupted
-		150 = bno_random.0047 #Gangbang
-		80 = bno_random.0048 #wife sugest chastity
-		40 = bno_bull.0001 #bull pov, liege's wife
-		100 = bno_bull.0002 #bbc ruler anti stress event
-		100 = bno_bull.0003 #bbc ruler fix white slut eating habits event
-		150 = bno_bull.0004 #black ruler fucks non blacked courtier
-		50 = bno_bull.0005 #willing pretty white woman appears to black ruler
-		50 = bno_bull.0006 #black ruler puts male courtier in chastity cage
-		200 = bno_bull.0007 #bull gets strong trait
-		100 = bno_bull.0008 #bull pimps out lowborn whitegirl
-		100 = bno_bull.0009 #bull ruler pimps out noble whitegirl
-		100 = bno_bull.0010 #bull collects money from liege's wife
-		100 = bno_bull.0012 #bull learns blacked female's and her spouse's secrets
-		1000 = bno_bull.0013 #bull further blacks wife
-		120 = bno_bull.0014 #bbc ruler works on foreign ruler's pretty wife over a few days, 3 options : fuck, love, marry
-		100 = bno_bull.0015 #bbc ruler targets non-bbc fellow vassal's wife, for woman with no blacked xp
-		1000 = bno_bull.0016 # wife become bimbo
-		#1000 = bno_bull.0017 # you become bimbo
-		150 = bno_cuck.0001 #cuck overhears wife(?) getting blacked
-		150 = bno_cuck.0002 #cuck works, gets money
-		100 = bno_cuck.0003 #cuck paying bbc for wifes "damages" to bbc camp
-		40 = bno_cuck.0004 #unaware cuck ruler lets his wife deal with troop moral
-		100 = bno_cuck.0005 #Cuck is convinced to be trusting
-		100 = bno_cuck.0006 #Just cuck bonds with bbc, gives court position
-		100 = bno_cuck.0007 #BBC makes brave cuck a coward
-		80 = bno_cuck.0008 #advanced cuck gives hook to bbc vassal or wife gets fucked
-		80 = bno_cuck.0009 #Cuck player bonding with cuck son
-		100 = bno_cuck.0010 #BBC Spymaster "helps" cuck
-		150 = bno_cuck.0011 #BBC vassal explains he will take cuck's real white daughter as future wife
-		100 = bno_cuck.0012 #Wife suggests a BBC camp
-		130 = bno_cuck.0013 #wife suggests a new diarch
-		150 = bno_cuck.0014 #A Cock bigger than yours
-		100 = bno_war.0001 #bbc war event, will insta win any offensive war against defender w/blacked wife
-		100 = bno_war.0002 #bbc war defender event. if defending against non bbc religion enemy, can get holy_warrior trait, and become bbc if for some reason you aren't currently. All choices give 500 bbc_maa troops
 	}
 }
 
