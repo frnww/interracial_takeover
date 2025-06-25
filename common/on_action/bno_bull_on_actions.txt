@@ -1,6 +1,7 @@
-﻿random_yearly_playable_pulse = {
+﻿random_yearly_everyone_pulse = {
 	on_actions = {
 		bno_bull_yearly_initial_pulse
+		bno_bull_yearly_global_random_pulse
 	}
 }
 
@@ -21,7 +22,7 @@ bno_yearly_bull_pulse = {
 			value = 0
 			if = {
 				limit = { is_ai = yes }
-				add = 70
+				add = 90
 			}
 		}
 		25 = 0
@@ -40,5 +41,14 @@ bno_yearly_bull_pulse = {
 		120 = bno_bull.0014 #bbc ruler works on foreign ruler's pretty wife over a few days, 3 options : fuck, love, marry
 		100 = bno_bull.0015 #bbc ruler targets non-bbc fellow vassal's wife, for woman with no blacked xp
 		1000 = bno_bull.0016 # wife become bimbo
+	}
+}
+
+bno_bull_yearly_global_random_pulse = {
+	trigger = {
+		has_game_rule = bno_global_bbc_activities_yes
+	}
+	on_actions = {
+		bno_yearly_bull_pulse
 	}
 }

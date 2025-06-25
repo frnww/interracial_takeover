@@ -11,7 +11,7 @@ bno_quarterly_war_pulse = {
 			value = 0
 			if = {
 				limit = { is_ai = yes }
-				add = 70
+				add = 90
 			}
 		}
 		25 = 0

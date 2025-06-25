@@ -9,9 +9,16 @@ bno_events00 = {
 	decision_group_type = courtier
 	desc = bno_events00.desc
 	selection_tooltip = bno_events00_decision_tooltip
-	is_shown = {
+	trigger = {
 		is_ruler = yes
 		is_adult = yes
+		OR = {
+			is_ai = no
+			AND = {
+				is_ai = yes
+				has_game_rule = bno_decision_npc_yes
+			}
+		}
 	}
 	cooldown = {
 		months = 12
@@ -28,59 +35,106 @@ bno_events00 = {
 	}
 	ai_check_interval = 12
 	ai_potential = {
-		is_ruler = yes
-		is_adult = yes
+		any_held_title = {
+			tier >= tier_county
+		}
 	}
 	ai_will_do = {
-		base = 0
-		modifier = {
-			add = 1
-			trigger = {
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 25
+        base = 0
+        modifier = {
+            add = 25
+            trigger = {
+                has_trait_xp = {
+                    trait = bno_lifestyle_whitegirl
+                    value >= 25
+                }
+            }
+        } #+25 cause she's horny
+        modifier = {
+            add = 50
+            trigger = {
+                has_trait_xp = {
+                    trait = bno_lifestyle_whitegirl
+                    value >= 75
 				}
 			}
-		}
-		modifier = {
-			add = 1
-			trigger = {
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 75
+        } #+50 cause she's horny
+        modifier = {
+            add = 20
+            trigger = {
+                number_of_knights < max_number_of_knights
+            }
+		} #+20 as there cheap knights
+        modifier = {
+            add = 100
+            trigger = {
+                has_trait_xp = {
+                    trait = bno_lifestyle_whitegirl
+                    value >= 50
+                number_of_knights < max_number_of_knights
 				}
-			}
-		}
+            }
+        } #+100, as there cheap knights and she's horny
+        modifier = {
+            factor = 5
+            trigger = {
+                geographical_region = world_europe
+            }
+        } #+5, as its the region the player is probaly looking to see corrupted
+        modifier = {
+            add = 10
+            trigger = {
+                has_trait = compassionate
+            }
+        } #+10 falls for sob story
+        modifier = {
+            add = 10
+            trigger = {
+                has_trait = generous
+            }
+        } #+10 falls for sob story
+        modifier = {
+            add = 25
+            trigger = {
+                has_trait = bno_cuckish
+            }
+        } #+25 he's wife is wispering in his ear
+        modifier = {
+            add = 50
+            trigger = {
+                has_trait = bno_cuck
+            }
+        } #+50 he knows what he's into
+        modifier = {
+            add = 75
+            trigger = {
+                has_trait = bno_beta
+            }
+        } #+75 he knows what he's into
+        modifier = {
+            add = 100
+            trigger = {
+                has_trait = bno_jos
+            }
+        } #+100 he knows what he's into
 		modifier = {
-			add = 2
-			trigger = {
-				number_of_knights < max_number_of_knights
-			}
-		}
-		#modifier = {
-			#	factor = 2
-			#	trigger = {
-				#		root.geolocagraphical_region = world_europe
-				#	}
-			#}
+            add = -10
+            trigger = {
+                has_trait = cynical
+            }
+        } #-10 not beliving sob story, helps cull number of AI inviting
 		modifier = {
-			add = 1
-			trigger = {
-				has_trait = compassionate
-			}
-		}
+            add = -10
+            trigger = {
+                has_trait = greedy
+            }
+        } #-10 not wanting to hand out gold, helps cull number of AI inviting
 		modifier = {
-			add = 1
-			trigger = {
-				has_trait = generous
-			}
-		}
-		modifier = {
-			add = 100
-			trigger = {
-				has_trait = bno_bbc
-			}
-		}
+            add = -10
+            trigger = {
+                has_trait = paranoid
+            }
+        } #-10 not trusting strangers, helps cull number of AI inviting
 	}
 }
 

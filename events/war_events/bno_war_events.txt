@@ -112,7 +112,7 @@ bno_war.0001 = {
 				modifier = bno_pathetic_cuck_husband
 				target = scope:defender
 			}
-			set_character_faith = faith:bbcs
+			convert_to_bbc_religion = yes
 		}
 	}
 	option = { #simply add betrayer to your court
@@ -224,7 +224,7 @@ bno_war.0002 = {
 				NOT = { has_faith = faith:bbcs }
 			}
 		}
-		set_character_faith = faith:bbcs
+		convert_to_bbc_religion = yes
 		spawn_army = {
 			men_at_arms = {
 				type = bno_african_warriors
@@ -246,7 +246,7 @@ bno_war.0002 = {
 				}
 			}
 		}
-		set_character_faith = faith:bbcs
+		convert_to_bbc_religion = yes
 		add_trait = holy_warrior
 		spawn_army = {
 			men_at_arms = {

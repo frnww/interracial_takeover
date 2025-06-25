@@ -59,7 +59,7 @@ bno_marriage.0001 = {
 			years = 15
 		}
 		scope:target1 = {
-			set_character_faith = faith:bbcs
+			convert_to_bbc_religion = yes
 			set_sexuality = heterosexual
 			add_opinion = {
 				modifier = taken_by_new_bull_master
@@ -210,7 +210,7 @@ bno_marriage.0002 = {
 			}
 		}
 		scope:target1 = {
-			set_character_faith = faith:bbcs
+			convert_to_bbc_religion = yes
 			set_sexuality = heterosexual
 			add_opinion = {
 				modifier = stolen_by_new_bull_master
@@ -366,7 +366,7 @@ bno_marriage.0004 = { #unmarried bbc looks to other realms for single woman
 			years = 15
 		}
 		scope:target1 = {
-			set_character_faith = faith:bbcs
+			convert_to_bbc_religion = yes
 			set_sexuality = heterosexual
 			add_opinion = {
 				modifier = taken_by_new_bull_master
@@ -495,7 +495,7 @@ bno_marriage.0005 = {
 			}
 		}
 		scope:target1 = {
-			set_character_faith = faith:bbcs
+			convert_to_bbc_religion = yes
 			set_sexuality = heterosexual
 			add_opinion = {
 				modifier = stolen_by_new_bull_master

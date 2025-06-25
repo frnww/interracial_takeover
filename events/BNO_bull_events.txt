@@ -683,7 +683,7 @@ bno_bull.0004 = {
 				primary_spouse = {
 					become_more_cuck_effect = yes
 				}
-				set_character_faith = faith:bbcs
+				convert_to_bbc_religion = yes
 			}
 		}
 	}
@@ -1456,7 +1456,7 @@ bno_bull.0013 = {
 				target = root
 			}
 			add_trait = lustful
-			set_character_faith = faith:bbcs
+			convert_to_bbc_religion = yes
 		}
 	}
 	option = {
@@ -1670,7 +1670,7 @@ bno_bull.1014 = { #follow up event, fuck and done
 				trait = bno_lifestyle_whitegirl
 				value = 4
 			}
-			set_character_faith = faith:bbcs
+			convert_to_bbc_religion = yes
 		}
 	}
 	option = {
@@ -1724,7 +1724,7 @@ bno_bull.2014 = { #follow up event, fuck and become lovers
 				trait = bno_lifestyle_whitegirl
 				value = 5
 			}
-			set_character_faith = faith:bbcs
+			convert_to_bbc_religion = yes
 		}
 	}
 	option = {
@@ -1778,7 +1778,7 @@ bno_bull.3014 = { #follow up event, fuck and steal as wife
 				modifier = bno_bull_fucks_me
 				target = root
 			}
-			set_character_faith = faith:bbcs
+			convert_to_bbc_religion = yes
 			add_trait_xp = {
 				trait = bno_lifestyle_whitegirl
 				value = 5

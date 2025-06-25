@@ -15,15 +15,15 @@
 	doctrine = doctrine_polygamy
 	doctrine = doctrine_divorce_allowed
 	doctrine = doctrine_bastardry_none
-	doctrine = doctrine_consanguinity_aunt_nephew_and_uncle_niece
+	doctrine = doctrine_consanguinity_unrestricted
 	
 	#Crimes
 	doctrine = doctrine_homosexuality_crime
 	doctrine = doctrine_adultery_men_accepted
 	doctrine = doctrine_adultery_women_accepted
 	doctrine = doctrine_kinslaying_close_kin_accepted
-	doctrine = doctrine_deviancy_accepted
-	doctrine = doctrine_witchcraft_accepted
+	doctrine = doctrine_deviancy_virtuous
+	doctrine = doctrine_witchcraft_virtuous
 	doctrine = doctrine_dick_small_bad_crime
 	
 	#Clerical Functions

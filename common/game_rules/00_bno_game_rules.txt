@@ -34,3 +34,54 @@ bno_body_modification = {
 		
 	}
 }
+
+bno_religion_allowed = {
+	categories = {
+		interaccial_takeover
+	}
+
+	default = bno_religion_yes
+
+	bno_religion_yes = {
+
+	}
+
+	bno_religion_no = {
+
+	}
+
+}
+
+bno_decision_npc = {
+	categories = {
+		interaccial_takeover
+	}
+
+	default = bno_decision_npc_yes
+
+	bno_decision_npc_yes = {
+
+	}
+
+	bno_decision_npc_no = {
+
+	}
+
+}
+
+bno_global_bbc_activities = {
+	categories = {
+		interaccial_takeover
+	}
+
+	default = bno_global_bbc_activities_yes
+
+	bno_global_bbc_activities_yes = {
+
+	}
+
+	bno_global_bbc_activities_no = {
+		
+	}
+
+}

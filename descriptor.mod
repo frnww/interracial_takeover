@@ -1,8 +1,8 @@
-version="0.1.3.3.9"
+version="1.1.2"
 tags={
 	"Culture"
 	"Religion"
 	"Events"
 }
-name="Interracial Takeover 2nd Edition"
-supported_version="1.14.*"
+name="Interracial Takeover 3rd Edition?"
+supported_version="1.16.*"

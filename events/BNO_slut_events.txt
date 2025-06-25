@@ -85,7 +85,7 @@ bno_slut.0001 = {
 		root = {
 			become_lover_with_bbc = yes
 			sex_with_bbc = yes
-			set_character_faith = faith:bbcs
+			convert_to_bbc_religion = yes
 			level_up_whitegirl_lifestyle = {
 				xp = 5
 			}
@@ -605,7 +605,7 @@ bno_slut.0004 = {
 		}
 		scope:whitegirl = {
 			sex_with_bbc = yes
-			set_character_faith = faith:bbcs
+			convert_to_bbc_religion = yes
 			if = {
 				limit = {
 					exists = scope:cuck
@@ -705,7 +705,7 @@ bno_slut.0005 = {
 			level_up_whitegirl_lifestyle = {
 				xp = 10
 			}
-			set_character_faith = faith:bbcs
+			convert_to_bbc_religion = yes
 		}
 	}
 	option = {
@@ -1459,7 +1459,7 @@ bno_slut.0013 = {
 			get_bbc_husband_scope = yes
 			sex_with_bbc = yes
 			add_trait = lustful
-			set_character_faith = faith:bbcs
+			convert_to_bbc_religion = yes
 		}
 	}
 	option = {
@@ -1683,7 +1683,7 @@ bno_slut.1014 = {
 			level_up_whitegirl_lifestyle = {
 				xp = 4
 			}
-			set_character_faith = faith:bbcs
+			convert_to_bbc_religion = yes
 		}
 	}
 	option = {
@@ -1734,7 +1734,7 @@ bno_slut.2014 = { #follow up event, fuck and become lovers
 			level_up_whitegirl_lifestyle = {
 				xp = 5
 			}
-			set_character_faith = faith:bbcs
+			convert_to_bbc_religion = yes
 			set_relation_lover = {
 				target = scope:bbc
 				reason = bbc_too_good
@@ -1786,7 +1786,7 @@ bno_slut.3014 = { #follow up event, fuck and steal as wife
 				modifier = bno_bull_fucks_me
 				target = scope:bbc
 			}
-			set_character_faith = faith:bbcs
+			convert_to_bbc_religion = yes
 			level_up_whitegirl_lifestyle = {
 				xp = 5
 			}

@@ -1,11 +1,13 @@
-﻿random_yearly_playable_pulse = {
-    on_actions = {
-        bno_slut_yearly_initial_pulse
-    }
+﻿random_yearly_everyone_pulse = {
+	on_actions = {
+		bno_slut_yearly_initial_pulse
+		bno_slut_yearly_global_random_pulse
+	}
 }
 
 bno_slut_yearly_initial_pulse = {
 	trigger = {
+		has_game_rule = bno_global_bbc_activities_no
 		is_ai = no
         is_elligible_partner = yes
 	}
@@ -23,7 +25,7 @@ bno_slut_yearly_random_pulse = {
 				limit = {
 					is_ai = yes
 				}
-				add = 70
+				add = 90
 			}
 		}
 		100 = bno_slut.0001 #Slut lays with BBC
@@ -39,5 +41,14 @@ bno_slut_yearly_random_pulse = {
 		100 = bno_slut.0012
 		100 = bno_slut.0013
 		100 = bno_slut.0014
+	}
+}
+
+bno_slut_yearly_global_random_pulse = {
+	trigger = {
+		has_game_rule = bno_global_bbc_activities_yes
+	}
+	on_actions = {
+		bno_slut_yearly_random_pulse
 	}
 }

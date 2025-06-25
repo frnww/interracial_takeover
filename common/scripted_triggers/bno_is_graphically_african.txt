@@ -33,7 +33,8 @@
 		has_culture = culture:serer
 		has_culture = culture:afar
 		has_culture = culture:somali
-		####
+		
+		#### DISABLED
 		#has_culture = culture:aari
 		#has_culture = culture:african_roman
 		#has_culture = culture:afro_roman

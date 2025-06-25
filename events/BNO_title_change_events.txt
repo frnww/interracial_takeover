@@ -525,7 +525,7 @@ bno_title_change.0005 = { #Wife takes cucks titles
 			remove_trait = strong
 			remove_trait = fecund
 			remove_trait = gluttonous
-			set_character_faith = faith:bbcs
+			convert_to_bbc_religion = yes
 			add_piety_level = 1
 			if = {
 				limit = { is_ruler = yes }

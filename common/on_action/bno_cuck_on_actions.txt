@@ -1,6 +1,7 @@
-﻿random_yearly_playable_pulse = {
+﻿random_yearly_everyone_pulse = {
 	on_actions = {
 		bno_cuck_yearly_initial_pulse
+		bno_cuck_yearly_global_random_pulse
 	}
 }
 
@@ -21,7 +22,7 @@ bno_yearly_cuck_pulse = {
 			value = 0
 			if = {
 				limit = { is_ai = yes }
-				add = 70
+				add = 90
 			}
 		}
 		25 = 0
@@ -39,5 +40,14 @@ bno_yearly_cuck_pulse = {
 		100 = bno_cuck.0012 #Wife suggests a BBC camp
 		130 = bno_cuck.0013 #wife suggests a new diarch
 		150 = bno_cuck.0014 #A Cock bigger than yours
+	}
+}
+
+bno_cuck_yearly_global_random_pulse = {
+	trigger = {
+		has_game_rule = bno_global_bbc_activities_yes
+	}
+	on_actions = {
+		bno_yearly_cuck_pulse
 	}
 }

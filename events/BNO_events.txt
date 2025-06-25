@@ -404,7 +404,7 @@ bbcconversion.0001 = {
 	}
 	option = {
 		name = bbcconversion.a
-		set_character_faith = faith:bbcs
+		convert_to_bbc_religion = yes
 		add_piety = medium_piety_loss
 	}
 }

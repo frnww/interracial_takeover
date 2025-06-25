@@ -42,6 +42,15 @@
 	}
 }
 
+convert_to_bbc_religion = {
+	if = {
+		limit = {
+			has_game_rule = bno_religion_yes
+		}
+		set_character_faith = faiths:bbcs
+	}
+}
+
 becoming_african = {
 	if = {
 		limit = {
