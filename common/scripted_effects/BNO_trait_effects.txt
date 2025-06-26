@@ -29,6 +29,12 @@ become_less_slut = {
 	}
 }
 
+blind_and_castrate_actor_effect = {
+	add_trait = blind
+	add_trait = bno_castrated
+	add_trait = eunuch_1
+}
+
 become_more_chastity = {
 	change_trait_rank = {
 		trait = bno_chastity

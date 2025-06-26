@@ -55,9 +55,8 @@ bno_chastity_interaction = {
 				flag = is_being_tortured
 				months = 6 # Players in MP can keep the event window open...
 			}
+			blind_and_castrate_actor_effect = yes #Stress & dread
 		}
-		
-		blind_and_castrate_actor_effect = yes #Stress & dread
 		
 		show_as_tooltip = {
 			scope:recipient = {
@@ -81,7 +80,10 @@ bno_chastity_interaction = {
 				}
 			}
 		}
-		add_courtier = scope:recipient
+		
+		scope:actor = {
+			add_courtier = scope:recipient
+		}
 	}
 	
 	auto_accept = yes
@@ -188,9 +190,8 @@ bno_castration_interaction = {
 				flag = is_being_tortured
 				months = 6 # Players in MP can keep the event window open...
 			}
+			blind_and_castrate_actor_effect = yes #Stress & dread
 		}
-		
-		blind_and_castrate_actor_effect = yes #Stress & dread
 		
 		show_as_tooltip = {
 			scope:recipient = {
@@ -215,7 +216,9 @@ bno_castration_interaction = {
 				}
 			}
 		}
-		add_courtier = scope:recipient
+		scope:actor = {
+			add_courtier = scope:recipient
+		}
 	}
 	
 	auto_accept = yes

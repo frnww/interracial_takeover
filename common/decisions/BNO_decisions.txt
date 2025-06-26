@@ -9,7 +9,7 @@ bno_events00 = {
 	decision_group_type = courtier
 	desc = bno_events00.desc
 	selection_tooltip = bno_events00_decision_tooltip
-	trigger = {
+	is_shown = {
 		is_ruler = yes
 		is_adult = yes
 		OR = { 
@@ -68,14 +68,16 @@ bno_events00 = {
                 has_trait_xp = {
                     trait = bno_lifestyle_whitegirl
                     value >= 50
-                number_of_knights < max_number_of_knights
 				}
+                number_of_knights < max_number_of_knights
             }
         } #+100, as there cheap knights and she's horny
         modifier = {
             factor = 5
             trigger = {
-                geographical_region = world_europe
+				location = {
+					geographical_region = world_europe
+				}
             }
         } #+5, as its the region the player is probaly looking to see corrupted
         modifier = {

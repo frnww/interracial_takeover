@@ -47,7 +47,7 @@ convert_to_bbc_religion = {
 		limit = {
 			has_game_rule = bno_religion_yes
 		}
-		set_character_faith = faiths:bbcs
+		set_character_faith = faith:bbcs
 	}
 }
 
@@ -221,7 +221,6 @@ create_bbc = {
 		save_scope_as = $scope_name$
 		location = root.location
 		
-		add_character_flag = bno_originally_black
 		dynasty = none
 		trait = bno_bbc
 		trait = bno_full_black
@@ -240,6 +239,7 @@ create_bbc = {
 		}
 		after_creation = {
 			set_sexuality = heterosexual
+			add_character_flag = bno_originally_black
 		}
 	}
 }

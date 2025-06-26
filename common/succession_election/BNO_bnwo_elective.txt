@@ -24,13 +24,8 @@ bnwo_elective = {
 			add = 4
 			highest_held_title_tier = 3
 		}
-		modifier = { # Count
-			desc = tooltip_feudal_vote_strength_count_tier
-			add = 2
-			highest_held_title_tier = 2
-		}
 		modifier = { # barony
-			desc = tooltip_feudal_vote_strength_count_tier
+			desc = tooltip_feudal_vote_strength_is_diarch
 			add = 1
 			highest_held_title_tier = tier_barony
 		}

@@ -115,10 +115,18 @@ diarch_loyalty_score_standard_values_general_traits_value = {
 	## --- BBC.
 	else_if = {
 		limit = {
-			liege = { is_female = yes}
-			has_trait = bno_bbc }
+			liege = { 
+				OR = {
+					has_trait = bno_whiteboi
+					NOT = {
+						has_trait = bno_whitegirl
+					}
+				}
+			}
+			has_trait = bno_bbc 
+		}
 		add = {
-			desc = BBC
+			desc = bbc_diarch
 			value = diarch_loyalty_score_add_omega_loss
 		}
 	}
@@ -126,10 +134,16 @@ diarch_loyalty_score_standard_values_general_traits_value = {
 	## +++ BBC.
 	else_if = {
 		limit = {
-			liege = { has_trait = bno_bbc}
-			has_trait = bno_bbc }
+			liege = { 
+				OR = {
+					has_trait = bno_bbc
+					has_trait = bno_whitegirl
+				}
+			}
+			has_trait = bno_bbc 
+		}
 		add = {
-			desc = BBC
+			desc = bbc_diarch
 			value = diarch_loyalty_score_add_omega_gain
 		}
 	}
