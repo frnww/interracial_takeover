@@ -24,7 +24,7 @@
 	ignore_effect = change_title_holder
 	
 	on_declaration = {
-		on_declared_war = yes
+		on_declared_war = scope:recipient
 	}
 	
 	cost = {

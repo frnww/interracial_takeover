@@ -1,15 +1,12 @@
 ﻿ep3_yearly_events_laamps = { # EP3 - Laamp Events
-	#	on_actions = {
-		#		bno_ep3_yearly_events_laamps
-		#	}
-	
-	random_events = {
-		500 = bno_ep3_laamp_flavour.0001
+	on_actions = {
+		bno_ep3_yearly_events_laamps
 	}
 }
 
 bno_ep3_yearly_events_laamps = {
 	trigger = {
+		has_game_rule = bno_mod_status_on
 		has_ep3_dlc_trigger = yes
 		is_landless_adventurer = yes
 		is_imprisoned = no
@@ -22,7 +19,6 @@ bno_ep3_yearly_events_laamps = {
 			}
 		}
 	}
-	
 	random_events = {
 		25 = bno_ep3_laamp_flavour.0001
 	}

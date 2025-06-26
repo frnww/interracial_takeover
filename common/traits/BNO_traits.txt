@@ -362,7 +362,7 @@ bno_curious = {
 	random_creation = .05
 	
 	opposite_opinion = 20
-	seduce_scheme_resistance_add = -20
+	seduce_scheme_phase_duration_add = -20
 	ignore_negative_culture_opinion = yes
 	ignore_negative_opinion_of_culture = yes
 	good = yes
@@ -404,7 +404,7 @@ bno_blacked = {
 	monthly_intrigue_lifestyle_xp_gain_mult = 0.2
 	dread_baseline_add = -5
 	dread_decay_mult = 0.2
-	seduce_scheme_resistance_add = -20
+	seduce_scheme_phase_duration_add = -20
 	ignore_negative_culture_opinion = yes
 	ignore_negative_opinion_of_culture = yes
 	good = yes
@@ -445,7 +445,7 @@ bno_snowbunny = {
 	monthly_intrigue_lifestyle_xp_gain_mult = 0.2
 	dread_baseline_add = -10
 	dread_decay_mult = 0.3
-	seduce_scheme_resistance_add = -20
+	seduce_scheme_phase_duration_add = -20
 	ignore_negative_culture_opinion = yes
 	ignore_negative_opinion_of_culture = yes
 	good = yes
@@ -487,7 +487,7 @@ bno_qos = {
 	monthly_intrigue_lifestyle_xp_gain_mult = 0.2
 	dread_baseline_add = -15
 	dread_decay_mult = 0.5
-	seduce_scheme_resistance_add = -20
+	seduce_scheme_phase_duration_add = -20
 	ignore_negative_culture_opinion = yes
 	ignore_negative_opinion_of_culture = yes
 	good = yes
@@ -532,7 +532,7 @@ bno_mindless_bbc_slut = { #need to make optional, and instead acquirable through
 	fertility = .5
 	dread_baseline_add = -10
 	dread_decay_mult = 1.0
-	seduce_scheme_resistance_add = -20
+	seduce_scheme_phase_duration_add = -20
 	ignore_negative_culture_opinion = yes
 	ignore_negative_opinion_of_culture = yes
 	good = yes
@@ -597,6 +597,8 @@ bno_barely_mixed = {
 	
 }
 
+#shown_in_ruler_designer
+
 bno_lifestyle_whitegirl = {
 	category = lifestyle
 	group = bno_whitegirl
@@ -624,7 +626,7 @@ bno_lifestyle_whitegirl = {
 	track = {
 		0 = {
 			opposite_opinion = 20
-			seduce_scheme_resistance_add = -20
+			seduce_scheme_phase_duration_add = -20
 			
 		}
 		25 = {
@@ -637,7 +639,7 @@ bno_lifestyle_whitegirl = {
 			monthly_intrigue_lifestyle_xp_gain_mult = 0.1
 			dread_baseline_add = -5
 			dread_decay_mult = 0.2
-			seduce_scheme_resistance_add = -5
+			seduce_scheme_phase_duration_add = -5
 			stress_gain_mult = -0.05
 			stress_loss_mult = 0.05
 		}
@@ -650,7 +652,7 @@ bno_lifestyle_whitegirl = {
 			intrigue = 1
 			monthly_intrigue_lifestyle_xp_gain_mult = 0.1
 			dread_baseline_add = -10
-			seduce_scheme_resistance_add = -5
+			seduce_scheme_phase_duration_add = -5
 			stress_gain_mult = -0.1
 			stress_loss_mult = 0.1
 		}
@@ -664,7 +666,7 @@ bno_lifestyle_whitegirl = {
 			fertility = 0.25
 			dread_baseline_add = -10
 			dread_decay_mult = 0.3
-			seduce_scheme_resistance_add = -10
+			seduce_scheme_phase_duration_add = -10
 			stress_gain_mult = -0.15
 			stress_loss_mult = 0.15
 		}
@@ -680,7 +682,7 @@ bno_lifestyle_whitegirl = {
 			fertility = .25
 			dread_baseline_add = -10
 			dread_decay_mult = 0.5
-			seduce_scheme_resistance_add = -20
+			seduce_scheme_phase_duration_add = -20
 			stress_gain_mult = -0.2
 			stress_loss_mult = 0.2
 		}

@@ -215,6 +215,73 @@ pay_prestige = {
 	}
 }
 
+create_bbc = {
+	create_character = {
+		gender = male
+		save_scope_as = $scope_name$
+		location = root.location
+		
+		add_character_flag = bno_originally_black
+		dynasty = none
+		trait = bno_bbc
+		trait = bno_full_black
+		trait = dick_big_good_3
+		trait = lustful
+		random_traits = yes
+		faith = faith:bbcs
+		culture = culture:bnoc
+		prowess = {
+			min_template_decent_skill
+			max_template_decent_skill
+		}
+		martial = {
+			min_template_decent_skill
+			max_template_decent_skill
+		}
+		after_creation = {
+			set_sexuality = heterosexual
+		}
+	}
+}
+
+remove_bad_traits = {
+	remove_trait = scaly
+	remove_trait = clubfooted
+	remove_trait = dwarf
+	remove_trait = hunchbacked
+	remove_trait = spindly
+	remove_trait = albino
+	remove_trait = infertile
+	remove_trait = wheezing
+	remove_trait = bleeder
+	remove_trait = depressed_genetic
+	remove_trait = depressed_1
+	remove_trait = lunatic_genetic
+	remove_trait = lunatic_1
+	remove_trait = possessed_genetic
+	remove_trait = possessed_1
+	remove_trait = lisping
+	remove_trait = stuttering
+	remove_trait = beauty_bad_1
+	remove_trait = beauty_bad_2
+	remove_trait = beauty_bad_3
+	remove_trait = intellect_bad_1
+	remove_trait = intellect_bad_2
+	remove_trait = intellect_bad_3
+	remove_trait = physique_bad_1
+	remove_trait = physique_bad_2
+	remove_trait = physique_bad_3
+	
+	add_character_flag = {
+		flag = no_headgear
+		years = 1
+	}
+	
+	dynasty = {
+		add_dynasty_prestige = 2000
+	}
+}
+
 prostitution = {
 	scope:whore = {
 		if = {

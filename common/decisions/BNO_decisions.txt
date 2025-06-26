@@ -12,12 +12,9 @@ bno_events00 = {
 	trigger = {
 		is_ruler = yes
 		is_adult = yes
-		OR = {
-			is_ai = no
-			AND = {
-				is_ai = yes
-				has_game_rule = bno_decision_npc_yes
-			}
+		OR = { 
+			is_ai = no 
+			has_game_rule = bno_decision_npc_yes 
 		}
 	}
 	cooldown = {

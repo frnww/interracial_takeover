@@ -21,7 +21,7 @@
 	doctrine = doctrine_homosexuality_crime
 	doctrine = doctrine_adultery_men_accepted
 	doctrine = doctrine_adultery_women_accepted
-	doctrine = doctrine_kinslaying_close_kin_accepted
+	doctrine = doctrine_kinslaying_accepted
 	doctrine = doctrine_deviancy_virtuous
 	doctrine = doctrine_witchcraft_virtuous
 	doctrine = doctrine_dick_small_bad_crime
@@ -64,7 +64,7 @@
 		{ name = "bnoho5" }
 	}
 	
-	holy_order_maa = { cataphracts } # Islamic MAA
+	holy_order_maa = { cataphract } # Islamic MAA
 	
 	localization = {
 		#HighGod

@@ -19,6 +19,23 @@
 	}
 }
 
+bno_mod_status = {
+	categories = {
+		interaccial_takeover
+	}
+
+	default = bno_mod_status_on
+
+	bno_mod_status_on = {
+
+	}
+
+	bno_mod_status_off = {
+		
+	}
+
+}
+
 bno_body_modification = {
 	categories = {
 		interaccial_takeover
@@ -81,6 +98,23 @@ bno_global_bbc_activities = {
 	}
 
 	bno_global_bbc_activities_no = {
+		
+	}
+
+}
+
+bno_seeding = {
+	categories = {
+		interaccial_takeover
+	}
+
+	default = bno_seeding_yes
+
+	bno_seeding_yes = {
+
+	}
+
+	bno_seeding_no = {
 		
 	}
 

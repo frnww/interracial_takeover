@@ -6,6 +6,9 @@
 }
 
 bno_king_title_gain = {
+	trigger = {
+		has_game_rule = bno_mod_status_on
+	}
 	effect = {
 		if = {
 			limit = {
@@ -17,6 +20,9 @@ bno_king_title_gain = {
 }
 
 bno_emp_title_gain = {
+	trigger = {
+		has_game_rule = bno_mod_status_on
+	}
 	effect = {
 		if = {
 			limit = {

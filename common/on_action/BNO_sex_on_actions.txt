@@ -47,6 +47,9 @@ carn_on_sex = {
 }
 
 bno_on_sex = {
+	trigger = {
+		has_game_rule = bno_mod_status_on
+	}
 	effect = {
 		if = {
 			limit = {

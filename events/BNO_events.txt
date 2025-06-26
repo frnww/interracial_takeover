@@ -25,189 +25,24 @@ bno_events.0001 = {
 		animation = personality_content
 	}
 	immediate = {
-		create_character = {
-			gender = male
-			save_scope_as = target1
-			location = root.location
-			
-			dynasty = none
-			trait = bno_bbc
-			trait = bno_full_black
-			trait = dick_big_good_3
-			trait = lustful
-			random_traits = yes
-			faith = faith:bbcs
-			culture = culture:bnoc
-			prowess = {
-				min_template_decent_skill
-				max_template_decent_skill
-			}
-			martial = {
-				min_template_decent_skill
-				max_template_decent_skill
-			}
-			after_creation = {
-				set_sexuality = heterosexual
-			}
+		create_bbc = {
+			scope_name = target1
 		}
-		create_character = {
-			gender = male
-			save_scope_as = target2
-			location = root.location
-			
-			dynasty = none
-			trait = bno_bbc
-			trait = bno_full_black
-			trait = dick_big_good_3
-			trait = lustful
-			random_traits = yes
-			faith = faith:bbcs
-			culture = culture:bnoc
-			prowess = {
-				min_template_decent_skill
-				max_template_decent_skill
-			}
-			stewardship = {
-				min_template_decent_skill
-				max_template_decent_skill
-			}
-			after_creation = {
-				set_sexuality = heterosexual
-			}
+		create_bbc = {
+			scope_name = target2
 		}
-		create_character = {
-			gender = male
-			save_scope_as = target3
-			location = root.location
-			
-			dynasty = none
-			trait = bno_bbc
-			trait = bno_full_black
-			trait = dick_big_good_3
-			trait = lustful
-			random_traits = yes
-			faith = faith:bbcs
-			culture = culture:bnoc
-			prowess = {
-				min_template_decent_skill
-				max_template_decent_skill
-			}
-			intrigue = {
-				min_template_decent_skill
-				max_template_decent_skill
-			}
-			after_creation = {
-				set_sexuality = heterosexual
-			}
+		create_bbc = {
+			scope_name = target3
 		}
 		hidden_effect = {
 			scope:target1 = {
-				remove_trait = scaly
-				remove_trait = clubfooted
-				remove_trait = dwarf
-				remove_trait = hunchbacked
-				remove_trait = spindly
-				remove_trait = albino
-				remove_trait = infertile
-				remove_trait = wheezing
-				remove_trait = bleeder
-				remove_trait = depressed_genetic
-				remove_trait = depressed_1
-				remove_trait = lunatic_genetic
-				remove_trait = lunatic_1
-				remove_trait = possessed_genetic
-				remove_trait = possessed_1
-				remove_trait = lisping
-				remove_trait = stuttering
-				remove_trait = beauty_bad_1
-				remove_trait = beauty_bad_2
-				remove_trait = beauty_bad_3
-				remove_trait = intellect_bad_1
-				remove_trait = intellect_bad_2
-				remove_trait = intellect_bad_3
-				remove_trait = physique_bad_1
-				remove_trait = physique_bad_2
-				remove_trait = physique_bad_3
-				
-				add_character_flag = {
-					flag = no_headgear
-					years = 1
-				}
-				dynasty = {
-					add_dynasty_prestige = 2000
-				}
+				remove_bad_traits = yes
 			}
 			scope:target2 = {
-				remove_trait = scaly
-				remove_trait = clubfooted
-				remove_trait = dwarf
-				remove_trait = hunchbacked
-				remove_trait = spindly
-				remove_trait = albino
-				remove_trait = infertile
-				remove_trait = wheezing
-				remove_trait = bleeder
-				remove_trait = depressed_genetic
-				remove_trait = depressed_1
-				remove_trait = lunatic_genetic
-				remove_trait = lunatic_1
-				remove_trait = possessed_genetic
-				remove_trait = possessed_1
-				remove_trait = lisping
-				remove_trait = stuttering
-				remove_trait = beauty_bad_1
-				remove_trait = beauty_bad_2
-				remove_trait = beauty_bad_3
-				remove_trait = intellect_bad_1
-				remove_trait = intellect_bad_2
-				remove_trait = intellect_bad_3
-				remove_trait = physique_bad_1
-				remove_trait = physique_bad_2
-				remove_trait = physique_bad_3
-				
-				add_character_flag = {
-					flag = no_headgear
-					years = 1
-				}
-				dynasty = {
-					add_dynasty_prestige = 2000
-				}
+				remove_bad_traits = yes
 			}
 			scope:target3 = {
-				remove_trait = scaly
-				remove_trait = clubfooted
-				remove_trait = dwarf
-				remove_trait = hunchbacked
-				remove_trait = spindly
-				remove_trait = albino
-				remove_trait = infertile
-				remove_trait = wheezing
-				remove_trait = bleeder
-				remove_trait = depressed_genetic
-				remove_trait = depressed_1
-				remove_trait = lunatic_genetic
-				remove_trait = lunatic_1
-				remove_trait = possessed_genetic
-				remove_trait = possessed_1
-				remove_trait = lisping
-				remove_trait = stuttering
-				remove_trait = beauty_bad_1
-				remove_trait = beauty_bad_2
-				remove_trait = beauty_bad_3
-				remove_trait = intellect_bad_1
-				remove_trait = intellect_bad_2
-				remove_trait = intellect_bad_3
-				remove_trait = physique_bad_1
-				remove_trait = physique_bad_2
-				remove_trait = physique_bad_3
-				
-				add_character_flag = {
-					flag = no_headgear
-					years = 1
-				}
-				dynasty = {
-					add_dynasty_prestige = 2000
-				}
+				remove_bad_traits = yes
 			}
 		}
 	}
@@ -290,13 +125,11 @@ bno_events.0002 = {
 	}
 	
 	trigger = {
-		root = {
-			is_female = yes
-			primary_spouse = {
-				is_male = yes
-				has_trait = bno_bbc
-				has_any_nickname = no
-			}
+		is_female = yes
+		primary_spouse = {
+			is_male = yes
+			has_trait = bno_bbc
+			has_any_nickname = no
 		}
 	}
 	
@@ -340,17 +173,15 @@ bno_events.0003 = {
 	}
 	
 	trigger = {
-		root = {
-			is_female = yes
-			primary_spouse = {
-				is_male = yes
-				has_trait = bno_bbc
-				OR = {
-					has_any_nickname = no
-					has_nickname = nick_bk
-				}
+		is_female = yes
+		primary_spouse = {
+			is_male = yes
+			has_trait = bno_bbc
+			OR = {
+				has_any_nickname = no
+				has_nickname = nick_bk
 			}
-		}
+		}	
 	}
 	
 	immediate = {
