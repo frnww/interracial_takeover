@@ -278,7 +278,7 @@ bno_camp_leader = {
 
 bno_bbc = {
 	opposites = {
-		bno_lifestyle_whitegirl
+		bno_whitegirl
 		bno_whiteboi
 		bno_chastity
 	}
@@ -350,42 +350,71 @@ bno_bbc = {
 #WHITEGIRL TRAITS
 
 bno_curious = {
+	category = lifestyle
+
+	#Validation
+	valid_sex = female
+
+	#Special Flags
+	physical = yes
+	genetic = yes
+	good = yes
+	child_inheritance_sex = female
+	shown_in_ruler_designer = yes
+
+	#Trait Generation
+	birth = 5
+	random_creation = 5
+	
+	#Special Opinion
+	opposite_opinion = 20
+	same_opinion = 10
+	same_opinion_if_same_faith = 20
+
+	#Trait Relation
+	compatibility = {
+		bno_bbc = 20
+		bno_cuckish = -10
+		bno_cuck = -20
+		bno_beta = -30
+		bno_jos = -40
+		bno_caged = -50
+		bno_castrated = -100
+	}
 	opposites = {
 		bno_bbc
 	}
-	group = bno_whitegirl
+
+	#Groups
 	level = 1
-	
-	inherit_chance = 10 #need to check if it needs to be fraction or not
-	child_inheritance_sex = female
-	birth = .10
-	random_creation = .05
-	
-	opposite_opinion = 20
-	seduce_scheme_phase_duration_add = -20
-	ignore_negative_culture_opinion = yes
-	ignore_negative_opinion_of_culture = yes
-	good = yes
-	genetic = yes
-	
-	ai_boldness = low_negative_ai_value
-	ai_sociability = low_positive_ai_value
-	
+	group = bno_whitegirl
+
+	#Misc
 	ruler_designer_cost = 10
-	
-	valid_sex = female
-	
-	desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					NOT = { exists = this }
-				}
-				desc = trait_bno_curious
-			}
-			desc = trait_bno_curious_desc
+
+	#Tracks
+	track = {
+		50 = {
+			general_opinion = 5
+			seduce_scheme_phase_duration_add = -5
+			prowess = -1
+			knight_limit = 1
+		}
+		100 = {
+			general_opinion = 5
+			seduce_scheme_phase_duration_add = -5
+			prowess = -1
+			knight_limit = 1
 		}
 	}
+	
+	#Modifiers	
+	ignore_negative_culture_opinion = yes
+	ignore_negative_opinion_of_culture = yes
+	
+	#AI
+	ai_boldness = low_negative_ai_value
+	ai_sociability = low_positive_ai_value
 }
 
 bno_blacked = {
@@ -412,21 +441,7 @@ bno_blacked = {
 	ai_boldness = low_negative_ai_value
 	ai_sociability = low_positive_ai_value
 	
-	ruler_designer_cost = 20
-	
 	valid_sex = female
-	
-	desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					NOT = { exists = this }
-				}
-				desc = trait_bno_blacked
-			}
-			desc = trait_bno_blacked_desc
-		}
-	}
 }
 
 bno_snowbunny = {
@@ -456,18 +471,6 @@ bno_snowbunny = {
 	ruler_designer_cost = 40
 	
 	valid_sex = female
-	
-	desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					NOT = { exists = this }
-				}
-				desc = trait_bno_snowbunny
-			}
-			desc = trait_bno_snowbunny_desc
-		}
-	}
 }
 
 bno_qos = {
@@ -500,18 +503,6 @@ bno_qos = {
 	valid_sex = female
 	#flag = can_not_marry
 	flag = carn_no_consequences_for_extramarital_sex_with_others
-	
-	desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					NOT = { exists = this }
-				}
-				desc = trait_bno_qos
-			}
-			desc = trait_bno_qos_desc
-		}
-	}
 }
 
 bno_mindless_bbc_slut = { #need to make optional, and instead acquirable through an event
@@ -547,18 +538,6 @@ bno_mindless_bbc_slut = { #need to make optional, and instead acquirable through
 	flag = carn_no_consequences_for_extramarital_sex_with_others
 	divorce_allowed = no
 	disables_combat_leadership = yes
-	
-	desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					NOT = { exists = this }
-				}
-				desc = trait_bno_mindless_bbc_slut
-			}
-			desc = trait_bno_mindless_bbc_slut_desc
-		}
-	}
 }
 
 bno_full_black = {
@@ -607,6 +586,8 @@ bno_lifestyle_whitegirl = {
 	opposites = {
 		bno_bbc
 	}
+
+
 	
 	good = yes
 	
