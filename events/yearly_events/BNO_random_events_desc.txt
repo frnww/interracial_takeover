@@ -5667,25 +5667,23 @@ bno_random.0032 = {
 	cooldown = { months = 16 }
 	
 	trigger = {
-		root = {
-			is_female = yes
+		is_female = yes
+		is_adult = yes
+		has_trait = bno_lifestyle_whitegirl
+		AND = {
+			has_trait_xp = {
+				trait = bno_lifestyle_whitegirl
+				value >= 50
+			}
+			has_trait_xp = {
+				trait = bno_lifestyle_whitegirl
+				value < 75
+			}
+		}
+		any_courtier_or_guest = {
+			has_trait = bno_bbc
 			is_adult = yes
-			has_trait = bno_lifestyle_whitegirl
-			AND = {
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 50
-				}
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value < 75
-				}
-			}
-			any_courtier_or_guest = {
-				has_trait = bno_bbc
-				is_adult = yes
-				is_ai = yes
-			}
+			is_ai = yes
 		}
 	}
 	
@@ -5711,21 +5709,6 @@ bno_random.0032 = {
 		
 		trigger_event = bno_random.1032
 	}
-	
-	#	option = { #use me as you wish... as long as noone's watching
-		#		name = bno_random_0032.b
-		#
-		#		carn_had_sex_with_effect = {
-			#			CHARACTER_1 = root
-			#			CHARACTER_2 = scope:target1
-			#			C1_PREGNANCY_CHANCE = pregnancy_chance
-			#			C2_PREGNANCY_CHANCE = pregnancy_chance
-			#			STRESS_EFFECTS = scope:carn_sex_stress_effects
-			#			DRAMA = scope:carn_sex_drama
-			#		}
-		#
-		#		trigger_event = bno_random.2032
-		#	}
 	
 	option = { #it was an accident! I dont know how i got here!
 		name = bno_random_0032.c
@@ -6064,7 +6047,7 @@ bno_random.0034 = {
 	option = { #anal
 		name = bno_random_0034.b
 		
-		carn_had_sex_with_effect = {
+		carn_had_sex_with_effect_v2 = {
 			PARTNER = scope:target1
 			carn_sex_scene_no_pregnancy_effect = yes
 		}
@@ -7198,12 +7181,6 @@ bno_random.0041 = {
 			save_scope_as = target2
 		}
 		primary_spouse = {
-			limit = {
-				is_adult = yes
-				is_female = yes
-				is_ruler = no
-				is_ai = yes
-			}
 			save_scope_as = target1
 		}
 		hidden_effect = {
@@ -7216,8 +7193,8 @@ bno_random.0041 = {
 			}
 		}
 		add_character_modifier = {
-			name = emasculated
-			duration = 12
+			modifier = bno_emasculated
+			months = 12
 		}
 	}
 	option = {
@@ -7225,7 +7202,7 @@ bno_random.0041 = {
 		imprison = {
 			target = scope:target2
 		}
-		stress_impact = major_stress_impact_gain
+		add_stress = major_stress_impact_gain
 	}
 }
 
@@ -7271,7 +7248,7 @@ bno_random.0042 = {
 		any_courtier_or_guest = {
 			is_ai_not_married_blackbull = yes
 		}
-		any_spouse = {
+		primary_spouse = {
 			is_ai_curious = yes
 		}
 	}
@@ -7283,19 +7260,14 @@ bno_random.0042 = {
 			save_scope_as = target1
 		}
 		primary_spouse = {
-			limit = {
-				is_ai_curious = yes
-			}
 			save_scope_as = target2
 		}
-		carn_had_sex_with_effect = {
-			CHARACTER_1 = scope:target2
-			CHARACTER_2 = scope:target1
-			C1_PREGNANCY_CHANCE = pregnancy_chance
-			C2_PREGNANCY_CHANCE = pregnancy_chance
-			STRESS_EFFECTS = scope:carn_sex_stress_effects
-			DRAMA = scope:carn_sex_drama
+		scope:target1 = {
+			carn_had_sex_with_effect_v2 = {
+				PARTNER = scope:target2
+			}
 		}
+		
 		scope:target1 = {
 			hidden_effect = {
 				set_relation_friend = {
@@ -7460,7 +7432,7 @@ bno_random.1042 = {
 		}
 	}
 	immediate = {
-		primary_spouse = {
+		random_spouse = {
 			limit = {
 				is_adult = yes
 				is_female = yes
@@ -7470,8 +7442,8 @@ bno_random.1042 = {
 			save_scope_as = target1
 		}
 		add_character_modifier = {
-			name = emasculated
-			duration = 12
+			modifier = bno_emasculated
+			months = 12
 		}
 	}
 	
@@ -7584,13 +7556,10 @@ bno_random.0043 = {
 			save_scope_as = target2
 		}
 		
-		carn_had_sex_with_effect = {
-			CHARACTER_1 = scope:target2
-			CHARACTER_2 = scope:target1
-			C1_PREGNANCY_CHANCE = pregnancy_chance
-			C2_PREGNANCY_CHANCE = pregnancy_chance
-			STRESS_EFFECTS = scope:carn_sex_stress_effects
-			DRAMA = scope:carn_sex_drama
+		scope:target1 = {
+			carn_had_sex_with_effect_v2 = {
+				PARTNER = scope:target2
+			}
 		}
 		
 		scope:target2 = {
@@ -7890,13 +7859,10 @@ bno_random.1044 = {
 			}
 			save_scope_as = target2
 		}
-		carn_had_sex_with_effect = {
-			CHARACTER_1 = scope:target2
-			CHARACTER_2 = scope:target1
-			C1_PREGNANCY_CHANCE = pregnancy_chance
-			C2_PREGNANCY_CHANCE = pregnancy_chance
-			STRESS_EFFECTS = scope:carn_sex_stress_effects
-			DRAMA = scope:carn_sex_drama
+		scope:target1 = {
+			carn_had_sex_with_effect_v2 = {
+				PARTNER = scope:target2
+			}
 		}
 		scope:target1 = {
 			hidden_effect = {
@@ -7910,7 +7876,7 @@ bno_random.1044 = {
 		scope:target2 = {
 			hidden_effect = {
 				stress_impact = {
-					bno_lifestyle_whitegirl = huge_stress_impact_loss
+					bno_lifestyle_whitegirl = massive_stress_impact_loss
 				}
 			}
 		}
@@ -7992,11 +7958,9 @@ bno_random.0045 = {
 	cooldown = { months = 18 }
 	
 	trigger = {
-		root = {
-			is_male = yes
-			is_adult = yes
-			has_trait = bno_whiteboi
-		}
+		is_male = yes
+		is_adult = yes
+		has_trait = bno_whiteboi
 		any_courtier_or_guest = {
 			has_trait = bno_bbc
 			is_adult = yes
@@ -8015,7 +7979,7 @@ bno_random.0045 = {
 	}
 	
 	immediate = {
-		primary_spouse = {
+		random_spouse = {
 			limit = {
 				is_adult = yes
 				is_female = yes
@@ -8028,7 +7992,7 @@ bno_random.0045 = {
 			}
 			save_scope_as = target1
 		}
-		any_courtier_or_guest = {
+		random_courtier_or_guest = {
 			limit = {
 				has_trait = bno_bbc
 				is_adult = yes
@@ -8036,13 +8000,8 @@ bno_random.0045 = {
 			}
 			save_scope_as = target2
 		}
-		carn_had_sex_with_effect = {
-			CHARACTER_1 = root
-			CHARACTER_2 = scope:target1
-			C1_PREGNANCY_CHANCE = pregnancy_chance
-			C2_PREGNANCY_CHANCE = pregnancy_chance
-			STRESS_EFFECTS = scope:carn_sex_stress_effects
-			DRAMA = scope:carn_sex_drama
+		carn_had_sex_with_effect_v2 = {
+			PARTNER = scope:target1
 		}
 		hidden_effect = {
 			primary_spouse = {
@@ -8121,7 +8080,7 @@ bno_random.1045 = {
 			}
 			save_scope_as = target1
 		}
-		primary_spouse = {
+		random_spouse = {
 			limit = {
 				is_adult = yes
 				is_female = yes
@@ -8129,13 +8088,10 @@ bno_random.1045 = {
 			}
 			save_scope_as = target2
 		}
-		carn_had_sex_with_effect = {
-			CHARACTER_1 = scope:target2
-			CHARACTER_2 = scope:target1
-			C1_PREGNANCY_CHANCE = pregnancy_chance
-			C2_PREGNANCY_CHANCE = pregnancy_chance
-			STRESS_EFFECTS = scope:carn_sex_stress_effects
-			DRAMA = scope:carn_sex_drama
+		scope:target1 = {
+			carn_had_sex_with_effect_v2 = {
+				PARTNER = scope:target2
+			}
 		}
 		scope:target1 = {
 			hidden_effect = {
@@ -8149,7 +8105,7 @@ bno_random.1045 = {
 		scope:target2 = {
 			hidden_effect = {
 				stress_impact = {
-					bno_lifestyle_whitegirl = huge_stress_impact_loss
+					bno_lifestyle_whitegirl = massive_stress_impact_loss
 				}
 			}
 		}
@@ -8243,19 +8199,16 @@ bno_random.0046 = {
 			}
 			save_scope_as = target1
 		}
-		primary_spouse = {
+		random_spouse = {
 			limit = {
 				is_ai_snowbunny = yes
 			}
 			save_scope_as = target2
 		}
-		carn_had_sex_with_effect = {
-			CHARACTER_1 = scope:target2
-			CHARACTER_2 = scope:target1
-			C1_PREGNANCY_CHANCE = pregnancy_chance
-			C2_PREGNANCY_CHANCE = pregnancy_chance
-			STRESS_EFFECTS = scope:carn_sex_stress_effects
-			DRAMA = scope:carn_sex_drama
+		scope:target1 = {
+			carn_had_sex_with_effect_v2 = {
+				PARTNER = scope:target2
+			}
 		}
 		scope:target1 = {
 			hidden_effect = {
@@ -8417,11 +8370,11 @@ bno_random.1046 = {
 				has_trait = bno_bbc
 				is_adult = yes
 				is_ai = yes
-				is_lover_of = scope:target2
+				has_relation_lover = scope:target2
 			}
 			save_scope_as = target1
 		}
-		primary_spouse = {
+		random_spouse = {
 			limit = {
 				is_adult = yes
 				is_female = yes
@@ -8429,21 +8382,9 @@ bno_random.1046 = {
 			}
 			save_scope_as = target2
 		}
-		carn_had_sex_with_effect = {
-			CHARACTER_1 = scope:target2
-			CHARACTER_2 = scope:target1
-			C1_PREGNANCY_CHANCE = pregnancy_chance
-			C2_PREGNANCY_CHANCE = pregnancy_chance
-			STRESS_EFFECTS = scope:carn_sex_stress_effects
-			DRAMA = scope:carn_sex_drama
-		}
-		carn_had_sex_with_effect = {
-			CHARACTER_1 = scope:target2
-			CHARACTER_2 = root
-			C1_PREGNANCY_CHANCE = pregnancy_chance
-			C2_PREGNANCY_CHANCE = pregnancy_chance
-			STRESS_EFFECTS = scope:carn_sex_stress_effects
-			DRAMA = scope:carn_sex_drama
+
+		carn_had_sex_with_effect_v2 = {
+			PARTNER = scope:target2
 		}
 		
 		scope:target1 = {
@@ -8456,9 +8397,12 @@ bno_random.1046 = {
 			}
 		}
 		scope:target2 = {
+			carn_had_sex_with_effect_v2 = {
+				PARTNER = scope:target1
+			}
 			hidden_effect = {
 				stress_impact = {
-					bno_lifestyle_whitegirl = huge_stress_impact_loss
+					bno_lifestyle_whitegirl = massive_stress_impact_loss
 				}
 			}
 		}
@@ -8534,11 +8478,11 @@ bno_random.2046 = {
 				has_trait = bno_bbc
 				is_adult = yes
 				is_ai = yes
-				is_lover_of = scope:target2
+				has_relation_lover = scope:target2
 			}
 			save_scope_as = target1
 		}
-		primary_spouse = {
+		random_spouse = {
 			limit = {
 				is_adult = yes
 				is_female = yes
@@ -8546,13 +8490,10 @@ bno_random.2046 = {
 			}
 			save_scope_as = target2
 		}
-		carn_had_sex_with_effect = {
-			CHARACTER_1 = scope:target2
-			CHARACTER_2 = scope:target1
-			C1_PREGNANCY_CHANCE = pregnancy_chance
-			C2_PREGNANCY_CHANCE = pregnancy_chance
-			STRESS_EFFECTS = scope:carn_sex_stress_effects
-			DRAMA = scope:carn_sex_drama
+		scope:target1 = {
+			carn_had_sex_with_effect_v2 = {
+				PARTNER = scope:target2
+			}
 		}
 		
 		scope:target1 = {
@@ -8567,7 +8508,7 @@ bno_random.2046 = {
 		scope:target2 = {
 			hidden_effect = {
 				stress_impact = {
-					bno_lifestyle_whitegirl = huge_stress_impact_loss
+					bno_lifestyle_whitegirl = massive_stress_impact_loss
 				}
 			}
 		}
@@ -8703,7 +8644,7 @@ bno_random.0047 = {
 			limit = {
 				NOT = {this = scope:target1}
 				NOT = {this = scope:target2}
-				is_blackbull = brave
+				is_blackbull = yes
 				is_ai = yes
 			}
 			save_scope_as = target3
@@ -8745,46 +8686,22 @@ bno_random.0047 = {
 			}
 		}
 		hidden_effect = {
-			carn_had_sex_with_effect = {
-				CHARACTER_1 = root.primary_spouse
-				CHARACTER_2 = scope:target1
-				C1_PREGNANCY_CHANCE = pregnancy_chance
-				C2_PREGNANCY_CHANCE = pregnancy_chance
-				STRESS_EFFECTS = scope:carn_sex_stress_effects
-				DRAMA = scope:carn_sex_drama
-			}
-			carn_had_sex_with_effect = {
-				CHARACTER_1 = root.primary_spouse
-				CHARACTER_2 = scope:target2
-				C1_PREGNANCY_CHANCE = pregnancy_chance
-				C2_PREGNANCY_CHANCE = pregnancy_chance
-				STRESS_EFFECTS = scope:carn_sex_stress_effects
-				DRAMA = scope:carn_sex_drama
-			}
-			carn_had_sex_with_effect = {
-				CHARACTER_1 = root.primary_spouse
-				CHARACTER_2 = scope:target3
-				C1_PREGNANCY_CHANCE = pregnancy_chance
-				C2_PREGNANCY_CHANCE = pregnancy_chance
-				STRESS_EFFECTS = scope:carn_sex_stress_effects
-				DRAMA = scope:carn_sex_drama
-			}
-			carn_had_sex_with_effect = {
-				CHARACTER_1 = root.primary_spouse
-				CHARACTER_2 = scope:target4
-				C1_PREGNANCY_CHANCE = pregnancy_chance
-				C2_PREGNANCY_CHANCE = pregnancy_chance
-				STRESS_EFFECTS = scope:carn_sex_stress_effects
-				DRAMA = scope:carn_sex_drama
-			}
-		}
-		hidden_effect = {
 			root.primary_spouse = {
+				carn_had_sex_with_effect_v2 = {
+					PARTNER = scope:target1
+				}
+				carn_had_sex_with_effect_v2 = {
+					PARTNER = scope:target2
+				}
+				carn_had_sex_with_effect_v2 = {
+					PARTNER = scope:target3
+				}
+				carn_had_sex_with_effect_v2 = {
+					PARTNER = scope:target4
+				}
 				stress_impact = {
 					bno_lifestyle_whitegirl = massive_stress_impact_loss
 				}
-			}
-			scope:primary_spouse = {
 				add_opinion = {
 					target = root
 					modifier = bno_pathetic_cuck_husband
@@ -8852,7 +8769,7 @@ bno_random.0048 = {
 		}
 	}
 	immediate = {
-		primary_spouse = {
+		random_spouse = {
 			limit = {
 				is_adult = yes
 				is_female = yes

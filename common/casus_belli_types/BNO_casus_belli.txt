@@ -7,6 +7,10 @@
 	allowed_for_character = {
 		OR = {
 			has_trait = bno_bbc
+			has_trait_xp = {
+				trait = bno_lifestyle_whitegirl
+				xp >= 100
+			}
 		}
 	}
 	allowed_against_character = {
@@ -24,7 +28,7 @@
 	ignore_effect = change_title_holder
 	
 	on_declaration = {
-		on_declared_war = scope:recipient
+		on_declared_war = yes
 	}
 	
 	cost = {
@@ -207,6 +211,7 @@ bno_subj_war = {
 		
 		scope:target1 = {
 			add_opinion = {
+				modifier = grateful_opinion
 				target = scope:attacker
 				opinion = 200
 			}

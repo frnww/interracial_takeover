@@ -41,20 +41,18 @@ bno_council_orgy.0001 = {
 	}
 	
 	trigger = {
-		root = {
+		is_female = yes
+		is_adult = yes
+		
+		any_councillor = {
+			has_trait = bno_bbc
+			is_adult = yes
+			is_ai = yes
+		}
+		any_councillor = {
 			is_female = yes
 			is_adult = yes
-			
-			any_councillor = {
-				has_trait = bno_bbc
-				is_adult = yes
-				is_ai = yes
-			}
-			any_councillor = {
-				is_female = yes
-				is_adult = yes
-				is_ai = yes
-			}
+			is_ai = yes
 		}
 	}
 	
@@ -539,7 +537,7 @@ bno_council_orgy.0002 = {
 				}
 				
 				add_opinion = {
-					modifier = gratefulness_opinion
+					modifier = grateful_opinion
 					target = root
 					opinion = 5
 				}
@@ -633,14 +631,10 @@ bno_council_orgy.0002 = {
 							}
 						}
 						desc = bno_council_orgy_0002.joins
-						carn_sex_scene_is_orgy = yes
-						carn_had_sex_with_effect = {
-							CHARACTER_1 = scope:target_female_1
-							CHARACTER_2 = scope:target_bbc_1
-							C1_PREGNANCY_CHANCE = pregnancy_chance
-							C2_PREGNANCY_CHANCE = pregnancy_chance
-							STRESS_EFFECTS = scope:carn_sex_stress_effects
-							DRAMA = scope:carn_sex_drama
+						scope:target_female_1 = {
+							carn_had_sex_with_effect_v2 = {
+								PARTNER = scope:target_bbc_1
+							}
 						}
 						hidden_effect = {
 							add_character_flag = bno_council_orgy_participated
@@ -799,7 +793,7 @@ bno_council_orgy.0002 = {
 				}
 				
 				add_opinion = {
-					modifier = gratefulness_opinion
+					modifier = grateful_opinion
 					target = root
 					opinion = 5
 				}
@@ -893,14 +887,10 @@ bno_council_orgy.0002 = {
 							}
 						}
 						desc = bno_council_orgy_0002.joins
-						carn_sex_scene_is_orgy = yes
-						carn_had_sex_with_effect = {
-							CHARACTER_1 = scope:target_female_2
-							CHARACTER_2 = scope:target_bbc_1
-							C1_PREGNANCY_CHANCE = pregnancy_chance
-							C2_PREGNANCY_CHANCE = pregnancy_chance
-							STRESS_EFFECTS = scope:carn_sex_stress_effects
-							DRAMA = scope:carn_sex_drama
+						scope:target_female_2 = {
+							carn_had_sex_with_effect_v2 = {
+								PARTNER = scope:target_bbc_1
+							}
 						}
 						hidden_effect = {
 							add_character_flag = bno_council_orgy_participated
@@ -1052,7 +1042,7 @@ bno_council_orgy.0002 = {
 				}
 				
 				add_opinion = {
-					modifier = gratefulness_opinion
+					modifier = grateful_opinion
 					target = root
 					opinion = 5
 				}
@@ -1146,14 +1136,10 @@ bno_council_orgy.0002 = {
 							}
 						}
 						desc = bno_council_orgy_0002.joins
-						carn_sex_scene_is_orgy = yes
-						carn_had_sex_with_effect = {
-							CHARACTER_1 = scope:target_female_3
-							CHARACTER_2 = scope:target_bbc_1
-							C1_PREGNANCY_CHANCE = pregnancy_chance
-							C2_PREGNANCY_CHANCE = pregnancy_chance
-							STRESS_EFFECTS = scope:carn_sex_stress_effects
-							DRAMA = scope:carn_sex_drama
+						scope:target_female_3 = {
+							carn_had_sex_with_effect_v2 = {
+								PARTNER = target_bbc_1
+							}
 						}
 						hidden_effect = {
 							add_character_flag = bno_council_orgy_participated
@@ -1238,7 +1224,6 @@ bno_council_orgy.0002 = {
 			NOT = { has_character_flag = bno_council_orgy_participated }
 		}
 		name = bno_council_orgy_0002.r
-		carn_sex_scene_is_orgy = yes
 		carn_had_sex_with_effect_v2 = {
 			PARTNER = scope:target_bbc_1
 		}

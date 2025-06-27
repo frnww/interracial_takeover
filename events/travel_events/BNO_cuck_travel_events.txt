@@ -37,21 +37,23 @@ bno_cuck_travel.0001 = {
 	}
 	immediate = {
 		root = {
-			random_entourage_character = {
-				limit = {
-					is_adult = yes
-					is_female = yes
-					has_trait = bno_lifestyle_whitegirl
+			current_travel_plan = {
+				random_entourage_character = {
+					limit = {
+						is_adult = yes
+						is_female = yes
+						has_trait = bno_lifestyle_whitegirl
+					}
+					save_scope_as = target1
 				}
-				save_scope_as = target1
-			}
-			random_entourage_character = {
-				limit = {
-					is_adult = yes
-					is_male = yes
-					has_trait = bno_bbc
+				random_entourage_character = {
+					limit = {
+						is_adult = yes
+						is_male = yes
+						has_trait = bno_bbc
+					}
+					save_scope_as = target2
 				}
-				save_scope_as = target2
 			}
 		}
 		scope:target1 = {
@@ -63,12 +65,20 @@ bno_cuck_travel.0001 = {
 				value = 5
 			}
 		}
-		random_entourage_character = {
-			is_adult = yes
-			is_female = yes
-			hidden_effect = {
-				add_trait = bno_lifestyle_whitegirl
-				add_trait_xp = 4
+		current_travel_plan = {
+			random_entourage_character = {
+				limit = {
+					is_adult = yes
+					is_female = yes
+					NOT = {has_trait = bno_lifestyle_whitegirl}
+				}
+				hidden_effect = {
+					add_trait = bno_lifestyle_whitegirl
+					add_trait_xp = {
+						trait = bno_lifestyle_whitegirl
+						value = 4
+					}
+				}
 			}
 		}
 	}

@@ -275,6 +275,7 @@ bno_marriage.0003 = {
 					modifier = bno_no_longer_black_breedable
 					years = 1
 				}
+				save_scope_as = target1
 			}
 			add_character_modifier = {
 				modifier = bno_divorced_worthless_wife

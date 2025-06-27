@@ -39,7 +39,7 @@ bno_birth.0001 = { # White Breeder
 					title = bno_birth.0001.wife.t
 					right_icon = root
 					desc = bno_birth.0001.wife.desc
-					scope:root = {
+					root = {
 						add_character_modifier = {
 							modifier = bno_white_breeder
 						}
@@ -56,7 +56,7 @@ bno_birth.0001 = { # White Breeder
 					title = bno_birth.0001.cuck.wife.t
 					right_icon = root
 					desc = bno_birth.0001.cuck.wife.desc
-					scope:root = {
+					root = {
 						add_character_modifier = {
 							modifier = bno_white_breeder
 						}
@@ -74,7 +74,7 @@ bno_birth.0001 = { # White Breeder
 				title = bno_birth.0001.lover.t
 				right_icon = root
 				desc = bno_birth.0001.lover.desc
-				scope:root = {
+				root = {
 					add_character_modifier = {
 						modifier = bno_white_breeder
 					}
@@ -103,7 +103,7 @@ bno_birth.0002 = {
 			title = bno_birth.0002.t
 			right_icon = root
 			desc = bno_birth.0002.personal_desc
-			scope:root = {
+			root = {
 				add_character_modifier = {
 					modifier = bno_bull_breeder
 				}

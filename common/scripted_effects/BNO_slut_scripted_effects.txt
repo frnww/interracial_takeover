@@ -117,29 +117,24 @@ find_5_sex_partner = {
 }
 
 sex_with_5_sex_partner = {
-	had_sex_with_effect = {
-		CHARACTER = scope:sex_partner_1
-		PREGNANCY_CHANCE = pregnancy_chance
+	carn_had_sex_with_effect_v2 = {
+		PARTNER = scope:sex_partner_1
 	}
 	add_gold = minor_gold_value
-	had_sex_with_effect = {
-		CHARACTER = scope:sex_partner_2
-		PREGNANCY_CHANCE = pregnancy_chance
+	carn_had_sex_with_effect_v2 = {
+		PARTNER = scope:sex_partner_2
 	}
 	add_gold = minor_gold_value
-	had_sex_with_effect = {
-		CHARACTER = scope:sex_partner_3
-		PREGNANCY_CHANCE = pregnancy_chance
+	carn_had_sex_with_effect_v2 = {
+		PARTNER = scope:sex_partner_3
 	}
 	add_gold = minor_gold_value
-	had_sex_with_effect = {
-		CHARACTER = scope:sex_partner_4
-		PREGNANCY_CHANCE = pregnancy_chance
+	carn_had_sex_with_effect_v2 = {
+		PARTNER = scope:sex_partner_4
 	}
 	add_gold = minor_gold_value
-	had_sex_with_effect = {
-		CHARACTER = scope:sex_partner_5
-		PREGNANCY_CHANCE = pregnancy_chance
+	carn_had_sex_with_effect_v2 = {
+		PARTNER = scope:sex_partner_5
 	}
 	add_gold = minor_gold_value
 }
@@ -325,9 +320,8 @@ fuck_random_local_bbc = {
 		right_icon = root
 		service_fee = yes
 		prostitution = yes
-		had_sex_with_effect = {
-			CHARACTER = scope:local_bbc
-			PREGNANCY_CHANCE = pregnancy_chance
+		carn_had_sex_with_effect_v2 = {
+			PARTNER = scope:local_bbc
 		}
 		#impregnate = {
 			#	father = scope:local_bbc
@@ -349,9 +343,8 @@ sex_with_bbc = {
 				target = scope:bbc
 			}
 		}
-		had_sex_with_effect = {
-			CHARACTER = scope:bbc
-			PREGNANCY_CHANCE = pregnancy_chance
+		carn_had_sex_with_effect_v2 = {
+			PARTNER = scope:bbc
 		}
 		add_character_modifier = {
 			modifier = bno_slut_stress_relieved

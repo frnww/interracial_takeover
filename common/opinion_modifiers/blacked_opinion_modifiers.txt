@@ -66,3 +66,85 @@ bno_travel_delayed_for_fucking = {
 	decaying = yes
 	months = 6
 }
+
+### trait opinions
+
+whitegirl_vs_cuckish = {
+	opinion = -10
+	decaying = no
+	growing = yes
+	monthly_change = -1
+	min = 0
+	max = -10
+}
+
+whitegirl_vs_cuck = {
+	opinion = -20
+	decaying = no
+	growing = yes
+	monthly_change = -1
+	min = -10
+	max = -20
+}
+
+whitegirl_vs_beta = {
+	opinion = -30
+	decaying = no
+	growing = yes
+	monthly_change = -1
+	min = -20
+	max = -30
+}
+
+whitegirl_vs_jos = {
+	opinion = -40
+	decaying = no
+	growing = yes
+	monthly_change = -1
+	min = -30
+	max = -40
+}
+
+whitegirl_vs_caged = {
+	opinion = -50
+	decaying = no
+	growing = yes
+	monthly_change = -1
+	min = -40
+	max = -50
+}
+
+whitegirl_vs_castrated = {
+	opinion = -100
+	decaying = no
+	growing = yes
+	monthly_change = -1
+	min = -50
+	max = -100
+}
+
+whiteboi_vs_curious = {
+	opinion = 10
+	decaying = no
+}
+
+whiteboi_vs_blacked = {
+	opinion = 20
+	decaying = no
+}
+
+whiteboi_vs_snowbunny = {
+	opinion = 30
+	decaying = no
+}
+
+whiteboi_vs_qos = {
+	opinion = 40
+	decaying = no
+}
+
+whiteboi_vs_mindless = {
+	opinion = 50
+	decaying = no
+}
+

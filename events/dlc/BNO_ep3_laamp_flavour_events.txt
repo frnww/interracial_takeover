@@ -101,7 +101,7 @@ bno_ep3_laamp_flavour.0001 = {
 			75 = {
 				send_interface_toast = {
 					title = bno_ep3_laamp_flavour_0001.success
-					left_icon = scope:root
+					left_icon = root
 					right_icon = scope:target1
 					scope:target1 = {
 						set_relation_friend = {
@@ -291,7 +291,7 @@ bno_ep3_laamp_flavour.0002 = {
 				}
 				send_interface_toast = {
 					title = bno_ep3_laamp_flavour_0002.success
-					left_icon = scope:root
+					left_icon = root
 					right_icon = scope:target1
 					scope:target1 = {
 						add_opinion = {
@@ -313,7 +313,7 @@ bno_ep3_laamp_flavour.0002 = {
 				}
 				send_interface_toast = {
 					title = bno_ep3_laamp_flavour_0002.failure
-					left_icon = scope:root
+					left_icon = root
 					right_icon = scope:target1
 					scope:target1 = {
 						add_opinion = {
@@ -348,7 +348,7 @@ bno_ep3_laamp_flavour.0002 = {
 				}
 				send_interface_toast = {
 					title = bno_ep3_laamp_flavour_0002.success
-					left_icon = scope:root
+					left_icon = root
 					right_icon = scope:target1
 					scope:target1 = {
 						add_opinion = {
@@ -367,7 +367,7 @@ bno_ep3_laamp_flavour.0002 = {
 				}
 				send_interface_toast = {
 					title = bno_ep3_laamp_flavour_0002.failure
-					left_icon = scope:root
+					left_icon = root
 					right_icon = scope:target1
 					scope:target1 = {
 						add_opinion = {
@@ -403,7 +403,7 @@ bno_ep3_laamp_flavour.0002 = {
 				}
 				send_interface_toast = {
 					title = bno_ep3_laamp_flavour_0002.success
-					left_icon = scope:root
+					left_icon = root
 					right_icon = scope:target1
 					scope:target1 = {
 						add_opinion = {
@@ -422,7 +422,7 @@ bno_ep3_laamp_flavour.0002 = {
 				}
 				send_interface_toast = {
 					title = bno_ep3_laamp_flavour_0002.failure
-					left_icon = scope:root
+					left_icon = root
 					right_icon = scope:target1
 					scope:target1 = {
 						add_opinion = {

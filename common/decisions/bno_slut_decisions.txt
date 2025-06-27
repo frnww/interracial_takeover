@@ -9,6 +9,10 @@
 		NOT = {
 			has_character_flag = bno_slut.1015
 		}
+		OR = { 
+			is_ai = no 
+			has_game_rule = bno_decision_npc_yes 
+		}
 	}
 	effect = {
 		trigger_event = {
@@ -34,6 +38,10 @@ bno_stop_becoming_bbc_slut = {
 		is_blacked_whitegirl = yes
 		is_partner_bbc = yes
 		has_character_flag = bno_slut.1015
+		OR = { 
+			is_ai = no 
+			has_game_rule = bno_decision_npc_yes 
+		}
 	}
 	effect = {
 		remove_character_flag = bno_slut.1015

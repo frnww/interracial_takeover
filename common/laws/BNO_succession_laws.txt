@@ -246,9 +246,7 @@
 		}
 		
 		should_start_with = {
-			OR = {
-				culture = { has_cultural_parameter = female_only_inheritance }
-			}
+			culture = { has_cultural_parameter = female_only_inheritance }
 		}
 	}
 	

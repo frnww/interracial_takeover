@@ -63,13 +63,10 @@ bno_cuck.0001 = {
 			}
 			save_scope_as = target2
 		}
-		carn_had_sex_with_effect = {
-			CHARACTER_1 = scope:target2
-			CHARACTER_2 = scope:target1
-			C1_PREGNANCY_CHANCE = pregnancy_chance
-			C2_PREGNANCY_CHANCE = pregnancy_chance
-			STRESS_EFFECTS = scope:carn_sex_stress_effects
-			DRAMA = scope:carn_sex_drama
+		scope:target1 = {
+			carn_had_sex_with_effect_v2 = {
+				PARTNER = scope:target2
+			}
 		}
 		
 		scope:target2 = {
@@ -542,13 +539,10 @@ bno_cuck.2004 = {
 		}
 	}
 	immediate = {
-		carn_had_sex_with_effect = {
-			CHARACTER_1 = scope:target2
-			CHARACTER_2 = scope:target1
-			C1_PREGNANCY_CHANCE = pregnancy_chance
-			C2_PREGNANCY_CHANCE = pregnancy_chance
-			STRESS_EFFECTS = scope:carn_sex_stress_effects
-			DRAMA = scope:carn_sex_drama
+		scope:target1 = {
+			carn_had_sex_with_effect_v2 = {
+				PARTNER = scope:target2
+			}
 		}
 		
 		scope:target2 = {
@@ -658,6 +652,7 @@ bno_cuck.3004 = {
 		random_knight = {
 			limit = {
 				is_blackbull = yes
+				NOT = {this = scope:target1}
 			}
 			save_scope_as = target3
 		}
@@ -671,9 +666,8 @@ bno_cuck.3004 = {
 		random_knight = {
 			limit = {
 				is_blackbull = yes
-				NOT = {
-					character = scope:target3
-				}
+				NOT = {this = scope:target1}
+				NOT = {this = scope:target3}
 			}
 			save_scope_as = target4
 		}
@@ -700,18 +694,21 @@ bno_cuck.3004 = {
 				primary_spouse = { become_more_cuck_effect = yes }
 			}
 		}
-		
-		carn_had_sex_with_effect = {
-			CHARACTER_1 = scope:target2
-			CHARACTER_2 = scope:target1
-			CHARACTER_3 = scope:target3
-			CHARACTER_4 = scope:target4
-			C1_PREGNANCY_CHANCE = pregnancy_chance
-			C2_PREGNANCY_CHANCE = pregnancy_chance
-			STRESS_EFFECTS = scope:carn_sex_stress_effects
-			DRAMA = scope:carn_sex_drama
-		}
+
 		scope:target2 = {
+			
+			hidden_effect = {
+				carn_had_sex_with_effect_v2 = {
+					PARTNER = scope:target1
+				}
+				carn_had_sex_with_effect_v2 = {
+					PARTNER = scope:target3
+				}
+				carn_had_sex_with_effect_v2 = {
+					PARTNER = scope:target4
+				}
+			}
+
 			add_trait_xp = {
 				trait = bno_lifestyle_whitegirl
 				value = 25
@@ -1041,13 +1038,10 @@ bno_cuck.0008 = {
 	}
 	option = { #BBC fucks cuck's wife
 		name = bno_cuck_0008.b
-		carn_had_sex_with_effect = {
-			CHARACTER_1 = scope:target2
-			CHARACTER_2 = scope:target1
-			C1_PREGNANCY_CHANCE = pregnancy_chance
-			C2_PREGNANCY_CHANCE = pregnancy_chance
-			STRESS_EFFECTS = scope:carn_sex_stress_effects
-			DRAMA = scope:carn_sex_drama
+		scope:target1 = {
+			carn_had_sex_with_effect_v2 = {
+				PARTNER = scope:target2
+			}
 		}
 		scope:target2 = {
 			add_opinion = {
@@ -1381,15 +1375,10 @@ bno_cuck.2010 = { #follow up event, bbc spymaster lays with cuck's wife
 	}
 	immediate = {
 		hidden_effect = {
-			carn_had_sex_with_effect = {
-				CHARACTER_1 = scope:target2
-				CHARACTER_2 = scope:target1
-				C1_PREGNANCY_CHANCE = pregnancy_chance
-				C2_PREGNANCY_CHANCE = pregnancy_chance
-				STRESS_EFFECTS = scope:carn_sex_stress_effects
-				DRAMA = scope:carn_sex_drama
-			}
 			scope:target2 = {
+				carn_had_sex_with_effect_v2 = {
+					PARTNER = scope:target1
+				}
 				add_trait_xp = {
 					trait = bno_lifestyle_whitegirl
 					value = 5
@@ -1544,7 +1533,7 @@ bno_cuck.0012 = {
 			is_bno_snowbunny = yes
 		}
 		any_directly_owned_province = {
-			has_duchy_building_slot = yes
+			free_building_slots > 0
 		}
 	}
 	immediate = {
@@ -1556,13 +1545,11 @@ bno_cuck.0012 = {
 		}
 		random_directly_owned_province  = {
 			limit = {
-				has_duchy_building_slot = yes
+				free_building_slots > 0
 			}
 			add_building = bbc_camp_01
 		}
-		remove_short_term_gold = {
-			amount = 300
-		}
+		remove_short_term_gold = 300
 	}
 	option = {
 		name = bno_cuck_0012.a
@@ -1685,7 +1672,7 @@ bno_cuck.0014 = {
 			}
 			save_scope_as = target2
 		}
-		primary_spouse = {
+		random_spouse = {
 			limit = {
 				is_adult = yes
 				is_female = yes
@@ -1752,7 +1739,7 @@ bno_cuck.0015 = {
 		}
 	}
 	immediate = {
-		primary_spouse = {
+		random_spouse = {
 			limit = {
 				is_mindless_bbc_slut = yes
 			}
@@ -1828,7 +1815,7 @@ bno_cuck.0016 = {
 		}
 	}
 	immediate = {
-		former_spouse = {
+		random_spouse = {
 			limit = {
 				is_mindless_bbc_slut = yes
 				is_ai = yes

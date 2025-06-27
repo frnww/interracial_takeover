@@ -241,7 +241,6 @@ bno_camp_leader = {
 	dread_decay_mult = -0.5
 	owned_personal_scheme_success_chance_max_add = 50
 	owned_hostile_scheme_success_chance_max_add = 10
-	scheme_success_chance = 20
 	max_hostile_schemes_add = 2
 	max_seduce_schemes_add = 2
 	owned_personal_scheme_success_chance_add = 50
@@ -363,11 +362,13 @@ bno_curious = {
 	shown_in_ruler_designer = yes
 
 	#Trait Generation
-	birth = 5
-	random_creation = 5
+	birth = 0.05
+	random_creation = 0.05
 	
 	#Special Opinion
 	opposite_opinion = 20
+	attraction_opinion = 10
+	spouse_opinion = 10
 	same_opinion = 10
 	same_opinion_if_same_faith = 20
 
@@ -394,20 +395,24 @@ bno_curious = {
 
 	#Tracks
 	track = {
-		50 = {
+		30 = {
 			general_opinion = 5
-			seduce_scheme_phase_duration_add = -5
+			seduce_scheme_phase_duration_add = -10
 			prowess = -1
 			knight_limit = 1
 		}
-		100 = {
+		60 = {
 			general_opinion = 5
-			seduce_scheme_phase_duration_add = -5
+			seduce_scheme_phase_duration_add = -10
 			prowess = -1
 			knight_limit = 1
 		}
 	}
-	
+	monthly_track_xp_degradation = {
+		min = 100
+		change = 5
+	}
+
 	#Modifiers	
 	ignore_negative_culture_opinion = yes
 	ignore_negative_opinion_of_culture = yes
@@ -418,14 +423,135 @@ bno_curious = {
 }
 
 bno_blacked = {
+	category = lifestyle
+
+	#Validation
+	valid_sex = female
+
+	#Special Flags
+	physical = yes
+	good = yes
+	shown_in_ruler_designer = no
+	
+	#Special Opinion
+	opposite_opinion = 30
+	attraction_opinion = 10
+	spouse_opinion = 10
+	same_opinion = 10
+	same_opinion_if_same_faith = 20
+
+	#Trait Relation
+	compatibility = {
+		bno_bbc = 40
+		bno_cuckish = -20
+		bno_cuck = -30
+		bno_beta = -40
+		bno_jos = -50
+		bno_caged = -60
+		bno_castrated = -100
+	}
 	opposites = {
 		bno_bbc
 	}
-	group = bno_whitegirl
+
+	#Groups
 	level = 2
+	group = bno_whitegirl
+
+	#Tracks
+	track = {
+		30 = {
+			martial = -1
+			prowess = -1
+			diplomacy = 2
+			intrigue = 2
+			stress_gain_mult = -0.05
+			stress_loss_mult = 0.05
+		}
+		60 = {
+			monthly_intrigue_lifestyle_xp_gain_mult = 0.2
+			dread_baseline_add = -5
+			dread_decay_mult = 0.2
+			owned_personal_scheme_success_chance_add = 20
+		}
+	}
+	monthly_track_xp_degradation = {
+		min = 60
+		change = 5
+	}
+
+	#Modifiers	
+	ignore_negative_culture_opinion = yes
+	ignore_negative_opinion_of_culture = yes
+	general_opinion = 10
+	seduce_scheme_phase_duration_add = -10
+	prowess = -2
+	knight_limit = 2
 	
-	opposite_opinion = 30
+	#AI
+	ai_boldness = low_negative_ai_value
+	ai_sociability = low_positive_ai_value
+}
+
+bno_snowbunny = {
+	category = lifestyle
+
+	#Validation
+	valid_sex = female
+
+	#Special Flags
+	physical = yes
+	good = yes
+	shown_in_ruler_designer = no
 	
+	#Special Opinion
+	opposite_opinion = 50
+	attraction_opinion = 10
+	spouse_opinion = 10
+	same_opinion = 10
+	same_opinion_if_same_faith = 20
+
+	#Trait Relation
+	compatibility = {
+		bno_bbc = 50
+		bno_cuckish = -30
+		bno_cuck = -40
+		bno_beta = -50
+		bno_jos = -60
+		bno_caged = -70
+		bno_castrated = -100
+	}
+	opposites = {
+		bno_bbc
+	}
+
+	#Groups
+	level = 3
+	group = bno_whitegirl
+
+	#Tracks
+	track = {
+		30 = {
+			martial = -2
+			prowess = -2
+			diplomacy = 3
+			intrigue = 3
+			max_personal_schemes_add = 1
+			stress_gain_mult = -0.05
+			stress_loss_mult = 0.05
+		}
+		60 = {
+			dread_baseline_add = -5
+			dread_decay_mult = 0.1
+			owned_scheme_secrecy_add = 10
+		}
+	}
+	monthly_track_xp_degradation = {
+		min = 60
+		change = 5
+	}
+
+	#Modifiers
 	martial = -1
 	prowess = -1
 	diplomacy = 2
@@ -433,111 +559,194 @@ bno_blacked = {
 	monthly_intrigue_lifestyle_xp_gain_mult = 0.2
 	dread_baseline_add = -5
 	dread_decay_mult = 0.2
-	seduce_scheme_phase_duration_add = -20
+	owned_personal_scheme_success_chance_add = 20
 	ignore_negative_culture_opinion = yes
 	ignore_negative_opinion_of_culture = yes
-	good = yes
-	
-	ai_boldness = low_negative_ai_value
-	ai_sociability = low_positive_ai_value
-	
-	valid_sex = female
-}
-
-bno_snowbunny = {
-	opposites = {
-		bno_bbc
-	}
-	group = bno_whitegirl
-	level = 3
-	
-	opposite_opinion = 50
-	
-	martial = -2
-	prowess = -2
-	diplomacy = 3
-	intrigue = 3
-	monthly_intrigue_lifestyle_xp_gain_mult = 0.2
-	dread_baseline_add = -10
-	dread_decay_mult = 0.3
+	general_opinion = 10
 	seduce_scheme_phase_duration_add = -20
-	ignore_negative_culture_opinion = yes
-	ignore_negative_opinion_of_culture = yes
-	good = yes
+	knight_limit = 2
+	stress_gain_mult = -0.05
+	stress_loss_mult = 0.05
 	
+	#AI
 	ai_boldness = medium_negative_ai_value
 	ai_sociability = medium_positive_ai_value
-	
-	ruler_designer_cost = 40
-	
-	valid_sex = female
 }
 
 bno_qos = {
+	category = lifestyle
+
+	#Validation
+	valid_sex = female
+
+	#Special Flags
+	physical = yes
+	good = yes
+	shown_in_ruler_designer = no
+	
+	#Special Opinion
+	opposite_opinion = 100
+	attraction_opinion = 10
+	spouse_opinion = 10
+	same_opinion = 10
+	same_opinion_if_same_faith = 20
+
+	#Trait Relation
+	compatibility = {
+		bno_bbc = 100
+		bno_cuckish = -40
+		bno_cuck = -50
+		bno_beta = -60
+		bno_jos = -70
+		bno_caged = -80
+		bno_castrated = -100
+	}
 	opposites = {
 		bno_bbc
 	}
-	group = bno_whitegirl
+
+	#Groups
 	level = 4
-	
-	opposite_opinion = 100
-	
+	group = bno_whitegirl
+
+	#Tracks
+	track = {
+		30 = {
+			fertility = 0.25
+			enemy_hostile_scheme_phase_duration_add = 20
+			stress_gain_mult = -0.1
+			stress_loss_mult = 0.1
+		}
+		60 = {
+			dread_baseline_add = -5
+			dread_decay_mult = 0.2
+			development_growth = 0.1
+		}
+	}
+	monthly_track_xp_degradation = {
+		min = 60
+		change = 5
+	}
+
+	#Modifiers
 	martial = -3
 	prowess = -3
 	diplomacy = 5
 	intrigue = 5
-	fertility = 0.25
 	monthly_intrigue_lifestyle_xp_gain_mult = 0.2
-	dread_baseline_add = -15
-	dread_decay_mult = 0.5
-	seduce_scheme_phase_duration_add = -20
+	dread_baseline_add = -10
+	dread_decay_mult = 0.3
+	owned_personal_scheme_success_chance_add = 20
+	owned_scheme_secrecy_add = 10
+	max_personal_schemes_add = 1
 	ignore_negative_culture_opinion = yes
 	ignore_negative_opinion_of_culture = yes
-	good = yes
+	general_opinion = 10
+	seduce_scheme_phase_duration_add = -20
+	knight_limit = 2
+	stress_gain_mult = -0.1
+	stress_loss_mult = 0.1
+
+	#Flags
+	flag = carn_no_consequences_for_extramarital_sex_with_others
 	
+	#AI
 	ai_boldness = high_negative_ai_value
 	ai_sociability = high_positive_ai_value
-	
-	ruler_designer_cost = 50
-	
-	valid_sex = female
-	#flag = can_not_marry
-	flag = carn_no_consequences_for_extramarital_sex_with_others
 }
 
 bno_mindless_bbc_slut = { #need to make optional, and instead acquirable through an event
+	category = lifestyle
+
+	#Validation
+	valid_sex = female
+
+	#Special Flags
+	physical = yes
+	good = yes
+	shown_in_ruler_designer = no
+	
+	#Special Opinion
+	opposite_opinion = 100
+	attraction_opinion = 10
+	spouse_opinion = 10
+	same_opinion = 10
+	same_opinion_if_same_faith = 20
+
+	#Trait Relation
+	compatibility = {
+		bno_bbc = 100
+		bno_cuckish = -50
+		bno_cuck = -60
+		bno_beta = -70
+		bno_jos = -80
+		bno_caged = -90
+		bno_castrated = -100
+	}
 	opposites = {
 		bno_bbc
 	}
-	group = bno_whitegirl
+
+	#Groups
 	level = 5
-	
-	opposite_opinion = 100
-	
-	martial = -6
-	prowess = -6
-	diplomacy = -6
-	intrigue = -6
-	stewardship = -6
-	learning = -6
-	fertility = .5
-	dread_baseline_add = -10
-	dread_decay_mult = 1.0
-	seduce_scheme_phase_duration_add = -20
+	group = bno_whitegirl
+
+	#Tracks
+	track = {
+		30 = {
+			fertility = 0.25
+			development_growth = 0.1
+			development_growth_factor = 0.5
+			men_at_arms_maintenance = -0.5
+			men_at_arms_recruitment_cost = -0.5
+			men_at_arms_limit = 1
+			men_at_arms_cap = 1
+			dread_baseline_add = -10
+			dread_decay_mult = 1.0
+			stress_gain_mult = -0.3
+			stress_loss_mult = 0.3
+		}
+		80 = {
+			martial = -7
+			prowess = -7
+			diplomacy = -15
+			intrigue = -15
+		}
+	}
+	monthly_track_xp_degradation = {
+		min = 30
+		change = 5
+	}
+
+	#Modifiers
+	martial = -3
+	prowess = -3
+	diplomacy = 5
+	intrigue = 5
+	monthly_intrigue_lifestyle_xp_gain_mult = 0.2
+	dread_baseline_add = -15
+	dread_decay_mult = 0.5
+	development_growth = 0.1
+	owned_personal_scheme_success_chance_add = 20
+	enemy_hostile_scheme_phase_duration_add = 20
+	owned_scheme_secrecy_add = 10
+	max_personal_schemes_add = 1
 	ignore_negative_culture_opinion = yes
 	ignore_negative_opinion_of_culture = yes
-	good = yes
+	general_opinion = 10
+	seduce_scheme_phase_duration_add = -20
+	knight_limit = 2
+	fertility = 0.25
+	stress_gain_mult = -0.2
+	stress_loss_mult = 0.2
+
+	#Flags
+	flag = carn_no_consequences_for_extramarital_sex_with_others
+	disables_combat_leadership = yes
 	
+	#AI
 	ai_boldness = high_negative_ai_value
 	ai_sociability = high_positive_ai_value
-	
-	ruler_designer_cost = 10
-	
-	valid_sex = female
-	#flag = can_not_marry
-	flag = carn_no_consequences_for_extramarital_sex_with_others
-	divorce_allowed = no
-	disables_combat_leadership = yes
 }
 
 bno_full_black = {
@@ -576,8 +785,6 @@ bno_barely_mixed = {
 	
 }
 
-#shown_in_ruler_designer
-
 bno_lifestyle_whitegirl = {
 	category = lifestyle
 	group = bno_whitegirl
@@ -606,12 +813,12 @@ bno_lifestyle_whitegirl = {
 	
 	track = {
 		0 = {
-			opposite_opinion = 20
+			#opposite_opinion = 20
 			seduce_scheme_phase_duration_add = -20
 			
 		}
 		25 = {
-			opposite_opinion = 40
+			#opposite_opinion = 40
 			
 			martial = -1
 			prowess = -1
@@ -625,7 +832,7 @@ bno_lifestyle_whitegirl = {
 			stress_loss_mult = 0.05
 		}
 		50 = {
-			opposite_opinion = 60
+			#opposite_opinion = 60
 			
 			martial = -1
 			prowess = -1
@@ -638,7 +845,7 @@ bno_lifestyle_whitegirl = {
 			stress_loss_mult = 0.1
 		}
 		75 = {
-			opposite_opinion = 80
+			#opposite_opinion = 80
 			
 			martial = -2
 			prowess = -2
@@ -652,7 +859,7 @@ bno_lifestyle_whitegirl = {
 			stress_loss_mult = 0.15
 		}
 		100 = {
-			opposite_opinion = 100
+			#opposite_opinion = 100
 			
 			martial = -3
 			prowess = -6

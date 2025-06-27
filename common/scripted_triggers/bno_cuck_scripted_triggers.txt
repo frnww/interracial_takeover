@@ -59,7 +59,3 @@ is_ai_snowbunny = {
 	is_ai = yes
 	is_prime_girl = yes
 }
-
-is_bno_sissy = {
-	has_trait = bno_sissy
-}
