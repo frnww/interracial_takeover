@@ -1,4 +1,104 @@
-﻿namespace = bno_ep3_laamp_flavour
+﻿@ep3_laamp_flavour_ewan_event_cooldown_short = 5
+
+namespace = bno_ep3_laamp_flavour
+
+### MISC SCRIPTED TRIGGERS & EFFECTS
+
+scripted_effect ep3_laamp_flavour_ewan_register_terrain_effect = {
+	location = {
+		switch = {
+			trigger = terrain
+			plains = {
+				save_scope_value_as = {
+					name = terrain_type
+					value = flag:plains
+				}
+			}
+			farmlands = {
+				save_scope_value_as = {
+					name = terrain_type
+					value = flag:farmlands
+				}
+			}
+			hills = {
+				save_scope_value_as = {
+					name = terrain_type
+					value = flag:hills
+				}
+			}
+			mountains = {
+				save_scope_value_as = {
+					name = terrain_type
+					value = flag:mountains
+				}
+			}
+			desert = {
+				save_scope_value_as = {
+					name = terrain_type
+					value = flag:desert
+				}
+			}
+			desert_mountains = {
+				save_scope_value_as = {
+					name = terrain_type
+					value = flag:desert_mountains
+				}
+			}
+			oasis = {
+				save_scope_value_as = {
+					name = terrain_type
+					value = flag:oasis
+				}
+			}
+			jungle = {
+				save_scope_value_as = {
+					name = terrain_type
+					value = flag:jungle
+				}
+			}
+			forest = {
+				save_scope_value_as = {
+					name = terrain_type
+					value = flag:forest
+				}
+			}
+			taiga = {
+				save_scope_value_as = {
+					name = terrain_type
+					value = flag:taiga
+				}
+			}
+			wetlands = {
+				save_scope_value_as = {
+					name = terrain_type
+					value = flag:wetlands
+				}
+			}
+			steppe = {
+				save_scope_value_as = {
+					name = terrain_type
+					value = flag:steppe
+				}
+			}
+			floodplains = {
+				save_scope_value_as = {
+					name = terrain_type
+					value = flag:floodplains
+				}
+			}
+			drylands = {
+				save_scope_value_as = {
+					name = terrain_type
+					value = flag:drylands
+				}
+			}
+		}
+	}
+}
+
+
+
+
 
 ##################################################
 # 0000-4000 - Male Events
@@ -88,7 +188,7 @@ bno_ep3_laamp_flavour.0001 = {
 		}
 		
 		stress_impact = {
-			generous = tiny_stress_loss
+			generous = minor_stress_loss
 		}
 		
 		add_courtier = scope:target1
@@ -131,6 +231,7 @@ bno_ep3_laamp_flavour.0001 = {
 					scope:target1 = {
 						add_opinion = {
 							target = root
+							modifier = humiliated_opinion
 							opinion = -25
 						}
 					}
@@ -257,7 +358,6 @@ bno_ep3_laamp_flavour.0002 = {
 		ep3_laamp_flavour_ewan_register_terrain_effect = yes
 		
 		location = {
-			has_holding = yes
 			county = {
 				holder = {
 					save_scope_as = ruler
@@ -533,35 +633,36 @@ bno_ep3_laamp_flavour.3002 = {
 	}
 }
 
-# unwitting campgirl catches PC masturbating
-bno_ep3_laamp_flavour.0003 = {
-	
-}
-
-# washing with a campgirl who is bnwo
-bno_ep3_laamp_flavour.0004 = {
-}
-
-# a mother thanks you for the refuge (must have a child? or over a certain age?)
-bno_ep3_laamp_flavour.0005 = {
-}
-
-# hooking up with a wellknown camp slut
-bno_ep3_laamp_flavour.0006 = {
-}
-
-# sleeping with a whore at the brothel, taking her home
-bno_ep3_laamp_flavour.0007 = {
-}
-
-# cuck event within the camp
-bno_ep3_laamp_flavour.0008 = {
-}
-
-# if there are multiple black guys in camp, spitroast a girl
-bno_ep3_laamp_flavour.0009 = {
-}
-
-# event that randomly introduces a new refugee to camp?
-bno_ep3_laamp_flavour.0010 = {
-}
+## unwitting campgirl catches PC masturbating
+#bno_ep3_laamp_flavour.0003 = {
+#	
+#}
+#
+## washing with a campgirl who is bnwo
+#bno_ep3_laamp_flavour.0004 = {
+#}
+#
+## a mother thanks you for the refuge (must have a child? or over a certain age?)
+#bno_ep3_laamp_flavour.0005 = {
+#}
+#
+## hooking up with a wellknown camp slut
+#bno_ep3_laamp_flavour.0006 = {
+#}
+#
+## sleeping with a whore at the brothel, taking her home
+#bno_ep3_laamp_flavour.0007 = {
+#}
+#
+## cuck event within the camp
+#bno_ep3_laamp_flavour.0008 = {
+#}
+#
+## if there are multiple black guys in camp, spitroast a girl
+#bno_ep3_laamp_flavour.0009 = {
+#}
+#
+## event that randomly introduces a new refugee to camp?
+#bno_ep3_laamp_flavour.0010 = {
+#}
+#

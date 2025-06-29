@@ -3,17 +3,9 @@ bbc_camp_01 = {
 	
 	construction_time = slow_construction_time
 	
-	cost_gold =expensive_building_tier_2_cost
+	cost_gold = expensive_building_tier_2_cost
 	can_construct_potential = {
-		scope:holder ={
-			OR = {
-				has_trait = bno_bbc
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 75
-				}
-			}
-		}
+		bno_building_requirement_camp = yes
 	}
 	
 	is_enabled = {
@@ -46,18 +38,10 @@ bbc_camp_02 = {
 	
 	construction_time = slow_construction_time
 	
-	cost_gold =expensive_building_tier_3_cost
+	cost_gold = expensive_building_tier_3_cost
 	
 	can_construct_potential = {
-		scope:holder ={
-			OR = {
-				has_trait = bno_bbc
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 75
-				}
-			}
-		}
+		bno_building_requirement_camp = yes
 	}
 	
 	is_enabled = {
@@ -89,18 +73,10 @@ bbc_camp_03 = {
 	
 	construction_time = slow_construction_time
 	
-	cost_gold =expensive_building_tier_4_cost
+	cost_gold = expensive_building_tier_4_cost
 	
 	can_construct_potential = {
-		scope:holder ={
-			OR = {
-				has_trait = bno_bbc
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 75
-				}
-			}
-		}
+		bno_building_requirement_camp = yes
 	}
 	
 	province_modifier = { # add province modifiers here
@@ -128,18 +104,10 @@ bbc_camp_04 = {
 	
 	construction_time = slow_construction_time
 	
-	cost_gold =expensive_building_tier_5_cost
+	cost_gold = expensive_building_tier_5_cost
 	
 	can_construct_potential = {
-		scope:holder ={
-			OR = {
-				has_trait = bno_bbc
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 75
-				}
-			}
-		}
+		bno_building_requirement_camp = yes
 	}
 	
 	province_modifier = { # add province modifiers here
@@ -167,18 +135,10 @@ bbc_camp_05 = {
 	
 	construction_time = slow_construction_time
 	
-	cost_gold =expensive_building_tier_6_cost
+	cost_gold = expensive_building_tier_6_cost
 	
 	can_construct_potential = {
-		scope:holder ={
-			OR = {
-				has_trait = bno_bbc
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 75
-				}
-			}
-		}
+		bno_building_requirement_camp = yes
 	}
 	
 	province_modifier = { # add province modifiers here
@@ -206,18 +166,10 @@ bbc_camp_06 = {
 	
 	construction_time = slow_construction_time
 	
-	cost_gold =expensive_building_tier_6_cost
+	cost_gold = expensive_building_tier_7_cost
 	
 	can_construct_potential = {
-		scope:holder ={
-			OR = {
-				has_trait = bno_bbc
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 75
-				}
-			}
-		}
+		bno_building_requirement_camp = yes
 	}
 	
 	province_modifier = { # add province modifiers here

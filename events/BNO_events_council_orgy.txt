@@ -1138,7 +1138,7 @@ bno_council_orgy.0002 = {
 						desc = bno_council_orgy_0002.joins
 						scope:target_female_3 = {
 							carn_had_sex_with_effect_v2 = {
-								PARTNER = target_bbc_1
+								PARTNER = scope:target_bbc_1
 							}
 						}
 						hidden_effect = {

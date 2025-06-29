@@ -272,7 +272,6 @@
 			}
 		}
 		
-		
 		cosmetics_bno_body_tattoo = {
 			#inheritable = no
 			
@@ -484,6 +483,7 @@
 				girl = male
 			}
 		}
+		
 		cosmetics_bno_pregnancy_tattoo = {
 			#inheritable = no
 			

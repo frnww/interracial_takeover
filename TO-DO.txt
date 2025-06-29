@@ -1,4 +1,5 @@
-﻿from Dragul17:
+﻿
+from Dragul17:
 Forgot to add this part: 
 
 There could even be events that reduce or extend the cool down.

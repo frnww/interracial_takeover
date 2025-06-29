@@ -1,5 +1,5 @@
-﻿slut = {
-	slut = {
+﻿mindless_slut = {
+	mindless_slut = {
 		traits = {
 			bno_mindless_bbc_slut
 		}
@@ -11,30 +11,49 @@
 					template = complexion_beauty_1
 					value = 4.0
 				}
-				#color = { #changes hair color
-				#	gene = hair_color
-				#	mode = replace
-				#	
-				#	x = 0.1
-				#	y = 0
-				#}
+				color = { #changes hair color
+					gene = hair_color
+					mode = replace
+					
+					x = 0.1
+					y = 0
+				}
 			}		
 		}
 	}
 }
 
-#slut2 = {
-	#	slut2 = {
-		#		traits = {
-			#			bno_mindless_bbc_slut
-			#		}
-		#		dna_modifiers = {
-			#			morph = {
-				#				mode = replace
-				#				gene = cosmetics_norse_tattoo
-				#				template = norse_face_tattoo
-				#				range = { 0 1 } # For the randomness to work correctly
-				#			}
-			#		}
-		#	}
-	#}
+queen_of_spades = {
+	queen_of_spades = {
+		traits = {
+			bno_qos
+		}
+		dna_modifiers = {
+			human = {
+				color = { #changes hair color
+					gene = hair_color
+					mode = replace
+					x = 0.1
+					y = 0
+				}
+				accessory = { #high heels from cbo
+					mode = add
+					gene = shoes
+					template = ankle_boot_heels_03
+					value = 1.0
+				}
+				morph = { #pink lipstick
+					mode = add
+					gene = lipstick
+					template = pink_matte
+					value = 1.0
+				}
+				morph = {
+					mode = add
+					gene = cosmetics_bno_body_tattoo
+					template = bno_body_tattoo_6
+				}
+			}
+		}
+	}
+}

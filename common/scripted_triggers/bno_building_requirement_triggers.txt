@@ -1,0 +1,14 @@
+﻿bno_building_requirement_camp = {
+    custom_description = {
+        text = bbc_or_whitegirl_trigger
+        scope:holder ?= {
+	    	OR = {
+	    		has_trait = bno_bbc
+	    		has_trait_xp = {
+	    			trait = bno_lifestyle_whitegirl
+	    			value >= 75
+	    		}
+	    	}
+	    }
+    }
+}

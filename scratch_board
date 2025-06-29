@@ -1,0 +1,672 @@
+﻿This validator was made for Crusader Kings 3 version 1.16 (Chamfron).
+If you are using a newer version of Crusader Kings 3, it may be inaccurate.
+!! Currently it's inaccurate anyway because it's in beta state.
+Using CK3 directory: G:\SteamLibrary\steamapps\common\Crusader Kings III
+Using mod directory: G:\Modding\Paradox Interactive\Crusader Kings III\mod\interracial_takeover
+Loading secondary mod Carnalitas from: C:\Users\Homr\Documents\Paradox Interactive\Crusader Kings III\mod\Carnalitas "Carnalitas"
+Loading secondary mod Carnalitas DEI from: C:\Users\Homr\Documents\Paradox Interactive\Crusader Kings III\mod\Cheri - Carnalitas Dei - Detenetized "Cheri - Carnalitas Dei - Detenetized"
+Loading secondary mod CBO Unofficial from: C:\Users\Homr\Documents\Paradox Interactive\Crusader Kings III\mod\CBO Unofficial "CBO Unofficial"
+
+error(reader-directives): reader variable ep3_laamp_flavour_ewan_event_cooldown_short not defined
+  --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+58 |                 years = @ep3_laamp_flavour_ewan_event_cooldown_short
+   |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error(unknown-field): unknown token `@ep3_laamp_flavour_ewan_event_cooldown_short`
+  --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+58 |                 years = @ep3_laamp_flavour_ewan_event_cooldown_short
+   |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error(unknown-field): unknown token `ep3_laamp_flavour_ewan_register_terrain_effect`
+  --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+62 |         ep3_laamp_flavour_ewan_register_terrain_effect = yes
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error(validation): dynamic script values are not allowed here
+  --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+91 |             generous = tiny_stress_loss
+   |                        ^^^^^^^^^^^^^^^^
+   = Info: only literal numbers or the name of a simple script value
+
+error(field-missing): required field `modifier` missing
+   --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+132 |                 add_opinion = {
+    |                               ^
+
+error(reader-directives): reader variable ep3_laamp_flavour_ewan_event_cooldown_short not defined
+   --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+253 |                 years = @ep3_laamp_flavour_ewan_event_cooldown_short
+    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error(unknown-field): unknown token `@ep3_laamp_flavour_ewan_event_cooldown_short`
+   --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+253 |                 years = @ep3_laamp_flavour_ewan_event_cooldown_short
+    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error(unknown-field): unknown token `ep3_laamp_flavour_ewan_register_terrain_effect`
+   --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+257 |         ep3_laamp_flavour_ewan_register_terrain_effect = yes
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error(unknown-field): unknown token `has_holding`
+   --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+260 |             has_holding = yes
+    |             ^^^^^^^^^^^
+
+error(field-missing): required field `option` missing
+   --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+537 | bno_ep3_laamp_flavour.0003 = {
+    |                              ^
+
+error(field-missing): required field `option` missing
+   --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+542 | bno_ep3_laamp_flavour.0004 = {
+    |                              ^
+
+error(field-missing): required field `option` missing
+   --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+546 | bno_ep3_laamp_flavour.0005 = {
+    |                              ^
+
+error(field-missing): required field `option` missing
+   --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+550 | bno_ep3_laamp_flavour.0006 = {
+    |                              ^
+
+error(field-missing): required field `option` missing
+   --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+554 | bno_ep3_laamp_flavour.0007 = {
+    |                              ^
+
+error(field-missing): required field `option` missing
+   --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+558 | bno_ep3_laamp_flavour.0008 = {
+    |                              ^
+
+error(field-missing): required field `option` missing
+   --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+562 | bno_ep3_laamp_flavour.0009 = {
+    |                              ^
+
+error(field-missing): required field `option` missing
+   --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+566 | bno_ep3_laamp_flavour.0010 = {
+    |                              ^
+
+error(validation): expected number
+ --> [MOD] gfx\portraits\portrait_modifiers\99_bno_slut.txt
+9 |                 x = skin_color_x
+  |                     ^^^^^^^^^^^^
+
+error(validation): expected number
+  --> [MOD] gfx\portraits\portrait_modifiers\99_bno_slut.txt
+10 |                 y = skin_color_y
+   |                     ^^^^^^^^^^^^
+
+error(validation): expected number
+  --> [MOD] gfx\portraits\portrait_modifiers\99_bno_slut.txt
+17 |                 x = hair_color_x
+   |                     ^^^^^^^^^^^^
+
+error(validation): expected number
+  --> [MOD] gfx\portraits\portrait_modifiers\99_bno_slut.txt
+18 |                 y = hair_color_y
+   |                     ^^^^^^^^^^^^
+
+error(strict-scopes): scope:new_title might not be available here
+   --> [MOD] common\casus_belli_types\BNO_casus_belli.txt
+907 |                 scope:new_title = {
+    |                 ^^^^^^^^^^^^^^^
+276 | bno_varangian_adventure = {
+    | ^^^^^^^^^^^^^^^^^^^^^^^ <-- scopes initialized here
+
+warning(tooltip): OR is a too complex trigger to be tooltipped in a trigger that shows failures only.
+ --> [MOD] common\buildings\BNO_camp.txt
+9 |             OR = {
+  |                  ^
+  = Info: Try adding a custom_description or custom_tooltip, or simplifying the trigger
+
+warning(tooltip): OR is a too complex trigger to be tooltipped in a trigger that shows failures only.
+  --> [MOD] common\buildings\BNO_camp.txt
+53 |             OR = {
+   |                  ^
+   = Info: Try adding a custom_description or custom_tooltip, or simplifying the trigger
+
+warning(tooltip): OR is a too complex trigger to be tooltipped in a trigger that shows failures only.
+  --> [MOD] common\buildings\BNO_camp.txt
+96 |             OR = {
+   |                  ^
+   = Info: Try adding a custom_description or custom_tooltip, or simplifying the trigger
+
+warning(tooltip): OR is a too complex trigger to be tooltipped in a trigger that shows failures only.
+   --> [MOD] common\buildings\BNO_camp.txt
+135 |             OR = {
+    |                  ^
+    = Info: Try adding a custom_description or custom_tooltip, or simplifying the trigger
+
+warning(tooltip): OR is a too complex trigger to be tooltipped in a trigger that shows failures only.
+   --> [MOD] common\buildings\BNO_camp.txt
+174 |             OR = {
+    |                  ^
+    = Info: Try adding a custom_description or custom_tooltip, or simplifying the trigger
+
+warning(missing-localization): missing english localization key building_bbc_camp_06
+   --> [MOD] common\buildings\BNO_camp.txt
+205 | bbc_camp_06 = {
+    | ^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key building_bbc_camp_06_desc
+   --> [MOD] common\buildings\BNO_camp.txt
+205 | bbc_camp_06 = {
+    | ^^^^^^^^^^^
+
+warning(tooltip): OR is a too complex trigger to be tooltipped in a trigger that shows failures only.
+   --> [MOD] common\buildings\BNO_camp.txt
+213 |             OR = {
+    |                  ^
+    = Info: Try adding a custom_description or custom_tooltip, or simplifying the trigger
+
+warning(missing-file): file gfx/interface/icons/casus_bellis/bno_war.dds does not exist
+ --> [MOD] common\casus_belli_types\BNO_casus_belli.txt
+1 | bno_war = {
+  | ^^^^^^^
+
+warning(missing-localization): missing english localization key bno_war
+ --> [MOD] common\casus_belli_types\BNO_casus_belli.txt
+1 | bno_war = {
+  | ^^^^^^^
+
+warning(strict-scopes): `on_declared_war` expects scope:recipient to be set
+   --> [MOD] common\casus_belli_types\BNO_casus_belli.txt
+ 31 |         on_declared_war = yes
+    |         ^^^^^^^^^^^^^^^
+   --> [CK3] common\scripted_effects\00_war_effects.txt
+194 |                 target = scope:recipient
+    |                          ^^^^^^^^^^^^^^^ <-- here
+   --> [MOD] common\casus_belli_types\BNO_casus_belli.txt
+  1 | bno_war = {
+    | ^^^^^^^ <-- scopes initialized here
+
+warning(scopes): `on_declared_war` expects root to be character but root seems to be casus belli
+   --> [MOD] common\casus_belli_types\BNO_casus_belli.txt
+ 31 |         on_declared_war = yes
+    |         ^^^^^^^^^^^^^^^
+   --> [CK3] common\scripted_effects\03_bp1_scripted_effects.txt
+ 26 |                 var:house_feud_house ?= root.house
+    |                                              ^^^^^ <-- expected root was deduced from `house` here
+   --> [CK3] common\scripted_effects\00_war_effects.txt
+300 |                 house_feud_start_effect = {
+    |                 ^ <-- from here
+   --> [MOD] common\casus_belli_types\BNO_casus_belli.txt
+  1 | bno_war = {
+    | ^^^^^^^ <-- actual root was supplied by the game engine
+
+warning(missing-localization): missing english localization key Racial Takeover
+   --> [MOD] common\casus_belli_types\BNO_casus_belli.txt
+104 |     war_name = "Racial Takeover"
+    |                 ^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key BBC Takeover
+   --> [MOD] common\casus_belli_types\BNO_casus_belli.txt
+105 |     cb_name_no_target = "BBC Takeover"
+    |                          ^^^^^^^^^^^^
+
+warning(missing-file): file gfx/interface/icons/casus_bellis/bno_subj_war.dds does not exist
+   --> [MOD] common\casus_belli_types\BNO_casus_belli.txt
+119 | bno_subj_war = {
+    | ^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key bno_subj_war
+   --> [MOD] common\casus_belli_types\BNO_casus_belli.txt
+119 | bno_subj_war = {
+    | ^^^^^^^^^^^^
+
+warning(strict-scopes): `on_declared_war` expects scope:recipient to be set
+   --> [MOD] common\casus_belli_types\BNO_casus_belli.txt
+156 |         on_declared_war = yes
+    |         ^^^^^^^^^^^^^^^
+   --> [CK3] common\scripted_effects\00_war_effects.txt
+194 |                 target = scope:recipient
+    |                          ^^^^^^^^^^^^^^^ <-- here
+   --> [MOD] common\casus_belli_types\BNO_casus_belli.txt
+119 | bno_subj_war = {
+    | ^^^^^^^^^^^^ <-- scopes initialized here
+
+warning(scopes): `on_declared_war` expects root to be character but root seems to be casus belli
+   --> [MOD] common\casus_belli_types\BNO_casus_belli.txt
+156 |         on_declared_war = yes
+    |         ^^^^^^^^^^^^^^^
+   --> [CK3] common\scripted_effects\03_bp1_scripted_effects.txt
+ 26 |                 var:house_feud_house ?= root.house
+    |                                              ^^^^^ <-- expected root was deduced from `house` here
+   --> [CK3] common\scripted_effects\00_war_effects.txt
+300 |                 house_feud_start_effect = {
+    |                 ^ <-- from here
+   --> [MOD] common\casus_belli_types\BNO_casus_belli.txt
+119 | bno_subj_war = {
+    | ^^^^^^^^^^^^ <-- actual root was supplied by the game engine
+
+warning(missing-localization): missing english localization key African Subjugation
+   --> [MOD] common\casus_belli_types\BNO_casus_belli.txt
+257 |     war_name = "African Subjugation"
+    |                 ^^^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key African Subjugation
+   --> [MOD] common\casus_belli_types\BNO_casus_belli.txt
+258 |     cb_name_no_target = "African Subjugation"
+    |                          ^^^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key bno_varangian_adventure
+   --> [MOD] common\casus_belli_types\BNO_casus_belli.txt
+276 | bno_varangian_adventure = {
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning(strict-scopes): `on_declared_war` expects scope:recipient to be set
+   --> [MOD] common\casus_belli_types\BNO_casus_belli.txt
+413 |         on_declared_war = yes
+    |         ^^^^^^^^^^^^^^^
+   --> [CK3] common\scripted_effects\00_war_effects.txt
+194 |                 target = scope:recipient
+    |                          ^^^^^^^^^^^^^^^ <-- here
+   --> [MOD] common\casus_belli_types\BNO_casus_belli.txt
+276 | bno_varangian_adventure = {
+    | ^^^^^^^^^^^^^^^^^^^^^^^ <-- scopes initialized here
+
+warning(scopes): `on_declared_war` expects root to be character but root seems to be casus belli
+   --> [MOD] common\casus_belli_types\BNO_casus_belli.txt
+413 |         on_declared_war = yes
+    |         ^^^^^^^^^^^^^^^
+   --> [CK3] common\scripted_effects\03_bp1_scripted_effects.txt
+ 26 |                 var:house_feud_house ?= root.house
+    |                                              ^^^^^ <-- expected root was deduced from `house` here
+   --> [CK3] common\scripted_effects\00_war_effects.txt
+300 |                 house_feud_start_effect = {
+    |                 ^ <-- from here
+   --> [MOD] common\casus_belli_types\BNO_casus_belli.txt
+276 | bno_varangian_adventure = {
+    | ^^^^^^^^^^^^^^^^^^^^^^^ <-- actual root was supplied by the game engine
+
+warning(scopes): `found_cadet_house_decision_effect` expects root to be character but root seems to be casus belli
+    --> [MOD] common\casus_belli_types\BNO_casus_belli.txt
+1226 |                 found_cadet_house_decision_effect = {
+     |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    --> [CK3] common\scripted_effects\00_decisions_effects.txt
+2883 |                 var:banner_dynasty = root.dynasty
+     |                                           ^^^^^^^ <-- expected root was deduced from `dynasty` here
+    --> [MOD] common\casus_belli_types\BNO_casus_belli.txt
+1226 |                 found_cadet_house_decision_effect = {
+     |                 ^ <-- from here
+ 276 | bno_varangian_adventure = {
+     | ^^^^^^^^^^^^^^^^^^^^^^^ <-- actual root was supplied by the game engine
+
+warning(scopes): `found_cadet_house_decision_effect` expects root to be character but root seems to be casus belli
+    --> [MOD] common\casus_belli_types\BNO_casus_belli.txt
+1247 |                 found_cadet_house_decision_effect = {
+     |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    --> [CK3] common\scripted_effects\00_decisions_effects.txt
+2883 |                 var:banner_dynasty = root.dynasty
+     |                                           ^^^^^^^ <-- expected root was deduced from `dynasty` here
+    --> [MOD] common\casus_belli_types\BNO_casus_belli.txt
+1247 |                 found_cadet_house_decision_effect = {
+     |                 ^ <-- from here
+ 276 | bno_varangian_adventure = {
+     | ^^^^^^^^^^^^^^^^^^^^^^^ <-- actual root was supplied by the game engine
+
+warning(missing-localization): missing english localization key BNWO Invasion
+    --> [MOD] common\casus_belli_types\BNO_casus_belli.txt
+1449 |     war_name = "BNWO Invasion"
+     |                 ^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key BNWO Invasion
+    --> [MOD] common\casus_belli_types\BNO_casus_belli.txt
+1450 |     war_name_base = "BNWO Invasion"
+     |                      ^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key BNWO Invasion
+    --> [MOD] common\casus_belli_types\BNO_casus_belli.txt
+1451 |     cb_name = "BNWO Invasion"
+     |                ^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key cosmetics_bno_face_tattoo
+ --> [MOD] common\genes\09_bno_tattoo.txt
+3 |         cosmetics_bno_face_tattoo = {
+  |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key cosmetics_bno_body_tattoo
+   --> [MOD] common\genes\09_bno_tattoo.txt
+276 |         cosmetics_bno_body_tattoo = {
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key cosmetics_bno_pregnancy_tattoo
+   --> [MOD] common\genes\09_bno_tattoo.txt
+487 |         cosmetics_bno_pregnancy_tattoo = {
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning(scopes): `is_female` is for character but scope seems to be landed title
+   --> [MOD] common\laws\BNO_succession_laws.txt
+255 |             is_female = yes
+    |             ^^^^^^^^^
+254 |         can_title_have = {
+    |         ^^^^^^^^^^^^^^ <-- scope was supplied by the game engine
+
+warning(scopes): `has_trait` is for character but scope seems to be landed title
+   --> [MOD] common\laws\BNO_succession_laws.txt
+256 |             has_trait = bno_lifestyle_whitegirl
+    |             ^^^^^^^^^
+254 |         can_title_have = {
+    |         ^^^^^^^^^^^^^^ <-- scope was supplied by the game engine
+
+warning(missing-localization): missing english localization key bno_african_warriors_flavor
+ --> [MOD] common\men_at_arms_types\00_bno_maa_types.txt
+2 | bno_african_warriors = {
+  | ^^^^^^^^^^^^^^^^^^^^
+
+warning(missing-file): file gfx/interface/icons/regimenttypes/bno_african_warriors.dds does not exist
+  --> [MOD] common\men_at_arms_types\00_bno_maa_types.txt
+37 |     icon = bno_african_warriors
+   |            ^^^^^^^^^^^^^^^^^^^^
+
+warning(missing-file): file gfx/interface/illustrations/men_at_arms_big/bno_african_warriors.dds does not exist
+  --> [MOD] common\men_at_arms_types\00_bno_maa_types.txt
+37 |     icon = bno_african_warriors
+   |            ^^^^^^^^^^^^^^^^^^^^
+
+warning(missing-file): file gfx/interface/illustrations/men_at_arms_small/bno_african_warriors.dds does not exist
+  --> [MOD] common\men_at_arms_types\00_bno_maa_types.txt
+37 |     icon = bno_african_warriors
+   |            ^^^^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key message_filter_bno_breeding_outcomes
+ --> [MOD] common\message_filter_types\bno_message_filter_types.txt
+5 | bno_breeding_outcomes = { display = feed }
+  | ^^^^^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key message_filter_bno_blacked_events
+ --> [MOD] common\message_filter_types\bno_message_filter_types.txt
+7 | bno_blacked_events = { display = feed }
+  | ^^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key trait_track_bno_curious
+   --> [MOD] common\traits\BNO_traits.txt
+397 |     track = {
+    |     ^^^^^
+
+warning(missing-localization): missing english localization key trait_track_bno_curious_desc
+   --> [MOD] common\traits\BNO_traits.txt
+397 |     track = {
+    |     ^^^^^
+
+warning(missing-localization): missing english localization key trait_track_bno_blacked
+   --> [MOD] common\traits\BNO_traits.txt
+462 |     track = {
+    |     ^^^^^
+
+warning(missing-localization): missing english localization key trait_track_bno_blacked_desc
+   --> [MOD] common\traits\BNO_traits.txt
+462 |     track = {
+    |     ^^^^^
+
+warning(missing-localization): missing english localization key trait_track_bno_snowbunny
+   --> [MOD] common\traits\BNO_traits.txt
+533 |     track = {
+    |     ^^^^^
+
+warning(missing-localization): missing english localization key trait_track_bno_snowbunny_desc
+   --> [MOD] common\traits\BNO_traits.txt
+533 |     track = {
+    |     ^^^^^
+
+warning(missing-localization): missing english localization key trait_track_bno_qos
+   --> [MOD] common\traits\BNO_traits.txt
+613 |     track = {
+    |     ^^^^^
+
+warning(missing-localization): missing english localization key trait_track_bno_qos_desc
+   --> [MOD] common\traits\BNO_traits.txt
+613 |     track = {
+    |     ^^^^^
+
+warning(missing-localization): missing english localization key trait_track_bno_mindless_bbc_slut
+   --> [MOD] common\traits\BNO_traits.txt
+695 |     track = {
+    |     ^^^^^
+
+warning(missing-localization): missing english localization key trait_track_bno_mindless_bbc_slut_desc
+   --> [MOD] common\traits\BNO_traits.txt
+695 |     track = {
+    |     ^^^^^
+
+warning(missing-localization): missing english localization key bno_slave_0001.title
+ --> [MOD] events\BNO_slave_events.txt
+5 |     title = bno_slave_0001.title
+  |             ^^^^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key bno_slave_0001.desc
+ --> [MOD] events\BNO_slave_events.txt
+6 |     desc = bno_slave_0001.desc
+  |            ^^^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key bno_slave_0001.a
+  --> [MOD] events\BNO_slave_events.txt
+69 |         name = bno_slave_0001.a
+   |                ^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key bno_title_change_0005.a
+   --> [MOD] events\BNO_title_change_events.txt
+473 |         name = bno_title_change_0005.a
+    |                ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key bno_ep3_laamp_flavour_0001.success
+   --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+103 |                 title = bno_ep3_laamp_flavour_0001.success
+    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key bno_ep3_laamp_flavour_0001.failure
+   --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+128 |                 title = bno_ep3_laamp_flavour_0001.failure
+    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key bno_ep3_laamp_flavour_0002.title
+   --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+194 |     title = bno_ep3_laamp_flavour_0002.title
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key bno_ep3_laamp_flavour_0002.desc
+   --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+195 |     desc = bno_ep3_laamp_flavour_0002.desc
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key bno_ep3_laamp_flavour_0002.a
+   --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+281 |         name = bno_ep3_laamp_flavour_0002.a
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key bno_ep3_laamp_flavour_0002.success
+   --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+293 |                 title = bno_ep3_laamp_flavour_0002.success
+    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key bno_ep3_laamp_flavour_0002.b
+   --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+332 |         name = bno_ep3_laamp_flavour_0002.b
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key bno_ep3_laamp_flavour_0002.success
+   --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+350 |                 title = bno_ep3_laamp_flavour_0002.success
+    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key bno_ep3_laamp_flavour_0002.failure
+   --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+369 |                 title = bno_ep3_laamp_flavour_0002.failure
+    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key bno_ep3_laamp_flavour_0003.c
+   --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+386 |         name = bno_ep3_laamp_flavour_0003.c
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key bno_ep3_laamp_flavour_0002.success
+   --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+405 |                 title = bno_ep3_laamp_flavour_0002.success
+    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key bno_ep3_laamp_flavour_0002.failure
+   --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+424 |                 title = bno_ep3_laamp_flavour_0002.failure
+    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key bno_ep3_laamp_flavour_2002.title
+   --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+443 |     title = bno_ep3_laamp_flavour_2002.title
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key bno_ep3_laamp_flavour_2002.desc
+   --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+444 |     desc = bno_ep3_laamp_flavour_2002.desc
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key bno_ep3_laamp_flavour_2002.a
+   --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+458 |         name = bno_ep3_laamp_flavour_2002.a
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key bno_ep3_laamp_flavour_3002.title
+   --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+470 |     title = bno_ep3_laamp_flavour_3002.title
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key bno_ep3_laamp_flavour_3002.desc
+   --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+471 |     desc = bno_ep3_laamp_flavour_3002.desc
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key bno_ep3_laamp_flavour_3002.a
+   --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+507 |         name = bno_ep3_laamp_flavour_3002.a
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key bno_ep3_laamp_flavour_3002.b
+   --> [MOD] events\dlc\BNO_ep3_laamp_flavour_events.txt
+519 |         name = bno_ep3_laamp_flavour_3002.b
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key bno_war_0003.title
+   --> [MOD] events\war_events\bno_war_events.txt
+266 |     title = bno_war_0003.title
+    |             ^^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key bno_war_0003.desc
+   --> [MOD] events\war_events\bno_war_events.txt
+267 |     desc = bno_war_0003.desc
+    |            ^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key bno_war_0003.a
+   --> [MOD] events\war_events\bno_war_events.txt
+287 |         name = bno_war_0003.a
+    |                ^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key bno_random_0040.title
+    --> [MOD] events\yearly_events\BNO_random_events_desc.txt
+7012 |     title = bno_random_0040.title
+     |             ^^^^^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key bno_random_0040.desc
+    --> [MOD] events\yearly_events\BNO_random_events_desc.txt
+7013 |     desc = bno_random_0040.desc
+     |            ^^^^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key bno_random_0040.a
+    --> [MOD] events\yearly_events\BNO_random_events_desc.txt
+7082 |         name = bno_random_0040.a
+     |                ^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key bno_random_0040.b
+    --> [MOD] events\yearly_events\BNO_random_events_desc.txt
+7094 |         name = bno_random_0040.b
+     |                ^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key bno_random_0040.c
+    --> [MOD] events\yearly_events\BNO_random_events_desc.txt
+7106 |         name = bno_random_0040.c
+     |                ^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key PORTRAIT_MODIFIER_cosmetics_bno_pregnancy_tattoo
+   --> [MOD] gfx\portraits\portrait_modifiers\09_bno_tattoos.txt
+314 | cosmetics_bno_pregnancy_tattoo = {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key PORTRAIT_MODIFIER_cosmetics_bno_pregnancy_tattoo_bno_no_pregnancy_tattoo
+   --> [MOD] gfx\portraits\portrait_modifiers\09_bno_tattoos.txt
+317 |     bno_no_pregnancy_tattoo = { # empty
+    |     ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key PORTRAIT_MODIFIER_cosmetics_bno_pregnancy_tattoo_bno_pregnancy_1
+   --> [MOD] gfx\portraits\portrait_modifiers\09_bno_tattoos.txt
+328 |     bno_pregnancy_1 = {
+    |     ^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key PORTRAIT_MODIFIER_cosmetics_bno_pregnancy_tattoo_bno_pregnancy_2
+   --> [MOD] gfx\portraits\portrait_modifiers\09_bno_tattoos.txt
+341 |     bno_pregnancy_2 = {
+    |     ^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key PORTRAIT_MODIFIER_cosmetics_bno_pregnancy_tattoo_bno_pregnancy_3
+   --> [MOD] gfx\portraits\portrait_modifiers\09_bno_tattoos.txt
+354 |     bno_pregnancy_3 = {
+    |     ^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key PORTRAIT_MODIFIER_cosmetics_bno_pregnancy_tattoo_bno_pregnancy_4
+   --> [MOD] gfx\portraits\portrait_modifiers\09_bno_tattoos.txt
+367 |     bno_pregnancy_4 = {
+    |     ^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key PORTRAIT_MODIFIER_cosmetics_bno_pregnancy_tattoo_bno_pregnancy_5
+   --> [MOD] gfx\portraits\portrait_modifiers\09_bno_tattoos.txt
+380 |     bno_pregnancy_5 = {
+    |     ^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key PORTRAIT_MODIFIER_cosmetics_bno_pregnancy_tattoo_bno_pregnancy_6
+   --> [MOD] gfx\portraits\portrait_modifiers\09_bno_tattoos.txt
+393 |     bno_pregnancy_6 = {
+    |     ^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key PORTRAIT_MODIFIER_cosmetics_bno_pregnancy_tattoo_bno_pregnancy_7
+   --> [MOD] gfx\portraits\portrait_modifiers\09_bno_tattoos.txt
+406 |     bno_pregnancy_7 = {
+    |     ^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key PORTRAIT_MODIFIER_cosmetics_bno_pregnancy_tattoo_bno_pregnancy_8
+   --> [MOD] gfx\portraits\portrait_modifiers\09_bno_tattoos.txt
+419 |     bno_pregnancy_8 = {
+    |     ^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key PORTRAIT_MODIFIER_cosmetics_bno_pregnancy_tattoo_bno_pregnancy_9
+   --> [MOD] gfx\portraits\portrait_modifiers\09_bno_tattoos.txt
+432 |     bno_pregnancy_9 = {
+    |     ^^^^^^^^^^^^^^^
+
+warning(missing-localization): missing english localization key PORTRAIT_MODIFIER_cosmetics_bno_pregnancy_tattoo_bno_pregnancy_10
+   --> [MOD] gfx\portraits\portrait_modifiers\09_bno_tattoos.txt
+445 |     bno_pregnancy_10 = {
+    |     ^^^^^^^^^^^^^^^^
+
+warning(logic): OR with only one item inside is probably not what you intended
+  --> [MOD] common\character_interactions\sneak_bbc.txt
+65 |                 OR = {
+   |                      ^
+
+warning(logic): OR with only one item inside is probably not what you intended
+  --> [MOD] common\character_interactions\sneak_bbc.txt
+79 |                 OR = {
+   |                      ^
+
+tips(if-else): `else` with a `limit` does work, but may indicate a mistake
+   --> [MOD] common\on_action\BNO_birth_on_actions.txt
+154 |             limit = {
+    |             ^^^^^
+    = Info: normally you would use `else_if` instead.
+
+Not enough memory resources are available to process this command.
+
+G:\Modding\Paradox Interactive\Crusader Kings III\mod\interracial_takeover>

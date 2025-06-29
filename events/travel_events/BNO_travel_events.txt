@@ -658,30 +658,31 @@ bno_travel_events.2005 = {
 	}
 }
 
-#if you have decent fame and are qos+, you are clearly renowned. spitroast in a local town
-bno_travel_events.0006 = {
-}
-
-#if you have decent fame and are qos+, you are clearly renowned. a cucked male spawns, grovels at your feet
-bno_travel_events.0007 = {
-}
-
-#if you have decent fame and are qos+, you are clearly renowned. a female spawns, intrigued in the lifestyle, having run away from her family
-bno_travel_events.0008 = {
-}
-
-#come across a female getting shared. ask to join
-bno_travel_events.0009 = {
-}
-
-#white male spawns, asks for alms. you can run him over, or if you have a black master of the horse, kill him.
-bno_travel_events.0010 = {
-}
-
-#black master of the horse -> fills you
-bno_travel_events.0011 = {
-}
-
-#The White Killer
-bno_travel_events.0012 = {
-}
+##if you have decent fame and are qos+, you are clearly renowned. spitroast in a local town
+#bno_travel_events.0006 = {
+#}
+#
+##if you have decent fame and are qos+, you are clearly renowned. a cucked male spawns, grovels at your feet
+#bno_travel_events.0007 = {
+#}
+#
+##if you have decent fame and are qos+, you are clearly renowned. a female spawns, intrigued in the lifestyle, having run away from her family
+#bno_travel_events.0008 = {
+#}
+#
+##come across a female getting shared. ask to join
+#bno_travel_events.0009 = {
+#}
+#
+##white male spawns, asks for alms. you can run him over, or if you have a black master of the horse, kill him.
+#bno_travel_events.0010 = {
+#}
+#
+##black master of the horse -> fills you
+#bno_travel_events.0011 = {
+#}
+#
+##The White Killer
+#bno_travel_events.0012 = {
+#}
+#

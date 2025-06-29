@@ -9,7 +9,7 @@
 			has_trait = bno_bbc
 			has_trait_xp = {
 				trait = bno_lifestyle_whitegirl
-				xp >= 100
+				value >= 100
 			}
 		}
 	}

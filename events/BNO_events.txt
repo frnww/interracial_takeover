@@ -282,7 +282,7 @@ bno_events.0005 = {
 			}
 			save_scope_as = target1
 		}
-		primary_spouse = {
+		random_spouse = {
 			limit = {
 				is_adult = yes
 				is_female = yes
@@ -307,7 +307,7 @@ bno_events.0005 = {
 		scope:target2 = {
 			hidden_effect = {
 				stress_impact = {
-					bno_lifestyle_whitegirl = huge_stress_impact_loss
+					bno_lifestyle_whitegirl = massive_stress_impact_loss
 				}
 			}
 		}

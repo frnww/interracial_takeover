@@ -62,9 +62,7 @@ sneak_bbc = {
 			trigger = {
 				scope:recipient = {
 					any_courtier_or_guest = {
-						OR = {
-							has_trait = bno_lifestyle_whitegirl
-						}
+						has_trait = bno_lifestyle_whitegirl
 					}
 				}
 			}
@@ -76,9 +74,7 @@ sneak_bbc = {
 			trigger = {
 				scope:recipient = {
 					any_close_family_member = {
-						OR = {
-							has_trait = bno_lifestyle_whitegirl
-						}
+						has_trait = bno_lifestyle_whitegirl
 					}
 				}
 			}

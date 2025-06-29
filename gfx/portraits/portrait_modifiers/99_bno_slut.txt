@@ -2,39 +2,127 @@
 	usage = game
 	dark_skin = {
 		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = gene_areolas
+				template = areolas_2
+				value = {
+					add = {
+						value = var:becoming_dark
+						multiply = 0.25
+					}
+				}
+			}
+			#Changes Breast Size
+			morph = {
+				mode = modify 
+				gene = gene_bs_bust
+				value = {
+					add = {
+						value = var:becoming_dark
+						divide = 10
+					}
+				}
+			}
+			#Changes Breast Size
+			morph = {
+				mode = add 
+				gene = gene_breast_excess
+				template = breast_excess
+				value = {
+					add = {
+						value = var:becoming_dark
+						multiply = 0.03
+					}
+				}
+			}
+			morph = {
+				mode = modify gene = gene_bs_nipples
+				value = {
+					add = {
+						value = var:becoming_dark
+						divide = 10
+					}
+				}
+			}
+			#Changes Butt Size
+			morph = {
+				mode = modify gene = gene_bs_butt_size
+				value = {
+					add = {
+						value = var:becoming_dark
+						divide = 10
+					}
+				}
+			}
+			#Changes Hip Size
+			morph = {
+				mode = modify gene = gene_bs_hips
+				value = {
+					add = {
+						value = var:becoming_dark
+						divide = 10
+					}
+				}
+			}
+			#Changes Waist Size
+			morph = {
+				mode = modify gene = gene_bs_waist
+				value = {
+					add = {
+						value = var:becoming_dark
+						multiply = -1
+						divide = 10
+					}
+				}
+			}
+			#Changes Waist Size
+			morph = {
+				mode = modify gene = gene_bs_shoulders
+				value = {
+					add = {
+						value = var:becoming_dark
+						multiply = -1
+						divide = 10
+					}
+				}
+			}
 			#changes skin color
 			color = {
 				gene = skin_color
-				mode = replace
-				x = {
-					value = 0.25
-					multiply = var:becoming_dark
-				}
-				y = {
-					value = 0.25
-					multiply = var:becoming_dark
-				}
+				mode = modify
+				
+				x = skin_color_x
+				y = skin_color_y
 			}
 			#changes hair color
 			color = {
 				gene = hair_color
 				mode = replace
 				
-				x = {
-					value = 1
-					divide = var:becoming_dark
-					add = -0.15
-				}
-				y = {
-					value = 2
-					divide = var:becoming_dark
-					add = -0.25
-				}
+				x = hair_color_x
+				y = hair_color_y
 			}
 			accessory = {
 				mode = add
 				gene = dressed
 				template = undressed
+				value = {
+					if = {
+						limit = {
+							var:becoming_dark = 4
+						}
+						value = 1
+					}
+					else = {
+						value = 0
+					}
+				}
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
 				value = {
 					if = {
 						limit = {
@@ -68,37 +156,68 @@
 				gene = lipstick
 				template = pink_matte
 				value = {
+					value = 0.1
+					multiply = var:becoming_dark
+				}
+			}
+			morph = { #eye shadow
+				mode = add
+				gene = eye_shadow
+				template = red_eye_shadow
+				value = {
 					value = 0.25
 					multiply = var:becoming_dark
 				}
 			}
-			morph = {
+			morph = { #eyeliner
 				mode = add
-				gene = cosmetics_bno_face_tattoo
-				template = bno_face_tattoo
+				gene = eyeliner
+				template = black_eyeliner
 				value = {
-					value = 0.05
+					value = 0.25
+					multiply = var:becoming_dark
+				}
+			}
+			morph = { #eyelash_extensions
+				mode = add
+				gene = eyelash_extensions
+				template = eyelash_extensions
+				value = {
+					value = 0.1
 					multiply = var:becoming_dark
 				}
 			}
 			morph = {
 				mode = add
 				gene = gene_cumshots_oral
-				value = {
-					value = 0.25
-					multiply = var:becoming_dark
-				}
 				template = cumshots_oral_1
+			}
+			morph = {
+				mode = add
+				gene = gene_cumshots_doggy
+				template = cumshots_doggy_1
+			}
+			morph = {
+				mode = add
+				gene = gene_cumshots_miss
+				template = cumshots_miss_1
+			}
+			accessory = {
+				mode = replace
+				gene = cbo_eyelashes_accessory
+				template = mascara_eyelashes
 			}
 		}
 		weight = {
 			base = 0
 			modifier = {
 				add = 1000
-				AND = {
-					exists = var:becoming_dark
+				trigger_if = {
+					limit = {
+						exists = var:becoming_dark
+					}
 					OR = {
-						has_game_rule = bno_body_modification_yes
+					has_game_rule = bno_body_modification_yes
 						is_ai = yes
 					}
 				}

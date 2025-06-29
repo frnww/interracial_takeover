@@ -261,29 +261,29 @@ bno_war.0002 = {
 	}
 }
 
-bno_war.0003 = {
-	type = character_event
-	title = bno_war_0003.title
-	desc = bno_war_0003.desc
-	theme = war
-	
-	override_background = {
-		reference = battlefield
-	}
-	left_portrait = {
-		character = root
-		animation = war_attacker
-	}
-	right_portrait = {
-		character = scope:loser
-		animation = war_defender
-	}
-	trigger = {
-		
-	}
-	immediate = {
-	}
-	option = {
-		name = bno_war_0003.a
-	}
-}
+#bno_war.0003 = {
+#	type = character_event
+#	title = bno_war_0003.title
+#	desc = bno_war_0003.desc
+#	theme = war
+#	
+#	override_background = {
+#		reference = battlefield
+#	}
+#	left_portrait = {
+#		character = root
+#		animation = war_attacker
+#	}
+#	right_portrait = {
+#		character = scope:loser
+#		animation = war_defender
+#	}
+#	trigger = {
+#		
+#	}
+#	immediate = {
+#	}
+#	option = {
+#		name = bno_war_0003.a
+#	}
+#}

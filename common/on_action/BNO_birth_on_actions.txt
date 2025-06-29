@@ -150,7 +150,7 @@ bno_blood_inheritance = {
 			}
 			add_trait = bno_barely_mixed
 		}
-		else = {
+		else_if = {
 			limit = {
 				exists = scope:mother
 				exists = scope:real_father

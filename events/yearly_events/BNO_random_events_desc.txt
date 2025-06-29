@@ -1126,7 +1126,6 @@ bno_random.0005 = {
 		
 		carn_had_sex_with_effect_v2 = {
 			PARTNER = scope:target1
-			carn_sex_scene_no_pregnancy_effect = yes
 		}
 		
 		scope:target1 = {
@@ -1293,7 +1292,6 @@ bno_random.0006 = {
 		
 		carn_had_sex_with_effect_v2 = {
 			PARTNER = scope:target1
-			carn_sex_scene_no_pregnancy_effect = yes
 		}
 		scope:target1 = {
 			set_relation_lover = {
@@ -1444,7 +1442,6 @@ bno_random.0007 = {
 		
 		carn_had_sex_with_effect_v2 = {
 			PARTNER = scope:target1
-			carn_sex_scene_no_pregnancy_effect = yes
 		}
 		scope:target1 = {
 			set_relation_lover = {
@@ -1655,7 +1652,6 @@ bno_random.0008 = {
 		
 		carn_had_sex_with_effect_v2 = {
 			PARTNER = scope:target1
-			carn_sex_scene_no_pregnancy_effect = yes
 		}
 		
 		scope:target1 = {
@@ -1874,7 +1870,6 @@ bno_random.0009 = {
 		
 		carn_had_sex_with_effect_v2 = {
 			PARTNER = scope:target1
-			carn_sex_scene_no_pregnancy_effect = yes
 		}
 		scope:target1 = {
 			set_relation_lover = {
@@ -2119,7 +2114,6 @@ bno_random.0010 = {
 		
 		carn_had_sex_with_effect_v2 = {
 			PARTNER = scope:target1
-			carn_sex_scene_no_pregnancy_effect = yes
 		}
 		scope:target1 = {
 			set_relation_lover = {
@@ -3534,7 +3528,6 @@ bno_random.1017 = {
 	immediate = {
 		carn_had_sex_with_effect_v2 = {
 			PARTNER = scope:target1
-			carn_sex_scene_no_pregnancy_effect = yes
 		}
 	}
 	
@@ -3688,7 +3681,6 @@ bno_random.1018 = {
 	immediate = {
 		carn_had_sex_with_effect_v2 = {
 			PARTNER = scope:target1
-			carn_sex_scene_no_pregnancy_effect = yes
 		}
 	}
 	
@@ -6049,8 +6041,8 @@ bno_random.0034 = {
 		
 		carn_had_sex_with_effect_v2 = {
 			PARTNER = scope:target1
-			carn_sex_scene_no_pregnancy_effect = yes
 		}
+		
 		add_trait_xp = {
 			trait = bno_lifestyle_whitegirl
 			value = 5
@@ -6874,19 +6866,17 @@ bno_random.0039 = {
 	}
 	
 	trigger = {
-		root = {
-			is_female = yes
+		is_female = yes
+		is_adult = yes
+		any_courtier_or_guest = {
+			has_trait = bno_bbc
 			is_adult = yes
-			any_courtier_or_guest = {
-				has_trait = bno_bbc
-				is_adult = yes
-				is_ai = yes
-			}
-			any_courtier_or_guest = {
-				NOT = { has_trait = bno_bbc }
-				is_adult = yes
-				is_ai = yes
-			}
+			is_ai = yes
+		}
+		any_courtier_or_guest = {
+			NOT = { has_trait = bno_bbc }
+			is_adult = yes
+			is_ai = yes
 		}
 	}
 	
