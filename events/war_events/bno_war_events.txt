@@ -50,10 +50,7 @@ bno_war.0001 = {
 				primary_spouse = {
 					is_ai = yes
 					NOT = { is_close_or_extended_family_of = root }
-					has_trait_xp = {
-						trait = bno_lifestyle_whitegirl
-						value > 50
-					}
+					is_bno_snowbunny_and_up = yes
 				}
 			}
 		}
@@ -71,10 +68,7 @@ bno_war.0001 = {
 					NOT = { has_trait = bno_bbc }
 					primary_spouse = {
 						NOT = { is_close_or_extended_family_of = root }
-						has_trait_xp = {
-							trait = bno_lifestyle_whitegirl
-							value > 50
-						}
+						is_bno_snowbunny_and_up = yes
 					}
 				}
 			}
@@ -104,10 +98,7 @@ bno_war.0001 = {
 			add_character_modifier = {
 				modifier = bno_gave_husband_to_enemy
 			}
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 10
-			}
+			bno_increase_sluttyness = yes
 			add_opinion = {
 				modifier = bno_pathetic_cuck_husband
 				target = scope:defender

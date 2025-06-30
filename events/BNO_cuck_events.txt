@@ -70,10 +70,7 @@ bno_cuck.0001 = {
 		}
 		
 		scope:target2 = {
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 5
-			}
+			bno_increase_sluttyness = yes
 		}
 	}
 	
@@ -330,10 +327,7 @@ bno_cuck.0003 = {
 			save_scope_as = target2
 		}
 		scope:target2 = {
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 5
-			}
+			bno_increase_sluttyness = yes
 		}
 	}
 	option = {
@@ -546,10 +540,7 @@ bno_cuck.2004 = {
 		}
 		
 		scope:target2 = {
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 5
-			}
+			bno_increase_sluttyness = yes
 		}
 		
 		scope:target1 = {
@@ -709,10 +700,7 @@ bno_cuck.3004 = {
 				}
 			}
 
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 25
-			}
+			bno_increase_sluttyness = yes
 			give_nickname = nick_bcamps
 		}
 		scope:target1 = {
@@ -1151,11 +1139,8 @@ bno_cuck.0009 = {
 				modifier = bno_pathetic_cuck_husband
 				target = scope:cucked_son
 			}
-			add_trait = bno_lifestyle_whitegirl
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 5
-			}
+			add_trait = bno_curious
+			bno_increase_sluttyness = yes
 		}
 		scope:cucked_son = {
 			add_character_modifier = {
@@ -1379,10 +1364,7 @@ bno_cuck.2010 = { #follow up event, bbc spymaster lays with cuck's wife
 				carn_had_sex_with_effect_v2 = {
 					PARTNER = scope:target1
 				}
-				add_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value = 5
-				}
+				bno_increase_sluttyness = yes
 				set_relation_lover = {
 					target = scope:target1
 					reason = bbc_too_good
@@ -1497,11 +1479,8 @@ bno_cuck.0011 = {
 			set_relation_ward = scope:target1
 		}
 		scope:target1 = {
-			add_trait = bno_lifestyle_whitegirl
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 5
-			}
+			add_trait = bno_curious
+			bno_increase_sluttyness = yes
 			add_character_modifier = {
 				modifier = bno_family_betrothed_me_to_bbc
 			}
@@ -1651,7 +1630,7 @@ bno_cuck.0014 = {
 			is_adult = yes
 			is_ai = yes
 			is_female = yes
-			has_trait = bno_lifestyle_whitegirl
+			has_trait = bno_whitegirl
 			NOT = { is_spouse_of = root }
 		}
 		any_spouse = {
@@ -1664,7 +1643,7 @@ bno_cuck.0014 = {
 	immediate = {
 		random_courtier_or_guest = {
 			limit = {
-				has_trait = bno_lifestyle_whitegirl
+				has_trait = bno_whitegirl
 				is_adult = yes
 				is_ai = yes
 				is_female = yes
@@ -1683,11 +1662,7 @@ bno_cuck.0014 = {
 		}
 		hidden_effect = {
 			primary_spouse = {
-				add_trait = bno_lifestyle_whitegirl
-				add_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value = 5
-				}
+				bno_increase_sluttyness = yes
 			}
 		}
 		add_character_modifier = {

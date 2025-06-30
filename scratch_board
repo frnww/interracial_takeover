@@ -351,7 +351,7 @@ warning(scopes): `is_female` is for character but scope seems to be landed title
 
 warning(scopes): `has_trait` is for character but scope seems to be landed title
    --> [MOD] common\laws\BNO_succession_laws.txt
-256 |             has_trait = bno_lifestyle_whitegirl
+256 |             has_trait = bno_whitegirl
     |             ^^^^^^^^^
 254 |         can_title_have = {
     |         ^^^^^^^^^^^^^^ <-- scope was supplied by the game engine

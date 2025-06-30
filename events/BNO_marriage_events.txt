@@ -37,10 +37,7 @@ bno_marriage.0001 = {
 			PARTNER = scope:target1
 		}
 		scope:target1 = {
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 20
-			}
+			bno_increase_sluttyness = yes
 		}
 		root = {
 			set_relation_lover = {
@@ -345,10 +342,7 @@ bno_marriage.0004 = { #unmarried bbc looks to other realms for single woman
 			PARTNER = scope:target1
 		}
 		scope:target1 = {
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 20
-			}
+			bno_increase_sluttyness = yes
 		}
 		root = {
 			set_relation_lover = {

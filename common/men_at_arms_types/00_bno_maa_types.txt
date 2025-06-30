@@ -21,10 +21,7 @@ bno_african_warriors = {
 	can_recruit = {
 		OR = {
 			has_trait = bno_bbc
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 100
-			}
+			has_trait = bno_mindless_bbc_slut
 		}
 	}
 	

@@ -6,10 +6,7 @@ bno_birth.0001 = { # White Breeder
 	
 	trigger = {
 		bno_num_mixed_children_plus_dead >= 4			#this script found in common\script_values\children_count_script if there's a need to edit
-		has_trait_xp = {						#want to check mother is properly blacked, probably needlessly redundant since every black child currently should add 10xp to lifestyle trait.
-			trait = bno_lifestyle_whitegirl
-			value > 50
-		}
+		is_bno_snowbunny_and_up = yes
 		NOR = {
 			has_trait = bno_blood							#check she doesn't have any mixed/quarter mixed trait since it seems weird to refer to those characters as full white, can be removed if needed
 			has_character_flag = bno_white_breeder_flag		#test for character flag so player isn't constantly spammed by notifications everytime wife/lover gives birth, this should be a one time thing per woman

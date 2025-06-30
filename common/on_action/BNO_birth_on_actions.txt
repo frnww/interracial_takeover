@@ -1,6 +1,17 @@
 ﻿on_birth_child = {
 	on_actions = {
 		bno_blood_inheritance
+		bno_bbc_inheritance
+	}
+}
+
+bno_bbc_inheritance = {
+	trigger = {
+		has_game_rule = bno_mod_status_on
+		has_trait = bno_bbc
+	}
+	effect = {
+		make_trait_inactive = bno_bbc
 	}
 }
 
@@ -14,7 +25,7 @@ bno_blood_inheritance = {
 			limit = {
 				exists = scope:mother
 				exists = scope:real_father
-				OR = {
+				AND = {
 					scope:mother = {
 						has_character_flag = bno_originally_black
 					}
@@ -176,10 +187,7 @@ black_bred_bitch = {
 					has_trait = bno_bbc
 				}
 			}
-			add_trait_xp = {				#give the mother 10xp in blacked trait
-				trait = bno_lifestyle_whitegirl
-				value = 5
-			}
+			bno_increase_sluttyness = yes
 		}
 		if = {
 			limit = {

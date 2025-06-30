@@ -253,7 +253,7 @@
 	bnwo_only_law = {
 		can_title_have = {
 			is_female = yes
-			has_trait = bno_lifestyle_whitegirl
+			has_trait = bno_whitegirl
 			can_title_have_law_general_trigger = yes
 		}
 		should_show_for_title = { # Never show this in the UI, just apply it through script
@@ -261,7 +261,7 @@
 		}
 		can_keep = {
 			is_female = yes
-			has_trait = bno_lifestyle_whitegirl
+			has_trait = bno_whitegirl
 		}
 		can_pass = {
 			#can_change_to_equal_succession_law_trigger = yes

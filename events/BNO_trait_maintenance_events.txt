@@ -6,27 +6,34 @@ bno_trait_maintenance.0001 = {
 	hidden = yes
 	
 	trigger = {
-		root = {
-			OR = {
-				has_trait = dick_big_good_1
-				has_inactive_trait = dick_big_good_1
-				has_trait = dick_big_good_2
-				has_inactive_trait = dick_big_good_2
-				has_trait = dick_big_good_3
-				has_inactive_trait = dick_big_good_3
-			}
-			OR = {
-				has_trait = bno_mixed
-				has_trait = bno_mostly_black
-				has_trait = bno_full_black
-				has_character_flag = bno_originally_black
-			}
-			is_male = yes
-			is_adult = yes
+		OR = {
+			has_inactive_trait = bno_bbc
+			has_trait = dick_big_good_1
+			has_inactive_trait = dick_big_good_1
+			has_trait = dick_big_good_2
+			has_inactive_trait = dick_big_good_2
+			has_trait = dick_big_good_3
+			has_inactive_trait = dick_big_good_3
 		}
+		OR = {
+			has_trait = bno_mixed
+			has_trait = bno_mostly_black
+			has_trait = bno_full_black
+			has_character_flag = bno_originally_black
+		}
+		is_male = yes
+		is_adult = yes
 	}
 	immediate = {
-		add_trait = bno_bbc
+		if = {
+			limit = {
+				has_inactive_trait = bno_bbc
+			}
+			make_trait_active = bno_bbc
+		}
+		else = {
+			add_trait = bno_bbc
+		}
 	}
 }
 
@@ -109,7 +116,7 @@ bno_trait_maintenance.0005= {			#african girls cannot have whitegirl trait
 		}
 	}
 	immediate = {
-		remove_trait = bno_lifestyle_whitegirl
+		remove_trait = bno_whitegirl
 	}
 }
 #all africans have black trait

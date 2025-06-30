@@ -74,10 +74,7 @@ bno_bull.0001 = {
 			PARTNER = scope:target2
 		}
 		scope:target2 = {
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 3
-			}
+			bno_increase_sluttyness = yes
 		}
 		if = {
 			limit = {
@@ -120,10 +117,7 @@ bno_bull.0001 = {
 			PARTNER = scope:target2
 		}
 		scope:target2 = {
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 5
-			}
+			bno_increase_sluttyness = yes
 			every_spouse = { #Inform cuck husband she's happy.
 				send_interface_message = {
 					type = bno_blacked_events
@@ -664,10 +658,7 @@ bno_bull.0004 = {
 			PARTNER = scope:target1
 		}
 		scope:target1 = {
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 5
-			}
+			bno_increase_sluttyness = yes
 		}
 		if = {
 			limit = {
@@ -756,10 +747,7 @@ bno_bull.0005 = {
 			}
 		}
 		scope:target1 = {
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 10
-			}
+			bno_increase_sluttyness = yes
 		}
 	}
 	option = {
@@ -916,10 +904,7 @@ bno_bull.0008 = {
 			}
 		}
 		scope:target1 = {
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 10
-			}
+			bno_increase_sluttyness = yes
 			if = {
 				limit = {
 					primary_spouse = {
@@ -1029,10 +1014,7 @@ bno_bull.0009 = {
 			}
 		}
 		scope:target1 = {
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 10
-			}
+			bno_increase_sluttyness = yes
 			if = {
 				limit = {
 					primary_spouse = {
@@ -1175,10 +1157,7 @@ bno_bull.0010 = {
 			}
 		}
 		scope:target1 = {
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 5
-			}
+			bno_increase_sluttyness = yes
 			add_character_modifier = {
 				modifier = bno_wife_stealing_cucks_gold
 				months = 12
@@ -1356,10 +1335,7 @@ bno_bull.0012 = {
 			every_secret = {
 				reveal_to = root
 			}
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 5
-			}
+			bno_increase_sluttyness = yes
 			add_character_modifier = {
 				modifier = bno_cant_keep_mouth_shut
 				years = 2
@@ -1447,10 +1423,7 @@ bno_bull.0013 = {
 			PARTNER = scope:target1
 		}
 		scope:target1 = {
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 10
-			}
+			bno_increase_sluttyness = yes
 			add_opinion = {
 				modifier = bull_husband_takes_me
 				target = root
@@ -1550,11 +1523,7 @@ bno_bull.0014 = {
 			base = 60
 		}
 		scope:target1 = {
-			add_trait = bno_lifestyle_whitegirl
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 3
-			}
+			bno_increase_sluttyness = yes
 		}
 		scope:target2 = {
 			trigger_event = {
@@ -1575,11 +1544,7 @@ bno_bull.0014 = {
 			base = 50
 		}
 		scope:target1 = {
-			add_trait = bno_lifestyle_whitegirl
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 3
-			}
+			bno_increase_sluttyness = yes
 		}
 		scope:target2 = {
 			trigger_event = {
@@ -1600,11 +1565,7 @@ bno_bull.0014 = {
 			base = 5
 		}
 		scope:target1 = {
-			add_trait = bno_lifestyle_whitegirl
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 3
-			}
+			bno_increase_sluttyness = yes
 		}
 		trigger_event = {
 			id = bno_bull.3014
@@ -1666,10 +1627,7 @@ bno_bull.1014 = { #follow up event, fuck and done
 				modifier = bno_bull_fucks_me
 				target = root
 			}
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 4
-			}
+			bno_increase_sluttyness = yes
 			convert_to_bbc_religion = yes
 		}
 	}
@@ -1720,10 +1678,7 @@ bno_bull.2014 = { #follow up event, fuck and become lovers
 				modifier = bno_bull_fucks_me
 				target = root
 			}
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 5
-			}
+			bno_increase_sluttyness = yes
 			convert_to_bbc_religion = yes
 		}
 	}
@@ -1779,10 +1734,7 @@ bno_bull.3014 = { #follow up event, fuck and steal as wife
 				target = root
 			}
 			convert_to_bbc_religion = yes
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 5
-			}
+			bno_increase_sluttyness = yes
 		}
 	}
 	option = {
@@ -1877,11 +1829,7 @@ bno_bull.0015 = {
 	option = { #let her long for bbc
 		name = bno_bull_0015.a
 		scope:target2 = {
-			add_trait = bno_lifestyle_whitegirl
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 5
-			}
+			bno_increase_sluttyness = yes
 		}
 	}
 }

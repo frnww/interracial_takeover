@@ -26,7 +26,7 @@ bno_cuck_travel.0001 = {
 			any_entourage_character = {
 				is_adult = yes
 				is_female = yes
-				has_trait = bno_lifestyle_whitegirl
+				has_trait = bno_whitegirl
 			}
 			any_entourage_character = {
 				is_adult = yes
@@ -42,7 +42,7 @@ bno_cuck_travel.0001 = {
 					limit = {
 						is_adult = yes
 						is_female = yes
-						has_trait = bno_lifestyle_whitegirl
+						has_trait = bno_whitegirl
 					}
 					save_scope_as = target1
 				}
@@ -60,24 +60,17 @@ bno_cuck_travel.0001 = {
 			carn_had_sex_with_effect_v2 = {
 				PARTNER = scope:target2
 			}
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 5
-			}
+			bno_increase_sluttyness = yes
 		}
 		current_travel_plan = {
 			random_entourage_character = {
 				limit = {
 					is_adult = yes
 					is_female = yes
-					NOT = {has_trait = bno_lifestyle_whitegirl}
+					NOT = {has_trait = bno_whitegirl}
 				}
 				hidden_effect = {
-					add_trait = bno_lifestyle_whitegirl
-					add_trait_xp = {
-						trait = bno_lifestyle_whitegirl
-						value = 4
-					}
+					bno_increase_sluttyness = yes
 				}
 			}
 		}

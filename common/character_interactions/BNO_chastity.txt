@@ -18,7 +18,7 @@ bno_chastity_interaction = {
 		scope:actor = {
 			is_adult = yes
 			OR = {
-				has_trait = bno_lifestyle_whitegirl
+				has_trait = bno_whitegirl
 				has_trait = bno_bbc
 			}
 		}
@@ -153,7 +153,7 @@ bno_castration_interaction = {
 		scope:actor = {
 			is_adult = yes
 			OR = {
-				has_trait = bno_lifestyle_whitegirl
+				has_trait = bno_whitegirl
 				has_trait = bno_bbc
 			}
 		}

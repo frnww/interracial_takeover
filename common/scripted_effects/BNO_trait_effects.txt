@@ -1,12 +1,5 @@
 ﻿# assigning the fluctuation of traits and their development. "becoming sluttier"
 
-become_more_qos_effect = {
-	add_trait_xp = {
-		trait = bno_lifestyle_whitegirl
-		value = 100
-	}
-}
-
 become_more_cuck_effect = {
 	change_trait_rank = {
 		trait = bno_whiteboi
@@ -22,12 +15,7 @@ become_less_black = {
 	}
 }
 
-become_less_slut = {
-	change_trait_rank = {
-		trait = bno_whitegirl
-		rank = -1
-	}
-}
+
 
 blind_and_castrate_actor_effect = {
 	add_trait = blind

@@ -61,9 +61,7 @@ bno_slut.0001 = {
 		}
 		root = {
 			sex_with_bbc = yes
-			level_up_whitegirl_lifestyle = {
-				xp = 3
-			}
+			bno_increase_sluttyness = yes
 		}
 		scope:cuck = {
 			become_more_cuck_effect = yes
@@ -86,9 +84,7 @@ bno_slut.0001 = {
 			become_lover_with_bbc = yes
 			sex_with_bbc = yes
 			convert_to_bbc_religion = yes
-			level_up_whitegirl_lifestyle = {
-				xp = 5
-			}
+			bno_increase_sluttyness = yes
 		}
 		scope:cuck = {
 			become_more_cuck_effect = yes
@@ -306,10 +302,7 @@ bno_slut.0003 = {
 				target = scope:bbc
 				reason = bbc_too_good
 			}
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 3
-			}
+			bno_increase_sluttyness = yes
 		}
 		trigger_event = {
 			id = bno_slut.1003
@@ -373,9 +366,7 @@ bno_slut.1003 = {
 				modifier = bno_fed_me_cum
 				target = scope:bbc
 			}
-			level_up_whitegirl_lifestyle = {
-				xp = 3
-			}
+			bno_increase_sluttyness = yes
 		}
 		#send notification to cuck husband if one exists
 		if = {
@@ -454,10 +445,7 @@ bno_slut.2003 = {
 		add_stress = -20
 		add_learning_lifestyle_perk_points = 1
 		root = {
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 3
-			}
+			bno_increase_sluttyness = yes
 			add_stress = -20
 			add_trait = temperate
 			give_nickname = nick_bcm
@@ -696,15 +684,11 @@ bno_slut.0005 = {
 		get_bbc_scope = yes
 		root = {
 			sex_with_bbc = yes
-			level_up_whitegirl_lifestyle = {
-				xp = 10
-			}
+			bno_increase_sluttyness = yes
 		}
 		scope:whitegirl = {
 			sex_with_bbc = yes
-			level_up_whitegirl_lifestyle = {
-				xp = 10
-			}
+			bno_increase_sluttyness = yes
 			convert_to_bbc_religion = yes
 		}
 	}
@@ -826,14 +810,14 @@ bno_slut.0007 = {
 	trigger = {
 		is_mindless_bbc_slut = yes
 		NOT = {
-			exists = var:becoming_dark
+			exists = var:bno_becoming_dark
 		}
 		is_partner_bbc = yes
 	}
 	immediate = {
 		root = {
 			set_variable = {
-				name = becoming_dark
+				name = bno_becoming_dark
 				value = 1
 			}
 			get_bbc_husband_scope = yes
@@ -870,10 +854,10 @@ bno_slut.7777 = {
 	immediate = {
 		if = {
 			limit = {
-				var:becoming_dark <= 4
+				var:bno_becoming_dark <= 4
 			}
 			change_variable = {
-				name = becoming_dark
+				name = bno_becoming_dark
 				add = 0.006
 			}
 			trigger_event = {
@@ -884,12 +868,9 @@ bno_slut.7777 = {
 		}
 		else = {
 			set_variable = {
-				name = becoming_dark
+				name = bno_becoming_dark
 				value = 4
 			}
-		}
-		becoming_darker = {
-			BECOMING_DARK = var:becoming_dark
 		}
 	}
 }
@@ -1212,9 +1193,7 @@ bno_slut.0010 = {
 			add_prestige = minor_prestige_gain
 		}
 		root = {
-			level_up_whitegirl_lifestyle = {
-				xp = 5
-			}
+			bno_increase_sluttyness = yes
 			add_character_modifier = {
 				modifier = bno_wife_stealing_cucks_gold
 				months = 6
@@ -1375,10 +1354,7 @@ bno_slut.0012 = {
 			every_secret = {
 				reveal_to = scope:bbc
 			}
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 5
-			}
+			bno_increase_sluttyness = yes
 			add_character_modifier = {
 				modifier = bno_cant_keep_mouth_shut
 				years = 2
@@ -1444,11 +1420,10 @@ bno_slut.0013 = {
 	}
 	cooldown = {months = 12 }
 	trigger = {
-		has_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value < 100
-		}
-		is_blacked_whitegirl = yes
+		is_bno_curious_and_up = yes
+		is_bno_fucked_mindless = no
+		is_female = yes
+		is_elligible_partner = yes
 		is_ruler = yes
 		any_spouse = {
 			is_blackbull = yes
@@ -1572,9 +1547,7 @@ bno_slut.0014 = {
 			base = 60
 		}
 		scope:whitegirl = {
-			level_up_whitegirl_lifestyle = {
-				xp = 3
-			}
+			bno_increase_sluttyness = yes
 		}
 		scope:cuck = {
 			trigger_event = {
@@ -1595,9 +1568,7 @@ bno_slut.0014 = {
 			base = 50
 		}
 		scope:whitegirl = {
-			level_up_whitegirl_lifestyle = {
-				xp = 3
-			}
+			bno_increase_sluttyness = yes
 		}
 		scope:cuck = {
 			trigger_event = {
@@ -1618,9 +1589,7 @@ bno_slut.0014 = {
 			base = 5
 		}
 		scope:whitegirl = {
-			level_up_whitegirl_lifestyle = {
-				xp = 3
-			}
+			bno_increase_sluttyness = yes
 		}
 		trigger_event = {
 			id = bno_slut.3014
@@ -1680,9 +1649,7 @@ bno_slut.1014 = {
 				modifier = bno_bull_fucks_me
 				target = scope:bbc
 			}
-			level_up_whitegirl_lifestyle = {
-				xp = 4
-			}
+			bno_increase_sluttyness = yes
 			convert_to_bbc_religion = yes
 		}
 	}
@@ -1731,9 +1698,7 @@ bno_slut.2014 = { #follow up event, fuck and become lovers
 				modifier = bno_bull_fucks_me
 				target = scope:bbc
 			}
-			level_up_whitegirl_lifestyle = {
-				xp = 5
-			}
+			bno_increase_sluttyness = yes
 			convert_to_bbc_religion = yes
 			set_relation_lover = {
 				target = scope:bbc
@@ -1787,9 +1752,7 @@ bno_slut.3014 = { #follow up event, fuck and steal as wife
 				target = scope:bbc
 			}
 			convert_to_bbc_religion = yes
-			level_up_whitegirl_lifestyle = {
-				xp = 5
-			}
+			bno_increase_sluttyness = yes
 		}
 	}
 	option = {
@@ -1991,6 +1954,97 @@ bno_slut.3015 = {
 		root = {
 			remove_character_flag = {
 			flag = bno_slut.1015
+			}
+		}
+	}
+}
+
+##Increase Breast
+#bno_slut.0016 = {
+#
+#}
+#
+##Increase Butt
+#bno_slut.0017 = {
+#
+#}
+#
+##Decrease Hips
+#bno_slut.0018 = {
+#
+#}
+#
+##Blonder Hair
+#bno_slut.0019 = {
+#
+#}
+
+
+
+
+namespace = pregnancy
+pregnancy.5001 = {
+	type = character_event
+	title = pregnancy.5001.t
+	desc = {
+		desc = pregnancy.5001.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:real_father = scope:real_father_inquirer }
+				desc = pregnancy.5001.real_father
+			}
+			desc = pregnancy.5001.not_father
+		}
+	}
+	theme = pregnancy
+	left_portrait = {
+		character = scope:real_father_inquirer
+		animation = worry
+	}
+	right_portrait = {
+		trigger = {
+			NOT = { scope:spouse = scope:real_father_inquirer }
+		}
+		character = scope:spouse
+	}
+
+	trigger = {
+		scope:mother = {
+			NOT = {
+				has_character_flag = bno_slut.1015
+			}
+			is_pregnant = yes
+		}
+	}
+
+	option = { #It is true!
+		name = pregnancy.5001.a
+		trigger = {
+			scope:real_father_inquirer = scope:real_father
+		}
+		custom_tooltip = reveal_illegitimate_pregnancy_to_real_father_tt
+		ai_chance = {
+			base = 100
+		}
+		scope:real_father = {
+			trigger_event = {
+				id = pregnancy.5002 #The truth is revealed to them
+				days = { 3 5 }
+			}
+		}
+	}
+
+	option = { #Insist real_father is wrong
+		name = pregnancy.5001.b
+		trigger = { NOT = { scope:real_father_inquirer = scope:real_father } }
+		fallback = yes # Only show if they are not the father
+		ai_chance = {
+			base = 100
+		}
+		scope:real_father = {
+			trigger_event = {
+				id = pregnancy.5003 #Denial
+				days = { 3 5 }
 			}
 		}
 	}

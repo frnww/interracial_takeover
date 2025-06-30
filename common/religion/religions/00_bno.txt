@@ -42,8 +42,8 @@
 	doctrine = doctrine_pilgrimage_encouraged
 	
 	traits = {
-		virtues = { futa bno_bbc dick_big_good_1 dick_big_good_2 dick_big_good_3 lustful sadistic bno_camp_leader bno_full_black bno_lifestyle_whitegirl}
-		sins = { dick_small_good_1 dick_small_good_2 dick_small_good_3 dick_small_bad_1 dick_small_bad_2 dick_small_bad_3 chaste bno_cuckish bno_cuck bno_beta bno_jos bno_caged bno_castrated}
+		virtues = { bno_whitegirl futa bno_bbc dick_big_good_1 dick_big_good_2 dick_big_good_3 lustful sadistic bno_camp_leader bno_full_black}
+		sins = { dick_small_good_1 dick_small_good_2 dick_small_good_3 dick_small_bad_1 dick_small_bad_2 dick_small_bad_3 chaste bno_whiteboi bno_chastity}
 	}
 	
 	reserved_male_names = {

@@ -7,28 +7,45 @@
   }
 }
 
+bno_gold_amount = {
+	every_ruler = {
+		limit = {
+			faith = root.faith
+		}
+		add = 1
+	}
+}
+
+bno_random_xp_positive = {
+	value = { 1 10 }
+}
+
+bno_random_xp_negative = {
+	value = { -1 -10 }
+}
+
 bno_random_days = {
   value = { 1 90 }
 }
 
 hair_color_x = {
    value = 1
-   divide = var:becoming_dark
+   divide = var:bno_becoming_dark
    add = -0.15
 }
 
 hair_color_y = {
    value = 2
-   divide = var:becoming_dark
+   divide = var:bno_becoming_dark
    add = -0.25
 }
 
 skin_color_x = {
   value = 0.1
-  multiply = var:becoming_dark
+  multiply = var:bno_becoming_dark
 }
 
 skin_color_y = {
   value = 0.1
-  multiply = var:becoming_dark
+  multiply = var:bno_becoming_dark
 }

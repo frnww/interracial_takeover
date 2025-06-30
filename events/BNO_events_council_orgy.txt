@@ -105,11 +105,11 @@ bno_council_orgy.0001 = {
 	# Accept
 	option = {
 		trigger = {
-			NOT = { has_trait = bno_lifestyle_whitegirl }
+			NOT = { has_trait = bno_whitegirl }
 		}
 		name = bno_council_orgy_0001.a
 		root = {
-			add_trait = bno_lifestyle_whitegirl
+			add_trait = bno_curious
 		}
 		trigger_event = bno_council_orgy.0002
 		ai_chance = {
@@ -129,7 +129,7 @@ bno_council_orgy.0001 = {
 	}
 	option = {
 		trigger = {
-			has_trait = bno_lifestyle_whitegirl
+			has_trait = bno_whitegirl
 		}
 		fallback = yes
 		name = bno_council_orgy_0001.b
@@ -152,17 +152,11 @@ bno_council_orgy.0001 = {
 				add = 10
 			}
 			modifier = {
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 25
-				}
+				is_bno_blacked_and_up = yes
 				factor = 2
 			}
 			modifier = {
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 75
-				}
+				has_trait = bno_qos
 				factor = 2
 			}
 		}
@@ -171,10 +165,7 @@ bno_council_orgy.0001 = {
 	option = {
 		trigger = {
 			NOT = {
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 100
-				}
+				is_bno_mindless_bbc_slut = yes
 			}
 		}
 		name = bno_council_orgy_0001.c
@@ -182,7 +173,7 @@ bno_council_orgy.0001 = {
 			always = yes
 		}
 		stress_impact = {
-			bno_lifestyle_whitegirl = minor_stress_impact_gain
+			bno_whitegirl = minor_stress_impact_gain
 		}
 		fire_councillor = scope:target_bbc_1
 		ai_chance = {
@@ -481,7 +472,7 @@ bno_council_orgy.0002 = {
 			trigger = {
 				scope:target_female_1 = {
 					NOT = {
-						has_trait = bno_lifestyle_whitegirl
+						has_trait = bno_whitegirl
 					}
 				}
 			}
@@ -490,11 +481,7 @@ bno_council_orgy.0002 = {
 		name = {
 			trigger = {
 				scope:target_female_1 = {
-					has_trait = bno_lifestyle_whitegirl
-					has_trait_xp = {
-						trait = bno_lifestyle_whitegirl
-						value < 25
-					}
+					is_bno_curious = yes
 				}
 			}
 			text = bno_council_orgy_0002.f1b
@@ -502,15 +489,8 @@ bno_council_orgy.0002 = {
 		name = {
 			trigger = {
 				scope:target_female_1 = {
-					has_trait = bno_lifestyle_whitegirl
-					has_trait_xp = {
-						trait = bno_lifestyle_whitegirl
-						value >= 25
-					}
-					has_trait_xp = {
-						trait = bno_lifestyle_whitegirl
-						value < 75
-					}
+					is_bno_blacked_and_up = yes
+					is_bno_mindless_bbc_slut = no
 				}
 			}
 			text = bno_council_orgy_0002.f1c
@@ -518,11 +498,7 @@ bno_council_orgy.0002 = {
 		name = {
 			trigger = {
 				scope:target_female_1 = {
-					has_trait = bno_lifestyle_whitegirl
-					has_trait_xp = {
-						trait = bno_lifestyle_whitegirl
-						value >= 75
-					}
+					is_bno_qos_and_up = yes
 				}
 			}
 			text = bno_council_orgy_0002.f1d
@@ -532,7 +508,7 @@ bno_council_orgy.0002 = {
 			if = {
 				limit = {
 					NOT = {
-						has_trait = bno_lifestyle_whitegirl
+						has_trait = bno_whitegirl
 					}
 				}
 				
@@ -563,7 +539,7 @@ bno_council_orgy.0002 = {
 							add = 10
 						}
 						desc = bno_council_orgy_0002.stays_to_watch
-						add_trait = bno_lifestyle_whitegirl
+						add_trait = bno_curious
 						add_character_flag = bno_council_orgy_masturbated
 					}
 					# Leave
@@ -609,19 +585,11 @@ bno_council_orgy.0002 = {
 							add = 10
 						}
 						modifier = {
-							has_trait = bno_lifestyle_whitegirl
-							has_trait_xp = {
-								trait = bno_lifestyle_whitegirl
-								value >= 25
-							}
+							is_bno_blacked_and_up = yes
 							factor = 2
 						}
 						modifier = {
-							has_trait = bno_lifestyle_whitegirl
-							has_trait_xp = {
-								trait = bno_lifestyle_whitegirl
-								value >= 75
-							}
+							is_bno_qos_and_up = yes
 							factor = 2
 						}
 						modifier = {
@@ -651,7 +619,7 @@ bno_council_orgy.0002 = {
 							factor = 5
 						}
 						modifier = {
-							has_trait = bno_lifestyle_whitegirl
+							has_trait = bno_whitegirl
 							factor = 2
 						}
 						desc = bno_council_orgy_0002.only_watch
@@ -666,11 +634,7 @@ bno_council_orgy.0002 = {
 					50 = {
 						trigger = {
 							NOT = {
-								has_trait = bno_lifestyle_whitegirl
-								has_trait_xp = {
-									trait = bno_lifestyle_whitegirl
-									value >= 75
-								}
+								is_bno_qos_and_up = yes
 							}
 						}
 						modifier = {
@@ -699,11 +663,7 @@ bno_council_orgy.0002 = {
 		ai_chance = {
 			base = 50
 			modifier = {
-				has_trait = bno_lifestyle_whitegirl
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 25
-				}
+				is_bno_blacked_and_up = yes
 				factor = 2
 			}
 			modifier = {
@@ -737,7 +697,7 @@ bno_council_orgy.0002 = {
 			trigger = {
 				scope:target_female_2 = {
 					NOT = {
-						has_trait = bno_lifestyle_whitegirl
+						has_trait = bno_whitegirl
 					}
 				}
 			}
@@ -746,11 +706,7 @@ bno_council_orgy.0002 = {
 		name = {
 			trigger = {
 				scope:target_female_2 = {
-					has_trait = bno_lifestyle_whitegirl
-					has_trait_xp = {
-						trait = bno_lifestyle_whitegirl
-						value < 25
-					}
+					is_bno_curious = yes
 				}
 			}
 			text = bno_council_orgy_0002.f2b
@@ -758,15 +714,8 @@ bno_council_orgy.0002 = {
 		name = {
 			trigger = {
 				scope:target_female_2 = {
-					has_trait = bno_lifestyle_whitegirl
-					has_trait_xp = {
-						trait = bno_lifestyle_whitegirl
-						value >= 25
-					}
-					has_trait_xp = {
-						trait = bno_lifestyle_whitegirl
-						value < 75
-					}
+					is_bno_blacked_and_up = yes
+					is_bno_mindless_bbc_slut = no
 				}
 			}
 			text = bno_council_orgy_0002.f2c
@@ -774,11 +723,7 @@ bno_council_orgy.0002 = {
 		name = {
 			trigger = {
 				scope:target_female_2 = {
-					has_trait = bno_lifestyle_whitegirl
-					has_trait_xp = {
-						trait = bno_lifestyle_whitegirl
-						value >= 75
-					}
+					is_bno_qos_and_up = yes
 				}
 			}
 			text = bno_council_orgy_0002.f2d
@@ -788,7 +733,7 @@ bno_council_orgy.0002 = {
 			if = {
 				limit = {
 					NOT = {
-						has_trait = bno_lifestyle_whitegirl
+						has_trait = bno_whitegirl
 					}
 				}
 				
@@ -819,7 +764,7 @@ bno_council_orgy.0002 = {
 							add = 10
 						}
 						desc = bno_council_orgy_0002.stays_to_watch
-						add_trait = bno_lifestyle_whitegirl
+						add_trait = bno_curious
 						add_character_flag = bno_council_orgy_masturbated
 					}
 					# Leave
@@ -865,19 +810,11 @@ bno_council_orgy.0002 = {
 							add = 10
 						}
 						modifier = {
-							has_trait = bno_lifestyle_whitegirl
-							has_trait_xp = {
-								trait = bno_lifestyle_whitegirl
-								value >= 25
-							}
+							is_bno_blacked_and_up = yes
 							factor = 2
 						}
 						modifier = {
-							has_trait = bno_lifestyle_whitegirl
-							has_trait_xp = {
-								trait = bno_lifestyle_whitegirl
-								value >= 75
-							}
+							is_bno_qos_and_up = yes
 							factor = 2
 						}
 						modifier = {
@@ -948,11 +885,7 @@ bno_council_orgy.0002 = {
 		ai_chance = {
 			base = 50
 			modifier = {
-				has_trait = bno_lifestyle_whitegirl
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 25
-				}
+				is_bno_blacked_and_up = yes
 				factor = 2
 			}
 			modifier = {
@@ -986,7 +919,7 @@ bno_council_orgy.0002 = {
 			trigger = {
 				scope:target_female_3 = {
 					NOT = {
-						has_trait = bno_lifestyle_whitegirl
+						has_trait = bno_whitegirl
 					}
 				}
 			}
@@ -995,11 +928,7 @@ bno_council_orgy.0002 = {
 		name = {
 			trigger = {
 				scope:target_female_3 = {
-					has_trait = bno_lifestyle_whitegirl
-					has_trait_xp = {
-						trait = bno_lifestyle_whitegirl
-						value < 25
-					}
+					is_bno_curious = yes
 				}
 			}
 			text = bno_council_orgy_0002.f3b
@@ -1007,15 +936,8 @@ bno_council_orgy.0002 = {
 		name = {
 			trigger = {
 				scope:target_female_3 = {
-					has_trait = bno_lifestyle_whitegirl
-					has_trait_xp = {
-						trait = bno_lifestyle_whitegirl
-						value >= 25
-					}
-					has_trait_xp = {
-						trait = bno_lifestyle_whitegirl
-						value < 75
-					}
+					is_bno_blacked_and_up = yes
+					is_bno_mindless_bbc_slut = no
 				}
 			}
 			text = bno_council_orgy_0002.f3c
@@ -1023,11 +945,7 @@ bno_council_orgy.0002 = {
 		name = {
 			trigger = {
 				scope:target_female_3 = {
-					has_trait = bno_lifestyle_whitegirl
-					has_trait_xp = {
-						trait = bno_lifestyle_whitegirl
-						value >= 75
-					}
+					is_bno_qos_and_up = yes
 				}
 			}
 			text = bno_council_orgy_0002.f3d
@@ -1037,7 +955,7 @@ bno_council_orgy.0002 = {
 			if = {
 				limit = {
 					NOT = {
-						has_trait = bno_lifestyle_whitegirl
+						has_trait = bno_whitegirl
 					}
 				}
 				
@@ -1068,7 +986,7 @@ bno_council_orgy.0002 = {
 							add = 10
 						}
 						desc = bno_council_orgy_0002.stays_to_watch
-						add_trait = bno_lifestyle_whitegirl
+						add_trait = bno_curious
 						add_character_flag = bno_council_orgy_masturbated
 					}
 					# Leave
@@ -1114,19 +1032,11 @@ bno_council_orgy.0002 = {
 							add = 10
 						}
 						modifier = {
-							has_trait = bno_lifestyle_whitegirl
-							has_trait_xp = {
-								trait = bno_lifestyle_whitegirl
-								value >= 25
-							}
+							is_bno_blacked_and_up = yes
 							factor = 2
 						}
 						modifier = {
-							has_trait = bno_lifestyle_whitegirl
-							has_trait_xp = {
-								trait = bno_lifestyle_whitegirl
-								value >= 75
-							}
+							is_bno_qos_and_up = yes
 							factor = 2
 						}
 						modifier = {
@@ -1197,11 +1107,7 @@ bno_council_orgy.0002 = {
 		ai_chance = {
 			base = 50
 			modifier = {
-				has_trait = bno_lifestyle_whitegirl
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 25
-				}
+				is_bno_blacked_and_up = yes
 				factor = 2
 			}
 			modifier = {
@@ -1246,19 +1152,12 @@ bno_council_orgy.0002 = {
 				add = 10
 			}
 			modifier = {
-				has_trait = bno_lifestyle_whitegirl
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 25
-				}
+				is_bno_blacked_and_up = yes
 				factor = 2
 			}
 			modifier = {
-				has_trait = bno_lifestyle_whitegirl
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 75
-				}
+				has_trait = bno_whitegirl
+				has_trait = bno_qos
 				factor = 2
 			}
 			modifier = {

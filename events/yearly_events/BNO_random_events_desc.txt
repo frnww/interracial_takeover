@@ -87,10 +87,7 @@ bno_random.0001 = {
 			carn_had_sex_with_effect_v2 = {
 				PARTNER = scope:target1
 			}
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 20
-			}
+			bno_increase_sluttyness = yes
 		}
 		
 		scope:target1 = {
@@ -134,12 +131,9 @@ bno_random.0001 = {
 	option = {
 		name = bno_random_0001.c
 		stress_impact = {
-			bno_lifestyle_whitegirl = minor_stress_impact_gain
+			bno_whitegirl = minor_stress_impact_gain
 		}
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = -2
-		}
+		bno_decrease_sluttyness = yes
 		imprison = {
 			target = scope:target1
 		}
@@ -193,7 +187,7 @@ bno_random.1001 = {
 		name =  bno_random_1001.a
 		
 		trigger = {
-			NOT = { has_trait = bno_lifestyle_whitegirl }
+			NOT = { has_trait = bno_whitegirl }
 		}
 		if = {
 			limit = {
@@ -207,12 +201,12 @@ bno_random.1001 = {
 				primary_spouse = { become_more_cuck_effect = yes }
 			}
 		}
-		add_trait = bno_lifestyle_whitegirl
+		add_trait = bno_curious
 	}
 	option = {
 		name =  bno_random_1001.b
 		trigger = {
-			has_trait = bno_lifestyle_whitegirl
+			has_trait = bno_whitegirl
 		}
 		if = {
 			limit = {
@@ -300,10 +294,10 @@ bno_random.2001 = {
 		if = {
 			limit = {
 				NOT = {
-					has_trait = bno_lifestyle_whitegirl
+					has_trait = bno_whitegirl
 				}
 			}
-			add_trait = bno_lifestyle_whitegirl
+			add_trait = bno_curious
 		}
 		
 		carn_had_sex_with_effect_v2 = {
@@ -317,16 +311,9 @@ bno_random.2001 = {
 		}
 		if = {
 			limit = {
-				has_trait = bno_lifestyle_whitegirl
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value < 25
-				}
+				is_bno_curious = yes
 			}
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 20
-			}
+			bno_increase_sluttyness = yes
 		}
 		
 		add_stress = -25
@@ -381,10 +368,7 @@ bno_random.0002 = {
 				is_ai = yes
 			}
 			any_close_family_member = {
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 25
-				}
+				is_bno_blacked_and_up = yes
 				is_adult = yes
 				is_female = yes
 				is_parent_of = root
@@ -406,10 +390,7 @@ bno_random.0002 = {
 		}
 		random_close_family_member = {
 			limit = {
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 25
-				}
+				is_bno_blacked_and_up = yes
 				is_adult = yes
 				is_female = yes
 				is_ai = yes
@@ -457,10 +438,10 @@ bno_random.0002 = {
 		if = {
 			limit = {
 				NOT = {
-					has_trait = bno_lifestyle_whitegirl
+					has_trait = bno_whitegirl
 				}
 			}
-			add_trait = bno_lifestyle_whitegirl
+			add_trait = bno_curious
 		}
 		
 		trigger_event = bno_random.1002
@@ -469,11 +450,7 @@ bno_random.0002 = {
 	option = {
 		name = bno_random_0002.b
 		trigger = {
-			has_trait = bno_lifestyle_whitegirl
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 25
-			}
+			has_trait = bno_curious
 		}
 		
 		trigger_event = bno_random.2002
@@ -482,7 +459,7 @@ bno_random.0002 = {
 	option = {
 		name = bno_random_0002.c
 		stress_impact = {
-			bno_lifestyle_whitegirl = medium_stress_impact_gain
+			bno_whitegirl = medium_stress_impact_gain
 		}
 	}
 }
@@ -535,16 +512,13 @@ bno_random.2002 = {
 	desc = {
 		triggered_desc = {
 			trigger = {
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 75
-				}
+				has_trait = bno_qos
 			}
 			desc = bno_random_2002.desc1
 		}
 		triggered_desc = {
 			trigger = {
-				has_trait = bno_lifestyle_whitegirl
+				has_trait = bno_whitegirl
 				has_trait_xp = {
 					trait = bno_lifestyle_whitegirl
 					value < 75
@@ -606,10 +580,7 @@ bno_random.2002 = {
 				reason = bbc_too_good
 			}
 		}
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 5
-		}
+		bno_increase_sluttyness = yes
 		add_stress = -25
 	}
 }
@@ -662,10 +633,7 @@ bno_random.0003 = {
 				is_ai = yes
 			}
 			any_close_family_member = {
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 25
-				}
+				is_bno_blacked_and_up = yes
 				is_adult = yes
 				is_female = yes
 				is_sibling_of = root
@@ -687,10 +655,7 @@ bno_random.0003 = {
 		}
 		random_close_family_member = {
 			limit = {
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 25
-				}
+				is_bno_blacked_and_up = yes
 				is_adult = yes
 				is_female = yes
 				is_ai = yes
@@ -737,21 +702,17 @@ bno_random.0003 = {
 		if = {
 			limit = {
 				NOT = {
-					has_trait = bno_lifestyle_whitegirl
+					has_trait = bno_whitegirl
 				}
 			}
-			add_trait = bno_lifestyle_whitegirl
+			add_trait = bno_curious
 		}
 	}
 	
 	option = {
 		name = bno_random_0003.b
 		trigger = {
-			has_trait = bno_lifestyle_whitegirl
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 25
-			}
+			has_trait = bno_curious
 		}
 		carn_had_sex_with_effect_v2 = {
 			PARTNER = scope:target1
@@ -763,17 +724,14 @@ bno_random.0003 = {
 			}
 		}
 		
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 5
-		}
+		bno_increase_sluttyness = yes
 		
 		trigger_event = bno_random.2003
 	}
 	option = {
 		name = bno_random_0003.c
 		stress_impact = {
-			bno_lifestyle_whitegirl = medium_stress_impact_gain
+			bno_whitegirl = medium_stress_impact_gain
 		}
 		
 		scope:target1 = {
@@ -877,10 +835,7 @@ bno_random.0004 = {
 	trigger = {
 		root = {
 			any_liege_or_above = {
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 75
-				}
+				has_trait = bno_qos
 				is_adult = yes
 				is_female = yes
 				is_ai = yes
@@ -890,7 +845,7 @@ bno_random.0004 = {
 				}
 			}
 			NOT = {
-				has_trait = bno_lifestyle_whitegirl
+				has_trait = bno_whitegirl
 			}
 			is_female = yes
 			is_adult = yes
@@ -900,10 +855,7 @@ bno_random.0004 = {
 	immediate = {
 		random_liege_or_above = {
 			limit = {
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 75
-				}
+				has_trait = bno_qos
 				is_adult = yes
 				is_female = yes
 				is_ai = yes
@@ -936,10 +888,10 @@ bno_random.0004 = {
 		if = {
 			limit = {
 				NOT = {
-					has_trait = bno_lifestyle_whitegirl
+					has_trait = bno_whitegirl
 				}
 			}
-			add_trait = bno_lifestyle_whitegirl
+			add_trait = bno_curious
 		}
 		
 		trigger_event = bno_random.1004
@@ -949,7 +901,7 @@ bno_random.0004 = {
 		name = bno_random_0004.b
 		
 		stress_impact = {
-			bno_lifestyle_whitegirl = minor_stress_impact_gain
+			bno_whitegirl = minor_stress_impact_gain
 		}
 		
 		trigger_event = bno_random.2004
@@ -1033,10 +985,10 @@ bno_random.2004 = {
 		if = {
 			limit = {
 				NOT = {
-					has_trait = bno_lifestyle_whitegirl
+					has_trait = bno_whitegirl
 				}
 			}
-			add_trait = bno_lifestyle_whitegirl
+			add_trait = bno_curious
 		}
 	}
 }
@@ -1082,11 +1034,7 @@ bno_random.0005 = {
 		root = {
 			is_female = yes
 			is_adult = yes
-			has_trait = bno_lifestyle_whitegirl
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value < 25
-			}
+			is_bno_curious = yes
 			
 			any_courtier_or_guest = {
 				has_trait = bno_bbc
@@ -1135,10 +1083,7 @@ bno_random.0005 = {
 			}
 		}
 		
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 5
-		}
+		bno_increase_sluttyness = yes
 		
 		trigger_event = bno_random.1005
 	}
@@ -1146,12 +1091,9 @@ bno_random.0005 = {
 	option = {
 		name = bno_random_0005.b
 		stress_impact = {
-			bno_lifestyle_whitegirl = minor_stress_impact_gain
+			bno_whitegirl = minor_stress_impact_gain
 		}
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = -5
-		}
+		bno_decrease_sluttyness = yes
 		imprison = {
 			target = scope:target1
 		}
@@ -1240,11 +1182,7 @@ bno_random.0006 = {
 		root = {
 			is_female = yes
 			is_adult = yes
-			has_trait = bno_lifestyle_whitegirl
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value < 25
-			}
+			is_bno_curious = yes
 			
 			any_courtier_or_guest = {
 				has_trait = bno_bbc
@@ -1306,12 +1244,9 @@ bno_random.0006 = {
 	option = {
 		name = bno_random_0006.b
 		stress_impact = {
-			bno_lifestyle_whitegirl = minor_stress_impact_gain
+			bno_whitegirl = minor_stress_impact_gain
 		}
-		add_trait_xp = { #remove trait gain from sex
-			trait = bno_lifestyle_whitegirl
-			value = -5
-		}
+		bno_decrease_sluttyness = yes
 		imprison = {
 			target = scope:target1
 		}
@@ -1392,17 +1327,8 @@ bno_random.0007 = {
 		root = {
 			is_female = yes
 			is_adult = yes
-			has_trait = bno_lifestyle_whitegirl
-			AND = {
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 25
-				}
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value < 50
-				}
-			}
+			has_trait = bno_whitegirl
+			is_bno_blacked = yes
 			any_courtier_or_guest = {
 				has_trait = bno_bbc
 				is_adult = yes
@@ -1480,10 +1406,7 @@ bno_random.0007 = {
 			}
 		}
 		
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 5
-		}
+		bno_increase_sluttyness = yes
 		
 		trigger_event = bno_random.2007
 	}
@@ -1491,7 +1414,7 @@ bno_random.0007 = {
 	option = {
 		name = bno_random_0007.c
 		stress_impact = {
-			bno_lifestyle_whitegirl = medium_stress_impact_gain
+			bno_whitegirl = medium_stress_impact_gain
 		}
 	}
 }
@@ -1525,10 +1448,7 @@ bno_random.1007 = {
 	
 	option = {
 		name = bno_random_1007.a
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 5
-		}
+		bno_increase_sluttyness = yes
 	}
 }
 
@@ -1602,17 +1522,7 @@ bno_random.0008 = {
 		root = {
 			is_female = yes
 			is_adult = yes
-			has_trait = bno_lifestyle_whitegirl
-			AND = {
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 25
-				}
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value < 50
-				}
-			}
+			is_bno_blacked = yes
 			any_courtier_or_guest = {
 				has_trait = bno_bbc
 				is_adult = yes
@@ -1689,10 +1599,7 @@ bno_random.0008 = {
 				reason = bbc_too_good
 			}
 		}
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 5
-		}
+		bno_increase_sluttyness = yes
 		
 		trigger_event = bno_random.2008
 	}
@@ -1700,7 +1607,7 @@ bno_random.0008 = {
 	option = {
 		name = bno_random_0008.c
 		stress_impact = {
-			bno_lifestyle_whitegirl = minor_stress_impact_gain
+			bno_whitegirl = minor_stress_impact_gain
 		}
 		imprison = {
 			target = scope:target1
@@ -1819,18 +1726,7 @@ bno_random.0009 = {
 			is_female = yes
 			is_adult = yes
 			highest_held_title_tier >= tier_kingdom
-			has_trait = bno_lifestyle_whitegirl
-			AND = {
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 50
-					value < 75
-				}
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value < 75
-				}
-			}
+			is_bno_snowbunny = yes
 			any_courtier_or_guest = {
 				has_trait = bno_bbc
 				is_adult = yes
@@ -1878,10 +1774,7 @@ bno_random.0009 = {
 			}
 		}
 		
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 10
-		}
+		bno_increase_sluttyness = yes
 		
 		root = { give_nickname = nick_qos }
 		
@@ -1923,7 +1816,7 @@ bno_random.0009 = {
 	option = {
 		name = bno_random_0009.c
 		stress_impact = {
-			bno_lifestyle_whitegirl = major_stress_impact_gain
+			bno_whitegirl = major_stress_impact_gain
 		}
 		imprison = {
 			target = scope:target1
@@ -1972,7 +1865,7 @@ bno_random.1009 = {
 				is_female = yes
 			}
 			hidden_effect = {
-				add_trait = bno_lifestyle_whitegirl
+				add_trait = bno_curious
 			}
 		}
 		random_vassal = {
@@ -1981,7 +1874,7 @@ bno_random.1009 = {
 				is_adult = yes
 			}
 			hidden_effect = {
-				add_trait = bno_lifestyle_whitegirl
+				add_trait = bno_curious
 			}
 		}
 	}
@@ -2060,21 +1953,9 @@ bno_random.0010 = {
 	cooldown = { months = 16 }
 	
 	trigger = {
-		root = {
-			is_female = yes
-			is_adult = yes
-			has_trait = bno_lifestyle_whitegirl
-			AND = {
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 50
-				}
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value < 75
-				}
-			}
-		}
+		is_female = yes
+		is_adult = yes
+		is_bno_snowbunny = yes
 		any_pool_character = {
 			province = root.location
 			has_trait = bno_bbc
@@ -2122,10 +2003,7 @@ bno_random.0010 = {
 			}
 		}
 		
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 5
-		}
+		bno_increase_sluttyness = yes
 		
 		trigger_event = bno_random.1010
 	}
@@ -2164,7 +2042,7 @@ bno_random.0010 = {
 	option = {
 		name = bno_random_0010.c
 		stress_impact = {
-			bno_lifestyle_whitegirl = major_stress_impact_gain
+			bno_whitegirl = major_stress_impact_gain
 		}
 		hidden_effect = {
 			scope:target1 = {
@@ -2288,17 +2166,7 @@ bno_random.0011 = {
 	trigger = {
 		is_female = yes
 		is_adult = yes
-		has_trait = bno_lifestyle_whitegirl
-		AND = {
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 75
-			}
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value <= 100
-			}
-		}
+		is_bno_qos_and_up = yes
 		any_courtier_or_guest = {
 			has_trait = bno_bbc
 			is_adult = yes
@@ -2384,10 +2252,7 @@ bno_random.0011 = {
 			marry = root
 		}
 		
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 10
-		}
+		bno_increase_sluttyness = yes
 		
 		trigger_event = bno_random.2011
 	}
@@ -2473,16 +2338,7 @@ bno_random.0012 = {
 		root = {
 			is_female = yes
 			is_adult = yes
-			AND = {
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 75
-				}
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value < 100
-				}
-			}
+			is_bno_qos_and_up = yes
 			any_courtier_or_guest = {
 				has_trait = bno_bbc
 				is_adult = yes
@@ -2572,7 +2428,7 @@ bno_random.0012 = {
 	option = {
 		name = bno_random_0012.c
 		stress_impact = {
-			bno_lifestyle_whitegirl = major_stress_impact_gain
+			bno_whitegirl = major_stress_impact_gain
 		}
 	}
 }
@@ -2683,10 +2539,7 @@ bno_random.2012 = {
 			PARTNER = scope:target2
 		}
 		
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 10
-		}
+		bno_increase_sluttyness = yes
 	}
 }
 
@@ -2764,10 +2617,7 @@ bno_random.0013 = {
 		root = {
 			is_female = yes
 			is_adult = yes
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 75
-			}
+			is_bno_qos_and_up = yes
 			any_courtier_or_guest = {
 				has_trait = bno_bbc
 				is_adult = yes
@@ -3020,15 +2870,9 @@ bno_random.0014 = {
 			is_female = yes
 			is_adult = yes
 			OR = {
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 100
-				}
+				is_bno_mindless_bbc_slut = yes
 				AND = {
-					has_trait_xp = {
-						trait = bno_lifestyle_whitegirl
-						value >= 75
-					}
+					is_bno_qos_and_up = yes
 					is_ai = no
 				}
 			}
@@ -3052,7 +2896,7 @@ bno_random.0014 = {
 					is_adult = yes
 				}
 				hidden_effect = {
-					add_trait = bno_lifestyle_whitegirl
+					add_trait = bno_curious
 				}
 			}
 			random_vassal = {
@@ -3061,7 +2905,7 @@ bno_random.0014 = {
 					is_adult = yes
 				}
 				hidden_effect = {
-					add_trait = bno_lifestyle_whitegirl
+					add_trait = bno_curious
 				}
 			}
 		}
@@ -3072,10 +2916,7 @@ bno_random.0014 = {
 		carn_had_sex_with_effect_v2 = {
 			PARTNER = scope:target1
 		}
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 5
-		}
+		bno_increase_sluttyness = yes
 		
 		trigger_event = bno_random.1014
 	}
@@ -3184,15 +3025,9 @@ bno_random.0015 = {
 			is_female = yes
 			is_adult = yes
 			OR = {
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 100
-				}
+				is_bno_mindless_bbc_slut = yes
 				AND = {
-					has_trait_xp = {
-						trait = bno_lifestyle_whitegirl
-						value >= 75
-					}
+					is_bno_qos_and_up = yes
 					is_ai = no
 				}
 			}
@@ -3202,10 +3037,7 @@ bno_random.0015 = {
 			is_married = yes
 			any_close_family_member = {
 				is_female = yes
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 100
-				}
+				is_bno_mindless_bbc_slut = yes
 			}
 		}
 	}
@@ -3218,10 +3050,7 @@ bno_random.0015 = {
 		}
 		random_close_family_member = {
 			limit = {
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 100
-				}
+				is_bno_mindless_bbc_slut = yes
 				is_adult = yes
 				is_female = yes
 				is_ai = yes
@@ -3235,7 +3064,7 @@ bno_random.0015 = {
 					is_adult = yes
 				}
 				hidden_effect = {
-					add_trait = bno_lifestyle_whitegirl
+					add_trait = bno_curious
 				}
 			}
 			random_vassal = {
@@ -3244,7 +3073,7 @@ bno_random.0015 = {
 					is_adult = yes
 				}
 				hidden_effect = {
-					add_trait = bno_lifestyle_whitegirl
+					add_trait = bno_curious
 				}
 			}
 		}
@@ -3258,10 +3087,7 @@ bno_random.0015 = {
 			PARTNER = scope:target2
 		}
 		
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 5
-		}
+		bno_increase_sluttyness = yes
 		
 		trigger_event = bno_random.1015
 	}
@@ -3354,7 +3180,7 @@ bno_random.0016 = {
 			
 			is_female = yes
 			is_adult = yes
-			NOT = { has_trait = bno_lifestyle_whitegirl }
+			NOT = { has_trait = bno_whitegirl }
 		}
 	}
 	
@@ -3408,7 +3234,7 @@ bno_random.1016 = {
 	option = {
 		name = bno_random_1016.a
 		root = {
-			add_trait = bno_lifestyle_whitegirl
+			add_trait = bno_curious
 		}
 	}
 }
@@ -3438,10 +3264,7 @@ bno_random.0017 = {
 		root = {
 			is_female = yes
 			is_adult = yes
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 25
-			}
+			has_trait = bno_curious
 			employs_court_position = bodyguard_court_position
 			any_court_position_holder = {
 				type = bodyguard_court_position
@@ -3486,7 +3309,7 @@ bno_random.0017 = {
 			}
 		}
 		stress_impact = {
-			bno_lifestyle_whitegirl = minor_stress_impact_gain
+			bno_whitegirl = minor_stress_impact_gain
 		}
 	}
 }
@@ -3578,10 +3401,7 @@ bno_random.2017 = {
 	
 	option = {
 		name = bno_random_2017.a
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 5
-		}
+		bno_increase_sluttyness = yes
 	}
 }
 
@@ -3610,10 +3430,7 @@ bno_random.0018 = {
 		root = {
 			is_female = yes
 			is_adult = yes
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 75
-			}
+			is_bno_qos_and_up = yes
 			employs_court_position = bodyguard_court_position
 			any_court_position_holder = {
 				type = bodyguard_court_position
@@ -3715,7 +3532,7 @@ bno_random.0019 = {
 		root = {
 			is_female = yes
 			is_adult = yes
-			has_trait = bno_lifestyle_whitegirl
+			has_trait = bno_whitegirl
 			employs_court_position = champion_court_position
 			any_court_position_holder = {
 				type = champion_court_position
@@ -3755,7 +3572,7 @@ bno_random.0019 = {
 			}
 		}
 		stress_impact = {
-			bno_lifestyle_whitegirl = minor_stress_impact_gain
+			bno_whitegirl = minor_stress_impact_gain
 		}
 	}
 }
@@ -3863,32 +3680,22 @@ bno_random.0020 = {
 	
 	option = { #arent you persuasive
 		name = bno_random_0020.a
-		add_trait = bno_lifestyle_whitegirl
+		add_trait = bno_curious
 	}
 	
 	option = { #smooch!!!
 		name = bno_random_0020.b
 		trigger = {
-			has_trait = bno_lifestyle_whitegirl
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 25
-			}
+			has_trait = bno_curious
 		}
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 3
-		}
+		bno_increase_sluttyness = yes
 	}
 	
 	option = { #downplay his flirtation
 		name = bno_random_0020.c
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = -5
-		}
+		bno_decrease_sluttyness = yes
 		stress_impact = {
-			bno_lifestyle_whitegirl = minor_stress_impact_gain
+			bno_whitegirl = minor_stress_impact_gain
 		}
 	}
 }
@@ -3938,11 +3745,7 @@ bno_random.0021 = {
 		root = {
 			is_female = yes
 			is_adult = yes
-			has_trait = bno_lifestyle_whitegirl
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 50
-			}
+			is_bno_snowbunny_and_up = yes
 			
 			any_courtier_or_guest = {
 				OR = {
@@ -3988,16 +3791,13 @@ bno_random.0021 = {
 	
 	option = { #let him watch
 		name = bno_random_0021.a
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 5
-		}
+		bno_increase_sluttyness = yes
 		carn_had_sex_with_effect_v2 = {
 			PARTNER = scope:target1
 		}
 		
 		stress_impact = {
-			bno_lifestyle_whitegirl = major_stress_impact_loss
+			bno_whitegirl = major_stress_impact_loss
 		}
 		
 		trigger_event = bno_random.1021
@@ -4011,7 +3811,7 @@ bno_random.0021 = {
 		}
 		
 		stress_impact = {
-			bno_lifestyle_whitegirl = minor_stress_impact_loss
+			bno_whitegirl = minor_stress_impact_loss
 		}
 		
 		trigger_event = bno_random.2021
@@ -4129,17 +3929,7 @@ bno_random.0022 = {
 		root = {
 			is_female = yes
 			is_adult = yes
-			has_trait = bno_lifestyle_whitegirl
-			AND = {
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value < 25
-				}
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 0
-				}
-			}
+			is_bno_curious = yes
 			
 			any_courtier_or_guest = {
 				has_trait = bno_bbc
@@ -4168,19 +3958,13 @@ bno_random.0022 = {
 		remove_short_term_gold = minor_gold_value
 		add_piety = -25
 		
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 3
-		}
+		bno_increase_sluttyness = yes
 	}
 	
 	option = { #accept the possibility that god is black. sexual service
 		name = bno_random_0022.b
 		
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 5
-		}
+		bno_increase_sluttyness = yes
 		
 		trigger_event = bno_random.2022
 	}
@@ -4256,17 +4040,7 @@ bno_random.0023 = {
 		root = {
 			is_female = yes
 			is_adult = yes
-			has_trait = bno_lifestyle_whitegirl
-			AND = {
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value < 25
-				}
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 0
-				}
-			}
+			is_bno_curious = yes
 			
 			any_courtier_or_guest = {
 				has_trait = bno_bbc
@@ -4369,17 +4143,7 @@ bno_random.0024 = {
 		root = {
 			is_female = yes
 			is_adult = yes
-			has_trait = bno_lifestyle_whitegirl
-			AND = {
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value < 25
-				}
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 0
-				}
-			}
+			is_bno_curious = yes
 			
 			any_courtier_or_guest = {
 				has_trait = bno_bbc
@@ -4404,10 +4168,7 @@ bno_random.0024 = {
 	
 	option = { #bj
 		name = bno_random_0024.a
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 5
-		}
+		bno_increase_sluttyness = yes
 		trigger_event = bno_random.1024
 	}
 	
@@ -4419,10 +4180,7 @@ bno_random.0024 = {
 	option = { #imprison
 		name = bno_random_0024.c
 		imprison = { target = scope:target1 }
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = -5
-		}
+		bno_decrease_sluttyness = yes
 	}
 }
 
@@ -4482,17 +4240,7 @@ bno_random.0025 = {
 		root = {
 			is_female = yes
 			is_adult = yes
-			has_trait = bno_lifestyle_whitegirl
-			AND = {
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value < 50
-				}
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 25
-				}
-			}
+			is_blacked_whitegirl = yes
 		}
 		any_pool_character = {
 			count >= 3
@@ -4552,10 +4300,7 @@ bno_random.0025 = {
 		carn_had_sex_with_effect_v2 = {
 			PARTNER = scope:target3
 		}
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 10
-		}
+		bno_increase_sluttyness = yes
 		
 		trigger_event = bno_random.1025
 	}
@@ -4780,16 +4525,16 @@ bno_random.0026 = {
 		name = bno_random_0026.a
 		if = {
 			limit = {
-				NOT = { has_trait = bno_lifestyle_whitegirl }
+				NOT = { has_trait = bno_whitegirl }
 			}
-			add_trait = bno_lifestyle_whitegirl
+			add_trait = bno_curious
 		}
 		scope:target2 = {
 			if = {
 				limit = {
-					NOT = { has_trait = bno_lifestyle_whitegirl }
+					NOT = { has_trait = bno_whitegirl }
 				}
-				add_trait = bno_lifestyle_whitegirl
+				add_trait = bno_curious
 			}
 			carn_had_sex_with_effect_v2 = {
 				PARTNER = scope:target1
@@ -4800,18 +4545,14 @@ bno_random.0026 = {
 	option = { #step in
 		name = bno_random_0026.b
 		trigger = {
-			has_trait = bno_lifestyle_whitegirl
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 75
-			}
+			is_bno_qos_and_up = yes
 		}
 		scope:target2 = {
 			if = {
 				limit = {
-					NOT = { has_trait = bno_lifestyle_whitegirl }
+					NOT = { has_trait = bno_whitegirl }
 				}
-				add_trait = bno_lifestyle_whitegirl
+				add_trait = bno_curious
 			}
 			carn_had_sex_with_effect_v2 = {
 				PARTNER = scope:target1
@@ -4881,15 +4622,9 @@ bno_random.2026 = {
 	
 	option = {
 		name = bno_random_2026.a
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 10
-		}
+		bno_increase_sluttyness = yes
 		scope:target2 = {
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 10
-			}
+			bno_increase_sluttyness = yes
 		}
 	}
 }
@@ -4927,17 +4662,7 @@ bno_random.0027 = {
 		root = {
 			is_female = yes
 			is_adult = yes
-			has_trait = bno_lifestyle_whitegirl
-			AND = {
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 25
-				}
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value < 50
-				}
-			}
+			is_bno_blacked = yes
 			any_courtier_or_guest = {
 				has_trait = bno_bbc
 				is_adult = yes
@@ -4962,10 +4687,7 @@ bno_random.0027 = {
 	option = { #if I blow you, can you give me a massage?
 		name = bno_random_0027.a
 		
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 5
-		}
+		bno_increase_sluttyness = yes
 		
 		trigger_event = bno_random.1027
 	}
@@ -4976,10 +4698,7 @@ bno_random.0027 = {
 		carn_had_sex_with_effect_v2 = {
 			PARTNER = scope:target1
 		}
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 5
-		}
+		bno_increase_sluttyness = yes
 		
 		trigger_event = bno_random.2027
 	}
@@ -4987,10 +4706,7 @@ bno_random.0027 = {
 	option = { #are you kidding me? where's target2?
 		name = bno_random_0027.c
 		
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = -5
-		}
+		bno_decrease_sluttyness = yes
 	}
 }
 
@@ -5098,17 +4814,7 @@ bno_random.0028 = {
 		root = {
 			is_female = yes
 			is_adult = yes
-			has_trait = bno_lifestyle_whitegirl
-			AND = {
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 25
-				}
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value < 50
-				}
-			}
+			is_bno_blacked = yes
 			any_courtier_or_guest = {
 				has_trait = bno_bbc
 				is_adult = yes
@@ -5133,10 +4839,7 @@ bno_random.0028 = {
 	option = { #reciprocate his flirting
 		name = bno_random_0028.a
 		
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 5
-		}
+		bno_increase_sluttyness = yes
 		
 		trigger_event = bno_random.1028
 	}
@@ -5203,10 +4906,7 @@ bno_random.0029 = {
 			is_female = yes
 			is_adult = yes
 			has_trait = pregnant
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 25
-			}
+			has_trait = bno_curious
 			any_courtier_or_guest = {
 				has_trait = bno_bbc
 				is_adult = yes
@@ -5244,10 +4944,7 @@ bno_random.0029 = {
 		carn_had_sex_with_effect_v2 = {
 			PARTNER = scope:target1
 		}
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 3
-		}
+		bno_increase_sluttyness = yes
 		
 		trigger_event = bno_random.2029
 	}
@@ -5338,16 +5035,13 @@ bno_random.0030 = {
 	desc = {
 		triggered_desc = {
 			trigger = {
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 50
-				}
+				is_bno_snowbunny_and_up = yes
 			}
 			desc = bno_random_0030.desc1 #abuse noticed
 		}
 		triggered_desc = {
 			trigger = {
-				has_trait = bno_lifestyle_whitegirl
+				has_trait = bno_whitegirl
 				has_trait_xp = {
 					trait = bno_lifestyle_whitegirl
 					value < 50
@@ -5376,7 +5070,7 @@ bno_random.0030 = {
 		root = {
 			is_female = yes
 			is_adult = yes
-			has_trait = bno_lifestyle_whitegirl
+			has_trait = bno_whitegirl
 			
 			employs_court_position = court_physician_court_position
 			any_court_position_holder = {
@@ -5405,9 +5099,9 @@ bno_random.0030 = {
 	option = { #not experienced. offered anatomical lesson
 		name = bno_random_0030.a
 		trigger = {
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value < 50
+			OR = {
+				is_bno_curious = yes
+				is_bno_blacked = yes
 			}
 		}
 		
@@ -5417,10 +5111,7 @@ bno_random.0030 = {
 	option = { #notices your bodily abuse and leftovers
 		name = bno_random_0030.b
 		trigger = {
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 50
-			}
+			is_bno_snowbunny_and_up = yes
 		}
 		
 		carn_had_sex_with_effect_v2 = {
@@ -5511,10 +5202,7 @@ bno_random.2030 = {
 	
 	option = {
 		name = bno_random_2030.a
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 5
-		}
+		bno_increase_sluttyness = yes
 	}
 }
 
@@ -5543,17 +5231,7 @@ bno_random.0031 = {
 		root = {
 			is_female = yes
 			is_adult = yes
-			has_trait = bno_lifestyle_whitegirl
-			AND = {
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 25
-				}
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value < 50
-				}
-			}
+			is_bno_blacked = yes
 			any_courtier_or_guest = {
 				has_trait = bno_bbc
 				is_adult = yes
@@ -5661,17 +5339,7 @@ bno_random.0032 = {
 	trigger = {
 		is_female = yes
 		is_adult = yes
-		has_trait = bno_lifestyle_whitegirl
-		AND = {
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 50
-			}
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value < 75
-			}
-		}
+		is_bno_snowbunny = yes
 		any_courtier_or_guest = {
 			has_trait = bno_bbc
 			is_adult = yes
@@ -5704,10 +5372,7 @@ bno_random.0032 = {
 	
 	option = { #it was an accident! I dont know how i got here!
 		name = bno_random_0032.c
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = -10
-		}
+		bno_decrease_sluttyness = yes
 	}
 }
 
@@ -5814,17 +5479,7 @@ bno_random.0033 = {
 		root = {
 			is_female = yes
 			is_adult = yes
-			has_trait = bno_lifestyle_whitegirl
-			AND = {
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 50
-				}
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value < 75
-				}
-			}
+			is_bno_snowbunny = yes
 			any_courtier_or_guest = {
 				has_trait = bno_bbc
 				is_adult = yes
@@ -5849,10 +5504,7 @@ bno_random.0033 = {
 	option = { #a handjob will suffice, i say!
 		name = bno_random_0033.a
 		
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 3
-		}
+		bno_increase_sluttyness = yes
 		
 		trigger_event = bno_random.1033
 	}
@@ -5863,10 +5515,7 @@ bno_random.0033 = {
 		carn_had_sex_with_effect_v2 = {
 			PARTNER = scope:target1
 		}
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 3
-		}
+		bno_increase_sluttyness = yes
 		
 		trigger_event = bno_random.2033
 	}
@@ -5876,10 +5525,7 @@ bno_random.0033 = {
 		imprison = {
 			target = scope:target1
 		}
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = -10
-		}
+		bno_decrease_sluttyness = yes
 	}
 }
 
@@ -5994,17 +5640,7 @@ bno_random.0034 = {
 		root = {
 			is_female = yes
 			is_adult = yes
-			has_trait = bno_lifestyle_whitegirl
-			AND = {
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 50
-				}
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value < 75
-				}
-			}
+			is_bno_snowbunny = yes
 			any_courtier_or_guest = {
 				has_trait = bno_bbc
 				is_adult = yes
@@ -6043,10 +5679,7 @@ bno_random.0034 = {
 			PARTNER = scope:target1
 		}
 		
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 5
-		}
+		bno_increase_sluttyness = yes
 		
 		trigger_event = bno_random.2034
 	}
@@ -6171,11 +5804,7 @@ bno_random.0035 = {
 		root = {
 			is_female = yes
 			is_adult = yes
-			has_trait = bno_lifestyle_whitegirl
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 50
-			}
+			is_bno_snowbunny_and_up = yes
 			any_councillor = {
 				has_council_position = councillor_spymaster
 				has_trait = bno_bbc
@@ -6205,10 +5834,7 @@ bno_random.0035 = {
 		carn_had_sex_with_effect_v2 = {
 			PARTNER = scope:target1
 		}
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 5
-		}
+		bno_increase_sluttyness = yes
 		if = {
 			limit = {
 				primary_spouse = {
@@ -6227,10 +5853,7 @@ bno_random.0035 = {
 	option = { #yes yes yes i did it!
 		name = bno_random_0035.b
 		
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = -10
-		}
+		bno_decrease_sluttyness = yes
 		
 		random_secret = {
 			reveal_to = scope:target1
@@ -6318,10 +5941,7 @@ bno_random.0036 = {
 		root = {
 			is_female = yes
 			is_adult = yes
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 75
-			}
+			is_bno_qos_and_up = yes
 			any_courtier_or_guest = {
 				has_trait = bno_bbc
 				is_adult = yes
@@ -6359,10 +5979,7 @@ bno_random.0036 = {
 		carn_had_sex_with_effect_v2 = {
 			PARTNER = scope:target1
 		}
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 5
-		}
+		bno_increase_sluttyness = yes
 		
 		trigger_event = bno_random.2036
 	}
@@ -6501,10 +6118,7 @@ bno_random.0037 = {
 		root = {
 			is_female = yes
 			is_adult = yes
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 75
-			}
+			is_bno_qos_and_up = yes
 			any_courtier_or_guest = {
 				has_trait = bno_bbc
 				is_adult = yes
@@ -6551,10 +6165,7 @@ bno_random.0037 = {
 		carn_had_sex_with_effect_v2 = {
 			PARTNER = scope:target1
 		}
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 5
-		}
+		bno_increase_sluttyness = yes
 		
 		trigger_event = bno_random.1037
 	}
@@ -6711,10 +6322,7 @@ bno_random.0038 = {
 		root = {
 			is_female = yes
 			is_adult = yes
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 75
-			}
+			is_bno_qos_and_up = yes
 		}
 		
 		any_pool_character = {
@@ -6746,10 +6354,7 @@ bno_random.0038 = {
 			PARTNER = scope:target1
 		}
 		
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 5
-		}
+		bno_increase_sluttyness = yes
 		
 		trigger_event = bno_random.1038
 	}
@@ -6874,6 +6479,7 @@ bno_random.0039 = {
 			is_ai = yes
 		}
 		any_courtier_or_guest = {
+			is_male = yes
 			NOT = { has_trait = bno_bbc }
 			is_adult = yes
 			is_ai = yes
@@ -6892,6 +6498,7 @@ bno_random.0039 = {
 			}
 			random_courtier_or_guest = {
 				limit = {
+					is_male = yes
 					NOT = { has_trait = bno_bbc }
 					is_adult = yes
 					is_ai = yes
@@ -6924,18 +6531,14 @@ bno_random.0039 = {
 	#ooh, stronk
 	option = {
 		name = bno_random_0039.a
-		add_trait = bno_lifestyle_whitegirl
+		add_trait = bno_curious
 	}
 	
 	#he deserves a reward!!
 	option = {
 		name = bno_random_0039.b
 		trigger = {
-			has_trait = bno_lifestyle_whitegirl
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 25
-			}
+			has_trait = bno_curious
 		}
 		trigger_event = bno_random.2039
 	}
@@ -6992,11 +6595,7 @@ bno_random.2039 = {
 	option = {
 		name = bno_random_2039.b
 		trigger = {
-			has_trait = bno_lifestyle_whitegirl
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 75
-			}
+			is_bno_qos_and_up = yes
 		}
 		imprison = {
 			target = scope:target2
@@ -7083,11 +6682,7 @@ bno_random.0040 = {
 	#please, comfort me
 	option = {
 		trigger = {
-			has_trait = bno_lifestyle_whitegirl
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 25
-			}
+			has_trait = bno_curious
 		}
 		name = bno_random_0040.b
 	}
@@ -7095,11 +6690,7 @@ bno_random.0040 = {
 	#I know you did it.
 	option = {
 		trigger = {
-			has_trait = bno_lifestyle_whitegirl
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 50
-			}
+			is_bno_snowbunny_and_up = yes
 		}
 		name = bno_random_0040.c
 	}
@@ -7152,11 +6743,7 @@ bno_random.0041 = {
 				is_adult = yes
 				is_female = yes
 				is_ai = yes
-				has_trait = bno_lifestyle_whitegirl
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value <= 25
-				}
+				is_bno_curious = yes
 			}
 		}
 	}
@@ -7175,11 +6762,7 @@ bno_random.0041 = {
 		}
 		hidden_effect = {
 			root.primary_spouse = {
-				add_trait = bno_lifestyle_whitegirl
-				add_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value = 10
-				}
+				bno_increase_sluttyness = yes
 			}
 		}
 		add_character_modifier = {
@@ -7504,7 +7087,7 @@ bno_random.0043 = {
 			any_courtier_or_guest = {
 				is_adult = yes
 				is_female = yes
-				has_trait = bno_lifestyle_whitegirl
+				has_trait = bno_whitegirl
 				is_ruler = no
 				is_concubine = no
 				is_ai = yes
@@ -7553,10 +7136,7 @@ bno_random.0043 = {
 		}
 		
 		scope:target2 = {
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 10
-			}
+			bno_increase_sluttyness = yes
 		}
 		
 		scope:target1 = {
@@ -7765,10 +7345,7 @@ bno_random.0044 = {
 		}
 		hidden_effect = {
 			scope:target1 = {
-				add_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value = 5
-				}
+				bno_increase_sluttyness = yes
 			}
 		}
 	}
@@ -7866,7 +7443,7 @@ bno_random.1044 = {
 		scope:target2 = {
 			hidden_effect = {
 				stress_impact = {
-					bno_lifestyle_whitegirl = massive_stress_impact_loss
+					bno_whitegirl = massive_stress_impact_loss
 				}
 			}
 		}
@@ -7889,10 +7466,7 @@ bno_random.1044 = {
 			}
 		}
 		
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 5
-		}
+		bno_increase_sluttyness = yes
 	}
 }
 
@@ -7961,10 +7535,7 @@ bno_random.0045 = {
 			is_female = yes
 			is_ruler = no
 			is_ai = yes
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 30
-			}
+			is_bno_blacked_and_up = yes
 		}
 	}
 	
@@ -7975,10 +7546,7 @@ bno_random.0045 = {
 				is_female = yes
 				is_ruler = no
 				is_ai = yes
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 30
-				}
+				is_bno_blacked_and_up = yes
 			}
 			save_scope_as = target1
 		}
@@ -7995,10 +7563,7 @@ bno_random.0045 = {
 		}
 		hidden_effect = {
 			primary_spouse = {
-				add_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value = 5
-				}
+				bno_increase_sluttyness = yes
 			}
 		}
 	}
@@ -8095,7 +7660,7 @@ bno_random.1045 = {
 		scope:target2 = {
 			hidden_effect = {
 				stress_impact = {
-					bno_lifestyle_whitegirl = massive_stress_impact_loss
+					bno_whitegirl = massive_stress_impact_loss
 				}
 			}
 		}
@@ -8128,10 +7693,7 @@ bno_random.1045 = {
 				modifier = bno_bull_fucks_me
 				opinion = 30
 			}
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 5
-			}
+			bno_increase_sluttyness = yes
 		}
 	}
 }
@@ -8213,7 +7775,7 @@ bno_random.0046 = {
 			limit = {
 				scope:target2 = {
 					NOT = {
-						has_trait = bno_lifestyle_whitegirl
+						has_trait = bno_whitegirl
 					}
 				}
 			}
@@ -8392,7 +7954,7 @@ bno_random.1046 = {
 			}
 			hidden_effect = {
 				stress_impact = {
-					bno_lifestyle_whitegirl = massive_stress_impact_loss
+					bno_whitegirl = massive_stress_impact_loss
 				}
 			}
 		}
@@ -8419,10 +7981,7 @@ bno_random.1046 = {
 				modifier = taken_by_new_bull_master
 				opinion = 30
 			}
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 7
-			}
+			bno_increase_sluttyness = yes
 		}
 	}
 }
@@ -8498,7 +8057,7 @@ bno_random.2046 = {
 		scope:target2 = {
 			hidden_effect = {
 				stress_impact = {
-					bno_lifestyle_whitegirl = massive_stress_impact_loss
+					bno_whitegirl = massive_stress_impact_loss
 				}
 			}
 		}
@@ -8520,10 +8079,7 @@ bno_random.2046 = {
 				modifier = taken_by_new_bull_master
 				opinion = 30
 			}
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 14
-			}
+			bno_increase_sluttyness = yes
 		}
 	}
 }
@@ -8690,7 +8246,7 @@ bno_random.0047 = {
 					PARTNER = scope:target4
 				}
 				stress_impact = {
-					bno_lifestyle_whitegirl = massive_stress_impact_loss
+					bno_whitegirl = massive_stress_impact_loss
 				}
 				add_opinion = {
 					target = root
@@ -8747,10 +8303,7 @@ bno_random.0048 = {
 			is_female = yes
 			is_ruler = no
 			is_ai = yes
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 75
-			}
+			is_bno_qos_and_up = yes
 		}
 		NOT = {
 			has_trait = bno_bbc

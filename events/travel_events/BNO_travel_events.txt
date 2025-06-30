@@ -60,7 +60,7 @@ bno_travel_events.0001 = { #charity for a wandering african
 			arrogant = minor_stress_impact_gain
 			avaricious = minor_stress_impact_gain
 			callous = minor_stress_impact_gain
-			bno_lifestyle_whitegirl = minor_stress_impact_loss
+			bno_whitegirl = minor_stress_impact_loss
 		}
 	}
 	
@@ -68,28 +68,18 @@ bno_travel_events.0001 = { #charity for a wandering african
 		name = bno_travel_events_0001.b
 		
 		trigger = {
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 25
-			}
+			has_trait = bno_curious
 		}
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 3
-		}
+		bno_increase_sluttyness = yes
 		stress_impact = {
-			bno_lifestyle_whitegirl = minor_stress_impact_loss
+			bno_whitegirl = minor_stress_impact_loss
 		}
 	}
 	
 	option = { #scoff the peasant off
 		name = bno_travel_events_0001.c
 		
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = -5
-		}
-		
+		bno_decrease_sluttyness = yes
 		add_piety = miniscule_piety_loss
 		add_stress = 10
 	}
@@ -152,27 +142,18 @@ bno_travel_events.0002 = { #courtier asks to join
 		name = bno_travel_events_0002.b
 		
 		trigger = {
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 25
-			}
+			is_bno_blacked_and_up = yes
 		}
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 1
-		}
+		bno_increase_sluttyness = yes
 		add_courtier = scope:target1
 		trigger_event = bno_travel_events.2002
 	}
 	
 	option = { #deny access
 		name = bno_travel_events_0002.c
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = -3
-		}
+		bno_decrease_sluttyness = yes
 		stress_impact = {
-			bno_lifestyle_whitegirl = minor_stress_impact_gain
+			bno_whitegirl = minor_stress_impact_gain
 		}
 	}
 }
@@ -270,10 +251,7 @@ bno_travel_events.0003 = {
 		root = {
 			is_female = yes
 			is_adult = yes
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 25
-			}
+			has_trait = bno_curious
 		}
 		
 		any_pool_character = {
@@ -403,10 +381,7 @@ bno_travel_events.0004 = {
 		root = {
 			is_female = yes
 			is_adult = yes
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 25
-			}
+			has_trait = bno_curious
 		}
 		current_travel_plan = {
 			any_entourage_character = {
@@ -440,11 +415,7 @@ bno_travel_events.0004 = {
 	
 	option = { #sex +
 		trigger = {
-			has_trait = bno_lifestyle_whitegirl
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 50
-			}
+			is_bno_snowbunny_and_up = yes
 		}
 		name = bno_travel_events_0004.b
 		carn_had_sex_with_effect_v2 = {
@@ -525,10 +496,7 @@ bno_travel_events.2004 = {
 	
 	option = {
 		name = bno_travel_events_0004.a
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 5
-		}
+		bno_increase_sluttyness = yes
 	}
 }
 
@@ -564,26 +532,20 @@ bno_travel_events.0005 = {
 		root = {
 			is_female = yes
 			is_adult = yes
-			has_trait = bno_lifestyle_whitegirl
+			has_trait = bno_whitegirl
 		}
 	}
 	
 	option = { #fingers
 		name = bno_travel_events_0005.a
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 2
-		}
+		bno_increase_sluttyness = yes
 		add_stress = -5
 		trigger_event = bno_travel_events.1005
 	}
 	
 	option = { #dubious dildo
 		name = bno_travel_events_0005.b
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = 5
-		}
+		bno_increase_sluttyness = yes
 		add_stress = -15
 		
 		if = {

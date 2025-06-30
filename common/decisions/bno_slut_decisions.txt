@@ -5,7 +5,7 @@
 	desc = bno_becoming_bbc_slut_desc
 	selection_tooltip = bno_becoming_bbc_slut_tooltip
 	is_shown = {
-		is_blacked_whitegirl = yes
+		has_trait = bno_snowbunny
 		NOT = {
 			has_character_flag = bno_slut.1015
 		}
@@ -35,7 +35,7 @@ bno_stop_becoming_bbc_slut = {
 	desc = bno_stop_becoming_bbc_slut_desc
 	selection_tooltip = bno_stop_becoming_bbc_slut_tooltip
 	is_shown = {
-		is_blacked_whitegirl = yes
+		has_trait = bno_snowbunny
 		is_partner_bbc = yes
 		has_character_flag = bno_slut.1015
 		OR = { 

@@ -7,19 +7,13 @@
 	allowed_for_character = {
 		OR = {
 			has_trait = bno_bbc
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 100
-			}
+			has_trait = bno_mindless_bbc_slut
 		}
 	}
 	allowed_against_character = {
 		NOR = {
 			has_trait = bno_bbc
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 100
-			}
+			has_trait = bno_mindless_bbc_slut
 		}
 	}
 	#target_titles = neighbor_land_or_water
@@ -123,10 +117,7 @@ bno_subj_war = {
 	mutually_exclusive_titles = { always = yes }
 	
 	allowed_for_character = {
-		has_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value >= 100
-		}
+		has_trait = bno_mindless_bbc_slut
 		any_courtier_or_guest = {
 			has_trait = bno_bbc
 			is_ai = yes
@@ -138,10 +129,7 @@ bno_subj_war = {
 	allowed_against_character = {
 		NOR = {
 			has_trait = bno_bbc
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 100
-			}
+			has_trait = bno_mindless_bbc_slut
 		}
 	}
 	
@@ -284,10 +272,7 @@ bno_varangian_adventure = {
 	allowed_for_character = {
 		OR = {
 			has_trait = bno_bbc
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 100
-			}
+			has_trait = bno_mindless_bbc_slut
 			is_ai = no
 		}
 	}
@@ -334,10 +319,7 @@ bno_varangian_adventure = {
 		#Cannot adventure against same traits
 		NOR = {
 			has_trait = bno_bbc
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 100
-			}
+			has_trait = bno_mindless_bbc_slut
 		}
 		# Players vs. AI filtering.
 		OR = {

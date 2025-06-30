@@ -315,11 +315,7 @@ bno_title_change.0004 = {
 			}
 			primary_spouse = {
 				is_ai = yes
-				has_trait = bno_lifestyle_whitegirl
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value = 100
-				}
+				is_bno_fucked_mindless = yes
 			}
 		}
 	}
@@ -442,9 +438,7 @@ bno_title_change.0005 = { #Wife takes cucks titles
 				is_female = yes
 				is_imprisoned = no
 				is_spouse_of = root
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value >= 100	}
+				is_bno_mindless_bbc_slut = yes
 			}
 			is_married = yes
 			is_ai = yes
@@ -461,9 +455,7 @@ bno_title_change.0005 = { #Wife takes cucks titles
 					is_female = yes
 					is_imprisoned = no
 					is_spouse_of = root
-					has_trait_xp = {
-						trait = bno_lifestyle_whitegirl
-						value >= 100	}
+					is_bno_mindless_bbc_slut = yes
 				}
 				save_scope_as = target1
 			}
@@ -615,10 +607,7 @@ bno_title_change.0006 = {
 			is_female = yes
 			is_adult = yes
 			is_ai = yes
-			has_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value >= 100
-			}
+			has_trait = bno_mindless_bbc_slut
 		}
 		
 	}
@@ -767,53 +756,33 @@ bno_title_change.1006 = { #follow up event 3 days later, parade former liege, ge
 				limit = {
 					is_female = yes
 				}
-				add_trait = bno_lifestyle_whitegirl
-				add_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value = 5
-				}
+				bno_increase_sluttyness = yes
 			}
 		}
 		random_courtier_or_guest = {
 			limit = {
 				is_female = yes
 			}
-			add_trait = bno_lifestyle_whitegirl
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 5
-			}
+			bno_increase_sluttyness = yes
 		}
 		every_vassal = {
 			limit = {
 				is_female = yes
 			}
-			add_trait = bno_lifestyle_whitegirl
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 5
-			}
+			bno_increase_sluttyness = yes
 		}
 		every_neighboring_top_liege_realm_owner = {
 			limit = {
 				is_female = yes
 			}
-			add_trait = bno_lifestyle_whitegirl
-			add_trait_xp = {
-				trait = bno_lifestyle_whitegirl
-				value = 5
-			}
+			bno_increase_sluttyness = yes
 		}
 		every_neighboring_top_liege_realm_owner = {
 			every_consort = {
 				limit = {
 					is_female = yes
 				}
-				add_trait = bno_lifestyle_whitegirl
-				add_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value = 5
-				}
+				bno_increase_sluttyness = yes
 			}
 		}
 	}

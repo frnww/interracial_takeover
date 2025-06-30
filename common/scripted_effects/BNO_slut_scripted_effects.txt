@@ -1,48 +1,4 @@
-﻿becoming_darker = {
-	if = {
-		limit = {
-			OR = {
-				has_game_rule = bno_body_modification_yes
-				is_ai = yes
-			}
-		}
-		#change breast size
-		set_variable = {
-			name = breast_size_genetic
-			value = {
-				value = 25
-				multiply = $BECOMING_DARK$
-			}
-		}
-		#change butt size
-		set_variable = {
-			name = butt_size_genetic
-			value = {
-				value = 25
-				multiply = $BECOMING_DARK$
-			}
-		}
-		#change hip size
-		set_variable = {
-			name = hips_genetic
-			value = {
-				value = 37.5
-				multiply = $BECOMING_DARK$
-			}
-		}
-		#change waist size
-		set_variable = {
-			name = waist_genetic
-			value = {
-				value = 40
-				divide = $BECOMING_DARK$
-				add = -10
-			}
-		}
-	}
-}
-
-convert_to_bbc_religion = {
+﻿convert_to_bbc_religion = {
 	if = {
 		limit = {
 			has_game_rule = bno_religion_yes
@@ -277,6 +233,251 @@ remove_bad_traits = {
 	}
 }
 
+bbc_sex = {
+	if = {
+		limit = {
+			root = {
+				has_trait = bno_whitegirl
+			}
+		}
+		root = {
+			bno_bbc_sex_after_effects = yes
+		}
+	}
+	else_if = {
+		limit = {
+			scope:carn_sex_char_2 = {
+				has_trait = bno_whitegirl
+			}
+		}
+		scope:carn_sex_char_2 = {
+			bno_bbc_sex_after_effects = yes
+		}
+	}
+}
+
+bno_add_gold_faith = {
+	add_gold = bno_gold_amount
+}
+
+bno_bbc_sex_after_effects = {
+	bno_increase_sluttyness = yes
+	add_character_flag = {
+		flag = bno_naked
+		months = 1
+	}
+	add_character_flag = {
+		flag = bno_cum_shot
+		months = 1
+	}
+}
+
+become_more_slut = {
+	change_trait_rank = {
+		trait = bno_whitegirl
+		rank = 1
+	}
+}
+
+become_less_slut = {
+	change_trait_rank = {
+		trait = bno_whitegirl
+		rank = -1
+	}
+}
+
+bno_increase_sluttyness = {
+	if = {
+		limit = {
+			NOT = {
+				has_trait = bno_whitegirl
+				has_character_flag = bno_originally_black
+			}
+		}
+		add_trait = bno_curious
+	}
+	if = {
+		limit = {
+			has_trait = bno_curious
+		}
+		add_trait_xp = {
+			trait = bno_curious
+			value = bno_random_xp_positive
+		}
+		if = {
+			limit = {
+				has_trait_xp = {
+					trait = bno_curious
+					value >= 100
+				}
+			}
+			become_more_slut = yes
+		}
+	}
+	if = {
+		limit = {
+			has_trait = bno_blacked
+		}
+		add_trait_xp = {
+			trait = bno_blacked
+			value = bno_random_xp_positive
+		}
+		if = {
+			limit = {
+				has_trait_xp = {
+					trait = bno_blacked
+					value >= 100
+				}
+			}
+			become_more_slut = yes
+		}
+	}
+	if = {
+		limit = {
+			has_trait = bno_snowbunny
+		}
+		add_trait_xp = {
+			trait = bno_snowbunny
+			value = bno_random_xp_positive
+		}
+		if = {
+			limit = {
+				has_trait_xp = {
+					trait = bno_snowbunny
+					value >= 100
+				}
+			}
+			become_more_slut = yes
+		}
+	}
+	if = {
+		limit = {
+			has_trait = bno_qos
+		}
+		add_trait_xp = {
+			trait = bno_qos
+			value = bno_random_xp_positive
+		}
+		if = {
+			limit = {
+				has_trait_xp = {
+					trait = bno_qos
+					value >= 100
+				}
+			}
+			become_more_slut = yes
+		}
+	}
+	if = {
+		limit = {
+			has_trait = bno_mindless_bbc_slut
+		}
+		add_trait_xp = {
+			trait = bno_mindless_bbc_slut
+			value = bno_random_xp_positive
+		}
+	}
+}
+
+bno_decrease_sluttyness = {
+	if = {
+		limit = {
+			has_trait_xp = {
+				trait = bno_mindless_bbc_slut
+				value <= 100
+			}
+		}
+		add_trait_xp = {
+			trait = bno_mindless_bbc_slut
+			value = bno_random_xp_negative
+		}
+		if = {
+			limit = {
+				has_trait_xp = {
+					trait = bno_mindless_bbc_slut
+					value <= 0
+				}
+			}
+			become_less_slut = yes
+		}
+	}
+	if = {
+		limit = {
+			has_trait_xp = {
+				trait = bno_qos
+				value <= 100
+			}
+		}
+		add_trait_xp = {
+			trait = bno_qos
+			value = bno_random_xp_negative
+		}
+		if = {
+			limit = {
+				has_trait_xp = {
+					trait = bno_qos
+					value <= 0
+				}
+			}
+			become_less_slut = yes
+		}
+	}
+	if = {
+		limit = {
+			has_trait_xp = {
+				trait = bno_snowbunny
+				value <= 100
+			}
+		}
+		add_trait_xp = {
+			trait = bno_snowbunny
+			value = bno_random_xp_negative
+		}
+		if = {
+			limit = {
+				has_trait_xp = {
+					trait = bno_snowbunny
+					value <= 0
+				}
+			}
+			become_less_slut = yes
+		}
+	}
+	if = {
+		limit = {
+			has_trait_xp = {
+				trait = bno_blacked
+				value <= 100
+			}
+		}
+		add_trait_xp = {
+			trait = bno_blacked
+			value = bno_random_xp_negative
+		}
+		if = {
+			limit = {
+				has_trait_xp = {
+					trait = bno_blacked
+					value <= 0
+				}
+			}
+			become_less_slut = yes
+		}
+	}
+	if = {
+		limit = {
+			has_trait_xp = {
+				trait = bno_curious
+				value <= 100
+			}
+		}
+		add_trait_xp = {
+			trait = bno_curious
+			value = bno_random_xp_negative
+		}
+	}
+}
+
 prostitution = {
 	scope:whore = {
 		if = {
@@ -397,24 +598,6 @@ be_strongest = {
 	add_trait = physique_good_3
 }
 
-level_up_whitegirl_lifestyle = {
-	if = {
-		limit = {
-			has_trait = bno_lifestyle_whitegirl
-		}
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = $xp$
-		}
-	}
-	else = {
-		add_trait = bno_lifestyle_whitegirl
-		add_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value = $xp$
-		}
-	}
-}
 get_random_cuck = {
 	random_courtier_or_guest = {
 		limit = {

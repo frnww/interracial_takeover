@@ -21,12 +21,12 @@
 				scope:actor = { has_relation_ward = scope:recipient }
 				is_hostage_of = scope:actor
 			}
-			NOT = { has_trait = bno_lifestyle_whitegirl }
+			NOT = { has_trait = bno_whitegirl }
 		}
 		
 		scope:actor = {
 			OR = {
-				has_trait = bno_lifestyle_whitegirl
+				has_trait = bno_whitegirl
 				has_trait = bno_bbc
 				has_trait = bno_whiteboi
 			}
@@ -37,7 +37,7 @@
 	
 	on_accept = {
 		scope:recipient = {
-			add_trait = bno_lifestyle_whitegirl
+			add_trait = bno_curious
 			add_opinion = {
 				target = scope:actor
 				modifier = admiration_opinion

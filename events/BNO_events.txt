@@ -215,10 +215,7 @@ bbcconversion.0001 = {
 		reference = tavern
 	}
 	trigger = {
-		has_trait_xp = {
-			trait = bno_lifestyle_whitegirl
-			value >= 100
-		}
+		has_trait = bno_mindless_bbc_slut
 		NOT = {faith = faith:bbcs}
 	}
 	left_portrait = {
@@ -307,7 +304,7 @@ bno_events.0005 = {
 		scope:target2 = {
 			hidden_effect = {
 				stress_impact = {
-					bno_lifestyle_whitegirl = massive_stress_impact_loss
+					bno_whitegirl = massive_stress_impact_loss
 				}
 			}
 		}

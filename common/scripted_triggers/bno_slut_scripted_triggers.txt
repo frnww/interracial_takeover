@@ -34,11 +34,30 @@ is_curious_whitegirl = {
 	}
 }
 
+is_body_modification_ok = {
+	OR = {
+		has_game_rule = bno_body_modification_yes
+		is_ai = yes
+	}
+}
+
+is_bno_fucked_mindless = {
+	trigger_if = {
+		limit = {
+			has_trait = bno_mindless_bbc_slut
+		}
+		has_trait_xp = {
+			trait = bno_mindless_bbc_slut
+			value >= 80
+		}
+	}
+}
+
 is_blacked_whitegirl = {
 	NOT = {
 		has_character_flag = bno_originally_black
 	}
-	is_bno_blacked = yes
+	is_bno_blacked_and_up = yes
 	is_female = yes
 	is_elligible_partner = yes
 }
@@ -169,58 +188,56 @@ is_prime_girl = {
 }
 
 is_bno_curious = {
-	is_whitegirl = yes
-	has_trait_xp = {
-		trait = bno_lifestyle_whitegirl
-		value >= 0
-	}
-	has_trait_xp = {
-		trait = bno_lifestyle_whitegirl
-		value < 25
-	}
+	has_trait = bno_curious
 }
 
 is_bno_blacked = {
-	is_whitegirl = yes
-	has_trait_xp = {
-		trait = bno_lifestyle_whitegirl
-		value >= 25
-	}
-	has_trait_xp = {
-		trait = bno_lifestyle_whitegirl
-		value < 50
-	}
+	has_trait = bno_blacked
 }
 
 is_bno_snowbunny = {
-	is_whitegirl = yes
-	has_trait_xp = {
-		trait = bno_lifestyle_whitegirl
-		value >= 50
-	}
-	has_trait_xp = {
-		trait = bno_lifestyle_whitegirl
-		value < 75
-	}
+	has_trait = bno_snowbunny
 }
 
 is_bno_qos = {
-	is_whitegirl = yes
-	has_trait_xp = {
-		trait = bno_lifestyle_whitegirl
-		value >= 75
-	}
-	has_trait_xp = {
-		trait = bno_lifestyle_whitegirl
-		value < 100
-	}
+	has_trait = bno_qos
 }
 
 is_bno_mindless_bbc_slut = {
-	is_whitegirl = yes
-	has_trait_xp = {
-		trait = bno_lifestyle_whitegirl
-		value >= 100
+	has_trait = bno_mindless_bbc_slut
+}
+
+is_bno_curious_and_up = {
+	OR = {
+		is_bno_curious = yes
+		is_bno_blacked = yes
+		is_bno_snowbunny = yes
+		is_bno_qos = yes
+		is_mindless_bbc_slut = yes
+	}
+}
+
+is_bno_blacked_and_up = {
+	OR = {
+		is_bno_blacked = yes
+		is_bno_snowbunny = yes
+		is_bno_qos = yes
+		is_mindless_bbc_slut = yes
+	}
+}
+
+is_bno_snowbunny_and_up = {
+	OR = {
+		is_bno_snowbunny = yes
+		is_bno_qos = yes
+		is_mindless_bbc_slut = yes
+	}
+}
+
+is_bno_qos_and_up = {
+	OR = {
+		is_bno_qos = yes
+		is_mindless_bbc_slut = yes
 	}
 }
 
@@ -239,7 +256,7 @@ is_slave = {
 }
 
 is_whitegirl = {
-	has_trait = bno_lifestyle_whitegirl
+	has_trait = bno_whitegirl
 }
 
 is_full_black = {
