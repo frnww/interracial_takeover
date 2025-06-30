@@ -1,7 +1,7 @@
 ﻿succession_gender_laws = {
-	default = male_preference_law
+		default = male_preference_law
 	flag = succession_gender_laws
-	
+
 	male_only_law = {
 		can_title_have = {
 			can_title_have_law_general_trigger = yes
@@ -10,12 +10,21 @@
 			always = no
 		}
 		can_keep = {
-			custom_tooltip = {
-				text = culture_not_female_only_tt
-				OR = {
-					faith = { has_doctrine = doctrine_gender_male_dominated }
-					NOT = {
-						culture = { has_cultural_parameter = female_only_inheritance }
+			trigger_if = {
+				limit = {
+					is_independent_ruler = no
+					government_allows = administrative
+				}
+				top_liege = { has_realm_law = male_only_law }
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = culture_not_female_only_tt
+					OR = {
+						faith = { has_doctrine = doctrine_gender_male_dominated }
+						NOT = {
+							culture = { has_cultural_parameter = female_only_inheritance }
+						}
 					}
 				}
 			}
@@ -24,9 +33,18 @@
 			can_change_succession_law_trigger = yes
 		}
 		should_start_with = {
-			faith = {
-				has_doctrine = doctrine_gender_male_dominated
-				religion_tag = islam_religion
+			trigger_if = {
+				limit = {
+					is_independent_ruler = no
+					government_allows = administrative
+				}
+				top_liege = { has_realm_law = male_only_law }
+			}
+			trigger_else = {
+				faith = {
+					has_doctrine = doctrine_gender_male_dominated
+					religion_tag = islam_religion
+				}
 			}
 		}
 		succession = {
@@ -35,7 +53,7 @@
 		flag = men_can_have_multiple_spouses
 		flag = men_can_have_consorts
 		flag = no_female_commanders
-		
+
 		pass_cost = {
 			prestige = change_succession_law_prestige_cost
 		}
@@ -43,7 +61,7 @@
 			prestige = change_succession_law_prestige_cost
 		}
 	}
-	
+
 	male_preference_law = {
 		can_title_have = {
 			can_title_have_law_general_trigger = yes
@@ -52,18 +70,27 @@
 			always = no
 		}
 		can_keep = {
-			custom_description = {
-				text = change_law_male_preference_faith_requirement
-				faith = {
-					NOT = { has_doctrine = doctrine_gender_female_dominated }
+			trigger_if = {
+				limit = {
+					is_independent_ruler = no
+					government_allows = administrative
 				}
+				top_liege = { has_realm_law = male_preference_law }
 			}
-			custom_tooltip = {
-				text = culture_not_female_only_tt
-				OR = {
-					faith = { has_doctrine = doctrine_gender_male_dominated }
-					NOT = {
-						culture = { has_cultural_parameter = female_only_inheritance }
+			trigger_else = {
+				custom_description = {
+					text = change_law_male_preference_faith_requirement
+					faith = {
+						NOT = { has_doctrine = doctrine_gender_female_dominated }
+					}
+				}
+				custom_tooltip = {
+					text = culture_not_female_only_tt
+					OR = {
+						faith = { has_doctrine = doctrine_gender_male_dominated }
+						NOT = {
+							culture = { has_cultural_parameter = female_only_inheritance }
+						}
 					}
 				}
 			}
@@ -72,17 +99,48 @@
 			can_change_succession_law_trigger = yes
 		}
 		should_start_with = {
-			NOT = {
-				culture = { has_cultural_parameter = female_preference_inheritance }
-			}
-			OR = {
-				faith = {
-					NOT = {
-						religion_tag = islam_religion
-					}
-					has_doctrine = doctrine_gender_male_dominated
+			trigger_if = {
+				limit = {
+					is_independent_ruler = no
+					government_allows = administrative
 				}
-				has_realm_law = male_only_law # For when male_only_law ceases to be a legal option
+				top_liege = { has_realm_law = male_preference_law }
+			}
+			trigger_else = {
+				NOT = {
+					culture = { has_cultural_parameter = female_preference_inheritance }
+				}
+				OR = {
+					faith = {
+						NOT = {
+							religion_tag = islam_religion
+						}
+						has_doctrine = doctrine_gender_male_dominated
+					}
+					AND = {
+						has_realm_law = male_only_law # For when male_only_law ceases to be a legal option
+						trigger_if = {
+							limit = {
+								is_independent_ruler = no
+								government_allows = administrative
+							}
+							NOT = {
+								top_liege = { has_realm_law = male_only_law }
+							}
+						}
+						trigger_else = {
+							custom_tooltip = {
+								text = culture_not_female_only_tt
+								NOR = {
+									faith = { has_doctrine = doctrine_gender_male_dominated }
+									NOT = {
+										culture = { has_cultural_parameter = female_only_inheritance }
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 		succession = {
@@ -91,7 +149,7 @@
 		flag = men_can_have_multiple_spouses
 		flag = men_can_have_consorts
 		flag = no_female_commanders
-		
+
 		pass_cost = {
 			prestige = change_succession_law_prestige_cost
 		}
@@ -99,7 +157,7 @@
 			prestige = change_succession_law_prestige_cost
 		}
 	}
-	
+
 	equal_law = {
 		can_title_have = {
 			can_title_have_law_general_trigger = yes
@@ -108,19 +166,29 @@
 			always = no
 		}
 		can_keep = {
-			custom_tooltip = {
-				text = equal_law_culture_faith_or_innovation_trigger
-				OR = {
-					culture = { has_cultural_parameter = gender_equal_inheritance }
-					#culture = { has_innovation = innovation_visigothic_codes }
-					faith = { has_doctrine = doctrine_gender_equal }
-					AND = { #Culture is female dominated but religion is male dominated
-						faith = { has_doctrine = doctrine_gender_male_dominated }
-						culture = { has_cultural_parameter = female_only_inheritance }
-					}
-					AND = { #Culture is male dominated but faith is female dominated
-						faith = { has_doctrine = doctrine_gender_female_dominated }
-						NOT = { culture = { has_cultural_parameter = female_only_inheritance } }
+			trigger_if = {
+				limit = {
+					is_independent_ruler = no
+					government_allows = administrative
+				}
+				top_liege = { has_realm_law = equal_law }
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = equal_law_culture_faith_or_innovation_trigger
+					OR = {
+						culture = { has_cultural_parameter = gender_equal_inheritance }
+						#culture = { has_innovation = innovation_visigothic_codes }
+						faith = { has_doctrine = doctrine_gender_equal }
+						AND = { #Culture is female dominated but religion is male dominated
+							faith = { has_doctrine = doctrine_gender_male_dominated }
+							culture = { has_cultural_parameter = female_only_inheritance }
+						}
+						AND = { #Culture is male dominated but faith is female dominated
+							faith = { has_doctrine = doctrine_gender_female_dominated }
+							NOT = { culture = { has_cultural_parameter = female_only_inheritance } }
+						}
+						primary_title.var:can_keep_realm_law ?= flag:equal_law
 					}
 				}
 			}
@@ -130,14 +198,23 @@
 			can_change_succession_law_trigger = yes
 		}
 		should_start_with = {
-			NOR = {
-				culture = { has_cultural_parameter = female_preference_inheritance }
-				culture = { has_cultural_tradition = tradition_nubian_warrior_queens }
+			trigger_if = {
+				limit = {
+					is_independent_ruler = no
+					government_allows = administrative
+				}
+				top_liege = { has_realm_law = equal_law }
 			}
-			faith = {
-				has_doctrine = doctrine_gender_equal
+			trigger_else = {
+				NOR = {
+					culture = { has_cultural_parameter = female_preference_inheritance }
+					culture = { has_cultural_tradition = tradition_nubian_warrior_queens }
+				}
+				faith = {
+					has_doctrine = doctrine_gender_equal
+				}
+				NOT = { has_realm_law = female_only_law } # For when female_only_law ceases to be valid
 			}
-			NOT = { has_realm_law = female_only_law } # For when female_only_law ceases to be valid
 		}
 		succession = {
 			gender_law = equal
@@ -146,17 +223,18 @@
 		flag = men_can_have_consorts
 		flag = women_can_have_multiple_spouses
 		flag = women_can_have_consorts
-		
+
 		pass_cost = {
 			prestige = change_succession_law_prestige_cost
 		}
 		revoke_cost = {
 			prestige = change_succession_law_prestige_cost
 		}
-		
+
 		ai_will_do = {
 			if = {
 				limit = {
+					exists = primary_title
 					primary_title.tier > tier_county
 					faith = {
 						NOT = {
@@ -168,7 +246,7 @@
 			}
 		}
 	}
-	
+
 	female_preference_law = {
 		can_title_have = {
 			can_title_have_law_general_trigger = yes
@@ -177,23 +255,41 @@
 			always = no
 		}
 		can_keep = {
-			custom_tooltip = {
-				text = female_preference_law_faith_or_culture_trigger
-				OR = {
-					faith = {
-						NOT = { has_doctrine = doctrine_gender_male_dominated }
+			trigger_if = {
+				limit = {
+					is_independent_ruler = no
+					government_allows = administrative
+				}
+				top_liege = { has_realm_law = female_preference_law }
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = female_preference_law_faith_or_culture_trigger
+					OR = {
+						faith = {
+							NOT = { has_doctrine = doctrine_gender_male_dominated }
+						}
+						culture = { has_cultural_parameter = female_preference_inheritance }
 					}
-					culture = { has_cultural_parameter = female_preference_inheritance }
 				}
 			}
 		}
 		should_start_with = {
-			OR = {
-				culture = { has_cultural_parameter = female_preference_inheritance }
-				faith = {
-					has_doctrine = doctrine_gender_female_dominated
+			trigger_if = {
+				limit = {
+					is_independent_ruler = no
+					government_allows = administrative
 				}
-				has_realm_law = female_only_law # For when male_only_law ceases to be a legal option
+				top_liege = { has_realm_law = female_preference_law }
+			}
+			trigger_else = {
+				OR = {
+					culture = { has_cultural_parameter = female_preference_inheritance }
+					faith = {
+						has_doctrine = doctrine_gender_female_dominated
+					}
+					has_realm_law = female_only_law # For when male_only_law ceases to be a legal option
+				}
 			}
 		}
 		can_pass = {
@@ -204,7 +300,7 @@
 		}
 		flag = women_can_have_multiple_spouses
 		flag = women_can_have_consorts
-		
+
 		pass_cost = {
 			prestige = change_succession_law_prestige_cost
 		}
@@ -212,7 +308,7 @@
 			prestige = change_succession_law_prestige_cost
 		}
 	}
-	
+
 	female_only_law = {
 		can_title_have = {
 			can_title_have_law_general_trigger = yes
@@ -221,11 +317,20 @@
 			always = no
 		}
 		can_keep = {
-			custom_tooltip = {
-				text = female_only_law_faith_or_culture_trigger
-				OR = {
-					faith = { has_doctrine = doctrine_gender_female_dominated }
-					culture = { has_cultural_parameter = female_only_inheritance }
+			trigger_if = {
+				limit = {
+					is_independent_ruler = no
+					government_allows = administrative
+				}
+				top_liege = { has_realm_law = female_only_law }
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = female_only_law_faith_or_culture_trigger
+					OR = {
+						faith = { has_doctrine = doctrine_gender_female_dominated }
+						culture = { has_cultural_parameter = female_only_inheritance }
+					}
 				}
 			}
 		}
@@ -237,23 +342,30 @@
 		}
 		flag = women_can_have_multiple_spouses
 		flag = women_can_have_consorts
-		
+
 		pass_cost = {
 			prestige = change_succession_law_prestige_cost
 		}
 		revoke_cost = {
 			prestige = change_succession_law_prestige_cost
 		}
-		
+
 		should_start_with = {
-			culture = { has_cultural_parameter = female_only_inheritance }
+			trigger_if = {
+				limit = {
+					is_independent_ruler = no
+					government_allows = administrative
+				}
+				top_liege = { has_realm_law = female_only_law }
+			}
+			trigger_else = {
+				culture = { has_cultural_parameter = female_only_inheritance }
+			}
 		}
 	}
 	
 	bnwo_only_law = {
 		can_title_have = {
-			is_female = yes
-			has_trait = bno_whitegirl
 			can_title_have_law_general_trigger = yes
 		}
 		should_show_for_title = { # Never show this in the UI, just apply it through script
@@ -264,7 +376,6 @@
 			has_trait = bno_whitegirl
 		}
 		can_pass = {
-			#can_change_to_equal_succession_law_trigger = yes
 			can_change_succession_law_trigger = yes
 		}
 		succession = {
@@ -272,5 +383,9 @@
 			faith = same_faith
 		}
 		flag = can_designate_heirs
+		flag = women_can_have_multiple_spouses
+		flag = women_can_have_consorts
+		flag = men_can_have_multiple_spouses
+		flag = men_can_have_consorts
 	}
 }

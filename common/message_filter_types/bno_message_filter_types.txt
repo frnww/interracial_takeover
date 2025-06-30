@@ -2,6 +2,12 @@
 ### BNO
 ######################
 
-bno_breeding_outcomes = { display = feed }
+bno_breeding_outcomes = { 
+    display = feed 
+    group = character
+}
 
-bno_blacked_events = { display = feed }
+bno_blacked_events = { 
+    display = feed 
+    group = character
+}
