@@ -8,10 +8,6 @@
         limit = {
             is_elligible_partner = yes
         }
-        add_to_list = player_courtier
-    }
-    every_in_list = {
-        list = player_courtier
         bno_on_actions_function = {
             bno_on_actions_in_script = $bno_on_actions$
         }
@@ -21,27 +17,16 @@
         limit = {
             is_alive = yes
         }
-        add_to_list = player_vassal
-    }
-    every_in_list = {
-        list = player_vassal
+        bno_on_actions_function = {
+            bno_on_actions_in_script = $bno_on_actions$
+        }
         every_courtier_or_guest = {
             limit = {
                 is_elligible_partner = yes
             }
-            add_to_list = player_vassal_courtier
-        }
-    }
-    every_in_list = {
-        list = player_vassal
-        bno_on_actions_function = {
-            bno_on_actions_in_script = $bno_on_actions$
-        }
-    }
-    every_in_list = {
-        list = player_vassal_courtier
-        bno_on_actions_function = {
-            bno_on_actions_in_script = $bno_on_actions$
+            bno_on_actions_function = {
+                bno_on_actions_in_script = $bno_on_actions$
+            }
         }
     }
     #Player's Neighbour
@@ -49,57 +34,32 @@
         limit = {
             is_alive = yes
         }
-        add_to_list = neighbour
-    }
-    every_in_list = {
-        list = neighbour
+        bno_on_actions_function = {
+            bno_on_actions_in_script = $bno_on_actions$
+        }
         every_courtier_or_guest = {
             limit = {
                 is_elligible_partner = yes
             }
-            add_to_list = neighbour_courtier
+            bno_on_actions_function = {
+                bno_on_actions_in_script = $bno_on_actions$
+            }
         }
-    }
-    every_in_list = {
-        list = neighbour
         every_vassal_or_below = {
             limit = {
                 is_alive = yes
             }
-            add_to_list = neighbour_vassal
-        }
-    }
-    every_in_list = {
-        list = neighbour_vassal
-        every_courtier_or_guest = {
-            limit = {
-                is_elligible_partner = yes
+            bno_on_actions_function = {
+                bno_on_actions_in_script = $bno_on_actions$
             }
-            add_to_list = neighbour_vassal_courtier
-        }
-    }
-    every_in_list = {
-        list = neighbour
-        bno_on_actions_function = {
-            bno_on_actions_in_script = $bno_on_actions$
-        }
-    }
-    every_in_list = {
-        list = neighbour_courtier
-        bno_on_actions_function = {
-            bno_on_actions_in_script = $bno_on_actions$
-        }
-    }
-    every_in_list = {
-        list = neighbour_vassal
-        bno_on_actions_function = {
-            bno_on_actions_in_script = $bno_on_actions$
-        }
-    }
-    every_in_list = {
-        list = neighbour_vassal_courtier
-        bno_on_actions_function = {
-            bno_on_actions_in_script = $bno_on_actions$
+            every_courtier_or_guest = {
+                limit = {
+                    is_elligible_partner = yes
+                }
+                bno_on_actions_function = {
+                    bno_on_actions_in_script = $bno_on_actions$
+                }
+            }
         }
     }
 }

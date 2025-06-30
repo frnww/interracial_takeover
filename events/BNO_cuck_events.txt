@@ -1139,7 +1139,6 @@ bno_cuck.0009 = {
 				modifier = bno_pathetic_cuck_husband
 				target = scope:cucked_son
 			}
-			add_trait = bno_curious
 			bno_increase_sluttyness = yes
 		}
 		scope:cucked_son = {
@@ -1479,7 +1478,6 @@ bno_cuck.0011 = {
 			set_relation_ward = scope:target1
 		}
 		scope:target1 = {
-			add_trait = bno_curious
 			bno_increase_sluttyness = yes
 			add_character_modifier = {
 				modifier = bno_family_betrothed_me_to_bbc

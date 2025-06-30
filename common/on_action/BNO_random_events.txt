@@ -4,6 +4,7 @@
 random_yearly_everyone_pulse = {
 	on_actions = {
 		bno_trait_maintenance_pulse
+		bno_whitegirl_inheritance
 	}
 }
 #5 year pulse for chance for bbc chars to force title changes
@@ -164,5 +165,6 @@ bno_trait_maintenance_pulse = {
 		bno_trait_maintenance.0004			#make all non bbc male slaves caged if owner is bbc
 		bno_trait_maintenance.0005			#african girls cant have the whitegirl trait
 		bno_trait_maintenance.0006			#all africans have the full black trait
+		bno_trait_maintenance.0007
 	}
 }

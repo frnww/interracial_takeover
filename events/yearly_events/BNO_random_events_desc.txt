@@ -201,7 +201,7 @@ bno_random.1001 = {
 				primary_spouse = { become_more_cuck_effect = yes }
 			}
 		}
-		add_trait = bno_curious
+		bno_increase_sluttyness = yes
 	}
 	option = {
 		name =  bno_random_1001.b
@@ -297,7 +297,7 @@ bno_random.2001 = {
 					has_trait = bno_whitegirl
 				}
 			}
-			add_trait = bno_curious
+			bno_increase_sluttyness = yes
 		}
 		
 		carn_had_sex_with_effect_v2 = {
@@ -441,7 +441,7 @@ bno_random.0002 = {
 					has_trait = bno_whitegirl
 				}
 			}
-			add_trait = bno_curious
+			bno_increase_sluttyness = yes
 		}
 		
 		trigger_event = bno_random.1002
@@ -705,7 +705,7 @@ bno_random.0003 = {
 					has_trait = bno_whitegirl
 				}
 			}
-			add_trait = bno_curious
+			bno_increase_sluttyness = yes
 		}
 	}
 	
@@ -891,7 +891,7 @@ bno_random.0004 = {
 					has_trait = bno_whitegirl
 				}
 			}
-			add_trait = bno_curious
+			bno_increase_sluttyness = yes
 		}
 		
 		trigger_event = bno_random.1004
@@ -988,7 +988,7 @@ bno_random.2004 = {
 					has_trait = bno_whitegirl
 				}
 			}
-			add_trait = bno_curious
+			bno_increase_sluttyness = yes
 		}
 	}
 }
@@ -1865,7 +1865,7 @@ bno_random.1009 = {
 				is_female = yes
 			}
 			hidden_effect = {
-				add_trait = bno_curious
+				bno_increase_sluttyness = yes
 			}
 		}
 		random_vassal = {
@@ -1874,7 +1874,7 @@ bno_random.1009 = {
 				is_adult = yes
 			}
 			hidden_effect = {
-				add_trait = bno_curious
+				bno_increase_sluttyness = yes
 			}
 		}
 	}
@@ -2896,7 +2896,7 @@ bno_random.0014 = {
 					is_adult = yes
 				}
 				hidden_effect = {
-					add_trait = bno_curious
+					bno_increase_sluttyness = yes
 				}
 			}
 			random_vassal = {
@@ -2905,7 +2905,7 @@ bno_random.0014 = {
 					is_adult = yes
 				}
 				hidden_effect = {
-					add_trait = bno_curious
+					bno_increase_sluttyness = yes
 				}
 			}
 		}
@@ -3064,7 +3064,7 @@ bno_random.0015 = {
 					is_adult = yes
 				}
 				hidden_effect = {
-					add_trait = bno_curious
+					bno_increase_sluttyness = yes
 				}
 			}
 			random_vassal = {
@@ -3073,7 +3073,7 @@ bno_random.0015 = {
 					is_adult = yes
 				}
 				hidden_effect = {
-					add_trait = bno_curious
+					bno_increase_sluttyness = yes
 				}
 			}
 		}
@@ -3234,7 +3234,7 @@ bno_random.1016 = {
 	option = {
 		name = bno_random_1016.a
 		root = {
-			add_trait = bno_curious
+			bno_increase_sluttyness = yes
 		}
 	}
 }
@@ -3680,7 +3680,7 @@ bno_random.0020 = {
 	
 	option = { #arent you persuasive
 		name = bno_random_0020.a
-		add_trait = bno_curious
+		bno_increase_sluttyness = yes
 	}
 	
 	option = { #smooch!!!
@@ -4527,14 +4527,14 @@ bno_random.0026 = {
 			limit = {
 				NOT = { has_trait = bno_whitegirl }
 			}
-			add_trait = bno_curious
+			bno_increase_sluttyness = yes
 		}
 		scope:target2 = {
 			if = {
 				limit = {
 					NOT = { has_trait = bno_whitegirl }
 				}
-				add_trait = bno_curious
+				bno_increase_sluttyness = yes
 			}
 			carn_had_sex_with_effect_v2 = {
 				PARTNER = scope:target1
@@ -4552,7 +4552,7 @@ bno_random.0026 = {
 				limit = {
 					NOT = { has_trait = bno_whitegirl }
 				}
-				add_trait = bno_curious
+				bno_increase_sluttyness = yes
 			}
 			carn_had_sex_with_effect_v2 = {
 				PARTNER = scope:target1
@@ -6531,7 +6531,7 @@ bno_random.0039 = {
 	#ooh, stronk
 	option = {
 		name = bno_random_0039.a
-		add_trait = bno_curious
+		bno_increase_sluttyness = yes
 	}
 	
 	#he deserves a reward!!

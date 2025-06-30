@@ -256,6 +256,14 @@ bbc_sex = {
 	}
 }
 
+bno_remove_whitegirl_traits = {
+	remove_trait = bno_curious
+	remove_trait = bno_blacked
+	remove_trait = bno_snowbunny
+	remove_trait = bno_qos
+	remove_trait = bno_mindless_bbc_slut
+}
+
 bno_add_gold_faith = {
 	add_gold = bno_gold_amount
 }
@@ -289,9 +297,9 @@ become_less_slut = {
 bno_increase_sluttyness = {
 	if = {
 		limit = {
-			NOT = {
-				has_trait = bno_whitegirl
-				has_character_flag = bno_originally_black
+			AND = {
+				NOT = { has_trait = bno_whitegirl }
+				NOT = { has_character_flag = bno_originally_black }
 			}
 		}
 		add_trait = bno_curious

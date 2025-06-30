@@ -159,18 +159,32 @@ great_replacement = {
 	}
 	
 	ai_will_do = {
-		value = 1
+		value = 0
 		if = {
 			limit = {
-				is_bno_blacked = yes
+				OR = {
+					has_trait = bno_curious
+					has_trait = bno_blacked
+					has_trait = bno_snowbunny
+				}
 			}
 			add = 10
 		}
 		else_if = {
 			limit = {
-				is_bno_qos = yes
+				OR = {
+					has_trait = bno_qos
+					has_trait = bno_mindless_bbc_slut
+				}
 			}
 			add = 20
+		}
+		else_if = {
+			limit = {
+				is_bno_mindless_bbc_slut = yes
+				is_bno_fucked_mindless = yes
+			}
+			add = 75
 		}
 		else_if = {
 			limit = {

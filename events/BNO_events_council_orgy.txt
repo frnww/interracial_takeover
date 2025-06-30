@@ -109,7 +109,7 @@ bno_council_orgy.0001 = {
 		}
 		name = bno_council_orgy_0001.a
 		root = {
-			add_trait = bno_curious
+			bno_increase_sluttyness = yes
 		}
 		trigger_event = bno_council_orgy.0002
 		ai_chance = {
@@ -539,7 +539,7 @@ bno_council_orgy.0002 = {
 							add = 10
 						}
 						desc = bno_council_orgy_0002.stays_to_watch
-						add_trait = bno_curious
+						bno_increase_sluttyness = yes
 						add_character_flag = bno_council_orgy_masturbated
 					}
 					# Leave
@@ -764,7 +764,7 @@ bno_council_orgy.0002 = {
 							add = 10
 						}
 						desc = bno_council_orgy_0002.stays_to_watch
-						add_trait = bno_curious
+						bno_increase_sluttyness = yes
 						add_character_flag = bno_council_orgy_masturbated
 					}
 					# Leave
@@ -986,7 +986,7 @@ bno_council_orgy.0002 = {
 							add = 10
 						}
 						desc = bno_council_orgy_0002.stays_to_watch
-						add_trait = bno_curious
+						bno_increase_sluttyness = yes
 						add_character_flag = bno_council_orgy_masturbated
 					}
 					# Leave

@@ -7,15 +7,6 @@ bno_trait_maintenance.0001 = {
 	
 	trigger = {
 		OR = {
-			has_inactive_trait = bno_bbc
-			has_trait = dick_big_good_1
-			has_inactive_trait = dick_big_good_1
-			has_trait = dick_big_good_2
-			has_inactive_trait = dick_big_good_2
-			has_trait = dick_big_good_3
-			has_inactive_trait = dick_big_good_3
-		}
-		OR = {
 			has_trait = bno_mixed
 			has_trait = bno_mostly_black
 			has_trait = bno_full_black
@@ -109,14 +100,12 @@ bno_trait_maintenance.0004 = { #make all non bbc male slaves caged if owner is b
 bno_trait_maintenance.0005= {			#african girls cannot have whitegirl trait
 	hidden = yes
 	trigger = {
-		root = {
-			has_character_flag = bno_originally_black
-			is_female = yes
-			is_adult = yes
-		}
+		has_character_flag = bno_originally_black
+		is_female = yes
+		is_adult = yes
 	}
 	immediate = {
-		remove_trait = bno_whitegirl
+		bno_remove_whitegirl_traits = yes
 	}
 }
 #all africans have black trait
@@ -136,5 +125,36 @@ bno_trait_maintenance.0006 = {
 	}
 	immediate = {
 		add_trait = bno_full_black
+	}
+}
+
+bno_trait_maintenance.0007 = {
+	hidden = yes
+	trigger = {
+		is_adult = yes
+		OR = {
+			has_inactive_trait = bno_curious
+			has_inactive_trait = bno_blacked
+			has_inactive_trait = bno_snowbunny
+			has_inactive_trait = bno_qos
+			has_inactive_trait = bno_mindless_bbc_slut
+		}
+	}
+	immediate = {
+		switch = {
+			trigger = has_inactive_trait
+			bno_curious = { make_trait_active = bno_curious }
+			bno_blacked = { make_trait_active = bno_blacked }
+			bno_snowbunny = { make_trait_active = bno_snowbunny }
+			bno_qos = { make_trait_active = bno_qos }
+			bno_mindless_bbc_slut = { make_trait_active = bno_mindless_bbc_slut }
+		}
+		bno_remove_whitegirl_traits = yes
+		if = {
+			limit = {
+				NOT = { has_character_flag = bno_originally_black }
+			}
+			add_trait = bno_curious
+		}
 	}
 }

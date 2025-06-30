@@ -10,6 +10,7 @@ bno_trait_maintenance = {
 	}
 	events = {
 		delay = { days = 1 }
+		bno_trait_maintenance.0007
 		bno_trait_maintenance.0001 		#makes sure bbc 16yo actually has big dick
 	}
 }

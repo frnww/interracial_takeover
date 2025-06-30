@@ -15,6 +15,13 @@ bno_trait_seeding.0001 = {
 			}
 			add_trait = bno_bbc
 		}
+		if = {
+			limit = {
+				has_character_flag = bno_originally_black
+				has_trait = bno_whitegirl
+			}
+			bno_remove_whitegirl_traits = yes
+		}
 		add_trait = bno_full_black
 	}
 }

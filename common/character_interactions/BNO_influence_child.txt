@@ -37,7 +37,7 @@
 	
 	on_accept = {
 		scope:recipient = {
-			add_trait = bno_curious
+			bno_increase_sluttyness = yes
 			add_opinion = {
 				target = scope:actor
 				modifier = admiration_opinion
