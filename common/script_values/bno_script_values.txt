@@ -24,10 +24,6 @@ bno_random_xp_negative = {
 	value = { -1 -10 }
 }
 
-bno_random_days = {
-  value = { 1 90 }
-}
-
 hair_color_x = {
    value = 1
    divide = var:bno_becoming_dark
@@ -56,8 +52,4 @@ bno_younger_adult = {
 
 bno_young_adult = {
   value = { 21 39 }
-}
-
-bno_pregnancy_chance = {
-  value = { 0 100 }
 }

@@ -2212,8 +2212,6 @@ bno_random.0011 = {
 					}
 				}
 			}
-			root = {
-			}
 		}
 	}
 	
@@ -6452,6 +6450,10 @@ bno_random.0039 = {
 	desc = bno_random_0039.desc
 	theme = realm
 	
+	cooldown = {
+		months = 24
+	}
+
 	override_background = {
 		reference = army_camp
 	}
@@ -6471,6 +6473,7 @@ bno_random.0039 = {
 	trigger = {
 		is_female = yes
 		is_adult = yes
+		is_ruler = yes
 		any_courtier_or_guest = {
 			has_trait = bno_bbc
 			is_adult = yes
@@ -6536,7 +6539,7 @@ bno_random.0039 = {
 	option = {
 		name = bno_random_0039.b
 		trigger = {
-			has_trait = bno_curious
+			is_bno_curious_and_up = yes
 		}
 		trigger_event = bno_random.2039
 	}
@@ -6741,7 +6744,7 @@ bno_random.0041 = {
 				is_adult = yes
 				is_female = yes
 				is_ai = yes
-				is_bno_curious = yes
+				is_bno_curious_and_up = yes
 			}
 		}
 	}

@@ -454,6 +454,7 @@ bno_bull.1003 = {
 		}
 		add_stress = -20
 		scope:target1 = {
+			bno_increase_sluttyness = yes
 			add_stress = -20
 			remove_trait = drunkard
 			remove_trait = gluttonous
@@ -540,6 +541,7 @@ bno_bull.2003 = {
 		add_stress = -20
 		add_learning_lifestyle_perk_points = 1
 		scope:target1 = {
+			bno_increase_sluttyness = yes
 			add_stress = -20
 			add_trait = temperate
 			give_nickname = nick_bcm
@@ -996,6 +998,11 @@ bno_bull.0009 = {
 		character = root
 		animation = personality_content
 	}
+
+	cooldown = {
+		months = 12
+	}
+
 	trigger = {
 		is_ruler = yes
 		is_blackbull = yes
@@ -1796,6 +1803,11 @@ bno_bull.0015 = {
 		character = root
 		animation = personality_content
 	}
+
+	cooldown = {
+		months = 12
+	}
+
 	trigger = {
 		is_blackbull = yes
 		is_ruler = yes
@@ -1857,6 +1869,11 @@ bno_bull.0016 = {
 		character = root
 		animation = personality_content
 	}
+
+	cooldown = {
+		months = 12
+	}
+
 	trigger = {
 		is_ruler = yes
 		is_blackbull = yes

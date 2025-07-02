@@ -1,4 +1,4 @@
-﻿random_yearly_everyone_pulse = {
+﻿bno_cuck_pulse = {
 	on_actions = {
 		bno_cuck_yearly_initial_pulse
 		bno_cuck_yearly_global_random_pulse
@@ -7,7 +7,6 @@
 
 bno_cuck_yearly_initial_pulse = {
 	trigger = {
-		has_game_rule = bno_mod_status_on
 		is_ai = no
 		is_elligible_partner = yes
 	}
@@ -46,7 +45,6 @@ bno_yearly_cuck_pulse = {
 
 bno_cuck_yearly_global_random_pulse = {
 	trigger = {
-		has_game_rule = bno_mod_status_on
 		has_game_rule = bno_global_bbc_activities_yes
 	}
 	on_actions = {

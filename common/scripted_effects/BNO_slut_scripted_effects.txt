@@ -287,13 +287,34 @@ bbc_sex = {
 	}
 }
 
+bno_father_or_mother = {
+	if = {
+		limit = {
+			is_female = yes
+		}
+		save_scope_as = mother
+	}
+	else_if = {
+		limit = {
+			is_male = yes
+		}
+		save_scope_as = father
+	}
+}
+
 bno_have_sex_with_effects = {
 	save_scope_as = initiator
+	scope:initiator = {
+		bno_father_or_mother = yes
+	}
+	$PARTNER$ = {
+		bno_father_or_mother = yes
+	}
 	carn_had_sex_with_effect = {
 		CHARACTER_1 = scope:initiator
 		CHARACTER_2 = $PARTNER$
-		C1_PREGNANCY_CHANCE = bno_pregnancy_chance
-		C2_PREGNANCY_CHANCE = bno_pregnancy_chance
+		C1_PREGNANCY_CHANCE = carn_sex_pregnancy_chance
+		C2_PREGNANCY_CHANCE = carn_sex_pregnancy_chance
 		DRAMA = yes
 		STRESS_EFFECTS = yes
 	}

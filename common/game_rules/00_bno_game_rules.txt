@@ -119,3 +119,24 @@ bno_seeding = {
 	}
 
 }
+
+bno_event_frequency = {
+	categories = {
+		interaccial_takeover
+	}
+
+	default = bno_event_frequency_three_months
+
+	bno_event_frequency_three_months = {
+
+	}
+
+	bno_event_frequency_six_months = {
+
+	}
+
+	bno_event_frequency_twelve_months = {
+		
+	}
+
+}

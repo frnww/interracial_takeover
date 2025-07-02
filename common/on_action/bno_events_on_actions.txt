@@ -1,0 +1,56 @@
+﻿random_yearly_everyone_pulse = {
+	on_actions = {
+		bno_events_quarterly_pulse
+		bno_events_half_year_pulse
+		bno_events_each_year_pulse
+	}
+}
+
+bno_events_pulse = {
+	trigger = {
+		has_game_rule = bno_mod_status_on
+	}
+	on_actions = {
+		bno_bull_pulse
+		bno_cuck_pulse
+		bno_random_pulse
+		bno_slut_pulse
+	}
+}
+
+bno_events_quarterly_pulse = {
+	trigger = {
+		has_game_rule = bno_event_frequency_three_months
+	}
+	on_actions = {
+		delay = { days = { 1 89 } }
+		bno_events_pulse
+		delay = { days = { 90 179 } }
+		bno_events_pulse
+		delay = { days = { 180 269 } }
+		bno_events_pulse
+		delay = { days = { 270 365 } }
+		bno_events_pulse
+	}
+}
+
+bno_events_half_year_pulse = {
+	trigger = {
+		has_game_rule = bno_event_frequency_six_months
+	}
+	on_actions = {
+		delay = { days = { 1 89 } }
+		bno_events_pulse
+		delay = { days = { 180 269 } }
+		bno_events_pulse
+	}
+}
+
+bno_events_each_year_pulse = {
+	trigger = {
+		has_game_rule = bno_event_frequency_twelve_months
+	}
+	on_actions = {
+		bno_events_pulse
+	}
+}

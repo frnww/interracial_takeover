@@ -10,13 +10,22 @@ bno_curious.0001 = {
             has_trait = bno_whitegirl
 			has_trait = chaste
         }
-		any_relation = {
-			type = guardian
-			OR = {
-				is_blacked_whitegirl = yes
-				is_bbc = yes		
+		OR = {
+			any_relation = {
+				type = guardian
+				OR = {
+					is_blacked_whitegirl = yes
+					is_bbc = yes		
+				}
+			}
+			father = {
+				is_bbc = yes
+			}
+			mother = {
+				has_trait = bno_whitegirl
 			}
 		}
+		
 	}
 
 	immediate = {
