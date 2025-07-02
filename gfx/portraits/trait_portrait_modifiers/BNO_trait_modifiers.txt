@@ -1,4 +1,80 @@
-﻿mindless_slut = {
+﻿bno_full_black_portrait_modifier = {
+	bno_full_black_portrait_modifier = {
+		traits = {
+			bno_full_black
+		}
+		dna_modifiers = {
+			human = {
+				color = {
+					gene = skin_color
+					mode = modify
+
+					x = 0.0
+					y = 1.0
+				}
+			}
+		}
+	}
+}
+
+bno_mostly_black_portrait_modifier = {
+	bno_mostly_black_portrait_modifier = {
+		traits = {
+			bno_mostly_black
+		}
+		dna_modifiers = {
+			human = {
+				color = {
+					gene = skin_color
+					mode = modify
+
+					x = 0.0
+					y = 0.75
+				}
+			}
+		}
+	}
+}
+
+bno_mixed_portrait_modifier = {
+	bno_mixed_portrait_modifier = {
+		traits = {
+			bno_mixed
+		}
+		dna_modifiers = {
+			human = {
+				color = {
+					gene = skin_color
+					mode = modify
+
+					x = 0.0
+					y = 0.5
+				}
+			}
+		}
+	}
+}
+
+bno_barely_mixed_portrait_modifier = {
+	bno_barely_mixed_portrait_modifier = {
+		traits = {
+			bno_barely_mixed
+		}
+		dna_modifiers = {
+			human = {
+				color = {
+					gene = skin_color
+					mode = modify
+
+					x = 0.0
+					y = 0.25
+				}
+			}
+		}
+	}
+}
+
+mindless_slut = {
 	mindless_slut = {
 		traits = {
 			bno_mindless_bbc_slut

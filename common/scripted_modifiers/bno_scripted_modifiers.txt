@@ -119,3 +119,56 @@
 		add = 30
 	}
 }
+
+bno_white_girl_modifier_small = {
+	modifier = {
+		add = 5
+		is_bno_curious = yes
+	}
+	modifier = {
+		add = 10
+		is_bno_blacked = yes
+	}
+	modifier = {
+		add = 15
+		is_bno_snowbunny = yes
+	}
+	modifier = {
+		add = 20
+		is_bno_qos = yes
+	}
+	modifier = {
+		add = 25
+		is_bno_mindless_bbc_slut = yes
+	}
+}
+
+bno_bbc_modifier = {
+	modifier = {
+		add = 100
+		is_bbc = yes
+	}
+}
+
+bno_white_girl_modifier_big = {
+	modifier = {
+		add = 5
+		is_bno_curious_and_up = yes
+	}
+	modifier = {
+		add = 10
+		is_bno_blacked_and_up = yes
+	}
+	modifier = {
+		add = 15
+		is_bno_snowbunny_and_up = yes
+	}
+	modifier = {
+		add = 20
+		is_bno_qos_and_up = yes
+	}
+	modifier = {
+		add = 25
+		is_bno_mindless_bbc_slut = yes
+	}
+}

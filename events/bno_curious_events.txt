@@ -1,0 +1,366 @@
+﻿namespace = bno_curious
+
+bno_curious.0001 = { 
+	hidden = yes
+	
+	trigger = {
+        is_ai = yes
+		is_female = yes
+		NOR = {
+            has_trait = bno_whitegirl
+			has_trait = chaste
+        }
+		any_relation = {
+			type = guardian
+			OR = {
+				is_blacked_whitegirl = yes
+				is_bbc = yes		
+			}
+		}
+	}
+
+	immediate = {
+		save_scope_as = child
+
+		bno_increase_sluttyness = yes
+
+		random_relation = { 
+			type = guardian 
+			trigger_event = {
+				id = bno_curious.1001
+				days = 360
+				delayed = yes
+			}
+		}
+	}
+}
+
+bno_curious.1001 = {
+	type = character_event
+	title = bno_curious.1001.title
+	desc = bno_curious.1001.desc
+	theme = learning
+	override_background = { reference = garden }
+	
+	left_portrait = scope:child
+	immediate = { save_scope_as = guardian }
+	
+	option = { #Let her go to the refugee camp and learn her place
+		name = bno_curious.1001.a
+		trigger = {
+			has_trait = bno_whitegirl
+		}
+		trigger_event = {
+			id = bno_curious.1101
+			days = 1
+			delayed = yes
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = 5
+				is_bno_curious_and_up = yes
+			}
+			modifier = {
+				add = 10
+				is_bno_blacked_and_up = yes
+			}
+			modifier = {
+				add = 15
+				is_bno_snowbunny_and_up = yes
+			}
+		}
+	}
+	
+	option = { #BBC will let her know her true self
+		name = bno_curious.1001.b
+		trigger_event = {
+			id = bno_curious.1201
+			days = 1
+			delayed = yes
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 5
+				is_bno_curious_and_up = yes
+			}
+			modifier = {
+				add = 5
+				is_bno_blacked_and_up = yes
+			}
+			modifier = {
+				add = 10
+				is_bno_snowbunny_and_up = yes
+			}
+			modifier = {
+				add = 15
+				is_bno_qos_and_up = yes
+			}
+		}
+	}
+	
+	option = { #She is not suited to this path.
+		name = bno_curious.1001.c
+		ai_chance = {
+			base = 30
+			modifier = {
+				add = 20
+				has_trait = chaste
+			}
+			modifier = {
+				add = 20
+				has_trait = content
+			}
+			modifier = {
+				add = 20
+				has_trait = craven
+			}
+		}
+	}
+	
+	option = { #Let me release her inner desire.
+		name = bno_curious.1001.d
+		trigger = {has_trait = bno_bbc}
+		exclusive = yes
+		add_internal_flag = special
+		trigger_event = {
+			id = bno_curious.1301
+			days = 7
+			delayed = yes
+		}
+	}
+}
+
+bno_curious.1101 = {
+	type = character_event
+	title = bno_curious.1101.title
+	desc = bno_curious.1101.desc
+	theme = lover_relation
+	override_background = { reference = alley_night }
+	
+	left_portrait = {
+		character = root
+		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = root
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	
+	right_portrait = {
+		character = scope:child
+		animation = shame
+	}
+
+	immediate = {
+		root = { 
+			add_character_modifier = { 
+				modifier = bno_a_lively_performance_in_a_refugee_camp 
+                months = 36
+			}
+		}
+		scope:child = { 
+			add_character_modifier = { 
+				modifier = bno_a_future_queen_for_black
+			}
+		}
+	}
+	
+	option = { #She understands her identity, her dripping pussy says so
+		name = bno_curious.1101.a
+		scope:child = { 
+            bno_increase_sluttyness = yes 
+        }
+		if = { 
+            limit = {
+                root = { 
+                    is_married = yes 
+                } 
+            }
+            primary_spouse = {
+                trigger_event =  {
+                    id=bno_cuck.0002 
+                    days = 7 
+                    delayed = yes
+                }
+            }
+		}
+	}
+}
+
+bno_curious.1201 = {
+	type = character_event
+	title = bno_curious.1201.title
+	desc = bno_curious.1201.desc
+	theme = lover_relation
+	override_background = { reference = corridor_night }
+	
+	left_portrait = {
+		character = root
+		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = root
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	
+	right_portrait = {
+		character = scope:child
+		animation = shame
+	}
+
+	lower_center_portrait = {
+		character = scope:target1
+		triggered_outfit = {
+			trigger = {
+				exists = scope:target1
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	
+	immediate = {
+		create_bbc = {
+            age = 16
+            scope_name = target1
+        }
+		
+		root = {
+			add_character_modifier = { 
+				modifier = bno_educated_a_future_queen_of_spades 
+                months = 36
+			}
+		}
+		scope:child = { 
+			add_character_modifier = { 
+				modifier = bno_a_future_queen_for_black
+			}
+		}
+	}
+	
+	option = { #A future queen is born
+		name = bno_curious.1201.a
+        scope:child = {
+            bno_have_sex_with_effects = {
+                PARTNER = scope:target1
+            }
+			become_lover_with_target = {
+				TARGET = scope:target1
+				LOCATION = root.location
+			}
+        }
+        
+        root = {
+            bno_have_sex_with_effects = {
+                PARTNER = scope:target1
+            }
+        }
+		if = { 
+			limit = {
+				root = { 
+					is_married = yes 
+				} 
+			}
+			primary_spouse = { 
+				trigger_event = {
+					id = bno_cuck.0003
+					days = 1
+					delayed = yes
+				}
+			}
+		}
+		if = { 
+            limit = {
+                scope:child = { 
+                    is_married = yes 
+                } 
+            }
+			primary_spouse = {
+				trigger_event = {
+					id = bno_cuck.0004
+					days = 1
+				 	delayed = yes
+				}
+			}
+		}
+		if = { 
+            limit = {
+                scope:child.father = { 
+                    is_alive = yes
+                }
+            }
+			scope:child.father = {
+				trigger_event = {
+					id = bno_cuck.0005 
+					days = 1
+					delayed = yes
+				} 
+			}
+		}
+	}
+}
+
+
+bno_curious.1301 = {
+	type = character_event
+	title = bno_curious.1301.title
+	desc = bno_curious.1301.desc
+	theme = lover_relation
+	override_background = { reference = bedchamber }
+	
+	left_portrait = {
+		character = root
+		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = root
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	
+	right_portrait = {
+		character = scope:child
+		animation = shame
+	}
+
+	immediate = {
+		root = {
+			add_character_modifier = { 
+				modifier = bno_educated_a_future_queen_of_spades 
+				months = 36
+			}
+		}
+		scope:child = {
+			add_character_modifier = { 
+				modifier = bno_a_future_queen_for_black
+			}
+		}
+	}
+	
+	option = { #Look at her lost face, she is totally addicted to BBC
+		name = bno_curious.1301.a
+		root = {
+			bno_have_sex_with_effects = {
+				PARTNER = scope:child
+			}
+			become_lover_with_target = {
+				TARGET = scope:child
+				LOCATION = root.location
+			}
+		}
+	}
+}

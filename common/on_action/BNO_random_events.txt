@@ -4,7 +4,6 @@
 random_yearly_everyone_pulse = {
 	on_actions = {
 		bno_trait_maintenance_pulse
-		bno_whitegirl_inheritance
 	}
 }
 #5 year pulse for chance for bbc chars to force title changes

@@ -13,5 +13,12 @@ bno_trait_initialization_pulse = {
 		every_living_character = {
 			trigger_event = bno_trait_seeding.0001
 		}
+
+		if = {
+			limit = {
+				has_game_rule = inversed_gender_equality
+			}
+			bno_game_rule_inversed_gender_equality_effect = yes
+		}
 	}
 }

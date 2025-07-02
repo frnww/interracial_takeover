@@ -8,7 +8,7 @@
  bno_bull_0001.d: "她不是我的菜."
  
  #Bull anti-stress event. too lazy to write this one out fully
- bno_bull_0002.title: "请黑牛来帮我放松一下"
+ bno_bull_0002.title: "黑爹释放压力"
  bno_bull_0002.desc: "我最近压力很大, 还好, [target1.GetFirstName] 就在附近，我可以借此释放压力" 
  bno_bull_0002.a: "我需要这个."
  
@@ -40,7 +40,7 @@
  bno_bull_0005.a:  "你自然而然地满足了她对大黑鸡巴的渴望。"
  
  #
- bno_bull_0006.title: "低等种族的贞洁"
+ bno_bull_0006.title: "对低等男性上锁"
  bno_bull_0006.desc: "你正站在你的地牢里，监督着对[target1.GetFirstName]的纠正措施。可以理解，他因转变事件而感到羞辱，你几乎对他感到同情。几乎。但这些事情必须为了你们新世界的更大利益而做。绝不能让他妨碍这一切。"
  bno_bull_0006.a: "必须对世界进行纠正。"
  
@@ -96,11 +96,16 @@ bno_bull_3014.a: "正式占有她"
 bno_bull_0015.title: "王座之室的火花"  
 bno_bull_0015.desc: "宴会即将结束，你瞥见 [target1.GetFirstName], [target2.GetFirstName]的妻子, 正对着丈夫的玩笑轻声笑着。她看起来完美无瑕，纯白无垢，丝毫没有被你心中燃烧的火焰所触动。 你与她目光相遇一次，然后又一次，这就足够了。她移开了视线，但笑容依然萦绕，流露出一丝好奇。在接下来的日子里，偶遇变成了短暂的交谈、微妙的触碰和久久的凝视。她还不是你的，但她也不再真正属于他。 你们说的每句话，你们的每一个眼神，都像是另一条线，正在解开她自以为熟悉的生活。你不要急于结束这场游戏——它太甜蜜了，无法慢慢品味。你留给她的只是足够的时间，让她能够继续生活。" 夜里，想起你的手抚摸她的手，想起你的声音让她心潮澎湃。 [target2.GetFirstName] 没有注意到这种变化，但她注意到了。 [target1.GetFirstName] 每时每刻都更加强烈地渴望你的存在，她想知道，如果她真正地满足了内心深处的渴望，那会是什么感觉。" 
 bno_bull_0015.a: "引她更深一步"
+
+#BBC Ruler turn wife into a bimbo
+bno_bull_0016.title: "[target1.GetFirstName]的洗脑转化"  
+bno_bull_0016.desc: "事情是这样开始的：下班回家后，我们像往常一样粗暴地做爱。我对我的妻子[target1.GetFirstName]欲火焚身，情不自禁地把我的大黑鸡巴毫不留情地插进了她的喉咙深处。但是，[target1.GetFirstName]并没有生气，也没有推开我，而是继续忍受着--以最顺从的方式臣服于我。当我用力地插进她的嘴里时，[target1.GetFirstName]开始发出一些奇怪的 “咯咯 ”的声音。她的眼睛瞪得大大的，表情空洞地看着我，好像她的脑袋里只剩下了纯粹的动物本能！从那以后，[target1.GetFirstName]就成了我的玩偶。她会毫无疑问、毫不犹豫地做我想要的任何事--即使这意味着要为我和其他黑人大块头贬低自己。让我告诉你，没有什么比知道你的妻子现在是个白痴，只为鸡巴的快感而存在更性感的了。" 
+bno_bull_0016.a: "非常好，看来某人已经准备好被彻底成为所有物了。"
  
 # My first time doing this
-bno_bull_0017.title: "我完全臣服"
-bno_bull_0017.desc: "我受不了了。我不想再思考了。我只想被 [target1.GetFirstName] 干。"
-bno_bull_0017.a: "向你的新主人宣誓效忠"
+#bno_bull_0017.title: "我完全臣服"
+#bno_bull_0017.desc: "我受不了了。我不想再思考了。我只想被 [target1.GetFirstName] 干。"
+#bno_bull_0017.a: "向你的新主人宣誓效忠"
 #
 # bno_random_1001.title: "Test title"
 # bno_random_1001.desc: "Hi!"

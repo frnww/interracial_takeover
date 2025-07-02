@@ -70,3 +70,9 @@ bno_on_actions_function = {
         days = bno_random_days
     }
 }
+
+bno_game_rule_inversed_gender_equality_effect = {
+    culture:bnoc = {
+        set_culture_pillar = martial_custom_male_only
+    }
+} 

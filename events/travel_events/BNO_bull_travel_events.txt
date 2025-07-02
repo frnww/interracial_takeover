@@ -49,7 +49,7 @@ bno_bull_travel.0001 = {
 	}
 	option = { #delays travel to fuck girl
 		name = bno_bull_travel_0001.a
-		carn_had_sex_with_effect_v2 = {
+		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
 		scope:target1 = {

@@ -191,6 +191,9 @@ bull_decision = {
 		is_ruler = yes
 		is_adult = yes
 		has_trait = bno_whiteboi
+		NOT = {
+			has_trait = bno_bbc
+		}
 	}
 	cooldown = {
 		months = 6

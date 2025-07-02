@@ -1,5 +1,6 @@
 ﻿bno_war = {
 	group = religious
+	icon = religious_war
 	
 	combine_into_one = yes
 	mutually_exclusive_titles = { always = yes }
@@ -7,16 +8,16 @@
 	allowed_for_character = {
 		OR = {
 			has_trait = bno_bbc
-			has_trait = bno_mindless_bbc_slut
+			has_trait = bno_whitegirl
 		}
 	}
 	allowed_against_character = {
 		NOR = {
 			has_trait = bno_bbc
-			has_trait = bno_mindless_bbc_slut
+			has_trait = bno_whitegirl
 		}
 	}
-	#target_titles = neighbor_land_or_water
+
 	target_titles = all
 	target_title_tier = county
 	ignore_effect = change_title_holder
@@ -95,8 +96,9 @@
 	attacker_allies_inherit = yes
 	defender_allies_inherit = yes
 	
-	war_name = "Racial Takeover"
-	cb_name_no_target = "BBC Takeover"
+	war_name = "BNO_WAR_NAME"
+	war_name_base = "BNO_WAR_NAME_BASE"
+	cb_name_no_target = "BNO_WAR_CB_NAME"
 	
 	interface_priority = 0
 	
@@ -112,12 +114,13 @@
 
 bno_subj_war = {
 	group = religious
+	icon = invasion
 	
 	combine_into_one = yes
 	mutually_exclusive_titles = { always = yes }
 	
 	allowed_for_character = {
-		has_trait = bno_mindless_bbc_slut
+		has_trait = bno_whitegirl
 		any_courtier_or_guest = {
 			has_trait = bno_bbc
 			is_ai = yes
@@ -129,7 +132,7 @@ bno_subj_war = {
 	allowed_against_character = {
 		NOR = {
 			has_trait = bno_bbc
-			has_trait = bno_mindless_bbc_slut
+			has_trait = bno_whitegirl
 		}
 	}
 	
@@ -242,8 +245,9 @@ bno_subj_war = {
 	attacker_allies_inherit = yes
 	defender_allies_inherit = yes
 	
-	war_name = "African Subjugation"
-	cb_name_no_target = "African Subjugation"
+	war_name = "BNO_SUBJ_WAR_NAME"
+	war_name_base = "BNO_SUBJ_WAR_NAME_BASE"
+	cb_name_no_target = "BNO_SUBJ_WAR_CB_NAME"
 	
 	interface_priority = 0
 	
@@ -272,9 +276,9 @@ bno_varangian_adventure = {
 	allowed_for_character = {
 		OR = {
 			has_trait = bno_bbc
-			has_trait = bno_mindless_bbc_slut
-			is_ai = no
+			has_trait = bno_whitegirl
 		}
+		is_ai = no
 	}
 	
 	allowed_for_character_display_regardless = {
@@ -1428,9 +1432,9 @@ bno_varangian_adventure = {
 	attacker_allies_inherit = yes
 	defender_allies_inherit = yes
 	
-	war_name = "BNWO Invasion"
-	war_name_base = "BNWO Invasion"
-	cb_name = "BNWO Invasion"
+	war_name = "BNO_VARANGIAN_ADVENTURE_WAR_NAME"
+	war_name_base = "BNO_VARANGIAN_ADVENTURE_WAR_NAME_BASE"
+	cb_name = "BNO_VARANGIAN_ADVENTURE_CB_NAME"
 	
 	interface_priority = 79
 	

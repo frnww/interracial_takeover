@@ -3,7 +3,6 @@
 	
 	doctrine_background_icon = core_tenet_banner_islam.dds
 	doctrine = abrahamic_hostility_doctrine
-	doctrine = unreformed_faith_doctrine
 	
 	#Main Group
 	doctrine = doctrine_temporal_head
@@ -42,8 +41,8 @@
 	doctrine = doctrine_pilgrimage_encouraged
 	
 	traits = {
-		virtues = { bno_whitegirl futa bno_bbc dick_big_good_1 dick_big_good_2 dick_big_good_3 lustful sadistic bno_camp_leader bno_full_black}
-		sins = { dick_small_good_1 dick_small_good_2 dick_small_good_3 dick_small_bad_1 dick_small_bad_2 dick_small_bad_3 chaste bno_whiteboi bno_chastity}
+		virtues = { bno_whitegirl futa bno_bbc lustful sadistic bno_camp_leader bno_full_black}
+		sins = { chaste bno_whiteboi bno_chastity}
 	}
 	
 	reserved_male_names = {
@@ -381,7 +380,10 @@
 	faiths = {
 		bbcs = {
 			color = { 0 0 0 }
+			
 			icon = bnobbc
+			reformed_icon = bnobbc
+
 			holy_site = alexandria
 			holy_site = jerusalem
 			holy_site = antioch
@@ -393,6 +395,8 @@
 			holy_site = fes
 			holy_site = constantinople
 			
+			doctrine = unreformed_faith_doctrine
+
 			#Tenets
 			doctrine = tenet_struggle_submission
 			doctrine = tenet_human_sacrifice

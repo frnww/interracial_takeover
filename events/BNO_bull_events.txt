@@ -70,7 +70,7 @@ bno_bull.0001 = {
 		ai_chance = {
 			base = 100
 		}
-		carn_had_sex_with_effect_v2 = {
+		bno_have_sex_with_effects = {
 			PARTNER = scope:target2
 		}
 		scope:target2 = {
@@ -113,7 +113,7 @@ bno_bull.0001 = {
 			target = scope:target2
 			reason = bbc_too_good
 		}
-		carn_had_sex_with_effect_v2 = {
+		bno_have_sex_with_effects = {
 			PARTNER = scope:target2
 		}
 		scope:target2 = {
@@ -249,7 +249,7 @@ bno_bull.0002 = {
 				save_scope_as = target1
 			}
 		}
-		carn_had_sex_with_effect_v2 = {
+		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
 	}
@@ -654,7 +654,7 @@ bno_bull.0004 = {
 				save_scope_as = target1
 			}
 		}
-		carn_had_sex_with_effect_v2 = {
+		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
 		scope:target1 = {
@@ -742,7 +742,7 @@ bno_bull.0005 = {
 			save_scope_as = target1
 		}
 		root = {
-			carn_had_sex_with_effect_v2 = {
+			bno_have_sex_with_effects = {
 				PARTNER = scope:target1
 			}
 		}
@@ -1419,7 +1419,7 @@ bno_bull.0013 = {
 				save_scope_as = target1
 			}
 		}
-		carn_had_sex_with_effect_v2 = {
+		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
 		scope:target1 = {
@@ -1619,7 +1619,7 @@ bno_bull.1014 = { #follow up event, fuck and done
 		}
 	}
 	immediate = {
-		carn_had_sex_with_effect_v2 = {
+		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
 		scope:target1 = {
@@ -1670,7 +1670,7 @@ bno_bull.2014 = { #follow up event, fuck and become lovers
 		}
 	}
 	immediate = {
-		carn_had_sex_with_effect_v2 = {
+		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
 		scope:target1 = {
@@ -1725,7 +1725,7 @@ bno_bull.3014 = { #follow up event, fuck and steal as wife
 		}
 	}
 	immediate = {
-		carn_had_sex_with_effect_v2 = {
+		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
 		scope:target1 = {

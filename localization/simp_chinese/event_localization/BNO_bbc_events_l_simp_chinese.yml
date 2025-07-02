@@ -31,11 +31,12 @@
  
  #test
  bno_election: "采纳新的继承法"
+ bno_election_confirm: "确认"
  bno_election_decision_desc: "在仔细查阅文件并研究继承顺序之后，你被一位廷臣启发，采纳一种新的等级制度——一种以种族而非性别为中心的等级制度。"
  bno_election_decision_tooltip: "屈服吗？"
  bno_election_decision.a: "耶嘿！！！全速前进！"
 
- bull_decision: "传唤一个黑人来征服你的妻子"
+ bull_decision: "传唤一个黑爹来征服你的妻子"
  bull_decision_desc: "你的妻子对这些来自非洲的陌生新男人的大黑鸡巴上瘾了，而你也有点喜欢这样，为什么不告诉他们中的一个人在你面前享用她呢？"
  bull_decision_tooltip: "一位'黑牛'将造访你的卧室"
  bull_decision_confirm: "把那个黑人带来!"

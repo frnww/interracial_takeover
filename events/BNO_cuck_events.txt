@@ -64,7 +64,7 @@ bno_cuck.0001 = {
 			save_scope_as = target2
 		}
 		scope:target1 = {
-			carn_had_sex_with_effect_v2 = {
+			bno_have_sex_with_effects = {
 				PARTNER = scope:target2
 			}
 		}
@@ -534,7 +534,7 @@ bno_cuck.2004 = {
 	}
 	immediate = {
 		scope:target1 = {
-			carn_had_sex_with_effect_v2 = {
+			bno_have_sex_with_effects = {
 				PARTNER = scope:target2
 			}
 		}
@@ -689,13 +689,13 @@ bno_cuck.3004 = {
 		scope:target2 = {
 			
 			hidden_effect = {
-				carn_had_sex_with_effect_v2 = {
+				bno_have_sex_with_effects = {
 					PARTNER = scope:target1
 				}
-				carn_had_sex_with_effect_v2 = {
+				bno_have_sex_with_effects = {
 					PARTNER = scope:target3
 				}
-				carn_had_sex_with_effect_v2 = {
+				bno_have_sex_with_effects = {
 					PARTNER = scope:target4
 				}
 			}
@@ -1027,7 +1027,7 @@ bno_cuck.0008 = {
 	option = { #BBC fucks cuck's wife
 		name = bno_cuck_0008.b
 		scope:target1 = {
-			carn_had_sex_with_effect_v2 = {
+			bno_have_sex_with_effects = {
 				PARTNER = scope:target2
 			}
 		}
@@ -1132,7 +1132,7 @@ bno_cuck.0009 = {
 	option = {
 		name = bno_cuck_0009.a
 		scope:target2 = {
-			carn_had_sex_with_effect_v2 = {
+			bno_have_sex_with_effects = {
 				PARTNER = scope:target1
 			}
 			add_opinion = {
@@ -1360,7 +1360,7 @@ bno_cuck.2010 = { #follow up event, bbc spymaster lays with cuck's wife
 	immediate = {
 		hidden_effect = {
 			scope:target2 = {
-				carn_had_sex_with_effect_v2 = {
+				bno_have_sex_with_effects = {
 					PARTNER = scope:target1
 				}
 				bno_increase_sluttyness = yes
@@ -1575,7 +1575,7 @@ bno_cuck.0013 = {
 			save_scope_as = target2
 		}
 		scope:target1 = {
-			carn_had_sex_with_effect_v2 = {
+			bno_have_sex_with_effects = {
 				PARTNER = scope:target2
 			}
 		}

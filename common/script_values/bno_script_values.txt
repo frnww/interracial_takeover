@@ -49,3 +49,15 @@ skin_color_y = {
   value = 0.1
   multiply = var:bno_becoming_dark
 }
+
+bno_younger_adult = {
+  value = { 16 20 }
+}
+
+bno_young_adult = {
+  value = { 21 39 }
+}
+
+bno_pregnancy_chance = {
+  value = { 0 100 }
+}

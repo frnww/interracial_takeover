@@ -373,7 +373,7 @@ bno_title_change.0004 = {
 			}
 		}
 		scope:bbc_getting_title = {
-			carn_had_sex_with_effect_v2 = {
+			bno_have_sex_with_effects = {
 				PARTNER = scope:killer_slut
 			}
 			add_trait = bno_camp_leader
@@ -742,7 +742,7 @@ bno_title_change.1006 = { #follow up event 3 days later, parade former liege, ge
 		}
 	}
 	immediate = {
-		carn_had_sex_with_effect_v2 = {
+		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
 		add_dread = 50

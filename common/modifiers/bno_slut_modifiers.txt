@@ -17,3 +17,36 @@ bno_pretty_slut_pimped = {
 	monthly_prestige = 1.5
 	monthly_dread = -1
 }
+
+bno_a_lively_performance_in_a_refugee_camp = {
+	stewardship = 5
+	intrigue = 5
+	stress_gain_mult = -0.5
+	stress_loss_mult = 0.5
+}
+
+bno_educated_a_future_queen_of_spades = {
+	stewardship = 5
+	diplomacy = 5
+	learning = 5
+	intrigue = 5
+	stress_gain_mult = -0.5
+	stress_loss_mult = 0.5
+}
+
+bno_a_future_queen_for_black = {
+	stewardship = -3
+	diplomacy = -3
+	learning = -3
+	intrigue = 3
+	martial = -3
+	prowess = -5
+	tax_mult = 0.2
+	levy_size = 0.5
+	knight_effectiveness_mult = 0.5
+	knight_limit = 5
+	men_at_arms_limit = 1
+	men_at_arms_cap = 1
+	men_at_arms_maintenance = -0.1
+	men_at_arms_recruitment_cost = -0.1
+}

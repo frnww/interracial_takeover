@@ -1,13 +1,13 @@
 ﻿l_simp_chinese:
- DEFAULT_NICKNAME_DESC: "这片土地上的朋友和敌人都知道[CHARACTER.GetFirstName]的外号是“[CHARACTER.GetNicknameNoTooltip]""
+ #DEFAULT_NICKNAME_DESC: "这片土地上的朋友和敌人都知道[CHARACTER.GetFirstName]的外号是“[CHARACTER.GetNicknameNoTooltip]""
 
  nick_qos: "黑桃皇后"
   nick_qos_desc: "黑桃皇后这个头衔被许多背叛种族的人深深地崇敬，它象征着对黑人至上事业的真正奉献。毫无疑问，这位皇后被打上了烙印。"
   
- nick_beta: "the Beta"
+ nick_beta: "Beta"
   nick_beta_desc: "被妻子抛弃后，[CHARACTER.GetFirstName]毫无希望，只能眼睁睁地看着一个黑人国王介入并夺走他的床笫。"
   
- nick_cuck: "the Cucked"
+ nick_cuck: "绿毛龟"
   nick_cuck_desc: "‘只是一次而已，对吧，我的爱人？’第二天早上，当一个肤色较深的男人终于满足了他的妻子后，[CHARACTER.GetFirstName]这样想着。她眼中的神色却告诉他并非如此，他内心恐惧地认为，非洲男人才是她真正的欲望。"
  
  nick_yt: "白小子"
@@ -19,10 +19,10 @@
  nick_sq: "尺寸女王"
   nick_sq_desc: "可以肯定地说，她的阴道已经不像她失去童贞时那样紧致了，她完全迷恋更大更强的男人。巧合的是，黑人恰好拥有[CHARACTER.GetFirstName]所需要的。"
  
- nick_blacked: "the Blacked"
+ nick_blacked: "已黑化"
   nick_blacked_desc: "这个女孩炫耀着自己，她不介意一双粗大的黑色手掌在她漫步于男爵领地的庭院时爱抚她丰满的臀部。如果皇室成员没有亲眼看到她被黑化，他们肯定也听说过。"
   
- nick_bos: "the Black Only Slut"
+ nick_bos: "黑人专属婊子"
   nick_bos_desc: "当[CHARACTER.GetFirstName]第一眼看到她的第一个难民时，她就知道自己想要他的一部分。或者更确切地说，是想给他自己的一部分。从那时起，白人鸡巴就再也无法给她同样的感觉了。"
  
  nick_bw: "黑屌婊子"
@@ -31,7 +31,7 @@
  nick_sfa: "黑人的荡妇"
   nick_sfa_desc: "自从那些外来入侵者抵达后，大多数白人血统便毫无希望了。而这个女人恰好是其中一个幸运地苟延残喘的。"
  
- nick_rt: "叛徒"
+ nick_rt: "种族叛徒"
   nick_rt_desc: "背叛真是甜蜜的享受。除了抛弃信仰，背叛血统也足以让大多数王朝统治者不寒而栗。告别白人纯洁吧，因为这个王朝将永远被黑鸡巴捅烂。"
 
  nick_wb: "白婊"

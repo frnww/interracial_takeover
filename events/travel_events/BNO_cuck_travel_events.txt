@@ -57,7 +57,7 @@ bno_cuck_travel.0001 = {
 			}
 		}
 		scope:target1 = {
-			carn_had_sex_with_effect_v2 = {
+			bno_have_sex_with_effects = {
 				PARTNER = scope:target2
 			}
 			bno_increase_sluttyness = yes

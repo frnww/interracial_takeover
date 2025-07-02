@@ -10,9 +10,9 @@
  BBC_slut_reason: "#color_white [ROOT.Char.GetFullName]#! 爱上了一个黑屌： #color_green +50#!" 
  BBC_welcome_reason: "#color_white [ROOT.Char.GetFullName]#! 欢迎黑屌： #color_green +50#!" 
 #chastity interaction
- bno_chastity_interaction: "施加贞洁"
- bno_chastity_interaction_desc: "让[recipient.GetShortUINameNoTooltip]保持贞洁"
- bno_castration_interaction: "阉割他的鸡巴"
+ bno_chastity_interaction: "施加贞操锁"
+ bno_chastity_interaction_desc: "给[recipient.GetShortUINameNoTooltip]戴上贞操锁"
+ bno_castration_interaction: "阉割他的睾丸"
  bno_castration_interaction_desc: "彻底阉割[recipient.GetShortUINameNoTooltip]"
 #influence child interaction
  bno_influence_child: "培养好奇心"

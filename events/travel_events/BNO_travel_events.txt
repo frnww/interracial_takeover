@@ -196,7 +196,7 @@ bno_travel_events.2002 = {
 	}
 	
 	immediate = {
-		carn_had_sex_with_effect_v2 = {
+		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
 	}
@@ -324,7 +324,7 @@ bno_travel_events.2003 = { #accepting of the stranger
 	}
 	
 	immediate = {
-		carn_had_sex_with_effect_v2 = {
+		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
 	}
@@ -407,7 +407,7 @@ bno_travel_events.0004 = {
 	
 	option = { #sex
 		name = bno_travel_events_0004.a
-		carn_had_sex_with_effect_v2 = {
+		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
 		trigger_event = bno_travel_events.1004
@@ -418,7 +418,7 @@ bno_travel_events.0004 = {
 			is_bno_snowbunny_and_up = yes
 		}
 		name = bno_travel_events_0004.b
-		carn_had_sex_with_effect_v2 = {
+		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
 		trigger_event = bno_travel_events.2004

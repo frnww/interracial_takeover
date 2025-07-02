@@ -1,0 +1,7 @@
+﻿on_15th_birthday = {
+	trigger = { age = 15 }
+
+	events = {
+		bno_curious.0001
+	}
+}

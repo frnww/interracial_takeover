@@ -7,22 +7,6 @@ become_more_cuck_effect = {
 	}
 }
 
-# test effect to become less of something
-become_less_black = {
-	change_trait_rank = {
-		trait = bno_blood
-		rank = -1
-	}
-}
-
-
-
-blind_and_castrate_actor_effect = {
-	add_trait = blind
-	add_trait = bno_castrated
-	add_trait = eunuch_1
-}
-
 become_more_chastity = {
 	change_trait_rank = {
 		trait = bno_chastity

@@ -7,6 +7,15 @@
 	}
 }
 
+convert_to_african_culture = {
+	if = {
+		limit = {
+			has_game_rule = bno_religion_yes
+		}
+		set_culture = culture:bnoc
+	}
+}
+
 becoming_african = {
 	if = {
 		limit = {
@@ -73,23 +82,23 @@ find_5_sex_partner = {
 }
 
 sex_with_5_sex_partner = {
-	carn_had_sex_with_effect_v2 = {
+	bno_have_sex_with_effects = {
 		PARTNER = scope:sex_partner_1
 	}
 	add_gold = minor_gold_value
-	carn_had_sex_with_effect_v2 = {
+	bno_have_sex_with_effects = {
 		PARTNER = scope:sex_partner_2
 	}
 	add_gold = minor_gold_value
-	carn_had_sex_with_effect_v2 = {
+	bno_have_sex_with_effects = {
 		PARTNER = scope:sex_partner_3
 	}
 	add_gold = minor_gold_value
-	carn_had_sex_with_effect_v2 = {
+	bno_have_sex_with_effects = {
 		PARTNER = scope:sex_partner_4
 	}
 	add_gold = minor_gold_value
-	carn_had_sex_with_effect_v2 = {
+	bno_have_sex_with_effects = {
 		PARTNER = scope:sex_partner_5
 	}
 	add_gold = minor_gold_value
@@ -171,6 +180,7 @@ create_bbc = {
 		gender = male
 		save_scope_as = $scope_name$
 		location = root.location
+		age = $age$
 		
 		dynasty = none
 		trait = bno_bbc
@@ -192,6 +202,27 @@ create_bbc = {
 			set_sexuality = heterosexual
 			add_character_flag = bno_originally_black
 		}
+	}
+	scope:$scope_name$ = {
+		remove_bad_traits = yes
+	}
+}
+
+bno_kill_character = {
+	death = {
+		death_reason = death_disappearance
+	}
+}
+
+bno_kill_bbc_1_to_3 = {
+	scope:bbc_1 = {
+		bno_kill_character = yes
+	}
+	scope:bbc_2 = {
+		bno_kill_character = yes
+	}
+	scope:bbc_3 = {
+		bno_kill_character = yes
 	}
 }
 
@@ -253,6 +284,18 @@ bbc_sex = {
 		scope:carn_sex_char_2 = {
 			bno_bbc_sex_after_effects = yes
 		}
+	}
+}
+
+bno_have_sex_with_effects = {
+	save_scope_as = initiator
+	carn_had_sex_with_effect = {
+		CHARACTER_1 = scope:initiator
+		CHARACTER_2 = $PARTNER$
+		C1_PREGNANCY_CHANCE = bno_pregnancy_chance
+		C2_PREGNANCY_CHANCE = bno_pregnancy_chance
+		DRAMA = yes
+		STRESS_EFFECTS = yes
 	}
 }
 
@@ -529,7 +572,7 @@ fuck_random_local_bbc = {
 		right_icon = root
 		service_fee = yes
 		prostitution = yes
-		carn_had_sex_with_effect_v2 = {
+		bno_have_sex_with_effects = {
 			PARTNER = scope:local_bbc
 		}
 		#impregnate = {
@@ -552,7 +595,7 @@ sex_with_bbc = {
 				target = scope:bbc
 			}
 		}
-		carn_had_sex_with_effect_v2 = {
+		bno_have_sex_with_effects = {
 			PARTNER = scope:bbc
 		}
 		add_character_modifier = {
@@ -638,10 +681,11 @@ get_cuck_husband_scope = {
 		save_scope_as = cuck
 	}
 }
-become_lover_with_bbc = {
+become_lover_with_target = {
 	set_relation_lover = {
-		target = scope:bbc
+		target = $TARGET$
 		reason = bbc_too_good
+		province = $LOCATION$
 	}
 }
 

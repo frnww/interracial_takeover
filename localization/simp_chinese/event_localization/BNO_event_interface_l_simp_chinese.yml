@@ -38,3 +38,7 @@ bno_bull_0010_notification.desc: "我确定我没有记错，国库里好像少�
 
 bno_bull_0012_notification.title: "他知道什么吗？"
 bno_bull_0012_notification.desc: "最近我注意到 [ROOT.GetCharacter.GetName] 看我的眼神有些不同，好像他知道一些不该知道的事情。"
+bno_slut_0008_notification.title: "惊人的相似"
+bno_slut_0008_notification.desc: "有传言称，一名妓女在黑人难民营中游荡，长得与你亲爱的妻子 [target1.GetFirstName] 惊人地相似。"
+
+bbc_diarch: "大黑屌"

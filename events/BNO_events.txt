@@ -26,24 +26,16 @@ bno_events.0001 = {
 	}
 	immediate = {
 		create_bbc = {
+			age = bno_young_adult
 			scope_name = target1
 		}
 		create_bbc = {
+			age = bno_young_adult
 			scope_name = target2
 		}
 		create_bbc = {
+			age = bno_young_adult
 			scope_name = target3
-		}
-		hidden_effect = {
-			scope:target1 = {
-				remove_bad_traits = yes
-			}
-			scope:target2 = {
-				remove_bad_traits = yes
-			}
-			scope:target3 = {
-				remove_bad_traits = yes
-			}
 		}
 	}
 	option = {
@@ -51,14 +43,10 @@ bno_events.0001 = {
 		add_courtier = scope:target1
 		hidden_effect = {
 			scope:target2 = {
-				death = {
-					death_reason = death_disappearance
-				}
+				bno_kill_character = yes
 			}
 			scope:target3 = {
-				death = {
-					death_reason = death_disappearance
-				}
+				bno_kill_character = yes
 			}
 		}
 	}
@@ -67,14 +55,10 @@ bno_events.0001 = {
 		add_courtier = scope:target3
 		hidden_effect = {
 			scope:target1 = {
-				death = {
-					death_reason = death_disappearance
-				}
+				bno_kill_character = yes
 			}
 			scope:target2 = {
-				death = {
-					death_reason = death_disappearance
-				}
+				bno_kill_character = yes
 			}
 		}
 	}
@@ -83,14 +67,10 @@ bno_events.0001 = {
 		add_courtier = scope:target2
 		hidden_effect = {
 			scope:target1 = {
-				death = {
-					death_reason = death_disappearance
-				}
+				bno_kill_character = yes
 			}
 			scope:target3 = {
-				death = {
-					death_reason = death_disappearance
-				}
+				bno_kill_character = yes
 			}
 		}
 	}
@@ -288,16 +268,13 @@ bno_events.0005 = {
 			save_scope_as = target2
 		}
 		scope:target1 = {
-			carn_had_sex_with_effect_v2 = {
+			bno_have_sex_with_effects = {
 				PARTNER = scope:target2
 			}
-		}
-		scope:target1 = {
 			hidden_effect = {
-				set_relation_lover = {
-					target = scope:target2
-					reason = bbc_too_good
-					province = $LOCATION$
+				become_lover_with_target = {
+					TARGET = scope:target2
+					LOCATION = scope:target1.location
 				}
 			}
 		}
@@ -316,14 +293,14 @@ bno_events.0005 = {
 			bno_beta = medium_stress_impact_loss
 			bno_jos = major_stress_impact_loss
 		}
+		random_list = {
+			10 = { give_nickname = nick_cuck }
+		}
 		scope:target1 = {
 			set_relation_friend = {
 				target = root
 				reason = cuck_faped
 				province = $LOCATION$
-			}
-			random_list = {
-				10 = { give_nickname = nick_cuck }
 			}
 		}
 	}

@@ -81,7 +81,10 @@ bno_slut.0001 = {
 			base = 100
 		}
 		root = {
-			become_lover_with_bbc = yes
+			become_lover_with_target = {
+				TARGET = scope:bbc
+				LOCATION = root.location
+			}
 			sex_with_bbc = yes
 			convert_to_bbc_religion = yes
 			bno_increase_sluttyness = yes
@@ -1039,7 +1042,10 @@ bno_slut.0008 = {
 			sex_with_5_sex_partner = yes
 			sex_with_bbc = yes
 			slut_whoring = yes
-			become_lover_with_bbc = yes
+			become_lover_with_target = {
+				TARGET = scope:bbc
+				LOCATION = root.location
+			}
 			if = {
 				limit = {
 					is_partner_non_bbc = yes
@@ -1123,7 +1129,10 @@ bno_slut.0009 = {
 		scope:whitegirl = {
 			sex_with_5_sex_partner = yes
 			sex_with_bbc = yes
-			become_lover_with_bbc = yes
+			become_lover_with_target = {
+				TARGET = scope:bbc
+				LOCATION = root.location
+			}
 			slut_whoring = yes
 		}
 	}
