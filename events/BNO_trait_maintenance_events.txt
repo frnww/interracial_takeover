@@ -16,15 +16,7 @@ bno_trait_maintenance.0001 = {
 		is_adult = yes
 	}
 	immediate = {
-		if = {
-			limit = {
-				has_inactive_trait = bno_bbc
-			}
-			make_trait_active = bno_bbc
-		}
-		else = {
-			add_trait = bno_bbc
-		}
+		add_trait = bno_bbc
 	}
 }
 
@@ -125,36 +117,5 @@ bno_trait_maintenance.0006 = {
 	}
 	immediate = {
 		add_trait = bno_full_black
-	}
-}
-
-bno_trait_maintenance.0007 = {
-	hidden = yes
-	trigger = {
-		is_adult = yes
-		OR = {
-			has_inactive_trait = bno_curious
-			has_inactive_trait = bno_blacked
-			has_inactive_trait = bno_snowbunny
-			has_inactive_trait = bno_qos
-			has_inactive_trait = bno_mindless_bbc_slut
-		}
-	}
-	immediate = {
-		switch = {
-			trigger = has_inactive_trait
-			bno_curious = { make_trait_active = bno_curious }
-			bno_blacked = { make_trait_active = bno_blacked }
-			bno_snowbunny = { make_trait_active = bno_snowbunny }
-			bno_qos = { make_trait_active = bno_qos }
-			bno_mindless_bbc_slut = { make_trait_active = bno_mindless_bbc_slut }
-		}
-		bno_remove_whitegirl_traits = yes
-		if = {
-			limit = {
-				NOT = { has_character_flag = bno_originally_black }
-			}
-			add_trait = bno_curious
-		}
 	}
 }

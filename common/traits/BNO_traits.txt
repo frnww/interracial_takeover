@@ -306,16 +306,12 @@ bno_bbc = {
 
 	ruler_designer_cost = 30
 	
-	# This trait is derived from big dick and black traits, see bno_trait_maintenance.0001
-	birth = 0
-	random_creation = 0
 	valid_sex = male
 	
 	fertility = 0.7
 	#number_of_spouses = 1
 	#number_of_consorts = 3
-	
-	genetic = yes
+
 	good = yes
 	physical = yes
 	
@@ -356,7 +352,6 @@ bno_curious = {
 
 	#Special Flags
 	physical = yes
-	genetic = yes
 	good = yes
 	child_inheritance_sex = female
 	shown_in_ruler_designer = yes
@@ -404,10 +399,6 @@ bno_curious = {
 			knight_limit = 1
 		}
 	}
-	monthly_track_xp_degradation = {
-		min = 100
-		change = 5
-	}
 
 	#Modifiers	
 	ignore_negative_culture_opinion = yes
@@ -427,7 +418,6 @@ bno_blacked = {
 	#Special Flags
 	physical = yes
 	good = yes
-	genetic = yes
 	shown_in_ruler_designer = no
 	
 	#Special Opinion
@@ -474,10 +464,6 @@ bno_blacked = {
 			general_opinion = 5
 		}
 	}
-	monthly_track_xp_degradation = {
-		min = 60
-		change = 5
-	}
 
 	#Modifiers	
 	ignore_negative_culture_opinion = yes
@@ -501,7 +487,6 @@ bno_snowbunny = {
 	#Special Flags
 	physical = yes
 	good = yes
-	genetic = yes
 	shown_in_ruler_designer = no
 	
 	#Special Opinion
@@ -548,10 +533,6 @@ bno_snowbunny = {
 			general_opinion = 5
 		}
 	}
-	monthly_track_xp_degradation = {
-		min = 60
-		change = 5
-	}
 
 	#Modifiers
 	martial = -1
@@ -584,7 +565,6 @@ bno_qos = {
 	#Special Flags
 	physical = yes
 	good = yes
-	genetic = yes
 	shown_in_ruler_designer = no
 	
 	#Special Opinion
@@ -628,10 +608,6 @@ bno_qos = {
 			general_opinion = 5
 		}
 	}
-	monthly_track_xp_degradation = {
-		min = 60
-		change = 5
-	}
 
 	#Modifiers
 	martial = -3
@@ -669,7 +645,6 @@ bno_mindless_bbc_slut = {
 	#Special Flags
 	physical = yes
 	good = yes
-	genetic = yes
 	shown_in_ruler_designer = no
 	
 	#Special Opinion

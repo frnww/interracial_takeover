@@ -73,6 +73,5 @@ bno_trait_maintenance_pulse = {
 		bno_trait_maintenance.0004			#make all non bbc male slaves caged if owner is bbc
 		bno_trait_maintenance.0005			#african girls cant have the whitegirl trait
 		bno_trait_maintenance.0006			#all africans have the full black trait
-		bno_trait_maintenance.0007
 	}
 }

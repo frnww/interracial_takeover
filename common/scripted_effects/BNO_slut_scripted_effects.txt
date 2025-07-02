@@ -267,11 +267,14 @@ remove_bad_traits = {
 bbc_sex = {
 	if = {
 		limit = {
-			root = {
+			scope:carn_sex_char_1 = {
 				has_trait = bno_whitegirl
 			}
+			scope:carn_sex_char_2 = {
+				is_bbc = yes
+			}
 		}
-		root = {
+		scope:carn_sex_char_1 = {
 			bno_bbc_sex_after_effects = yes
 		}
 	}
@@ -279,6 +282,9 @@ bbc_sex = {
 		limit = {
 			scope:carn_sex_char_2 = {
 				has_trait = bno_whitegirl
+			}
+			scope:carn_sex_char_1 = {
+				is_bbc = yes
 			}
 		}
 		scope:carn_sex_char_2 = {

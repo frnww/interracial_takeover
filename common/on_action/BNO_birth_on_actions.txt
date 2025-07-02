@@ -1,36 +1,6 @@
 ﻿on_birth_child = {
 	on_actions = {
 		bno_blood_inheritance
-		bno_bbc_inheritance
-		bno_whitegirl_inheritance
-	}
-}
-
-bno_bbc_inheritance = {
-	trigger = {
-		has_game_rule = bno_mod_status_on
-		has_trait = bno_bbc
-	}
-	effect = {
-		make_trait_inactive = bno_bbc
-	}
-}
-
-bno_whitegirl_inheritance = {
-	trigger = {
-		has_game_rule = bno_mod_status_on
-		has_trait = bno_whitegirl
-		is_adult = no
-	}
-	effect = {
-		switch = {
-			trigger = has_trait
-			bno_curious = { make_trait_inactive = bno_curious }
-			bno_blacked = { make_trait_inactive = bno_blacked }
-			bno_snowbunny = { make_trait_inactive = bno_snowbunny }
-			bno_qos = { make_trait_inactive = bno_qos }
-			bno_mindless_bbc_slut = { make_trait_inactive = bno_mindless_bbc_slut }
-		}
 	}
 }
 
