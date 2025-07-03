@@ -1,9 +1,19 @@
 ﻿# assigning the fluctuation of traits and their development. "becoming sluttier"
 
 become_more_cuck_effect = {
-	change_trait_rank = {
-		trait = bno_whiteboi
-		rank = 1
+	if = {
+		limit = {
+			NOT = {
+				has_trait = bno_whiteboi
+			}
+		}
+		add_trait = bno_cuckish
+	}
+	else = {
+		change_trait_rank = {
+			trait = bno_whiteboi
+			rank = 1
+		}
 	}
 }
 

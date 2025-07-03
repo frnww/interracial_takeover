@@ -140,3 +140,20 @@ bno_event_frequency = {
 	}
 
 }
+
+bno_tattoo = {
+	categories = {
+		interaccial_takeover
+	}
+
+	default = bno_tattoo_yes
+
+	bno_tattoo_yes = {
+
+	}
+
+	bno_tattoo_no = {
+		
+	}
+
+}

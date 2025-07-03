@@ -21,5 +21,6 @@ bno_curious_pulse = {
 	}
 	events = {
 		bno_curious.0001
+		bno_ritual_of_purification.0001
 	}
 }

@@ -253,23 +253,24 @@ remove_bad_traits = {
 	remove_trait = physique_bad_1
 	remove_trait = physique_bad_2
 	remove_trait = physique_bad_3
+	remove_trait = wounded
 	
 	add_character_flag = {
 		flag = no_headgear
 		years = 1
 	}
-	
-	dynasty = {
-		add_dynasty_prestige = 2000
-	}
+}
+
+bno_remove_blood_traits = {
+	remove_trait = bno_full_black
+	remove_trait = bno_mostly_black
+	remove_trait = bno_mixed
+	remove_trait = bno_barely_mixed
 }
 
 bbc_sex = {
 	if = {
 		limit = {
-			scope:carn_sex_char_1 = {
-				has_trait = bno_whitegirl
-			}
 			scope:carn_sex_char_2 = {
 				is_bbc = yes
 			}
@@ -277,18 +278,43 @@ bbc_sex = {
 		scope:carn_sex_char_1 = {
 			bno_bbc_sex_after_effects = yes
 		}
+		if = {
+			limit = {
+				scope:carn_sex_char_1 = {
+					primary_spouse = {
+						is_bbc = no
+					}
+				}
+			}
+			scope:carn_sex_char_1 = {
+				primary_spouse = {
+					become_more_cuck_effect = yes
+				}
+			}
+		}
 	}
 	else_if = {
 		limit = {
-			scope:carn_sex_char_2 = {
-				has_trait = bno_whitegirl
-			}
 			scope:carn_sex_char_1 = {
 				is_bbc = yes
 			}
 		}
 		scope:carn_sex_char_2 = {
 			bno_bbc_sex_after_effects = yes
+		}
+		if = {
+			limit = {
+				scope:carn_sex_char_2 = {
+					primary_spouse = {
+						is_bbc = no
+					}
+				}
+			}
+			scope:carn_sex_char_2 = {
+				primary_spouse = {
+					become_more_cuck_effect = yes
+				}
+			}
 		}
 	}
 }

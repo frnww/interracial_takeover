@@ -22,17 +22,6 @@ bno_cuckish = {
 	flag = carn_no_consequences_for_extramarital_sex_with_others
 	#ai_sociability = high_negative_ai_value
 	
-	desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					NOT = { exists = this }
-				}
-				desc = trait_bno_cuckish
-			}
-			desc = trait_bno_cuckish_desc
-		}
-	}
 }
 
 # Level 2 Sissy: Cuck
@@ -58,17 +47,6 @@ bno_cuck = {
 	flag = carn_no_consequences_for_extramarital_sex_with_others
 	ai_sociability = high_negative_ai_value
 	
-	desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					NOT = { exists = this }
-				}
-				desc = trait_bno_cuck
-			}
-			desc = trait_bno_cuck_desc
-		}
-	}
 }
 
 #Level 3 Sissy: Beta
@@ -98,17 +76,6 @@ bno_beta = {
 	flag = carn_no_consequences_for_extramarital_sex_with_others
 	ai_sociability = high_negative_ai_value
 	
-	desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					NOT = { exists = this }
-				}
-				desc = trait_bno_beta
-			}
-			desc = trait_bno_beta_desc
-		}
-	}
 }
 
 #Level 4 Sissy: JoS
@@ -138,17 +105,6 @@ bno_jos = {
 	flag = carn_no_consequences_for_extramarital_sex_with_others
 	ai_sociability = high_negative_ai_value
 	
-	desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					NOT = { exists = this }
-				}
-				desc = trait_bno_jos
-			}
-			desc = trait_bno_jos_desc
-		}
-	}
 }
 
 #Level 1 Chastity: Caged
@@ -173,18 +129,6 @@ bno_caged = {
 	
 	valid_sex = male
 	
-	desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					NOT = { exists = this }
-				}
-				desc = trait_bno_caged
-			}
-			desc = trait_bno_caged_desc
-		}
-	}
-	
 }
 
 #Level 2 Chastity: Castrated
@@ -205,19 +149,6 @@ bno_castrated = {
 	fertility = -1
 	
 	valid_sex = male
-	
-	desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					NOT = { exists = this }
-				}
-				desc = trait_bno_castrated
-			}
-			desc = trait_bno_castrated_desc
-		}
-	}
-	
 }
 
 #BBC TRAITS
@@ -261,18 +192,6 @@ bno_camp_leader = {
 	ai_sociability = high_positive_ai_value
 	ai_amenity_target_baseline = 0.3
 	ai_amenity_spending = 0.15
-	
-	desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					NOT = { exists = this }
-				}
-				desc = trait_bno_camp_leader
-			}
-			desc = trait_bno_camp_leader_desc
-		}
-	}
 }
 
 bno_bbc = {
@@ -324,18 +243,6 @@ bno_bbc = {
 	ai_sociability = high_positive_ai_value
 	ai_amenity_target_baseline = 0.3
 	ai_amenity_spending = 0.15
-	
-	desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					NOT = { exists = this }
-				}
-				desc = trait_bno_bbc
-			}
-			desc = trait_bno_bbc_desc
-		}
-	}
 }
 
 # black nationalist trait? bonus to murder schemes.
@@ -764,5 +671,40 @@ bno_barely_mixed = {
 	
 	group = bno_blood
 	level = 1
+}
+
+bno_pure_white = {
+	category = fame
+	opposites = {
+		bno_bbc
+		bno_blood
+	}
 	
+	same_opinion = 50
+	spouse_opinion = 50
+	attraction_opinion = 50
+	opposite_opinion = 100
+	
+	ruler_designer_cost = 30
+	good = yes
+	
+	diplomacy_lifestyle_xp_gain_mult = 0.1
+	martial_lifestyle_xp_gain_mult = 0.1
+	stewardship_lifestyle_xp_gain_mult = 0.1
+	intrigue_lifestyle_xp_gain_mult = 0.1
+	learning_lifestyle_xp_gain_mult = 0.1
+	wanderer_lifestyle_xp_gain_mult = 0.1
+	health = 1.0
+	fertility = 1.0
+	
+	valid_sex = female
+
+	compatibility = {
+		bno_bbc = 100
+	}
+	
+	flag = carn_no_consequences_for_extramarital_sex_with_others
+	
+	ai_sociability = high_positive_ai_value
+	ai_boldness = high_negative_ai_value
 }

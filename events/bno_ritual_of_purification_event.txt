@@ -17,6 +17,10 @@ bno_ritual_of_purification.0001 = {
         animation = shame
     }
 
+    lower_center_portrait = {
+        character = root
+    }
+
     right_portrait = {
         character = scope:priest
         animation = disapproval
@@ -30,10 +34,10 @@ bno_ritual_of_purification.0001 = {
             is_bbc = yes
             has_trait = bno_whitegirl
         }
-        faith = faith:bbcs
         is_adult = yes
         is_ruler = yes
         any_child = {
+            age >= 15
             is_female = yes
             has_trait = bno_blood
         }
@@ -51,11 +55,13 @@ bno_ritual_of_purification.0001 = {
         }
         random_child = {
             limit = {
+                age >= 15
                 is_female = yes
                 has_trait = bno_blood
             }
             save_scope_as = child
         }
+
     }
 
     option = {
@@ -88,7 +94,7 @@ bno_ritual_of_purification.1001 = {
 
     left_portrait = {
         character = scope:child
-        animation = shame
+        animation = page_flipping 
     }
 
     right_portrait = {
@@ -96,11 +102,21 @@ bno_ritual_of_purification.1001 = {
         animation = personality_content
     }
 
+    immediate = {
+        random_courtier_or_guest = {
+            limit = {
+                is_bbc = yes
+                is_ai = yes
+            }
+            add_to_list = bbc_courtiers
+        }
+    }
+
     option = {#invite BBCS to purify her 
-        name = bno_ritual_of_purification.0001.a
+        name = bno_ritual_of_purification.1001.a
         trigger_event = {
             id = bno_ritual_of_purification.1101
-            days = 5
+            days = 7
             delayed = yes
         }
         ai_chance = {
@@ -110,13 +126,17 @@ bno_ritual_of_purification.1001 = {
     }
 
     option = {#have her consume your cum + all BBCS courtier cum
-        name = bno_ritual_of_purification.0001.b
+        name = bno_ritual_of_purification.1001.b
         trigger = {
             is_bbc = yes
+            list_size = {
+                name = bbc_courtiers
+                value >= 3
+            }
         }
         trigger_event = {
             id = bno_ritual_of_purification.1201
-            days = 5
+            days = 7
             delayed = yes
         }
         add_internal_flag = special
@@ -126,13 +146,13 @@ bno_ritual_of_purification.1001 = {
         }
     }
     option = {#have your BBC husband cum inside her
-        name = bno_ritual_of_purification.0001.c
+        name = bno_ritual_of_purification.1001.c
         trigger = {
             has_trait = bno_whitegirl
         }
         trigger_event = {
             id = bno_ritual_of_purification.1301
-            days = 5
+            days = 7
             delayed = yes
         }
         add_internal_flag = special
@@ -263,5 +283,171 @@ bno_ritual_of_purification.1101 = {
             days = 2
             delayed = yes
         }
+    }
+}
+
+bno_ritual_of_purification.1201 = {
+    type = character_event
+	title = bno_ritual_of_purification.1201.title
+	desc = bno_ritual_of_purification.1201.desc
+	theme = lover_relation
+	override_background = { reference = bedchamber }
+    
+    left_portrait = {
+        character = scope:child
+        animation = ecstasy
+        outfit_tags = {
+            no_clothes
+        }
+    }
+
+    right_portrait = {
+        character = root
+        animation = personality_content
+        outfit_tags = {
+            no_clothes
+        }
+    }
+
+    lower_left_portrait = {
+        character = scope:bbc_1
+        outfit_tags = {
+            no_clothes
+        }
+    }
+
+    lower_center_portrait = {
+        character = scope:bbc_2
+        outfit_tags = {
+            no_clothes
+        }
+    }
+
+    lower_right_portrait = {
+        character = scope:bbc_3
+        outfit_tags = {
+            no_clothes
+        }
+    }
+
+    immediate = {
+        random_in_list = {
+            list = bbc_courtiers
+            save_scope_as = bbc_1
+        }
+        random_in_list = {
+            list = bbc_courtiers
+            limit = {
+                NOT = { this = scope:bbc_1 }
+            }
+            save_scope_as = bbc_2
+        }
+        random_in_list = {
+            list = bbc_courtiers
+            limit = {
+                NOT = { this = scope:bbc_1 }
+                NOT = { this = scope:bbc_2 }
+            }
+            save_scope_as = bbc_3
+        }
+    }
+
+    option = {
+        name = bno_ritual_of_purification.1201.a
+        scope:child = {
+            bno_have_sex_with_effects = {
+                PARTNER = scope:bbc_1
+            }
+            bno_have_sex_with_effects = {
+                PARTNER = scope:bbc_2
+            }
+            bno_have_sex_with_effects = {
+                PARTNER = scope:bbc_3
+            }
+            bno_have_sex_with_effects = {
+                PARTNER = root
+            }
+        }
+        trigger_event = {
+            id = bno_ritual_of_purification.2001
+            days = 2
+            delayed = yes
+        }
+    }
+}
+
+bno_ritual_of_purification.1301 = {
+    type = character_event
+	title = bno_ritual_of_purification.1301.title
+	desc = bno_ritual_of_purification.1301.desc
+	theme = lover_relation
+	override_background = { reference = bedchamber }
+    
+    left_portrait = {
+        character = scope:child
+        animation = ecstasy
+        outfit_tags = {
+            no_clothes
+        }
+    }
+
+    right_portrait = {
+        character = root.primary_spouse
+        animation = personality_content
+        outfit_tags = {
+            no_clothes
+        }
+    }
+
+    lower_center_portrait = {
+        character = root
+        outfit_tags = {
+            no_clothes
+        }
+    }
+
+    option = {
+        name = bno_ritual_of_purification.1301.a
+
+        scope:child = {
+            bno_have_sex_with_effects = {
+                PARTNER = root.primary_spouse
+            }            
+        }
+
+        trigger_event = {
+            id = bno_ritual_of_purification.2001
+            days = 2
+            delayed = yes
+        }
+    }
+
+}
+
+#Emerge Pure white
+bno_ritual_of_purification.2001 = {
+    type = character_event
+	title = bno_ritual_of_purification.2001.title
+	desc = bno_ritual_of_purification.2001.desc
+	theme = witchcraft
+	override_background = { reference = temple }
+
+    left_portrait = {
+        character = scope:child
+        animation = prayer
+        outfit_tags = {
+            no_clothes
+        }
+    }
+
+    immediate = {
+        scope:child = {
+            bno_remove_blood_traits = yes
+            add_trait = bno_pure_white
+        }
+    }
+
+    option = {
+        name = bno_ritual_of_purification.2001.a
     }
 }

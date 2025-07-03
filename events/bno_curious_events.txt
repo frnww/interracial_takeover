@@ -1,4 +1,12 @@
-﻿namespace = bno_curious
+﻿scripted_effect bno_curious_trigger_event = {
+	trigger_event = {
+		id = bno_curious.1001
+		days = 360
+		delayed = yes
+	}
+}
+
+namespace = bno_curious
 
 bno_curious.0001 = { 
 	hidden = yes
@@ -18,10 +26,10 @@ bno_curious.0001 = {
 					is_bbc = yes		
 				}
 			}
-			father = {
+			root.father= {
 				is_bbc = yes
 			}
-			mother = {
+			root.mother = {
 				has_trait = bno_whitegirl
 			}
 		}
@@ -34,12 +42,38 @@ bno_curious.0001 = {
 		bno_increase_sluttyness = yes
 
 		random_relation = { 
-			type = guardian 
-			trigger_event = {
-				id = bno_curious.1001
-				days = 360
-				delayed = yes
+			type = guardian
+			save_scope_as = guardian
+		}
+		if = {
+			limit = {
+				exists = scope:guardian
 			}
+			scope:guardian = { bno_curious_trigger_event = yes }
+		}
+		else_if = {
+			limit = {
+				root.father= { is_ai = no }
+			}
+			root.father= { bno_curious_trigger_event = yes }
+		}
+		else_if = {
+			limit = {
+				root.mother = { is_ai = no }
+			}
+			root.mother = { bno_curious_trigger_event = yes }
+		}
+		else_if = {
+			limit = {
+				root.father= { is_bbc = yes	}
+			}
+			root.father= { bno_curious_trigger_event = yes }
+		}
+		else_if = {
+			limit = {
+				root.mother = { is_bno_curious_and_up = yes }
+			}
+			root.mother = { bno_curious_trigger_event = yes }
 		}
 	}
 }
@@ -305,11 +339,11 @@ bno_curious.1201 = {
 		}
 		if = { 
             limit = {
-                scope:child.father = { 
+                scope:child.root.father= { 
                     is_alive = yes
                 }
             }
-			scope:child.father = {
+			scope:child.root.father= {
 				trigger_event = {
 					id = bno_cuck.0005 
 					days = 1
