@@ -82,7 +82,7 @@ bno_slut.0001 = {
 		}
 		root = {
 			become_lover_with_target = {
-				TARGET = scope:bbc
+				target = scope:bbc
 				LOCATION = root.location
 			}
 			sex_with_bbc = yes
@@ -301,9 +301,9 @@ bno_slut.0003 = {
 		}
 		name = bno_slut_0003.a
 		root = {
-			set_relation_lover = {
+			become_lover_with_target = {
 				target = scope:bbc
-				reason = bbc_too_good
+				LOCATION = root.location
 			}
 			bno_increase_sluttyness = yes
 		}
@@ -517,11 +517,7 @@ bno_slut.0004 = {
 	lower_center_portrait = {
 		character = root
 		animation = personality_content
-		triggered_outfit = {
-			trigger = {
-				exists = root
-			}
-		}
+		
 		outfit_tags = {
 			no_clothes
 		}
@@ -1043,7 +1039,7 @@ bno_slut.0008 = {
 			sex_with_bbc = yes
 			slut_whoring = yes
 			become_lover_with_target = {
-				TARGET = scope:bbc
+				target = scope:bbc
 				LOCATION = root.location
 			}
 			if = {
@@ -1130,7 +1126,7 @@ bno_slut.0009 = {
 			sex_with_5_sex_partner = yes
 			sex_with_bbc = yes
 			become_lover_with_target = {
-				TARGET = scope:bbc
+				target = scope:bbc
 				LOCATION = root.location
 			}
 			slut_whoring = yes
@@ -1193,7 +1189,7 @@ bno_slut.0010 = {
 			remove_short_term_gold = minor_gold_value
 			add_prestige = minor_prestige_loss
 			add_character_flag = {
-				flag = bno_slut.0010				#give flag to make sure liege doesn't get spammed to lose all gold too quickly if he has many bbc courtiers
+				flag = bno_slut_0010				#give flag to make sure liege doesn't get spammed to lose all gold too quickly if he has many bbc courtiers
 				years = 1
 			}
 		}
@@ -1487,6 +1483,7 @@ bno_slut.0014 = {
 			is_married = no
 		}
 		any_neighboring_and_across_water_top_liege_realm_owner = {
+			exists = primary_spouse
 			primary_spouse = {
 				is_pure_whitegirl = yes
 				is_ai = yes
@@ -1709,9 +1706,9 @@ bno_slut.2014 = { #follow up event, fuck and become lovers
 			}
 			bno_increase_sluttyness = yes
 			convert_to_bbc_religion = yes
-			set_relation_lover = {
+			become_lover_with_target = {
 				target = scope:bbc
-				reason = bbc_too_good
+				LOCATION = root.location
 			}
 		}
 	}
@@ -1841,7 +1838,7 @@ bno_slut.0015 = {
 	trigger = {
 		is_blacked_whitegirl = yes
 		NOT = {
-			has_character_flag = bno_slut.0015
+			has_character_flag = bno_slut.1015
 		}
 	}
 	immediate = {

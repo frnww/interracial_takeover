@@ -10,10 +10,13 @@ bno_marriage.0001 = {
 		is_blackbull = yes
 		is_married = no
 		is_ruler = no
-		liege_or_court_owner = {
-			any_courtier_or_guest = {
-				is_good_pure_whitegirl= yes
-				is_ai = yes
+		AND = {
+			exists = liege_or_court_owner
+			liege_or_court_owner = {
+				any_courtier_or_guest = {
+					is_good_pure_whitegirl= yes
+					is_ai = yes
+				}
 			}
 		}
 	}
@@ -40,9 +43,9 @@ bno_marriage.0001 = {
 			bno_increase_sluttyness = yes
 		}
 		root = {
-			set_relation_lover = {
+			become_lover_with_target = {
 				target = scope:target1
-				reason = bbc_too_good
+				LOCATION = root.location
 			}
 		}
 	}
@@ -119,14 +122,17 @@ bno_marriage.0002 = {
 	trigger = {
 		is_blackbull = yes
 		is_ruler = no
-		liege_or_court_owner = {
-			any_courtier_or_guest = {
-				is_good_blacked_whitegirl = yes
-				is_ai = yes
-				primary_spouse = {
-					NOR = {
-						has_trait = bno_bbc
-						is_ruler = yes
+		AND = {
+			exists = liege_or_court_owner
+			liege_or_court_owner = {
+				any_courtier_or_guest = {
+					is_good_blacked_whitegirl = yes
+					is_ai = yes
+					primary_spouse = {
+						NOR = {
+							has_trait = bno_bbc
+							is_ruler = yes
+						}
 					}
 				}
 			}
@@ -201,9 +207,9 @@ bno_marriage.0002 = {
 		}
 		root = {
 			marry = scope:target1
-			set_relation_lover = {
+			become_lover_with_target = {
 				target = scope:target1
-				reason = bbc_too_good
+				LOCATION = root.location
 			}
 		}
 		scope:target1 = {
@@ -312,6 +318,7 @@ bno_marriage.0004 = { #unmarried bbc looks to other realms for single woman
 		is_ruler = no
 		any_neighboring_and_across_water_top_liege_realm_owner = {
 			any_courtier_or_guest = {
+				is_married = no
 				is_good_pure_whitegirl = yes
 				is_ai = yes
 			}
@@ -323,6 +330,7 @@ bno_marriage.0004 = { #unmarried bbc looks to other realms for single woman
 			every_neighboring_and_across_water_top_liege_realm_owner = {
 				random_courtier_or_guest = {
 					limit = {
+						is_married = no
 						is_good_pure_whitegirl = yes
 						is_ai = yes
 					}
@@ -345,9 +353,9 @@ bno_marriage.0004 = { #unmarried bbc looks to other realms for single woman
 			bno_increase_sluttyness = yes
 		}
 		root = {
-			set_relation_lover = {
+			become_lover_with_target = {
 				target = scope:target1
-				reason = bbc_too_good
+				LOCATION = root.location
 			}
 		}
 	}
@@ -484,9 +492,9 @@ bno_marriage.0005 = {
 		}
 		root = {
 			marry = scope:target1
-			set_relation_lover = {
+			become_lover_with_target = {
 				target = scope:target1
-				reason = bbc_too_good
+				LOCATION = root.location
 			}
 		}
 		scope:target1 = {
@@ -528,6 +536,9 @@ bno_marriage.0006 = {	#used to make sure bbc actually have children. Might be wo
 	}
 	immediate = {
 		random_consort = {
+			limit = {
+				is_pregnant = no
+			}
 			make_pregnant = {
 				father = root
 			}

@@ -60,7 +60,11 @@ bno_travel_events.0001 = { #charity for a wandering african
 			arrogant = minor_stress_impact_gain
 			avaricious = minor_stress_impact_gain
 			callous = minor_stress_impact_gain
-			bno_whitegirl = minor_stress_impact_loss
+			bno_curious = minor_stress_impact_loss
+			bno_blacked = minor_stress_impact_loss
+			bno_snowbunny = minor_stress_impact_loss
+			bno_qos = minor_stress_impact_loss
+			bno_mindless_bbc_slut = minor_stress_impact_loss
 		}
 	}
 	
@@ -72,7 +76,11 @@ bno_travel_events.0001 = { #charity for a wandering african
 		}
 		bno_increase_sluttyness = yes
 		stress_impact = {
-			bno_whitegirl = minor_stress_impact_loss
+			bno_curious = minor_stress_impact_loss
+			bno_blacked = minor_stress_impact_loss
+			bno_snowbunny = minor_stress_impact_loss
+			bno_qos = minor_stress_impact_loss
+			bno_mindless_bbc_slut = minor_stress_impact_loss
 		}
 	}
 	
@@ -153,7 +161,11 @@ bno_travel_events.0002 = { #courtier asks to join
 		name = bno_travel_events_0002.c
 		bno_decrease_sluttyness = yes
 		stress_impact = {
-			bno_whitegirl = minor_stress_impact_gain
+			bno_curious = minor_stress_impact_gain
+			bno_blacked = minor_stress_impact_gain
+			bno_snowbunny = minor_stress_impact_gain
+			bno_qos = minor_stress_impact_gain
+			bno_mindless_bbc_slut = minor_stress_impact_gain
 		}
 	}
 }

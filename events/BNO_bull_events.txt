@@ -39,12 +39,15 @@ bno_bull.0001 = {
 	cooldown = { months = 24 }
 	trigger = {
 		is_blackbull = yes
-		liege = {
-			is_married_whiteboy = yes
-			NOT = { has_character_flag = bno_bull.0001 } #prevent cuck from getting spammed too much if he has many bbc courtiers
-			any_spouse = {
-				is_blacked_whitegirl = yes
-				is_ai = yes
+		AND = {
+			exists = liege
+			liege = {
+				is_married_whiteboy = yes
+				NOT = { has_character_flag = bno_bull.0001 } #prevent cuck from getting spammed too much if he has many bbc courtiers
+				any_spouse = {
+					is_blacked_whitegirl = yes
+					is_ai = yes
+				}
 			}
 		}
 	}
@@ -109,9 +112,9 @@ bno_bull.0001 = {
 	}
 	option = {
 		name = bno_bull_0001.b
-		set_relation_lover = {
+		become_lover_with_target = {
 			target = scope:target2
-			reason = bbc_too_good
+			LOCATION = root.location
 		}
 		bno_have_sex_with_effects = {
 			PARTNER = scope:target2
@@ -769,11 +772,7 @@ bno_bull.0006 = {
 	left_portrait = {
 		character = root
 		animation = personality_content
-		triggered_outfit = {
-			trigger = {
-				exists = root
-			}
-		}
+		
 	}
 	right_portrait = {
 		character = scope:target1
@@ -885,8 +884,9 @@ bno_bull.0008 = {
 	cooldown = { months = 8 }
 	
 	trigger = {
-		root = {
-			is_blackbull = yes
+		is_blackbull = yes
+		AND = {
+			exists = liege
 			liege = {
 				any_courtier_or_guest = {
 					is_blacked_whitegirl = yes
@@ -909,6 +909,7 @@ bno_bull.0008 = {
 			bno_increase_sluttyness = yes
 			if = {
 				limit = {
+					exists = primary_spouse
 					primary_spouse = {
 						NOT = { has_trait = bno_bbc }
 					}
@@ -1123,8 +1124,9 @@ bno_bull.0010 = {
 	}
 	cooldown = {months = 12 }
 	trigger = {
-		root = {
-			is_blackbull = yes
+		is_blackbull = yes
+		AND = {
+			exists = liege
 			liege = {
 				gold > 50
 				is_married_whiteboy = yes
@@ -1457,20 +1459,12 @@ bno_bull.0014 = {
 	left_portrait = {
 		character = scope:target1
 		animation = admiration
-		triggered_outfit = {
-			trigger = {
-				exists = scope:target1
-			}
-		}
+		
 	}
 	right_portrait = {
 		character = root
 		animation = toast_goblet
-		triggered_outfit = {
-			trigger = {
-				exists = root
-			}
-		}
+		
 	}
 	cooldown = {months = 12 }
 	trigger = {
@@ -1478,9 +1472,12 @@ bno_bull.0014 = {
 		is_ruler = yes
 		allowed_more_spouses = yes
 		any_neighboring_and_across_water_top_liege_realm_owner = {
-			primary_spouse = {
-				is_good_blacked_whitegirl = yes
-				is_ai = yes
+			AND = {
+				exists = primary_spouse
+				primary_spouse = {
+					is_good_blacked_whitegirl = yes
+					is_ai = yes
+				}
 			}
 		}
 	}
@@ -1691,9 +1688,9 @@ bno_bull.2014 = { #follow up event, fuck and become lovers
 	}
 	option = {
 		name = bno_bull_2014.a
-		set_relation_lover = {
+		become_lover_with_target = {
 			target = scope:target1
-			reason = bbc_too_good
+			LOCATION = root.location
 		}
 	}
 }
@@ -1859,11 +1856,7 @@ bno_bull.0016 = {
 	left_portrait = {
 		character = scope:target1
 		animation = happiness
-		triggered_outfit = {
-			trigger = {
-				exists = scope:target1
-			}
-		}
+		
 	}
 	right_portrait = {
 		character = root

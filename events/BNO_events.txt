@@ -106,10 +106,13 @@ bno_events.0002 = {
 	
 	trigger = {
 		is_female = yes
-		primary_spouse = {
-			is_male = yes
-			has_trait = bno_bbc
-			has_any_nickname = no
+		AND = {
+			exists = primary_spouse
+			primary_spouse = {
+				is_male = yes
+				has_trait = bno_bbc
+				has_any_nickname = no
+			}
 		}
 	}
 	
@@ -273,7 +276,7 @@ bno_events.0005 = {
 			}
 			hidden_effect = {
 				become_lover_with_target = {
-					TARGET = scope:target2
+					target = scope:target2
 					LOCATION = scope:target1.location
 				}
 			}
@@ -281,7 +284,11 @@ bno_events.0005 = {
 		scope:target2 = {
 			hidden_effect = {
 				stress_impact = {
-					bno_whitegirl = massive_stress_impact_loss
+					bno_curious = massive_stress_impact_loss
+					bno_blacked = massive_stress_impact_loss
+					bno_snowbunny = massive_stress_impact_loss
+					bno_qos = massive_stress_impact_loss
+					bno_mindless_bbc_slut = massive_stress_impact_loss
 				}
 			}
 		}

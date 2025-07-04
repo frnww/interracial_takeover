@@ -26,14 +26,19 @@ bno_curious.0001 = {
 					is_bbc = yes		
 				}
 			}
-			root.father= {
-				is_bbc = yes
+			AND = {
+				exists = father
+				father= {
+					is_bbc = yes
+				}
 			}
-			root.mother = {
-				has_trait = bno_whitegirl
+			AND = {
+				exists = mother
+				mother = {
+					has_trait = bno_whitegirl
+				}
 			}
 		}
-		
 	}
 
 	immediate = {
@@ -53,27 +58,27 @@ bno_curious.0001 = {
 		}
 		else_if = {
 			limit = {
-				root.father= { is_ai = no }
+				father= { is_ai = no }
 			}
-			root.father= { bno_curious_trigger_event = yes }
+			father= { bno_curious_trigger_event = yes }
 		}
 		else_if = {
 			limit = {
-				root.mother = { is_ai = no }
+				mother = { is_ai = no }
 			}
-			root.mother = { bno_curious_trigger_event = yes }
+			mother = { bno_curious_trigger_event = yes }
 		}
 		else_if = {
 			limit = {
-				root.father= { is_bbc = yes	}
+				father= { is_bbc = yes	}
 			}
-			root.father= { bno_curious_trigger_event = yes }
+			father= { bno_curious_trigger_event = yes }
 		}
 		else_if = {
 			limit = {
-				root.mother = { is_bno_curious_and_up = yes }
+				mother = { is_bno_curious_and_up = yes }
 			}
-			root.mother = { bno_curious_trigger_event = yes }
+			mother = { bno_curious_trigger_event = yes }
 		}
 	}
 }
@@ -299,7 +304,7 @@ bno_curious.1201 = {
                 PARTNER = scope:target1
             }
 			become_lover_with_target = {
-				TARGET = scope:target1
+				target = scope:target1
 				LOCATION = root.location
 			}
         }
@@ -339,11 +344,11 @@ bno_curious.1201 = {
 		}
 		if = { 
             limit = {
-                scope:child.root.father= { 
+                scope:child.father= { 
                     is_alive = yes
                 }
             }
-			scope:child.root.father= {
+			scope:child.father= {
 				trigger_event = {
 					id = bno_cuck.0005 
 					days = 1
@@ -401,7 +406,7 @@ bno_curious.1301 = {
 				PARTNER = scope:child
 			}
 			become_lover_with_target = {
-				TARGET = scope:child
+				target = scope:child
 				LOCATION = root.location
 			}
 		}

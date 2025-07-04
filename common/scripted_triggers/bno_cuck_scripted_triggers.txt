@@ -43,7 +43,6 @@ is_ai_not_married_blackbull = {
 is_ai_blackbull = {
 	is_blackbull = yes
 	is_ai = yes
-	NOT = { is_close_or_extended_family_of = liege.primary_spouse }
 }
 
 is_ai_curious = {

@@ -42,14 +42,9 @@ is_body_modification_ok = {
 }
 
 is_bno_fucked_mindless = {
-	trigger_if = {
-		limit = {
-			has_trait = bno_mindless_bbc_slut
-		}
-		has_trait_xp = {
-			trait = bno_mindless_bbc_slut
-			value >= 80
-		}
+	has_trait_xp = {
+		trait = bno_mindless_bbc_slut
+		value >= 80
 	}
 }
 
@@ -157,12 +152,15 @@ does_blackbull_exist = {
 		any_vassal = {
 			is_ai_blackbull = yes
 		}
-		liege = {
-			any_courtier_or_guest = {
-				is_ai_blackbull = yes
-			}
-			any_vassal = {
-				is_ai_blackbull = yes
+		AND = {
+			exists = liege
+			liege = {
+				any_courtier_or_guest = {
+					is_ai_blackbull = yes
+				}
+				any_vassal = {
+					is_ai_blackbull = yes
+				}
 			}
 		}
 	}
@@ -173,9 +171,12 @@ does_pure_whitegirl_exist = {
 		any_courtier_or_guest = {
 			is_pure_whitegirl = yes
 		}
-		liege = {
-			any_courtier_or_guest = {
-				is_pure_whitegirl = yes
+		AND = {
+			exists = liege
+			liege = {
+				any_courtier_or_guest = {
+					is_pure_whitegirl = yes
+				}
 			}
 		}
 	}

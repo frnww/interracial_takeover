@@ -203,6 +203,7 @@ black_bred_bitch = {
 					scope:real_father = {			#triggers only if real father is BBC char and presumed father is non BBC char
 						has_trait = bno_bbc
 					}
+					exists = scope:father
 					scope:father = {
 						NOT = { has_trait = bno_bbc }
 					}

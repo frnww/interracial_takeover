@@ -29,7 +29,7 @@
  setting_bno_decision_npc_no_desc: "Нео! Идея о том, что другие женщины получают в свои руки большие черные петухи, слишком много для меня, чтобы справиться!" #NT!
   
  rule_bno_global_bbc_activities: "@bnobbc! #X Межрасовое поглощение: #! Би -би -си деятельность" #NT!
- setting_bno_global_bbc_activities_yes: "Глобал" #NT!
+ setting_bno_global_bbc_activities_yes: "Глобальный" #NT!
  setting_bno_global_bbc_activities_yes_desc: "Мне нужен неограниченный запас огромных членов, чтобы утолить мою ненасытную жажду, а не какое -то жалкое правило, ограничивающее меня только одной областью!" #NT!
  setting_bno_global_bbc_activities_no: "Местный" #NT!
  setting_bno_global_bbc_activities_no_desc: "Ну что ж, я думаю, если это единственный способ взять в руки какой -нибудь большой черный член, то пусть будет так!" #NT!
@@ -45,3 +45,17 @@
  setting_bno_seeding_yes_desc: "Ооо, ты можешь представить? Весь континент, наполненный только большими черными членами!" #NT!
  setting_bno_seeding_no: "Нет, спасибо" #NT!
  setting_bno_seeding_no_desc: "Да, да! Я буду отвечать за приглашение всех этих больших черных членов, чтобы поиграть со мной!" #NT!
+  
+ rule_bno_event_frequency: "@bnobbc! #X Межрасовое поглощение: #! частоты событий" #NT!
+ setting_bno_event_frequency_three_months: "Три месяца" #NT!
+ setting_bno_event_frequency_three_months_desc: "О да, абсолютно! Я не могу дождаться следующего события BBC. Ожидание уже сводит меня с ума от необходимости." #NT!
+ setting_bno_event_frequency_six_months: "Шесть месяцев" #NT!
+ setting_bno_event_frequency_six_months_desc: "Что ж, это было бы разочаровывающим ... но вы знаете, что они говорят - отсутствие заставляет сердце расти в голове!" #NT!
+ setting_bno_event_frequency_twelve_months: "Двенадцать месяцев" #NT!
+ setting_bno_event_frequency_twelve_months_desc: "Я ... я понимаю, что вы пытаетесь дразнить меня, но идея о необходимости ждать целый год между событиями BBC почти слишком много." #NT!
+  
+ rule_bno_tattoo: "@bnobbc! #X Межрасовое поглощение: #! Отображение татуировки" #NT!
+ setting_bno_tattoo_yes: "Да, пожалуйста" #NT!
+ setting_bno_tattoo_yes_desc: "Я не могу дождаться, когда все эти сильные чернокожие люди увидят это, и я знаю, что я один из них сейчас - грязная маленькая каминку, которая живет только для того, чтобы использовать их огромные члены!" #NT!
+ setting_bno_tattoo_no: "Нет, спасибо" #NT!
+ setting_bno_tattoo_no_desc: "Если бы я отказался от татуировки королевы пик, это означало бы отвергнуть всю мою личность как белую девушку, которая живет только для того, чтобы использовать сильные черные мужчины с огромными членами." #NT!

@@ -106,16 +106,19 @@ bno_naked = {
 				mode = add
 				gene = dressed
 				template = undressed
+				value = 1.0
 			}
 			accessory = {
 				mode = add
 				gene = cloaks
 				template = no_cloak
+				value = 1.0
 			}
 			accessory = {
-				mode = replace
+				mode = add
 				gene = legwear
 				template = no_legwear
+				value = 1.0
 			}
 		}
 		weight = {
@@ -140,21 +143,53 @@ bno_cum_shot = {
 				mode = add
 				gene = gene_cumshots_oral
 				template = cumshots_oral_1
+				value = {
+					if = {
+						limit = {
+							exists = root
+						}
+						value = 1
+					}
+				}
 			}
 			morph = {
 				mode = add
 				gene = gene_cumshots_doggy
 				template = cumshots_doggy_1
+				value = {
+					if = {
+						limit = {
+							exists = root
+						}
+						value = 1
+					}
+				}
 			}
 			morph = {
 				mode = add
 				gene = gene_cumshots_miss
 				template = cumshots_miss_1
+				value = {
+					if = {
+						limit = {
+							exists = root
+						}
+						value = 1
+					}
+				}
 			}
 			accessory = {
-				mode = replace
+				mode = add
 				gene = cbo_eyelashes_accessory
 				template = mascara_eyelashes
+				value = {
+					if = {
+						limit = {
+							exists = root
+						}
+						value = 1
+					}
+				}
 			}
 		}
 		weight = {

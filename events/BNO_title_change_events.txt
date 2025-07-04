@@ -166,11 +166,14 @@ bno_title_change.0002 = {
 			resolve_title_and_vassal_change = scope:change
 			stress_impact = {
 				generous = major_stress_impact_loss
-				bno_whiteboi = major_stress_impact_loss
 				arrogant = major_stress_impact_gain
 				stubborn = major_stress_impact_gain
 				ambitious = major_stress_impact_gain
 				content = medium_stress_impact_loss
+				bno_cuckish = major_stress_impact_loss
+				bno_cuck = major_stress_impact_loss
+				bno_beta = major_stress_impact_loss
+				bno_jos = major_stress_impact_loss
 			}
 			scope:bbc_getting_title = {
 				remove_short_term_gold = 200
@@ -261,7 +264,10 @@ bno_title_change.0003 = {
 			}
 			resolve_title_and_vassal_change = scope:change
 			stress_impact = {
-				bno_whiteboi = major_stress_impact_loss
+				bno_cuckish = major_stress_impact_loss
+				bno_cuck = major_stress_impact_loss
+				bno_beta = major_stress_impact_loss
+				bno_jos = major_stress_impact_loss
 				arrogant = major_stress_impact_gain
 				stubborn = major_stress_impact_gain
 				ambitious = major_stress_impact_gain
@@ -378,9 +384,9 @@ bno_title_change.0004 = {
 			}
 			add_trait = bno_camp_leader
 			marry = scope:killer_slut
-			set_relation_lover = {
+			become_lover_with_target = {
 				target = scope:killer_slut
-				reason = bbc_too_good
+				LOCATION = root.location
 			}
 		}
 		scope:killer_slut = {
@@ -416,20 +422,12 @@ bno_title_change.0005 = { #Wife takes cucks titles
 	left_portrait = {
 		character = root
 		animation = personality_content
-		triggered_outfit = {
-			trigger = {
-				exists = root
-			}
-		}
+		
 	}
 	right_portrait = {
 		character = scope:target1
 		animation = personality_content
-		triggered_outfit = {
-			trigger = {
-				exists = scope:target1
-			}
-		}
+		
 	}
 	trigger = {
 		root = {

@@ -173,7 +173,11 @@ bno_council_orgy.0001 = {
 			always = yes
 		}
 		stress_impact = {
-			bno_whitegirl = minor_stress_impact_gain
+			bno_curious = minor_stress_impact_gain
+			bno_blacked = minor_stress_impact_gain
+			bno_snowbunny = minor_stress_impact_gain
+			bno_qos = minor_stress_impact_gain
+			bno_mindless_bbc_slut = minor_stress_impact_gain
 		}
 		fire_councillor = scope:target_bbc_1
 		ai_chance = {

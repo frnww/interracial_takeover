@@ -277,20 +277,12 @@ bno_cuck.0003 = {
 	left_portrait = {
 		character = root
 		animation = personality_content
-		triggered_outfit = {
-			trigger = {
-				exists = root
-			}
-		}
+		
 	}
 	right_portrait = {
 		character = scope:target1
 		animation = marshal
-		triggered_outfit = {
-			trigger = {
-				exists = scope:target1
-			}
-		}
+		
 	}
 	lower_right_portrait = {
 		character = scope:target2
@@ -377,20 +369,12 @@ bno_cuck.0004 = {
 	left_portrait = {
 		character = root
 		animation = personality_content
-		triggered_outfit = {
-			trigger = {
-				exists = root
-			}
-		}
+		
 	}
 	right_portrait = {
 		character = scope:target1
 		animation = marshal
-		triggered_outfit = {
-			trigger = {
-				exists = scope:target1
-			}
-		}
+		
 	}
 	lower_right_portrait = {
 		character = scope:target2
@@ -506,20 +490,12 @@ bno_cuck.2004 = {
 	lower_left_portrait = {
 		character = root
 		animation = personality_content
-		triggered_outfit = {
-			trigger = {
-				exists = root
-			}
-		}
+		
 	}
 	right_portrait = {
 		character = scope:target1
 		animation = marshal
-		triggered_outfit = {
-			trigger = {
-				exists = scope:target1
-			}
-		}
+		
 	}
 	left_portrait = {
 		character = scope:target2
@@ -545,9 +521,9 @@ bno_cuck.2004 = {
 		
 		scope:target1 = {
 			hidden_effect = {
-				set_relation_lover = {
+				become_lover_with_target = {
 					target = scope:target2
-					reason = bbc_too_good
+					LOCATION = root.location
 				}
 			}
 		}
@@ -591,11 +567,7 @@ bno_cuck.3004 = {
 	left_portrait = {
 		character = root
 		animation = personality_content
-		triggered_outfit = {
-			trigger = {
-				exists = root
-			}
-		}
+		
 	}
 	right_portrait = {
 		character = scope:target2
@@ -705,25 +677,25 @@ bno_cuck.3004 = {
 		}
 		scope:target1 = {
 			hidden_effect = {
-				set_relation_lover = {
+				become_lover_with_target = {
 					target = scope:target2
-					reason = bbc_too_good
+					LOCATION = root.location
 				}
 			}
 		}
 		scope:target3 = {
 			hidden_effect = {
-				set_relation_lover = {
+				become_lover_with_target = {
 					target = scope:target2
-					reason = bbc_too_good
+					LOCATION = root.location
 				}
 			}
 		}
 		scope:target4 = {
 			hidden_effect = {
-				set_relation_lover = {
+				become_lover_with_target = {
 					target = scope:target2
-					reason = bbc_too_good
+					LOCATION = root.location
 				}
 			}
 		}
@@ -747,20 +719,12 @@ bno_cuck.0005 = {
 	left_portrait = {
 		character = root
 		animation = laugh
-		triggered_outfit = {
-			trigger = {
-				exists = root
-			}
-		}
+		
 	}
 	right_portrait = {
 		character = scope:target1
 		animation = laugh
-		triggered_outfit = {
-			trigger = {
-				exists = scope:target1
-			}
-		}
+		
 	}
 	trigger = {
 		is_normal_whiteboy = yes
@@ -1163,20 +1127,12 @@ bno_cuck.0010 = {
 	left_portrait = {
 		character = root
 		animation = personality_content
-		triggered_outfit = {
-			trigger = {
-				exists = root
-			}
-		}
+		
 	}
 	right_portrait = { #spymaster
 		character = scope:target1
 		animation = spymaster
-		triggered_outfit = {
-			trigger = {
-				exists = scope:target1
-			}
-		}
+		
 	}
 	lower_right_portrait = { #wife
 		character = scope:target2
@@ -1293,11 +1249,7 @@ bno_cuck.1010 = { #followup event, spymaster frames cuck's vassal, gives and get
 	right_portrait = {
 		character = scope:target1
 		animation = spymaster
-		triggered_outfit = {
-			trigger = {
-				exists = scope:target1
-			}
-		}
+		
 	}
 	immediate = {
 		add_hook = {
@@ -1351,11 +1303,7 @@ bno_cuck.2010 = { #follow up event, bbc spymaster lays with cuck's wife
 	right_portrait = {
 		character = scope:target1
 		animation = spymaster
-		triggered_outfit = {
-			trigger = {
-				exists = scope:target1
-			}
-		}
+		
 	}
 	immediate = {
 		hidden_effect = {
@@ -1364,9 +1312,9 @@ bno_cuck.2010 = { #follow up event, bbc spymaster lays with cuck's wife
 					PARTNER = scope:target1
 				}
 				bno_increase_sluttyness = yes
-				set_relation_lover = {
+				become_lover_with_target = {
 					target = scope:target1
-					reason = bbc_too_good
+					LOCATION = root.location
 				}
 			}
 		}
@@ -1414,11 +1362,7 @@ bno_cuck.0011 = {
 	left_portrait = {
 		character = scope:target1
 		animation = idle
-		triggered_outfit = {
-			trigger = {
-				exists = scope:target1
-			}
-		}
+		
 	}
 	right_portrait = {
 		character = scope:target2
@@ -1553,14 +1497,11 @@ bno_cuck.0013 = {
 	}
 	trigger = {
 		is_ruler = yes
+		exists = diarch
 		diarch = {
-			is_diarch_of_target = root
 			is_spouse_of = root
 			is_female = yes
-			OR = {
-				is_bno_qos = yes
-				is_bno_mindless_bbc_slut = yes
-			}
+			is_bno_qos_and_up = yes
 		}
 		does_blackbull_exist = yes
 	}
@@ -1610,11 +1551,7 @@ bno_cuck.0014 = {
 	right_portrait = {
 		character = scope:target1
 		animation = drink
-		triggered_outfit = {
-			trigger = {
-				exists = scope:target1
-			}
-		}
+		
 	}
 	
 	cooldown = { months = 36 }
@@ -1699,11 +1636,7 @@ bno_cuck.0015 = {
 	right_portrait = {
 		character = root
 		animation = sadness
-		triggered_outfit = {
-			trigger = {
-				exists = root
-			}
-		}
+		
 	}
 	trigger = {
 		is_cuck = yes
@@ -1774,11 +1707,7 @@ bno_cuck.0016 = {
 	right_portrait = {
 		character = root
 		animation = shame
-		triggered_outfit = {
-			trigger = {
-				exists = root
-			}
-		}
+		
 	}
 	trigger = {
 		is_cuck = yes

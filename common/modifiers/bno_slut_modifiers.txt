@@ -13,7 +13,7 @@ bno_slut_pimped = {
 bno_pretty_slut_pimped = {
 	icon = economy_positive
 	monthly_income = 3
-	monthly_income_mult = .1
+	monthly_income_mult = 0.1
 	monthly_prestige = 1.5
 	monthly_dread = -1
 }

@@ -59,7 +59,11 @@ bno_bull_travel.0001 = {
 				target = root
 			}
 			stress_impact = {
-				bno_whitegirl = minor_stress_impact_loss
+				bno_curious = minor_stress_impact_loss
+				bno_blacked = minor_stress_impact_loss
+				bno_snowbunny = minor_stress_impact_loss
+				bno_qos = minor_stress_impact_loss
+				bno_mindless_bbc_slut = minor_stress_impact_loss
 			}
 		}
 		current_travel_plan = {

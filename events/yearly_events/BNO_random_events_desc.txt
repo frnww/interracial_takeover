@@ -92,9 +92,9 @@ bno_random.0001 = {
 		
 		scope:target1 = {
 			hidden_effect = {
-				set_relation_lover = {
+				become_lover_with_target = {
 					target = scope:target2
-					reason = bbc_too_good
+					LOCATION = root.location
 				}
 			}
 		}
@@ -131,13 +131,19 @@ bno_random.0001 = {
 	option = {
 		name = bno_random_0001.c
 		stress_impact = {
-			bno_whitegirl = minor_stress_impact_gain
+			bno_curious = minor_stress_impact_gain
+			bno_blacked = minor_stress_impact_gain
+			bno_snowbunny = minor_stress_impact_gain
+			bno_qos = minor_stress_impact_gain
+			bno_mindless_bbc_slut = minor_stress_impact_gain
 		}
 		bno_decrease_sluttyness = yes
 		imprison = {
+			type = dungeon
 			target = scope:target1
 		}
 		imprison = {
+			type = dungeon
 			target = scope:target2
 		}
 	}
@@ -281,6 +287,7 @@ bno_random.2001 = {
 		
 		if = {
 			limit = {
+				exists = primary_spouse
 				primary_spouse = {
 					NOT = {
 						has_trait = bno_bbc
@@ -304,9 +311,9 @@ bno_random.2001 = {
 			PARTNER = scope:target1
 		}
 		scope:target1 = {
-			set_relation_lover = {
+			become_lover_with_target = {
 				target = root
-				reason = bbc_too_good
+				LOCATION = root.location
 			}
 		}
 		if = {
@@ -407,9 +414,9 @@ bno_random.0002 = {
 		
 		scope:target1 = {
 			hidden_effect = {
-				set_relation_lover = {
+				become_lover_with_target = {
 					target = scope:target2
-					reason = bbc_too_good
+					LOCATION = root.location
 				}
 			}
 		}
@@ -459,7 +466,11 @@ bno_random.0002 = {
 	option = {
 		name = bno_random_0002.c
 		stress_impact = {
-			bno_whitegirl = medium_stress_impact_gain
+			bno_curious = medium_stress_impact_gain
+			bno_blacked = medium_stress_impact_gain
+			bno_snowbunny = medium_stress_impact_gain
+			bno_qos = medium_stress_impact_gain
+			bno_mindless_bbc_slut = medium_stress_impact_gain
 		}
 	}
 }
@@ -518,11 +529,8 @@ bno_random.2002 = {
 		}
 		triggered_desc = {
 			trigger = {
-				has_trait = bno_whitegirl
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value < 75
-				}
+				is_bno_curious_and_up = yes
+				NOT = { is_bno_mindless_bbc_slut = yes }
 			}
 			desc = bno_random_2002.desc2
 		}
@@ -575,9 +583,9 @@ bno_random.2002 = {
 			PARTNER = scope:target1
 		}
 		scope:target1 = {
-			set_relation_lover = {
+			become_lover_with_target = {
 				target = root
-				reason = bbc_too_good
+				LOCATION = root.location
 			}
 		}
 		bno_increase_sluttyness = yes
@@ -672,9 +680,9 @@ bno_random.0003 = {
 		
 		scope:target1 = {
 			hidden_effect = {
-				set_relation_lover = {
+				become_lover_with_target = {
 					target = scope:target2
-					reason = bbc_too_good
+					LOCATION = root.location
 				}
 			}
 		}
@@ -718,9 +726,9 @@ bno_random.0003 = {
 			PARTNER = scope:target1
 		}
 		scope:target1 = {
-			set_relation_lover = {
+			become_lover_with_target = {
 				target = root
-				reason = bbc_too_good
+				LOCATION = root.location
 			}
 		}
 		
@@ -731,7 +739,11 @@ bno_random.0003 = {
 	option = {
 		name = bno_random_0003.c
 		stress_impact = {
-			bno_whitegirl = medium_stress_impact_gain
+			bno_curious = medium_stress_impact_gain
+			bno_blacked = medium_stress_impact_gain
+			bno_snowbunny = medium_stress_impact_gain
+			bno_qos = medium_stress_impact_gain
+			bno_mindless_bbc_slut = medium_stress_impact_gain
 		}
 		
 		scope:target1 = {
@@ -901,7 +913,11 @@ bno_random.0004 = {
 		name = bno_random_0004.b
 		
 		stress_impact = {
-			bno_whitegirl = minor_stress_impact_gain
+			bno_curious = minor_stress_impact_gain
+			bno_blacked = minor_stress_impact_gain
+			bno_snowbunny = minor_stress_impact_gain
+			bno_qos = minor_stress_impact_gain
+			bno_mindless_bbc_slut = minor_stress_impact_gain
 		}
 		
 		trigger_event = bno_random.2004
@@ -1061,6 +1077,7 @@ bno_random.0005 = {
 		
 		if = {
 			limit = {
+				exists = primary_spouse
 				primary_spouse = {
 					NOT = {
 						has_trait = bno_bbc
@@ -1077,9 +1094,9 @@ bno_random.0005 = {
 		}
 		
 		scope:target1 = {
-			set_relation_lover = {
+			become_lover_with_target = {
 				target = root
-				reason = bbc_too_good
+				LOCATION = root.location
 			}
 		}
 		
@@ -1091,10 +1108,15 @@ bno_random.0005 = {
 	option = {
 		name = bno_random_0005.b
 		stress_impact = {
-			bno_whitegirl = minor_stress_impact_gain
+			bno_curious = minor_stress_impact_gain
+			bno_blacked = minor_stress_impact_gain
+			bno_snowbunny = minor_stress_impact_gain
+			bno_qos = minor_stress_impact_gain
+			bno_mindless_bbc_slut = minor_stress_impact_gain
 		}
 		bno_decrease_sluttyness = yes
 		imprison = {
+			type = dungeon
 			target = scope:target1
 		}
 	}
@@ -1214,6 +1236,7 @@ bno_random.0006 = {
 		if = {
 			limit = {
 				root = {
+					exists = primary_spouse
 					primary_spouse = {
 						NOT = {
 							has_trait = bno_bbc
@@ -1232,22 +1255,26 @@ bno_random.0006 = {
 			PARTNER = scope:target1
 		}
 		scope:target1 = {
-			set_relation_lover = {
+			become_lover_with_target = {
 				target = root
-				reason = bbc_too_good
+				LOCATION = root.location
 			}
 		}
-		
 		
 		trigger_event = bno_random.1006
 	}
 	option = {
 		name = bno_random_0006.b
 		stress_impact = {
-			bno_whitegirl = minor_stress_impact_gain
+			bno_curious = minor_stress_impact_gain
+			bno_blacked = minor_stress_impact_gain
+			bno_snowbunny = minor_stress_impact_gain
+			bno_qos = minor_stress_impact_gain
+			bno_mindless_bbc_slut = minor_stress_impact_gain
 		}
 		bno_decrease_sluttyness = yes
 		imprison = {
+			type = dungeon
 			target = scope:target1
 		}
 	}
@@ -1305,20 +1332,12 @@ bno_random.0007 = {
 	left_portrait = {
 		character = root
 		animation = throne_room_conversation_4
-		triggered_outfit = {
-			trigger = {
-				exists = root
-			}
-		}
+		
 	}
 	right_portrait = {
 		character = scope:target1
 		animation = personality_content
-		triggered_outfit = {
-			trigger = {
-				exists = scope:target1
-			}
-		}
+		
 	}
 	
 	cooldown = { months = 16 }
@@ -1370,9 +1389,9 @@ bno_random.0007 = {
 			PARTNER = scope:target1
 		}
 		scope:target1 = {
-			set_relation_lover = {
+			become_lover_with_target = {
 				target = root
-				reason = bbc_too_good
+				LOCATION = root.location
 			}
 		}
 		
@@ -1400,9 +1419,9 @@ bno_random.0007 = {
 			PARTNER = scope:target1
 		}
 		scope:target1 = {
-			set_relation_lover = {
+			become_lover_with_target = {
 				target = root
-				reason = bbc_too_good
+				LOCATION = root.location
 			}
 		}
 		
@@ -1414,7 +1433,11 @@ bno_random.0007 = {
 	option = {
 		name = bno_random_0007.c
 		stress_impact = {
-			bno_whitegirl = medium_stress_impact_gain
+			bno_curious = medium_stress_impact_gain
+			bno_blacked = medium_stress_impact_gain
+			bno_snowbunny = medium_stress_impact_gain
+			bno_qos = medium_stress_impact_gain
+			bno_mindless_bbc_slut = medium_stress_impact_gain
 		}
 	}
 }
@@ -1430,20 +1453,12 @@ bno_random.1007 = {
 	left_portrait = {
 		character = root
 		animation = throne_room_conversation_4
-		triggered_outfit = {
-			trigger = {
-				exists = root
-			}
-		}
+		
 	}
 	right_portrait = {
 		character = scope:target1
 		animation = personality_content
-		triggered_outfit = {
-			trigger = {
-				exists = scope:target1
-			}
-		}
+		
 	}
 	
 	option = {
@@ -1463,20 +1478,12 @@ bno_random.2007 = {
 	left_portrait = {
 		character = root
 		animation = throne_room_conversation_4
-		triggered_outfit = {
-			trigger = {
-				exists = root
-			}
-		}
+		
 	}
 	right_portrait = {
 		character = scope:target1
 		animation = personality_content
-		triggered_outfit = {
-			trigger = {
-				exists = scope:target1
-			}
-		}
+		
 	}
 	
 	option = {
@@ -1497,11 +1504,7 @@ bno_random.0008 = {
 	left_portrait = {
 		character = root
 		animation = love
-		triggered_outfit = {
-			trigger = {
-				exists = root
-			}
-		}
+		
 	}
 	right_portrait = {
 		character = scope:target1
@@ -1548,6 +1551,7 @@ bno_random.0008 = {
 		if = {
 			limit = {
 				root = {
+					exists = primary_spouse
 					primary_spouse = {
 						NOT = {
 							has_trait = bno_bbc
@@ -1565,9 +1569,9 @@ bno_random.0008 = {
 		}
 		
 		scope:target1 = {
-			set_relation_lover = {
+			become_lover_with_target = {
 				target = root
-				reason = bbc_too_good
+				LOCATION = root.location
 			}
 		}
 		
@@ -1579,6 +1583,7 @@ bno_random.0008 = {
 		if = {
 			limit = {
 				root = {
+					exists = primary_spouse
 					primary_spouse = {
 						NOT = {
 							has_trait = bno_bbc
@@ -1594,9 +1599,9 @@ bno_random.0008 = {
 			PARTNER = scope:target1
 		}
 		scope:target1 = {
-			set_relation_lover = {
+			become_lover_with_target = {
 				target = root
-				reason = bbc_too_good
+				LOCATION = root.location
 			}
 		}
 		bno_increase_sluttyness = yes
@@ -1607,9 +1612,14 @@ bno_random.0008 = {
 	option = {
 		name = bno_random_0008.c
 		stress_impact = {
-			bno_whitegirl = minor_stress_impact_gain
+			bno_curious = minor_stress_impact_gain
+			bno_blacked = minor_stress_impact_gain
+			bno_snowbunny = minor_stress_impact_gain
+			bno_qos = minor_stress_impact_gain
+			bno_mindless_bbc_slut = minor_stress_impact_gain
 		}
 		imprison = {
+			type = dungeon
 			target = scope:target1
 		}
 	}
@@ -1626,11 +1636,7 @@ bno_random.1008 = {
 	left_portrait = {
 		character = root
 		animation = love
-		triggered_outfit = {
-			trigger = {
-				exists = root
-			}
-		}
+		
 	}
 	right_portrait = {
 		character = scope:target1
@@ -1661,11 +1667,7 @@ bno_random.2008 = {
 	left_portrait = {
 		character = root
 		animation = love
-		triggered_outfit = {
-			trigger = {
-				exists = root
-			}
-		}
+		
 	}
 	right_portrait = {
 		character = scope:target1
@@ -1752,6 +1754,7 @@ bno_random.0009 = {
 		if = {
 			limit = {
 				root = {
+					exists = primary_spouse
 					primary_spouse = {
 						NOT = {
 							has_trait = bno_bbc
@@ -1768,9 +1771,9 @@ bno_random.0009 = {
 			PARTNER = scope:target1
 		}
 		scope:target1 = {
-			set_relation_lover = {
+			become_lover_with_target = {
 				target = root
-				reason = bbc_too_good
+				LOCATION = root.location
 			}
 		}
 		
@@ -1786,6 +1789,7 @@ bno_random.0009 = {
 		if = {
 			limit = {
 				root = {
+					exists = primary_spouse
 					primary_spouse = {
 						NOT = {
 							has_trait = bno_bbc
@@ -1802,9 +1806,9 @@ bno_random.0009 = {
 			PARTNER = scope:target1
 		}
 		scope:target1 = {
-			set_relation_lover = {
+			become_lover_with_target = {
 				target = root
-				reason = bbc_too_good
+				LOCATION = root.location
 			}
 		}
 		
@@ -1816,9 +1820,14 @@ bno_random.0009 = {
 	option = {
 		name = bno_random_0009.c
 		stress_impact = {
-			bno_whitegirl = major_stress_impact_gain
+			bno_curious = major_stress_impact_gain
+			bno_blacked = major_stress_impact_gain
+			bno_snowbunny = major_stress_impact_gain
+			bno_qos = major_stress_impact_gain
+			bno_mindless_bbc_slut = major_stress_impact_gain
 		}
 		imprison = {
+			type = dungeon
 			target = scope:target1
 		}
 	}
@@ -1931,11 +1940,7 @@ bno_random.0010 = {
 	left_portrait = {
 		character = root
 		animation = pain
-		triggered_outfit = {
-			trigger = {
-				exists = root
-			}
-		}
+		
 	}
 	right_portrait = {
 		character = scope:target1
@@ -1997,9 +2002,9 @@ bno_random.0010 = {
 			PARTNER = scope:target1
 		}
 		scope:target1 = {
-			set_relation_lover = {
+			become_lover_with_target = {
 				target = root
-				reason = bbc_too_good
+				LOCATION = root.location
 			}
 		}
 		
@@ -2030,9 +2035,9 @@ bno_random.0010 = {
 			PARTNER = scope:target1
 		}
 		scope:target1 = {
-			set_relation_lover = {
+			become_lover_with_target = {
 				target = root
-				reason = bbc_too_good
+				LOCATION = root.location
 			}
 		}
 		
@@ -2042,7 +2047,11 @@ bno_random.0010 = {
 	option = {
 		name = bno_random_0010.c
 		stress_impact = {
-			bno_whitegirl = major_stress_impact_gain
+			bno_curious = major_stress_impact_gain
+			bno_blacked = major_stress_impact_gain
+			bno_snowbunny = major_stress_impact_gain
+			bno_qos = major_stress_impact_gain
+			bno_mindless_bbc_slut = major_stress_impact_gain
 		}
 		hidden_effect = {
 			scope:target1 = {
@@ -2064,11 +2073,7 @@ bno_random.1010 = {
 	left_portrait = {
 		character = root
 		animation = pain
-		triggered_outfit = {
-			trigger = {
-				exists = root
-			}
-		}
+		
 	}
 	right_portrait = {
 		character = scope:target1
@@ -2100,11 +2105,7 @@ bno_random.2010 = {
 	left_portrait = {
 		character = root
 		animation = pain
-		triggered_outfit = {
-			trigger = {
-				exists = root
-			}
-		}
+		
 	}
 	right_portrait = {
 		character = scope:target1
@@ -2189,7 +2190,6 @@ bno_random.0011 = {
 	option = {
 		name = bno_random_0011.a
 		
-		add_courtier = scope:target1
 		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
@@ -2198,6 +2198,7 @@ bno_random.0011 = {
 			if = {
 				limit = {
 					root = {
+						exists = primary_spouse
 						primary_spouse = {
 							NOT = { has_trait = bno_bbc }
 						}
@@ -2205,10 +2206,7 @@ bno_random.0011 = {
 				}
 				root = {
 					primary_spouse = {
-						change_trait_rank = {
-							trait = bno_whiteboi
-							rank = 2
-						}
+						become_more_cuck_effect = yes
 					}
 				}
 			}
@@ -2218,7 +2216,6 @@ bno_random.0011 = {
 	option = {
 		name = bno_random_0011.b
 		
-		add_courtier = scope:target1
 		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
@@ -2227,6 +2224,7 @@ bno_random.0011 = {
 			if = {
 				limit = {
 					root = {
+						exists = primary_spouse
 						primary_spouse = {
 							NOT = { has_trait = bno_bbc }
 						}
@@ -2234,10 +2232,7 @@ bno_random.0011 = {
 				}
 				root = {
 					primary_spouse = {
-						change_trait_rank = {
-							trait = bno_whiteboi
-							rank = 2
-						}
+						become_more_cuck_effect = yes
 					}
 				}
 			}
@@ -2357,7 +2352,6 @@ bno_random.0012 = {
 	}
 	option = {
 		name = bno_random_0012.a
-		add_courtier = scope:target1
 		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
@@ -2365,6 +2359,7 @@ bno_random.0012 = {
 			if = {
 				limit = {
 					root = {
+						exists = primary_spouse
 						primary_spouse = {
 							NOT = { has_trait = bno_bbc }
 						}
@@ -2402,6 +2397,7 @@ bno_random.0012 = {
 			if = {
 				limit = {
 					root = {
+						exists = primary_spouse
 						primary_spouse = {
 							NOT = { has_trait = bno_bbc }
 						}
@@ -2424,7 +2420,11 @@ bno_random.0012 = {
 	option = {
 		name = bno_random_0012.c
 		stress_impact = {
-			bno_whitegirl = major_stress_impact_gain
+			bno_curious = major_stress_impact_gain
+			bno_blacked = major_stress_impact_gain
+			bno_snowbunny = major_stress_impact_gain
+			bno_qos = major_stress_impact_gain
+			bno_mindless_bbc_slut = major_stress_impact_gain
 		}
 	}
 }
@@ -3305,7 +3305,11 @@ bno_random.0017 = {
 			}
 		}
 		stress_impact = {
-			bno_whitegirl = minor_stress_impact_gain
+			bno_curious = minor_stress_impact_gain
+			bno_blacked = minor_stress_impact_gain
+			bno_snowbunny = minor_stress_impact_gain
+			bno_qos = minor_stress_impact_gain
+			bno_mindless_bbc_slut = minor_stress_impact_gain
 		}
 	}
 }
@@ -3568,7 +3572,11 @@ bno_random.0019 = {
 			}
 		}
 		stress_impact = {
-			bno_whitegirl = minor_stress_impact_gain
+			bno_curious = minor_stress_impact_gain
+			bno_blacked = minor_stress_impact_gain
+			bno_snowbunny = minor_stress_impact_gain
+			bno_qos = minor_stress_impact_gain
+			bno_mindless_bbc_slut = minor_stress_impact_gain
 		}
 	}
 }
@@ -3691,7 +3699,11 @@ bno_random.0020 = {
 		name = bno_random_0020.c
 		bno_decrease_sluttyness = yes
 		stress_impact = {
-			bno_whitegirl = minor_stress_impact_gain
+			bno_curious = minor_stress_impact_gain
+			bno_blacked = minor_stress_impact_gain
+			bno_snowbunny = minor_stress_impact_gain
+			bno_qos = minor_stress_impact_gain
+			bno_mindless_bbc_slut = minor_stress_impact_gain
 		}
 	}
 }
@@ -3793,7 +3805,11 @@ bno_random.0021 = {
 		}
 		
 		stress_impact = {
-			bno_whitegirl = major_stress_impact_loss
+			bno_curious = major_stress_impact_loss
+			bno_blacked = major_stress_impact_loss
+			bno_snowbunny = major_stress_impact_loss
+			bno_qos = major_stress_impact_loss
+			bno_mindless_bbc_slut = major_stress_impact_loss
 		}
 		
 		trigger_event = bno_random.1021
@@ -3807,7 +3823,11 @@ bno_random.0021 = {
 		}
 		
 		stress_impact = {
-			bno_whitegirl = minor_stress_impact_loss
+			bno_curious = minor_stress_impact_loss
+			bno_blacked = minor_stress_impact_loss
+			bno_snowbunny = minor_stress_impact_loss
+			bno_qos = minor_stress_impact_loss
+			bno_mindless_bbc_slut = minor_stress_impact_loss
 		}
 		
 		trigger_event = bno_random.2021
@@ -3967,7 +3987,10 @@ bno_random.0022 = {
 	
 	option = { #imprison for heresy
 		name = bno_random_0022.c
-		imprison = { target = scope:target1 }
+		imprison = { 
+			type = dungeon
+			target = scope:target1 
+		}
 	}
 }
 
@@ -4071,7 +4094,10 @@ bno_random.0023 = {
 	
 	option = { #imprison
 		name = bno_random_0023.b
-		imprison = { target = scope:target1 }
+		imprison = { 
+			type = dungeon
+			target = scope:target1 
+		}
 	}
 }
 
@@ -4175,7 +4201,10 @@ bno_random.0024 = {
 	
 	option = { #imprison
 		name = bno_random_0024.c
-		imprison = { target = scope:target1 }
+		imprison = { 
+			type = dungeon
+			target = scope:target1 
+		}
 		bno_decrease_sluttyness = yes
 	}
 }
@@ -4565,6 +4594,7 @@ bno_random.0026 = {
 	option = { #imprison + punishment
 		name = bno_random_0026.c
 		imprison = {
+			type = dungeon
 			target = scope:target1
 		}
 	}
@@ -5037,11 +5067,8 @@ bno_random.0030 = {
 		}
 		triggered_desc = {
 			trigger = {
-				has_trait = bno_whitegirl
-				has_trait_xp = {
-					trait = bno_lifestyle_whitegirl
-					value < 50
-				}
+				is_bno_curious_and_up = yes
+				NOT = { is_bno_qos_and_up = yes }
 			}
 			desc = bno_random_0030.desc2 #no abuse
 		}
@@ -5519,6 +5546,7 @@ bno_random.0033 = {
 	option = { #get away from me
 		name = bno_random_0033.c
 		imprison = {
+			type = dungeon
 			target = scope:target1
 		}
 		bno_decrease_sluttyness = yes
@@ -6556,9 +6584,11 @@ bno_random.0039 = {
 		}
 		add_stress = 35
 		imprison = {
+			type = dungeon
 			target = scope:target1
 		}
 		imprison = {
+			type = dungeon
 			target = scope:target2
 		}
 	}
@@ -6599,6 +6629,7 @@ bno_random.2039 = {
 			is_bno_qos_and_up = yes
 		}
 		imprison = {
+			type = dungeon
 			target = scope:target2
 		}
 	}
@@ -6721,11 +6752,7 @@ bno_random.0041 = {
 	right_portrait = {
 		character = scope:target1
 		animation = flirtation
-		triggered_outfit = {
-			trigger = {
-				exists = scope:target1
-			}
-		}
+		
 	}
 	
 	cooldown = { months = 16 }
@@ -6774,6 +6801,7 @@ bno_random.0041 = {
 	option = {
 		name = bno_random_0041.a
 		imprison = {
+			type = dungeon
 			target = scope:target2
 		}
 		add_stress = major_stress_impact_gain
@@ -6847,7 +6875,7 @@ bno_random.0042 = {
 				set_relation_friend = {
 					target = scope:target2
 					reason = bbc_too_good
-					province = $LOCATION$
+					province = root.location
 				}
 			}
 		}
@@ -6892,7 +6920,7 @@ bno_random.0042 = {
 						10 = { give_nickname = nick_blacked }
 						10 = { give_nickname = nick_bos }
 						10 = { give_nickname = nick_bw }
-						10 = { give_nickname = nick_bs }
+						10 = { give_nickname = nick_bos }
 						10 = { give_nickname = nick_rt }
 						10 = { give_nickname = nick_wb }
 						10 = { give_nickname = nick_ps }
@@ -6903,7 +6931,7 @@ bno_random.0042 = {
 						10 = { give_nickname = nick_blacked }
 						10 = { give_nickname = nick_bos }
 						10 = { give_nickname = nick_bw }
-						10 = { give_nickname = nick_bs }
+						10 = { give_nickname = nick_bos }
 						10 = { give_nickname = nick_rt }
 						10 = { give_nickname = nick_wb }
 						10 = { give_nickname = nick_ps }
@@ -6927,7 +6955,7 @@ bno_random.0042 = {
 						10 = { give_nickname = nick_blacked }
 						10 = { give_nickname = nick_bos }
 						10 = { give_nickname = nick_bw }
-						10 = { give_nickname = nick_bs }
+						10 = { give_nickname = nick_bos }
 						10 = { give_nickname = nick_rt }
 						10 = { give_nickname = nick_wb }
 						10 = { give_nickname = nick_ps }
@@ -6938,7 +6966,7 @@ bno_random.0042 = {
 						10 = { give_nickname = nick_blacked }
 						10 = { give_nickname = nick_bos }
 						10 = { give_nickname = nick_bw }
-						10 = { give_nickname = nick_bs }
+						10 = { give_nickname = nick_bos }
 						10 = { give_nickname = nick_rt }
 						10 = { give_nickname = nick_wb }
 						10 = { give_nickname = nick_ps }
@@ -6959,9 +6987,11 @@ bno_random.0042 = {
 			bno_beta = major_stress_impact_gain
 		}
 		imprison = {
+			type = dungeon
 			target = scope:target1
 		}
 		imprison = {
+			type = dungeon
 			target = scope:target2
 		}
 		scope:target2 = {
@@ -7032,7 +7062,7 @@ bno_random.1042 = {
 			set_relation_friend = {
 				target = root
 				reason = cuck_faped
-				province = $LOCATION$
+				province = root.location
 			}
 		}
 	}
@@ -7143,10 +7173,9 @@ bno_random.0043 = {
 		
 		scope:target1 = {
 			hidden_effect = {
-				set_relation_lover = {
+				become_lover_with_target = {
 					target = scope:target2
-					reason = bbc_too_good
-					province = $LOCATION$
+					LOCATION = root.location
 				}
 			}
 		}
@@ -7154,6 +7183,7 @@ bno_random.0043 = {
 		if = {
 			limit = {
 				scope:target2 = {
+					exists = primary_spouse
 					primary_spouse = {
 						NOT = {
 							has_trait = bno_bbc
@@ -7178,12 +7208,17 @@ bno_random.0043 = {
 	option = {
 		name = bno_random_0043.b
 		stress_impact = {
-			bno_whiteboi = minor_stress_impact_gain
+			bno_cuckish = minor_stress_impact_gain
+			bno_cuck = minor_stress_impact_gain
+			bno_beta = minor_stress_impact_gain
+			bno_jos = minor_stress_impact_gain
 		}
 		imprison = {
+			type = dungeon
 			target = scope:target1
 		}
 		imprison = {
+			type = dungeon
 			target = scope:target2
 		}
 	}
@@ -7333,13 +7368,17 @@ bno_random.0044 = {
 		stress_impact = {
 			callous = minor_stress_impact_gain
 			ambitious = minor_stress_impact_gain
-			bno_whiteboi = medium_stress_impact_loss
+			bno_cuckish = medium_stress_impact_loss
+			bno_cuck = medium_stress_impact_loss
+			bno_beta = medium_stress_impact_loss
+			bno_jos = medium_stress_impact_loss
 		}
 		spawn_army = {
+			name = event_troop_default_name
 			men_at_arms = {
 				type = bno_african_warriors
 				stacks = {
-					value = 1
+					value = 100
 				}
 			}
 			inheritable = no
@@ -7355,7 +7394,10 @@ bno_random.0044 = {
 	option = { #no
 		name = bno_random_0044.b
 		stress_impact = {
-			bno_whiteboi = minor_stress_impact_gain
+			bno_cuckish = minor_stress_impact_gain
+			bno_cuck = minor_stress_impact_gain
+			bno_beta = minor_stress_impact_gain
+			bno_jos = minor_stress_impact_gain
 		}
 		scope:target1 = {
 			add_opinion = {
@@ -7435,17 +7477,20 @@ bno_random.1044 = {
 		}
 		scope:target1 = {
 			hidden_effect = {
-				set_relation_lover = {
+				become_lover_with_target = {
 					target = scope:target2
-					reason = bbc_too_good
-					province = $LOCATION$
+					LOCATION = root.location
 				}
 			}
 		}
 		scope:target2 = {
 			hidden_effect = {
 				stress_impact = {
-					bno_whitegirl = massive_stress_impact_loss
+					bno_curious = massive_stress_impact_loss
+					bno_blacked = massive_stress_impact_loss
+					bno_snowbunny = massive_stress_impact_loss
+					bno_qos = massive_stress_impact_loss
+					bno_mindless_bbc_slut = massive_stress_impact_loss
 				}
 			}
 		}
@@ -7464,7 +7509,7 @@ bno_random.1044 = {
 			set_relation_friend = {
 				target = root
 				reason = cuck_faped
-				province = $LOCATION$
+				province = root.location
 			}
 		}
 		
@@ -7575,14 +7620,20 @@ bno_random.0045 = {
 		trigger_event = bno_random.1045
 		stress_impact = {
 			lustful = minor_stress_impact_loss
-			bno_whiteboi = medium_stress_impact_loss
+			bno_cuckish = medium_stress_impact_loss
+			bno_cuck = medium_stress_impact_loss
+			bno_beta = medium_stress_impact_loss
+			bno_jos = medium_stress_impact_loss
 		}
 	}
 	
 	option = { #no
 		name = bno_random_0045.b
 		stress_impact = {
-			bno_whiteboi = minor_stress_impact_gain
+			bno_cuckish = minor_stress_impact_gain
+			bno_cuck = minor_stress_impact_gain
+			bno_beta = minor_stress_impact_gain
+			bno_jos = minor_stress_impact_gain
 		}
 		scope:target1 = {
 			add_opinion = {
@@ -7652,17 +7703,20 @@ bno_random.1045 = {
 		}
 		scope:target1 = {
 			hidden_effect = {
-				set_relation_lover = {
+				become_lover_with_target = {
 					target = scope:target2
-					reason = bbc_too_good
-					province = $LOCATION$
+					LOCATION = root.location
 				}
 			}
 		}
 		scope:target2 = {
 			hidden_effect = {
 				stress_impact = {
-					bno_whitegirl = massive_stress_impact_loss
+					bno_curious = massive_stress_impact_loss
+					bno_blacked = massive_stress_impact_loss
+					bno_snowbunny = massive_stress_impact_loss
+					bno_qos = massive_stress_impact_loss
+					bno_mindless_bbc_slut = massive_stress_impact_loss
 				}
 			}
 		}
@@ -7681,7 +7735,7 @@ bno_random.1045 = {
 			set_relation_friend = {
 				target = root
 				reason = cuck_faped
-				province = $LOCATION$
+				province = root.location
 			}
 			add_opinion = {
 				target = root
@@ -7769,7 +7823,7 @@ bno_random.0046 = {
 				set_relation_friend = {
 					target = scope:target2
 					reason = bbc_too_good
-					province = $LOCATION$
+					province = root.location
 				}
 			}
 		}
@@ -7814,7 +7868,7 @@ bno_random.0046 = {
 						10 = { give_nickname = nick_blacked }
 						10 = { give_nickname = nick_bos }
 						10 = { give_nickname = nick_bw }
-						10 = { give_nickname = nick_bs }
+						10 = { give_nickname = nick_bos }
 						10 = { give_nickname = nick_rt }
 						10 = { give_nickname = nick_wb }
 						10 = { give_nickname = nick_ps }
@@ -7825,7 +7879,7 @@ bno_random.0046 = {
 						10 = { give_nickname = nick_blacked }
 						10 = { give_nickname = nick_bos }
 						10 = { give_nickname = nick_bw }
-						10 = { give_nickname = nick_bs }
+						10 = { give_nickname = nick_bos }
 						10 = { give_nickname = nick_rt }
 						10 = { give_nickname = nick_wb }
 						10 = { give_nickname = nick_ps }
@@ -7845,7 +7899,7 @@ bno_random.0046 = {
 						10 = { give_nickname = nick_blacked }
 						10 = { give_nickname = nick_bos }
 						10 = { give_nickname = nick_bw }
-						10 = { give_nickname = nick_bs }
+						10 = { give_nickname = nick_bos }
 						10 = { give_nickname = nick_rt }
 						10 = { give_nickname = nick_wb }
 						10 = { give_nickname = nick_ps }
@@ -7856,7 +7910,7 @@ bno_random.0046 = {
 						10 = { give_nickname = nick_blacked }
 						10 = { give_nickname = nick_bos }
 						10 = { give_nickname = nick_bw }
-						10 = { give_nickname = nick_bs }
+						10 = { give_nickname = nick_bos }
 						10 = { give_nickname = nick_rt }
 						10 = { give_nickname = nick_wb }
 						10 = { give_nickname = nick_ps }
@@ -7943,10 +7997,9 @@ bno_random.1046 = {
 		
 		scope:target1 = {
 			hidden_effect = {
-				set_relation_lover = {
+				become_lover_with_target = {
 					target = scope:target2
-					reason = bbc_too_good
-					province = $LOCATION$
+					LOCATION = root.location
 				}
 			}
 		}
@@ -7956,7 +8009,11 @@ bno_random.1046 = {
 			}
 			hidden_effect = {
 				stress_impact = {
-					bno_whitegirl = massive_stress_impact_loss
+					bno_curious = massive_stress_impact_loss
+					bno_blacked = massive_stress_impact_loss
+					bno_snowbunny = massive_stress_impact_loss
+					bno_qos = massive_stress_impact_loss
+					bno_mindless_bbc_slut = massive_stress_impact_loss
 				}
 			}
 		}
@@ -8049,17 +8106,20 @@ bno_random.2046 = {
 		
 		scope:target1 = {
 			hidden_effect = {
-				set_relation_lover = {
+				become_lover_with_target = {
 					target = scope:target2
-					reason = bbc_too_good
-					province = $LOCATION$
+					LOCATION = root.location
 				}
 			}
 		}
 		scope:target2 = {
 			hidden_effect = {
 				stress_impact = {
-					bno_whitegirl = massive_stress_impact_loss
+					bno_curious = massive_stress_impact_loss
+					bno_blacked = massive_stress_impact_loss
+					bno_snowbunny = massive_stress_impact_loss
+					bno_qos = massive_stress_impact_loss
+					bno_mindless_bbc_slut = massive_stress_impact_loss
 				}
 			}
 		}
@@ -8248,7 +8308,11 @@ bno_random.0047 = {
 					PARTNER = scope:target4
 				}
 				stress_impact = {
-					bno_whitegirl = massive_stress_impact_loss
+					bno_curious = massive_stress_impact_loss
+					bno_blacked = massive_stress_impact_loss
+					bno_snowbunny = massive_stress_impact_loss
+					bno_qos = massive_stress_impact_loss
+					bno_mindless_bbc_slut = massive_stress_impact_loss
 				}
 				add_opinion = {
 					target = root
