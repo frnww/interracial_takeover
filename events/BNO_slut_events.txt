@@ -808,6 +808,7 @@ bno_slut.0007 = {
 		}
 	}
 	trigger = {
+		has_game_rule = bno_body_modification_yes
 		is_mindless_bbc_slut = yes
 		NOT = {
 			exists = var:bno_becoming_dark
@@ -1460,20 +1461,10 @@ bno_slut.0014 = {
 	left_portrait = {
 		character = scope:whitegirl
 		animation = admiration
-		triggered_outfit = {
-			trigger = {
-				exists = scope:whitegirl
-			}
-		}
 	}
 	right_portrait = {
 		character = scope:bbc
 		animation = toast_goblet
-		triggered_outfit = {
-			trigger = {
-				exists = scope:bbc
-			}
-		}
 	}
 	cooldown = {months = 12 }
 	trigger = {

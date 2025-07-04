@@ -299,6 +299,7 @@ bno_cuck.0003 = {
 	cooldown = { months = 12 }
 	
 	trigger = {
+		is_bbc = no
 		does_blackbull_exist = yes
 		any_spouse = {
 			is_curious_whitegirl = yes
@@ -574,11 +575,7 @@ bno_cuck.3004 = {
 	right_portrait = {
 		character = scope:target2
 		animation = pregnant
-		triggered_outfit = {
-			trigger = {
-				exists = scope:target2
-			}
-		}
+		
 	}
 	lower_left_portrait = {
 		character = scope:target1
@@ -886,6 +883,7 @@ bno_cuck.0007 = {
 		animation = anger
 	}
 	trigger = {
+		is_bbc = no
 		is_cuck = yes
 		OR = {
 			has_trait = brave
@@ -946,6 +944,7 @@ bno_cuck.0008 = {
 	}
 	cooldown = { months = 25 }
 	trigger = {
+		is_bbc = no
 		is_cuck = yes
 		any_spouse = {
 			OR = {
@@ -1297,11 +1296,7 @@ bno_cuck.2010 = { #follow up event, bbc spymaster lays with cuck's wife
 	left_portrait = {
 		character = scope:target2
 		animation = flirtation
-		triggered_outfit = {
-			trigger = {
-				exists = scope:target2
-			}
-		}
+		
 	}
 	right_portrait = {
 		character = scope:target1
@@ -1370,13 +1365,10 @@ bno_cuck.0011 = {
 	right_portrait = {
 		character = scope:target2
 		animation = personality_greedy
-		triggered_outfit = {
-			trigger = {
-				exists = scope:target2
-			}
-		}
+		
 	}
 	trigger = {
+		is_bbc = no
 		any_close_family_member = {
 			is_female = yes
 			is_adult = no
@@ -1499,6 +1491,7 @@ bno_cuck.0013 = {
 		animation = dismissal
 	}
 	trigger = {
+		is_bbc = no
 		is_ruler = yes
 		exists = diarch
 		diarch = {
@@ -1544,11 +1537,7 @@ bno_cuck.0014 = {
 	left_portrait = {
 		character = scope:target2
 		animation = drink
-		triggered_outfit = {
-			trigger = {
-				exists = scope:target2
-			}
-		}
+		
 	}
 	
 	right_portrait = {
@@ -1630,11 +1619,7 @@ bno_cuck.0015 = {
 	left_portrait = {
 		character = scope:target2
 		animation = boredom
-		triggered_outfit = {
-			trigger = {
-				exists = scope:target2
-			}
-		}
+		
 	}
 	right_portrait = {
 		character = root
@@ -1642,6 +1627,7 @@ bno_cuck.0015 = {
 		
 	}
 	trigger = {
+		is_bbc = no
 		is_cuck = yes
 		any_spouse = {
 			is_mindless_bbc_slut = yes
@@ -1701,11 +1687,7 @@ bno_cuck.0016 = {
 	left_portrait = {
 		character = scope:target2
 		animation = disgust
-		triggered_outfit = {
-			trigger = {
-				exists = scope:target2
-			}
-		}
+		
 	}
 	right_portrait = {
 		character = root
@@ -1713,6 +1695,7 @@ bno_cuck.0016 = {
 		
 	}
 	trigger = {
+		is_bbc = no
 		is_cuck = yes
 		any_spouse = {
 			is_mindless_bbc_slut = yes

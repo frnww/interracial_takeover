@@ -142,7 +142,13 @@ great_replacement = {
 			change_county_control = {
 				subtract = 45
 			}
-			set_county_culture = scope:councillor.culture
+			#set_county_culture = scope:councillor.culture
+			culture = {
+				change_cultural_acceptance = {
+					target = scope:councillor_liege.culture
+					value = 100
+				}
+			}
 		}
 		scope:councillor = {
 			if = {

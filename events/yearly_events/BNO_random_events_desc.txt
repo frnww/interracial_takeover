@@ -5370,7 +5370,7 @@ bno_random.0032 = {
 	trigger = {
 		is_female = yes
 		is_adult = yes
-		is_bno_snowbunny = yes
+		is_bno_snowbunny_and_up = yes
 		any_courtier_or_guest = {
 			has_trait = bno_bbc
 			is_adult = yes
@@ -7297,13 +7297,6 @@ bno_random.0044 = {
 	left_portrait = {
 		character = root
 		animation = stress
-		triggered_outfit = {
-			trigger = {
-				exists = root
-			}
-			outfit_tags = {
-			}
-		}
 	}
 	right_portrait = {
 		character = scope:target2

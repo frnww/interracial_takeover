@@ -41,3 +41,14 @@ bno_cuck_events.0001 = {
         }
     }
 }
+
+namespace = bno_council_orgy_events
+
+bno_council_orgy_events.0001 = {
+    hidden = yes
+    immediate = {
+        bno_only_you_and_neighbour_on_actions = {
+            bno_on_actions = bno_yearly_council_orgy_pulse
+        }
+    }
+}

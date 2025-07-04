@@ -65,6 +65,7 @@ bno_random_yearly_random_pulse = {
 		150 = bno_random.0037 #Q+ event
 		150 = bno_random.0038 #Q+ event
 		200 = bno_random.0039 #Q+ event
+		100 = bno_random.0040
 		110 = bno_random.0041 #wife curiosity
 		125 = bno_random.0042 #Wife fisrt BBC
 		100 = bno_random.0043 #Courtier blacked

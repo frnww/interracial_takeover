@@ -176,7 +176,6 @@ bno_camp_leader = {
 	max_seduce_schemes_add = 2
 	owned_personal_scheme_success_chance_add = 50
 	ruler_designer_cost = 30
-	good = yes
 	
 	fertility = 1.0
 	valid_sex = male
@@ -231,7 +230,6 @@ bno_bbc = {
 	#number_of_spouses = 1
 	#number_of_consorts = 3
 
-	good = yes
 	physical = yes
 	
 	flag = carn_no_consequences_for_extramarital_sex_with_others
@@ -259,7 +257,6 @@ bno_curious = {
 
 	#Special Flags
 	physical = yes
-	good = yes
 	child_inheritance_sex = female
 	shown_in_ruler_designer = yes
 	
@@ -324,7 +321,6 @@ bno_blacked = {
 
 	#Special Flags
 	physical = yes
-	good = yes
 	shown_in_ruler_designer = no
 	
 	#Special Opinion
@@ -393,7 +389,6 @@ bno_snowbunny = {
 
 	#Special Flags
 	physical = yes
-	good = yes
 	shown_in_ruler_designer = no
 	
 	#Special Opinion
@@ -471,7 +466,6 @@ bno_qos = {
 
 	#Special Flags
 	physical = yes
-	good = yes
 	shown_in_ruler_designer = no
 	
 	#Special Opinion
@@ -551,7 +545,6 @@ bno_mindless_bbc_slut = {
 
 	#Special Flags
 	physical = yes
-	good = yes
 	shown_in_ruler_designer = no
 	
 	#Special Opinion
@@ -640,7 +633,6 @@ bno_mindless_bbc_slut = {
 
 bno_full_black = {
 	physical = yes
-	good = yes
 	
 	prowess = 2
 	
@@ -651,7 +643,6 @@ bno_full_black = {
 
 bno_mostly_black = {
 	physical = yes
-	good = yes
 	
 	group = bno_blood
 	level = 3
@@ -659,7 +650,6 @@ bno_mostly_black = {
 
 bno_mixed ={
 	physical = yes
-	good = yes
 	
 	group = bno_blood
 	level = 2
@@ -667,7 +657,6 @@ bno_mixed ={
 
 bno_barely_mixed = {
 	physical = yes
-	good = yes
 	
 	group = bno_blood
 	level = 1
@@ -686,7 +675,6 @@ bno_pure_white = {
 	opposite_opinion = 100
 	
 	ruler_designer_cost = 30
-	good = yes
 	
 	diplomacy_lifestyle_xp_gain_mult = 0.1
 	martial_lifestyle_xp_gain_mult = 0.1

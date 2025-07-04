@@ -1792,11 +1792,7 @@ bno_bull.0015 = {
 	left_portrait = {
 		character = scope:target2
 		animation = happiness
-		triggered_outfit = {
-			trigger = {
-				exists = scope:target2
-			}
-		}
+		
 	}
 	right_portrait = {
 		character = root
