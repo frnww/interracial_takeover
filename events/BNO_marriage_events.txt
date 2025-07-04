@@ -167,6 +167,7 @@ bno_marriage.0002 = {
 		if = {
 			limit = {
 				scope:target1 = {
+					exists = primary_spouse
 					primary_spouse = {
 						NOT = { has_trait = bno_bbc }
 					}
@@ -174,10 +175,7 @@ bno_marriage.0002 = {
 			}
 			scope:target1 = {
 				primary_spouse = {
-					change_trait_rank = {
-						trait = bno_whiteboi
-						rank = 4
-					}
+					become_more_cuck_effect = yes
 					add_character_modifier = {
 						modifier = bno_wife_stolen_by_bbc
 					}
@@ -451,6 +449,7 @@ bno_marriage.0005 = {
 			limit = {
 				exists = scope:target1
 				scope:target1 = {
+					exists = primary_spouse
 					primary_spouse = {
 						NOT = { has_trait = bno_bbc }
 					}
@@ -458,10 +457,7 @@ bno_marriage.0005 = {
 			}
 			scope:target1 = {
 				primary_spouse = {
-					change_trait_rank = {
-						trait = bno_whiteboi
-						rank = 4
-					}
+					become_more_cuck_effect = yes
 					add_character_modifier = {
 						modifier = bno_wife_stolen_by_bbc
 					}

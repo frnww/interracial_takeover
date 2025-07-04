@@ -2412,10 +2412,7 @@ bno_random.0012 = {
 				}
 				root = {
 					primary_spouse = {
-						change_trait_rank = {
-							trait = bno_whiteboi
-							rank = 2
-						}
+						become_more_cuck_effect = yes
 					}
 				}
 			}
@@ -2729,6 +2726,7 @@ bno_random.0013 = {
 			if = {
 				limit = {
 					root = {
+						exists = primary_spouse
 						primary_spouse = {
 							NOT = { has_trait = bno_bbc }
 						}
@@ -2736,10 +2734,7 @@ bno_random.0013 = {
 				}
 				root = {
 					primary_spouse = {
-						change_trait_rank = {
-							trait = bno_whiteboi
-							rank = 2
-						}
+						become_more_cuck_effect = yes
 					}
 				}
 			}

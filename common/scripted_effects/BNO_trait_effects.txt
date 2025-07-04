@@ -6,10 +6,14 @@ become_more_cuck_effect = {
 			NOT = {
 				has_trait = bno_whiteboi
 			}
+			is_bbc = no
 		}
 		add_trait = bno_cuckish
 	}
-	else = {
+	else_if = {
+		limit = {
+			is_bbc = no
+		}
 		change_trait_rank = {
 			trait = bno_whiteboi
 			rank = 1
@@ -18,9 +22,21 @@ become_more_cuck_effect = {
 }
 
 become_more_chastity = {
-	change_trait_rank = {
-		trait = bno_chastity
-		rank = 1
+	if = {
+		limit = {
+			NOT = { has_trait = bno_chastity }
+			is_bbc = no
+		}
+		add_trait = bno_caged
+	}
+	else_if = {
+		limit = {
+			is_bbc = no
+		}
+		change_trait_rank = {
+			trait = bno_chastity
+			rank = 1
+		}
 	}
 }
 
