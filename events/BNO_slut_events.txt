@@ -1015,8 +1015,7 @@ bno_slut.0008 = {
 	
 	cooldown = { months = 36 }
 	trigger = {
-		is_bno_curious = yes
-		is_bno_snowbunny = no
+		is_bno_curious_and_up = yes
 		does_blackbull_exist = yes
 	}
 	immediate = {

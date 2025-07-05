@@ -9,22 +9,6 @@ bno_blood_inheritance = {
 		has_game_rule = bno_mod_status_on
 	}
 	effect = {
-		#Originaly Black
-		if = {
-			limit = {
-				exists = scope:mother
-				exists = scope:real_father
-				AND = {
-					scope:mother = {
-						has_character_flag = bno_originally_black
-					}
-					scope:real_father = {
-						has_character_flag = bno_originally_black
-					}
-				}
-			}
-			add_character_flag = bno_originally_black
-		}
 		#African Trait
 		if = {
 			limit = {

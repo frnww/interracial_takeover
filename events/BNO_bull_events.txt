@@ -887,26 +887,25 @@ bno_bull.0008 = {
 	cooldown = { months = 8 }
 	
 	trigger = {
-		is_blackbull = yes
-		AND = {
-			exists = liege
-			liege = {
-				any_courtier_or_guest = {
-					is_blacked_whitegirl = yes
-				}
-			}
+		is_male = yes
+		is_bbc = yes
+		is_elligible_partner = yes
+		any_courtier_or_guest = {
+			NOT = { is_spouse_of = root }
+			is_female = yes
+			is_elligible_partner = yes
+			is_bno_blacked_and_up = yes
 		}
 	}
 	immediate = {
-		root = {
-			liege = {
-				random_courtier_or_guest = {
-					limit = {
-						is_blacked_whitegirl = yes
-					}
-					save_scope_as = target1
-				}
+		every_courtier_or_guest = {
+			limit = {
+				NOT = { is_spouse_of = root }
+				is_female = yes
+				is_elligible_partner = yes
+				is_bno_blacked_and_up = yes
 			}
+			save_scope_as = target1
 		}
 		scope:target1 = {
 			bno_increase_sluttyness = yes
@@ -1015,14 +1014,12 @@ bno_bull.0009 = {
 		}
 	}
 	immediate = {
-		root = {
-			random_courtier_or_guest = {
-				limit = {
-					is_blacked_whitegirl = yes
-					is_lowborn = no
-				}
-				save_scope_as = target1
+		random_courtier_or_guest = {
+			limit = {
+				is_blacked_whitegirl = yes
+				is_lowborn = no
 			}
+			save_scope_as = target1
 		}
 		scope:target1 = {
 			bno_increase_sluttyness = yes

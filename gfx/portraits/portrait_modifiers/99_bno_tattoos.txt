@@ -62,9 +62,7 @@ slut = {
 				is_female = yes
 				has_faith = faith:bbcs
 				is_bno_curious_and_up = yes
-				NOT = {
-					has_character_flag = bno_originally_black
-				}
+				NOT = { has_trait = bno_full_black }
 			}
 		}
 	}

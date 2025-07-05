@@ -1,13 +1,4 @@
-﻿on_15th_birthday = {
-	trigger = {
-		age = 15 
-	}
-	on_actions = {
-		bno_curious_pulse
-	}
-}
-
-on_birthday = {
+﻿on_birthday = {
 	on_actions = {
 		bno_curious_pulse
 	}
@@ -16,7 +7,6 @@ on_birthday = {
 bno_curious_pulse = {
 	trigger = {
 		has_game_rule = bno_mod_status_on
-		has_game_rule = bno_global_bbc_activities_yes
 		age >= 15
 	}
 	events = {

@@ -116,6 +116,10 @@ bno_council_orgy.0001 = {
 		root = {
 			bno_increase_sluttyness = yes
 		}
+		set_variable = {
+			name = bno_council_orgy_rounds
+			value = -1
+		}
 		trigger_event = bno_council_orgy.0002
 		ai_chance = {
 			base = 50

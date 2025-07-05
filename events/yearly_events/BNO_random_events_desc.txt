@@ -6759,6 +6759,7 @@ bno_random.0041 = {
 			any_courtier_or_guest = {
 				has_trait = bno_bbc
 				is_adult = yes
+				is_married = no
 				is_ai = yes
 			}
 			primary_spouse = {

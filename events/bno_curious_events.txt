@@ -12,6 +12,8 @@ bno_curious.0001 = {
 	hidden = yes
 	
 	trigger = {
+		age >= 15
+		NOT = { has_character_flag = bno_curious.0001 }
         is_ai = yes
 		is_female = yes
 		NOR = {
@@ -58,12 +60,14 @@ bno_curious.0001 = {
 		}
 		else_if = {
 			limit = {
+				exists = father
 				father= { is_ai = no }
 			}
 			father= { bno_curious_trigger_event = yes }
 		}
 		else_if = {
 			limit = {
+				exists = mother
 				mother = { is_ai = no }
 			}
 			mother = { bno_curious_trigger_event = yes }
@@ -79,6 +83,9 @@ bno_curious.0001 = {
 				mother = { is_bno_curious_and_up = yes }
 			}
 			mother = { bno_curious_trigger_event = yes }
+		}
+		add_character_flag = {
+			flag = bno_curious.0001
 		}
 	}
 }
@@ -366,6 +373,10 @@ bno_curious.1301 = {
 	desc = bno_curious.1301.desc
 	theme = lover_relation
 	override_background = { reference = bedchamber }
+
+	trigger = {
+		is_alive = yes
+	}
 	
 	left_portrait = {
 		character = root
@@ -401,14 +412,12 @@ bno_curious.1301 = {
 	
 	option = { #Look at her lost face, she is totally addicted to BBC
 		name = bno_curious.1301.a
-		root = {
-			bno_have_sex_with_effects = {
-				PARTNER = scope:child
-			}
-			become_lover_with_target = {
-				target = scope:child
-				LOCATION = root.location
-			}
+		bno_have_sex_with_effects = {
+			PARTNER = scope:child
+		}
+		become_lover_with_target = {
+			target = scope:child
+			LOCATION = location
 		}
 	}
 }

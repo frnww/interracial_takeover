@@ -82,7 +82,14 @@ bno_chastity_interaction = {
 		}
 		
 		scope:actor = {
-			add_courtier = scope:recipient
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = { liege = scope:actor }
+					}
+				}
+				add_courtier = scope:recipient
+			}
 		}
 	}
 	

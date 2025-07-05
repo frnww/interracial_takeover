@@ -10,7 +10,6 @@ bno_trait_maintenance.0001 = {
 			has_trait = bno_mixed
 			has_trait = bno_mostly_black
 			has_trait = bno_full_black
-			has_character_flag = bno_originally_black
 		}
 		is_male = yes
 		is_adult = yes
@@ -89,30 +88,18 @@ bno_trait_maintenance.0004 = { #make all non bbc male slaves caged if owner is b
 	}
 }
 
-bno_trait_maintenance.0005= {			#african girls cannot have whitegirl trait
-	hidden = yes
-	trigger = {
-		has_character_flag = bno_originally_black
-		is_female = yes
-		is_adult = yes
-	}
-	immediate = {
-		bno_remove_whitegirl_traits = yes
-	}
-}
 #all africans have black trait
 bno_trait_maintenance.0006 = {
 	hidden = yes
 	
 	trigger = {
-		root = {
-			has_character_flag = bno_originally_black
-			NOT = {
-				has_trait = bno_mixed
-				has_trait = bno_mostly_black
-				has_trait = bno_full_black
-				has_trait = bno_barely_mixed
-			}
+		is_ai = yes
+		bno_is_graphically_african = yes
+		NOR = {
+			has_trait = bno_mixed
+			has_trait = bno_mostly_black
+			has_trait = bno_full_black
+			has_trait = bno_barely_mixed
 		}
 	}
 	immediate = {

@@ -40,7 +40,11 @@ bno_ritual_of_purification.0001 = {
         any_child = {
             age >= 15
             is_female = yes
-            has_trait = bno_blood
+            OR = {
+                has_trait = bno_mostly_black
+                has_trait = bno_mixed
+                has_trait = bno_barely_mixed
+            }
         }
         any_councillor = {
             has_council_position = councillor_court_chaplain
@@ -58,7 +62,11 @@ bno_ritual_of_purification.0001 = {
             limit = {
                 age >= 15
                 is_female = yes
-                has_trait = bno_blood
+                OR = {
+                    has_trait = bno_mostly_black
+                    has_trait = bno_mixed
+                    has_trait = bno_barely_mixed
+                }
             }
             save_scope_as = child
         }
@@ -243,7 +251,6 @@ bno_ritual_of_purification.1101 = {
                 PARTNER = root
             }
         }
-        bno_kill_bbc_1_to_3 = yes
         trigger_event = {
             id = bno_ritual_of_purification.2001
             days = 2
@@ -278,11 +285,15 @@ bno_ritual_of_purification.1101 = {
                 PARTNER = scope:bbc_3
             }
         }
-        bno_kill_bbc_1_to_3 = yes
         trigger_event = {
             id = bno_ritual_of_purification.2001
             days = 2
             delayed = yes
+        }
+    }
+    after = {
+        hidden_effect = {
+            bno_kill_bbc_1_to_3 = yes
         }
     }
 }

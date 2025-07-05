@@ -200,7 +200,6 @@ create_bbc = {
 		}
 		after_creation = {
 			set_sexuality = heterosexual
-			add_character_flag = bno_originally_black
 		}
 	}
 	scope:$scope_name$ = {
@@ -400,10 +399,7 @@ bno_increase_sluttyness = {
 		limit = {
 			AND = {
 				NOT = { has_trait = bno_whitegirl }
-				NOT = { has_character_flag = bno_originally_black }
 				NOT = { has_trait = bno_full_black }
-				NOT = { has_trait = bno_mostly_black }
-				NOT = { has_trait = bno_mixed }
 			}
 		}
 		add_trait = bno_curious
@@ -646,31 +642,29 @@ fuck_random_local_bbc = {
 
 sex_with_bbc = {
 	save_scope_as = slut
-	scope:slut = {
-		if = {
-			limit = {
-				is_spouse_of = scope:bbc
-			}
-			add_opinion = {
-				modifier = bull_husband_takes_me
-				target = scope:bbc
-			}
-		}
-		bno_have_sex_with_effects = {
-			PARTNER = scope:bbc
-		}
-		add_character_modifier = {
-			modifier = bno_slut_stress_relieved
-			years = 1
-		}
-		add_character_modifier = {
-			modifier = bno_cumstuffed
-			months = 6
+	if = {
+		limit = {
+			is_spouse_of = scope:bbc
 		}
 		add_opinion = {
-			modifier = bno_bull_fucks_me
+			modifier = bull_husband_takes_me
 			target = scope:bbc
 		}
+	}
+	bno_have_sex_with_effects = {
+		PARTNER = scope:bbc
+	}
+	add_character_modifier = {
+		modifier = bno_slut_stress_relieved
+		years = 1
+	}
+	add_character_modifier = {
+		modifier = bno_cumstuffed
+		months = 6
+	}
+	add_opinion = {
+		modifier = bno_bull_fucks_me
+		target = scope:bbc
 	}
 	scope:bbc = {
 		add_character_modifier = {
