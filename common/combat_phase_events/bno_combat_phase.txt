@@ -1,0 +1,64 @@
+﻿bno_bbc_commander = {
+    type = commander
+
+    is_valid = {
+        exists = root
+        is_bbc = yes
+        NOT = { has_character_flag = bno_bbc_commander_cooldown }
+    }
+
+    chance = {
+        base = 500
+        modifier = {
+            add = 500
+            is_ai = no
+        } 
+    }
+
+    effect = {
+        save_scope_as = bbc_commander
+        if = {
+            limit = {
+                scope:combat_side.enemy_side.side_commander = {
+                    exists = this
+                    is_bbc = no
+                    is_ai = yes
+                    is_male = yes
+                    NOT = { has_trait = bno_chastity }
+                }
+            }
+            scope:combat_side.enemy_side.side_commander = {
+                save_scope_as = bbc_enemy_commander
+            }
+
+            trigger_event = bno_combat.0001
+
+            add_character_flag = {
+                flag = bno_bbc_commander_cooldown
+                months = 1
+            }
+        }
+        else_if = {
+            limit = {
+                scope:combat_side.enemy_side.side_commander = {
+                    exists = this
+                    is_ai = yes
+                    is_female = yes
+                    NOT = { has_trait = bno_full_black }
+                }
+            }
+            scope:combat_side.enemy_side.side_commander = {
+                save_scope_as = bbc_enemy_female_commander
+            }
+            trigger_event = bno_combat.0002
+            add_character_flag = {
+                flag = bno_bbc_commander_cooldown
+                months = 1
+            }
+        }
+    }
+}
+
+bno_slut_commander = {
+
+}

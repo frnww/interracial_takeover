@@ -11,6 +11,11 @@ bno_council_orgy.0001 = {
 	override_background = {
 		reference = council_chamber
 	}
+
+	cooldown = {
+		months = { 12 18 }
+	}
+
 	left_portrait = {
 		character = root
 		animation = shock
@@ -243,6 +248,9 @@ bno_council_orgy.0002 = {
 			}
 			desc = bno_council_orgy_0002.desc.c
 		}
+	}
+	cooldown = {
+		months = { 12 18 }
 	}
 	theme = realm
 	override_background = {

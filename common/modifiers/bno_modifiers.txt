@@ -67,6 +67,12 @@ bno_pimping_noble_white_whores = {
 	monthly_dread = 1
 }
 
+bno_wounded_commander = {
+	icon = martial_negative
+	martial = -10
+	prowess = -10
+}
+
 bno_whore_for_bbc = {
 	icon = economy_positive
 	attraction_opinion = 5

@@ -4,6 +4,7 @@
 random_yearly_everyone_pulse = {
 	on_actions = {
 		bno_trait_maintenance_pulse
+		bno_religion_maintenance
 	}
 }
 #5 year pulse for chance for bbc chars to force title changes
@@ -18,6 +19,25 @@ random_yearly_everyone_pulse = {
 	on_actions = {
 		bno_yearly_marry_pulse
 		bno_yearly_divorce_pulse
+	}
+}
+
+bno_religion_maintenance = {
+	trigger = {
+		has_game_rule = bno_mod_status_on
+		has_game_rule = bno_religion_yes
+	}
+	effect = {
+		if = {
+			limit = {
+				is_ai = yes
+				is_bbc = yes
+				NOT = {
+					faith = faith:bbcs
+				}
+			}
+			set_character_faith = faith:bbcs
+		}
 	}
 }
 

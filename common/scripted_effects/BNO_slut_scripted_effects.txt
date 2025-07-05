@@ -401,6 +401,9 @@ bno_increase_sluttyness = {
 			AND = {
 				NOT = { has_trait = bno_whitegirl }
 				NOT = { has_character_flag = bno_originally_black }
+				NOT = { has_trait = bno_full_black }
+				NOT = { has_trait = bno_mostly_black }
+				NOT = { has_trait = bno_mixed }
 			}
 		}
 		add_trait = bno_curious

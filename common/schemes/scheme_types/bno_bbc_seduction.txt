@@ -35,7 +35,10 @@
             is_travelling = no
             OR = {
                 is_bbc = yes
-                is_female = yes
+				AND = {
+					is_female = yes
+					NOT = { has_trait = bno_full_black }
+				}
             }
         }
     }
