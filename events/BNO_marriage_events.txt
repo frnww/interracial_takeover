@@ -386,6 +386,16 @@ bno_marriage.0004 = { #unmarried bbc looks to other realms for single woman
 			}
 		}
 		root = {
+			if = {
+				limit = {
+					scope:target1 = {
+						exists = primary_spouse
+					}
+				}
+				scope:target1 = {
+					divorce = primary_spouse
+				}
+			}
 			marry = scope:target1
 		}
 	}
@@ -535,8 +545,8 @@ bno_marriage.0006 = {	#used to make sure bbc actually have children. Might be wo
 			limit = {
 				is_pregnant = no
 			}
-			make_pregnant = {
-				father = root
+			bno_have_sex_with_effects = {
+				PARTNER = root
 			}
 		}
 	}

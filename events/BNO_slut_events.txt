@@ -1950,37 +1950,13 @@ bno_slut.3015 = {
 	option = {
 		name = bno_slut_3015.b
 		root = {
-			remove_character_flag = {
-			flag = bno_slut.1015
-			}
+			remove_character_flag = bno_slut.1015
 		}
 	}
 }
 
-##Increase Breast
-#bno_slut.0016 = {
-#
-#}
-#
-##Increase Butt
-#bno_slut.0017 = {
-#
-#}
-#
-##Decrease Hips
-#bno_slut.0018 = {
-#
-#}
-#
-##Blonder Hair
-#bno_slut.0019 = {
-#
-#}
-
-
-
-
 namespace = pregnancy
+
 pregnancy.5001 = {
 	type = character_event
 	title = pregnancy.5001.t

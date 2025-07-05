@@ -1242,11 +1242,6 @@ bno_cuck.1010 = { #followup event, spymaster frames cuck's vassal, gives and get
 	left_portrait = {
 		character = scope:target3
 		animation = shock
-		triggered_outfit = {
-			trigger = {
-				exists = scope:target3
-			}
-		}
 	}
 	right_portrait = {
 		character = scope:target1
@@ -1528,6 +1523,7 @@ bno_cuck.0013 = {
 # the black cock
 bno_cuck.0014 = {
 	type = character_event
+	theme = intrigue_intimidation_focus
 	title = bno_cuck_0014.title
 	desc = bno_cuck_0014.desc
 	override_background = {

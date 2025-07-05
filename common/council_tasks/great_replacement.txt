@@ -26,7 +26,15 @@ great_replacement = {
 					trigger_if = {
 						limit = { exists = scope:county }
 						scope:county = {
-							NOT = { culture = scope:councillor.culture }
+							OR = {
+								NOT = { culture = scope:councillor.culture }
+								culture = {
+									cultural_acceptance = {
+										target = scope:councillor_liege.culture
+										value < 95
+									}
+								}
+							}
 						}
 					}
 					trigger_else = { always = no }
@@ -45,7 +53,26 @@ great_replacement = {
 			}
 			desc = SCALED_COUNCILLOR_MARTIAL_VALUE
 		}
-		
+		add = {
+			value = {
+				add = 10
+				if = {
+					limit = {
+						exists = scope:county
+						scope:county = {
+							culture = {
+								cultural_acceptance = {
+									target = scope:councillor_liege.culture
+									value > 25
+								}
+							}
+						}
+					}
+					add = 40
+				}
+				multiply = 0.9
+			}
+		}
 		if = {
 			limit = {
 				exists = scope:county
@@ -143,10 +170,15 @@ great_replacement = {
 				subtract = 45
 			}
 			#set_county_culture = scope:councillor.culture
-			culture = {
-				change_cultural_acceptance = {
-					target = scope:councillor_liege.culture
-					value = 100
+			if = {
+				limit = {
+					NOT = { culture = scope:councillor_liege.culture }
+				}
+				culture = {
+					change_cultural_acceptance = {
+						target = scope:councillor_liege.culture
+						value = 100
+					}
 				}
 			}
 		}

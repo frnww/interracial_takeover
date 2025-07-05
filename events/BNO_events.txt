@@ -307,7 +307,7 @@ bno_events.0005 = {
 			set_relation_friend = {
 				target = root
 				reason = cuck_faped
-				province = $LOCATION$
+				province = location
 			}
 		}
 	}

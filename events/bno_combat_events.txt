@@ -89,6 +89,7 @@ bno_combat.0002 = {
         add_internal_flag = special
         trigger = {
             scope:bbc_enemy_female_commander = {
+                is_ruler = no
                 OR = {
                     AND = {
                         exists = liege

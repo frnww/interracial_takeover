@@ -12,6 +12,7 @@ bnoc = {
 	heritage = heritage_west_african
 	language = language_soninke
 	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
 	traditions = {
 		tradition_welcoming
 		tradition_only_the_strong

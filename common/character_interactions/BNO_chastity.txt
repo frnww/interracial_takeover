@@ -55,7 +55,7 @@ bno_chastity_interaction = {
 				flag = is_being_tortured
 				months = 6 # Players in MP can keep the event window open...
 			}
-			add_trait = bno_chastity
+			add_trait = bno_caged
 		}
 		
 		show_as_tooltip = {

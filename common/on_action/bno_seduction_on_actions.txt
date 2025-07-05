@@ -1,6 +1,6 @@
 ﻿bno_seduce_success = {
     effect = {
-        root = {
+        scope:owner = {
             bno_have_sex_with_effects = {
                 PARTNER = scope:target
             }

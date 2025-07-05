@@ -95,3 +95,9 @@ bno_trait_maintenance_pulse = {
 		bno_trait_maintenance.0006			#all africans have the full black trait
 	}
 }
+
+on_guest_arrived_from_pool = {
+	on_actions = {
+		bno_trait_maintenance_pulse
+	}
+}

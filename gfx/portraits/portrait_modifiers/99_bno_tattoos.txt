@@ -15,7 +15,7 @@
 				value = 1
 			}
 			accessory = {
-				mode = replace
+				mode = add
 				gene = legwear
 				template = no_legwear
 				value = 0
@@ -109,7 +109,7 @@ bimbo = {
 				value = 1
 			}
 			accessory = {
-				mode = replace
+				mode = add
 				gene = legwear
 				template = no_legwear
 				value = 0

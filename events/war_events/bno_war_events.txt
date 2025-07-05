@@ -87,7 +87,9 @@ bno_war.0001 = {
 		}
 		root = {
 			imprison = {
+				type = dungeon
 				target = scope:defender
+
 			}
 			add_opinion = {
 				modifier = bno_good_slut

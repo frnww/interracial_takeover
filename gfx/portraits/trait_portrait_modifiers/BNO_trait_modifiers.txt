@@ -143,6 +143,7 @@ queen_of_spades_tattoo = {
 					mode = add
 					gene = cosmetics_bno_body_tattoo
 					template = bno_body_tattoo_6
+					value = 1.0
 				}
 			}
 		}
@@ -166,7 +167,6 @@ bno_pure_white_portrait_modifier = {
 				color = {
 					gene = hair_color
 					mode = modify
-
 					x = -0.2
 					y = -1.0
 				}
@@ -174,6 +174,7 @@ bno_pure_white_portrait_modifier = {
 					mode = add
 					gene = hairstyles
 					template = indian_hairstyles_wavy
+					value = 1.0
 				}
 			}
 		}

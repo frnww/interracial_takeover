@@ -182,6 +182,7 @@ black_bred_bitch = {
 			limit = {
 				NOT = { is_spouse_of = scope:real_father }		#don't bother if BBC real father and mother are married
 				scope:real_father = {							#triggers only if child's real father is BBC character
+					is_alive = yes
 					has_trait = bno_bbc
 				}
 			}

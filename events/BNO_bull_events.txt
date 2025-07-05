@@ -670,6 +670,7 @@ bno_bull.0004 = {
 		if = {
 			limit = {
 				scope:target1 = {
+					exists = primary_spouse
 					primary_spouse = {
 						NOT = {
 							has_trait = bno_bbc

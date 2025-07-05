@@ -43,7 +43,6 @@ bno_random.0001 = {
 	
 	cooldown = { months = 6 }
 	trigger = {
-		root = {
 			any_courtier_or_guest = {
 				has_trait = bno_bbc
 				is_adult = yes
@@ -55,11 +54,8 @@ bno_random.0001 = {
 				is_ruler = no
 				is_ai = yes
 			}
-			
 			is_female = yes
 			is_adult = yes
-			
-		}
 	}
 	
 	immediate = {
@@ -369,22 +365,20 @@ bno_random.0002 = {
 	cooldown = { months = 6 }
 	
 	trigger = {
-		root = {
-			any_courtier_or_guest = {
-				has_trait = bno_bbc
-				is_adult = yes
-				is_ai = yes
-			}
-			any_close_family_member = {
-				is_bno_blacked_and_up = yes
-				is_adult = yes
-				is_female = yes
-				is_parent_of = root
-				is_ai = yes
-			}
-			is_female = yes
+		any_courtier_or_guest = {
+			has_trait = bno_bbc
 			is_adult = yes
+			is_ai = yes
 		}
+		any_close_family_member = {
+			is_bno_blacked_and_up = yes
+			is_adult = yes
+			is_female = yes
+			is_parent_of = root
+			is_ai = yes
+		}
+		is_female = yes
+		is_adult = yes
 	}
 	
 	immediate = {
@@ -636,22 +630,20 @@ bno_random.0003 = {
 	cooldown = { months = 6 }
 	
 	trigger = {
-		root = {
-			any_courtier_or_guest = {
-				has_trait = bno_bbc
-				is_adult = yes
-				is_ai = yes
-			}
-			any_close_family_member = {
-				is_bno_blacked_and_up = yes
-				is_adult = yes
-				is_female = yes
-				is_sibling_of = root
-				is_ai = yes
-			}
-			is_female = yes
+		any_courtier_or_guest = {
+			has_trait = bno_bbc
 			is_adult = yes
+			is_ai = yes
 		}
+		any_close_family_member = {
+			is_bno_blacked_and_up = yes
+			is_adult = yes
+			is_female = yes
+			is_sibling_of = root
+			is_ai = yes
+		}
+		is_female = yes
+		is_adult = yes
 	}
 	
 	immediate = {
@@ -848,23 +840,21 @@ bno_random.0004 = {
 	cooldown = { months = 6 }
 	
 	trigger = {
-		root = {
-			any_liege_or_above = {
-				has_trait = bno_qos
-				is_adult = yes
-				is_female = yes
-				is_ai = yes
-				is_married = yes
-				primary_spouse = {
-					has_trait = bno_bbc
-				}
-			}
-			NOT = {
-				has_trait = bno_whitegirl
-			}
-			is_female = yes
+		any_liege_or_above = {
+			has_trait = bno_qos
 			is_adult = yes
+			is_female = yes
+			is_ai = yes
+			is_married = yes
+			primary_spouse = {
+				has_trait = bno_bbc
+			}
 		}
+		NOT = {
+			has_trait = bno_whitegirl
+		}
+		is_female = yes
+		is_adult = yes
 	}
 	
 	immediate = {
@@ -6764,6 +6754,7 @@ bno_random.0041 = {
 		is_adult = yes
 		is_married = yes
 		is_male = yes
+		is_bbc = no
 		root = {
 			any_courtier_or_guest = {
 				has_trait = bno_bbc
@@ -7296,13 +7287,6 @@ bno_random.0044 = {
 	right_portrait = {
 		character = scope:target2
 		animation = eccentric
-		triggered_outfit = {
-			trigger = {
-				exists = scope:target2
-			}
-			outfit_tags = {
-			}
-		}
 	}
 	lower_center_portrait = {
 		character = scope:target1
@@ -7335,6 +7319,7 @@ bno_random.0044 = {
 		root = {
 			is_male = yes
 			is_adult = yes
+			is_bbc = no
 		}
 	}
 	
