@@ -598,22 +598,19 @@ bno_title_change.0006 = {
 		}
 	}
 	trigger = {
-		has_trait = bno_bbc
+		is_blackbull = yes
 		is_ruler = yes
 		is_adult = yes
+		exists = liege
 		liege = {
-			is_female = yes
-			is_adult = yes
+			is_mindless_bbc_slut = yes
+			is_partner_non_bbc = yes
 			is_ai = yes
-			has_trait = bno_mindless_bbc_slut
 		}
-		
 	}
 	immediate = {
-		root = {
-			liege = {
-				save_scope_as = target1
-			}
+		liege = {
+			save_scope_as = target1
 		}
 		scope:target1 = {
 			if = {
@@ -693,11 +690,9 @@ bno_title_change.0006 = {
 					gold = scope:target1.gold
 				}
 			}
-		}
-		root = {
-			marry = scope:target1
-			add_trait = bno_camp_leader
-			add_courtier = scope:target1
+			bno_marriage_effect = {
+				target = root
+			}
 		}
 		trigger_event = {
 			id = bno_title_change.1006

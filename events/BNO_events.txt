@@ -253,22 +253,20 @@ bno_events.0005 = {
 			}
 		}
 	}
+
+	trigger = {
+		is_ruler = yes
+		is_cuck = yes
+		does_blackbull_exist = yes
+		is_spouse_curious = yes
+	}
+
 	immediate = {
-		random_courtier_or_guest = {
-			limit = {
-				has_trait = bno_bbc
-				is_adult = yes
-				is_ai = yes
-			}
-			save_scope_as = target1
+		get_bbc_scope = {
+			scope_name = target1
 		}
-		random_spouse = {
-			limit = {
-				is_adult = yes
-				is_female = yes
-				is_ai = yes
-			}
-			save_scope_as = target2
+		get_primary_spouse_scope = {
+			scope_name = target2
 		}
 		scope:target1 = {
 			bno_have_sex_with_effects = {
@@ -304,7 +302,7 @@ bno_events.0005 = {
 			10 = { give_nickname = nick_cuck }
 		}
 		scope:target1 = {
-			set_relation_friend = {
+			become_friend_with_target = {
 				target = root
 				reason = cuck_faped
 				province = location

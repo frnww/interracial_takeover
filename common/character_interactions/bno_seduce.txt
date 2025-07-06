@@ -51,10 +51,22 @@
             }
         }
         scope:recipient = {
-            OR = {
-                is_bbc = yes
-                is_female = yes
-            }
+			trigger_if = {
+				limit = {
+					scope:actor = {
+						is_bbc = yes
+					}
+				}
+				is_female = yes
+			}
+            trigger_if = {
+				limit = {
+					scope:actor = {
+						has_trait = bno_whitegirl
+					}
+				}
+				is_bbc = yes
+			}
         }
 	}
 

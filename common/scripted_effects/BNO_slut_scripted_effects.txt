@@ -2,6 +2,7 @@
 	if = {
 		limit = {
 			has_game_rule = bno_religion_yes
+			is_bno_mindless_bbc_slut = yes
 		}
 		set_character_faith = faith:bbcs
 	}
@@ -16,114 +17,644 @@ convert_to_african_culture = {
 	}
 }
 
+bno_becoming_lustful_effect = {
+	switch = {
+		trigger = has_trait
+		chaste = {
+			remove_trait = chaste
+			add_trait = lustful
+		}
+		fallback = { add_trait = lustful }
+	}
+}
+
 becoming_african = {
-	if = {
-		limit = {
-			has_trait = bno_mostly_black
+	switch = {
+		trigger = has_trait
+		bno_mostly_black = {}
+		bno_mixed = {}
+		bno_barely_mixed = {
+			change_trait_rank = {
+				trait = bno_blood
+				rank = 1
+			}
 		}
-		remove_trait = bno_mostly_black
-		add_trait = bno_full_black
+		fallback = { add_trait = bno_barely_mixed }
 	}
-	else_if = {
+}
+
+get_wandering_male_scope = {
+	random_pool_character = {
+		province = location
 		limit = {
-			has_trait = bno_mixed
+			is_male = yes
+			is_elligible_partner = yes
 		}
-		remove_trait = bno_mixed
-		add_trait = bno_mostly_black
-	}
-	else_if = {
-		limit = {
-			has_trait = bno_barely_mixed
-		}
-		remove_trait = bno_barely_mixed
-		add_trait = bno_mixed
-	}
-	else = {
-		add_trait = bno_barely_mixed
+		save_scope_as = $scope_name$
 	}
 }
 
 find_5_sex_partner = {
-	random_pool_character = {
-		province = root.location
-		limit = {
-			is_male = yes
-		}
-		save_scope_as = sex_partner_1
+	save_scope_as = slut
+	get_wandering_male_scope = {
+		scope_name = sex_partner_1
 	}
-	random_pool_character = {
-		province = root.location
-		limit = {
-			is_male = yes
-		}
-		save_scope_as = sex_partner_2
+	get_wandering_male_scope = {
+		scope_name = sex_partner_2
 	}
-	random_pool_character = {
-		province = root.location
-		limit = {
-			is_male = yes
-		}
-		save_scope_as = sex_partner_3
+	get_wandering_male_scope = {
+		scope_name = sex_partner_3
 	}
-	random_pool_character = {
-		province = root.location
-		limit = {
-			is_male = yes
-		}
-		save_scope_as = sex_partner_4
+	get_wandering_male_scope = {
+		scope_name = sex_partner_4
 	}
-	random_pool_character = {
-		province = root.location
-		limit = {
-			is_male = yes
-		}
-		save_scope_as = sex_partner_5
+	get_wandering_male_scope = {
+		scope_name = sex_partner_5
 	}
 }
 
 sex_with_5_sex_partner = {
-	bno_have_sex_with_effects = {
-		PARTNER = scope:sex_partner_1
+	if = {
+		limit = {
+			exists = scope:sex_partner_1
+		}
+		bno_have_sex_with_effects = {
+			PARTNER = scope:sex_partner_1
+		}
+		add_gold = minor_gold_value
 	}
-	add_gold = minor_gold_value
-	bno_have_sex_with_effects = {
-		PARTNER = scope:sex_partner_2
+	if = {
+		limit = {
+			exists = scope:sex_partner_2
+		}
+		bno_have_sex_with_effects = {
+			PARTNER = scope:sex_partner_2
+		}
+		add_gold = minor_gold_value
 	}
-	add_gold = minor_gold_value
-	bno_have_sex_with_effects = {
-		PARTNER = scope:sex_partner_3
+	if = {
+		limit = {
+			exists = scope:sex_partner_3
+		}
+		bno_have_sex_with_effects = {
+			PARTNER = scope:sex_partner_3
+		}
+		add_gold = minor_gold_value
 	}
-	add_gold = minor_gold_value
-	bno_have_sex_with_effects = {
-		PARTNER = scope:sex_partner_4
+	if = {
+		limit = {
+			exists = scope:sex_partner_4
+		}
+		bno_have_sex_with_effects = {
+			PARTNER = scope:sex_partner_4
+		}
+		add_gold = minor_gold_value
 	}
-	add_gold = minor_gold_value
-	bno_have_sex_with_effects = {
-		PARTNER = scope:sex_partner_5
+	if = {
+		limit = {
+			exists = scope:sex_partner_5
+		}
+		bno_have_sex_with_effects = {
+			PARTNER = scope:sex_partner_5
+		}
+		add_gold = minor_gold_value
 	}
-	add_gold = minor_gold_value
 }
 
-get_bbc_husband_scope = {
-	save_scope_as = whore
-	random_courtier_or_guest = {
-		limit = {
-			has_trait = bno_bbc
-			is_adult = yes
-			is_imprisoned = no
-			is_spouse_of = scope:whore
+bno_steal_white_husband_gold_effect = {
+	add_character_modifier = {
+		modifier = bno_wife_stealing_cucks_gold
+		months = 6
+	}
+	primary_spouse = {
+		remove_short_term_gold = minor_gold_value
+		add_prestige = minor_prestige_loss
+		send_interface_message = {
+			type = bno_blacked_events
+			title = bno_bull_0010_notification.title
+			right_icon = root
+			desc = bno_bull_0010_notification.desc
 		}
-		save_scope_as = bbc
+	}
+}
+
+bno_reveal_secret_effect = {
+	save_temporary_scope_as = temp
+	primary_spouse = {
+		every_secret = {
+			reveal_to = root
+		}
+		every_secret = {
+			reveal_to = $target$
+		}
+		send_interface_message = {
+			type = bno_blacked_events
+			title = bno_bull_0012_notification.title
+			right_icon = scope:temp
+			left_icon = root
+			desc = bno_bull_0012_notification.desc
+		}
+	}
+	add_character_modifier = {
+		modifier = bno_cant_keep_mouth_shut
+		years = 2
+	}
+	every_secret = {
+		reveal_to = root
+	}
+	every_secret = {
+		reveal_to = $target$
+	}
+}
+
+get_secret_haver_scope = {
+	every_courtier_or_guest = { # Player's Court
+		limit = {
+			does_blacked_girl_white_husband_has_secret = yes
+			exists = this
+		}
+		save_scope_as = $scope_name$
+	}
+	if = { # Player's Vassal
+		limit = {
+			NOT = { exists = scope:$scope_name$ }
+		}
+		every_vassal_or_below = { # Player's Vassal
+			limit = {
+				does_blacked_girl_white_husband_has_secret = yes
+				exists = this
+			}
+			save_scope_as = $scope_name$
+		}
+	}
+	if = { # Player's Vassal's Court
+		limit = {
+			NOT = { exists = scope:$scope_name$ }
+		}
+		every_vassal_or_below = {
+			every_courtier_or_guest = {
+				limit = {
+					does_blacked_girl_white_husband_has_secret = yes
+					exists = this
+				}
+				save_scope_as = $scope_name$
+			}
+		}
+	}
+	if = { # Liege
+		limit = {
+			NOT = { exists = scope:$scope_name$ }
+			exists = liege
+			liege = {
+				does_blacked_girl_white_husband_has_secret = yes
+			}
+		}
+		liege = {
+			save_scope_as = $scope_name$
+		}
+	}
+	if = { # Liege's Court
+		limit = {
+			NOT = { exists = scope:$scope_name$ }
+			exists = liege
+		}
+		liege = {
+			every_courtier_or_guest = {
+				limit = {
+					does_blacked_girl_white_husband_has_secret = yes
+					exists = this
+				}
+				save_scope_as = $scope_name$
+			}
+		}
+	}
+	if = { # Liege's Vassal
+		limit = {
+			NOT = { exists = scope:$scope_name$ }
+			exists = liege
+		}
+		liege = {
+			every_vassal_or_below = {
+				limit = {
+					does_blacked_girl_white_husband_has_secret = yes
+					exists = this
+				}
+				save_scope_as = $scope_name$
+			}
+		}
+	}
+	if = { # Liege's Vassal's Court
+		limit = {
+			NOT = { exists = scope:$scope_name$ }
+			exists = liege
+		}
+		liege = {
+			every_vassal_or_below = {
+				every_courtier_or_guest = {
+					limit = {
+						does_blacked_girl_white_husband_has_secret = yes
+						exists = this
+					}
+					save_scope_as = $scope_name$
+				}
+			}
+		}
+	}
+}
+
+get_pure_whitegirl_scope = {
+	every_courtier_or_guest = { # Player's Court
+		limit = {
+			is_ai_pure_white_girl = yes
+			exists = this
+		}
+		save_scope_as = $scope_name$
+	}
+	if = { # Player's Vassal
+		limit = {
+			NOT = { exists = scope:$scope_name$ }
+		}
+		every_vassal_or_below = { # Player's Vassal
+			limit = {
+				is_ai_pure_white_girl = yes
+				exists = this
+			}
+			save_scope_as = $scope_name$
+		}
+	}
+	if = { # Player's Vassal's Court
+		limit = {
+			NOT = { exists = scope:$scope_name$ }
+		}
+		every_vassal_or_below = {
+			every_courtier_or_guest = {
+				limit = {
+					is_ai_pure_white_girl = yes
+					exists = this
+				}
+				save_scope_as = $scope_name$
+			}
+		}
+	}
+	if = { # Liege
+		limit = {
+			NOT = { exists = scope:$scope_name$ }
+			exists = liege
+			liege = {
+				is_ai_pure_white_girl = yes
+			}
+		}
+		liege = {
+			save_scope_as = $scope_name$
+		}
+	}
+	if = { # Liege's Court
+		limit = {
+			NOT = { exists = scope:$scope_name$ }
+			exists = liege
+		}
+		liege = {
+			every_courtier_or_guest = {
+				limit = {
+					is_ai_pure_white_girl = yes
+					exists = this
+				}
+				save_scope_as = $scope_name$
+			}
+		}
+	}
+	if = { # Liege's Vassal
+		limit = {
+			NOT = { exists = scope:$scope_name$ }
+			exists = liege
+		}
+		liege = {
+			every_vassal_or_below = {
+				limit = {
+					is_ai_pure_white_girl = yes
+					exists = this
+				}
+				save_scope_as = $scope_name$
+			}
+		}
+	}
+	if = { # Liege's Vassal's Court
+		limit = {
+			NOT = { exists = scope:$scope_name$ }
+			exists = liege
+		}
+		liege = {
+			every_vassal_or_below = {
+				every_courtier_or_guest = {
+					limit = {
+						is_ai_pure_white_girl = yes
+						exists = this
+					}
+					save_scope_as = $scope_name$
+				}
+			}
+		}
+	}
+}
+
+bno_marriage_effect = {
+	if = {
+		limit = {
+			exists = primary_spouse
+		}
+		add_opinion = {
+			modifier = previous_cuck_husband
+			target = primary_spouse
+		}
+		primary_spouse = {
+			add_opinion = {
+				modifier = forced_divorce_opinion
+				target = $target$
+			}
+			add_character_modifier = {
+				modifier = bno_wife_stolen_by_bbc
+			}
+			add_character_modifier = {
+				modifier = bno_happy_cuck_husband
+			}
+			become_more_cuck_effect = yes
+			add_prestige = -500
+		}
+		divorce = primary_spouse
+	}
+	else = {
+		$target$ = {
+			add_character_modifier = {
+				modifier = bno_took_unmarried_white_wife
+				years = 15
+			}
+		}
+	}
+	set_sexuality = heterosexual
+	marry = $target$
+	add_opinion = {
+		modifier = stolen_by_new_bull_master
+		target = $target$
+	}
+	add_character_modifier = {
+		modifier = bno_stolen_as_bbc_wife
+		years = 15
+	}
+	$target$ = {
+		add_character_modifier = {
+			modifier = bno_stole_married_white_wife
+			years = 15
+		}
+		add_prestige = 150
+	}
+}
+
+get_married_pure_girl_scope = {
+	every_neighboring_and_across_water_top_liege_realm_owner = {
+		limit = {
+			is_ai_whiteguy = yes
+			exists = primary_spouse
+			primary_spouse = {
+				is_ai_pure_white_girl = yes
+				has_desirable_looks_or_breast = yes
+			}
+		}
+		primary_spouse = {
+			save_scope_as = $scope_name$
+		}
+	}
+	if = {
+		limit = {
+			NOT = { exists = scope:$scope_name$ }
+		}
+		every_neighboring_and_across_water_top_liege_realm_owner = {
+			limit = {
+				is_alive = yes
+			}
+			every_vassal_or_below = {
+				limit = {
+					is_ai_whiteguy = yes
+					exists = primary_spouse
+					primary_spouse = {
+						is_ai_pure_white_girl = yes
+						has_desirable_looks_or_breast = yes
+					}
+				}
+				primary_spouse = {
+					save_scope_as = $scope_name$
+				}
+			}
+		}
+	}
+}
+
+get_unmarried_bbc_scope = {
+	every_courtier_or_guest = { # Player's Court
+		limit = {
+			is_unmarried_ai_blackbull = yes
+			exists = this
+		}
+		save_scope_as = $scope_name$
+	}
+	if = { # Player's Vassal
+		limit = {
+			NOT = { exists = scope:$scope_name$ }
+		}
+		every_vassal_or_below = { # Player's Vassal
+			limit = {
+				is_unmarried_ai_blackbull = yes
+				exists = this
+			}
+			save_scope_as = $scope_name$
+		}
+	}
+	if = { # Player's Vassal's Court
+		limit = {
+			NOT = { exists = scope:$scope_name$ }
+		}
+		every_vassal_or_below = {
+			every_courtier_or_guest = {
+				limit = {
+					is_unmarried_ai_blackbull = yes
+					exists = this
+				}
+				save_scope_as = $scope_name$
+			}
+		}
+	}
+	if = { # Liege
+		limit = {
+			NOT = { exists = scope:$scope_name$ }
+			exists = liege
+			liege = {
+				is_unmarried_ai_blackbull = yes
+			}
+		}
+		liege = {
+			save_scope_as = $scope_name$
+		}
+	}
+	if = { # Liege's Court
+		limit = {
+			NOT = { exists = scope:$scope_name$ }
+			exists = liege
+		}
+		liege = {
+			every_courtier_or_guest = {
+				limit = {
+					is_unmarried_ai_blackbull = yes
+					exists = this
+				}
+				save_scope_as = $scope_name$
+			}
+		}
+	}
+	if = { # Liege's Vassal
+		limit = {
+			NOT = { exists = scope:$scope_name$ }
+			exists = liege
+		}
+		liege = {
+			every_vassal_or_below = {
+				limit = {
+					is_unmarried_ai_blackbull = yes
+					exists = this
+				}
+				save_scope_as = $scope_name$
+			}
+		}
+	}
+	if = { # Liege's Vassal's Court
+		limit = {
+			NOT = { exists = scope:$scope_name$ }
+			exists = liege
+		}
+		liege = {
+			every_vassal_or_below = {
+				every_courtier_or_guest = {
+					limit = {
+						is_unmarried_ai_blackbull = yes
+						exists = this
+					}
+					save_scope_as = $scope_name$
+				}
+			}
+		}
 	}
 }
 
 get_bbc_scope = {
-	save_scope_as = whore
-	random_courtier_or_guest = {
+	every_courtier_or_guest = { # Player's Court
 		limit = {
-			is_blackbull = yes
+			is_ai_blackbull = yes
+			exists = this
 		}
-		save_scope_as = bbc
+		save_scope_as = $scope_name$
+	}
+	if = { # Player's Vassal
+		limit = {
+			NOT = { exists = scope:$scope_name$ }
+		}
+		every_vassal_or_below = { # Player's Vassal
+			limit = {
+				is_ai_blackbull = yes
+				exists = this
+			}
+			save_scope_as = $scope_name$
+		}
+	}
+	if = { # Player's Vassal's Court
+		limit = {
+			NOT = { exists = scope:$scope_name$ }
+		}
+		every_vassal_or_below = {
+			every_courtier_or_guest = {
+				limit = {
+					is_ai_blackbull = yes
+					exists = this
+				}
+				save_scope_as = $scope_name$
+			}
+		}
+	}
+	if = { # Liege
+		limit = {
+			NOT = { exists = scope:$scope_name$ }
+			exists = liege
+			liege = {
+				is_ai_blackbull = yes
+			}
+		}
+		liege = {
+			save_scope_as = $scope_name$
+		}
+	}
+	if = { # Liege's Court
+		limit = {
+			NOT = { exists = scope:$scope_name$ }
+			exists = liege
+		}
+		liege = {
+			every_courtier_or_guest = {
+				limit = {
+					is_ai_blackbull = yes
+					exists = this
+				}
+				save_scope_as = $scope_name$
+			}
+		}
+	}
+	if = { # Liege's Vassal
+		limit = {
+			NOT = { exists = scope:$scope_name$ }
+			exists = liege
+		}
+		liege = {
+			every_vassal_or_below = {
+				limit = {
+					is_ai_blackbull = yes
+					exists = this
+				}
+				save_scope_as = $scope_name$
+			}
+		}
+	}
+	if = { # Liege's Vassal's Court
+		limit = {
+			NOT = { exists = scope:$scope_name$ }
+			exists = liege
+		}
+		liege = {
+			every_vassal_or_below = {
+				every_courtier_or_guest = {
+					limit = {
+						is_ai_blackbull = yes
+						exists = this
+					}
+					save_scope_as = $scope_name$
+				}
+			}
+		}
+	}
+	scope:$scope_name$ = {
+		add_character_flag = {
+			flag = bbc_cooldown
+			months = 6
+		}
+	}
+}
+
+get_wandering_curious_whitegirl_scope = {
+	random_pool_character = {
+		province = location
+		limit = {
+			is_curious = yes
+		}
+		weight = {
+			base = 1
+			bno_good_female_modifier = yes
+		}
+		save_scope_as = $scope_name$
 	}
 }
 
@@ -260,12 +791,16 @@ remove_bad_traits = {
 }
 
 bno_remove_blood_traits = {
-	remove_trait = bno_full_black
-	remove_trait = bno_mostly_black
-	remove_trait = bno_mixed
-	remove_trait = bno_barely_mixed
+	switch = {
+		trigger = has_trait
+		bno_full_black  = {	remove_trait = bno_full_black }
+		bno_mostly_black  = { remove_trait = bno_mostly_black }
+		bno_mixed  = { remove_trait = bno_mixed }
+		bno_barely_mixed  = { remove_trait = bno_barely_mixed }
+	}
 }
 
+ # Called inside on_action
 bbc_sex = {
 	if = {
 		limit = {
@@ -275,6 +810,9 @@ bbc_sex = {
 		}
 		scope:carn_sex_char_1 = {
 			bno_bbc_sex_after_effects = yes
+		}
+		scope:carn_sex_char_2 = {
+			bno_slut_sex_after_effects = yes
 		}
 		if = {
 			limit = {
@@ -289,8 +827,19 @@ bbc_sex = {
 			}
 			scope:carn_sex_char_1 = {
 				primary_spouse = {
-					become_more_cuck_effect = yes
+					bno_cuck_sex_after_effects = yes
 				}
+			}
+		}
+		if = {
+			limit = {
+				scope:carn_sex_char_2 = {
+					exists = primary_spouse
+					is_spouse_of = scope:carn_sex_char_1
+				}
+			}
+			scope:carn_sex_char_1 = {
+				bno_bull_husband_sex_after_effects = yes
 			}
 		}
 	}
@@ -302,6 +851,9 @@ bbc_sex = {
 		}
 		scope:carn_sex_char_2 = {
 			bno_bbc_sex_after_effects = yes
+		}
+		scope:carn_sex_char_1 = {
+			bno_slut_sex_after_effects = yes
 		}
 		if = {
 			limit = {
@@ -316,11 +868,56 @@ bbc_sex = {
 			}
 			scope:carn_sex_char_2 = {
 				primary_spouse = {
-					become_more_cuck_effect = yes
+					bno_cuck_sex_after_effects = yes
 				}
 			}
 		}
+		if = {
+			limit = {
+				scope:carn_sex_char_1 = {
+					exists = primary_spouse
+					is_spouse_of = scope:carn_sex_char_2
+				}
+			}
+			scope:carn_sex_char_2 = {
+				bno_bull_husband_sex_after_effects = yes
+			}
+		}
 	}
+}
+
+bno_remove_eating_disorder = {
+	save_temporary_scope_as = temp
+	add_stress = -40
+	remove_trait = drunkard
+	remove_trait = gluttonous
+	remove_trait = inappetetic
+	remove_trait = comfort_eater
+	add_opinion = {
+		modifier = bno_fed_me_cum
+		target = $target$
+	}
+	primary_spouse = {
+		send_interface_message = {
+			type = bno_blacked_events
+			title = bno_bull_0004_notification.title
+			right_icon = scope:temp
+			desc = bno_bull_0004_notification.desc
+		}
+	}
+}
+
+bno_remove_stress = {
+	add_stress = -100
+	remove_trait = drunkard
+	remove_trait = rakish
+	remove_trait = reclusive
+	remove_trait = flagellant
+	remove_trait = improvident
+	remove_trait = contrite
+	remove_trait = inappetetic
+	remove_trait = comfort_eater
+	remove_trait = profligate
 }
 
 bno_father_or_mother = {
@@ -335,6 +932,21 @@ bno_father_or_mother = {
 			is_male = yes
 		}
 		save_scope_as = father
+	}
+}
+
+get_hated_non_black_courtier_scope = {
+	random_courtier_or_guest = {
+		limit = {
+			is_ai_whiteguy = yes
+			reverse_opinion = {
+				target = root
+				value < 0
+			}
+			NOT = { has_trait = bno_castrated }
+			NOT = { has_trait = bno_chastity }
+		}
+		save_scope_as = $scope_name$
 	}
 }
 
@@ -368,8 +980,75 @@ bno_add_gold_faith = {
 	add_gold = bno_gold_amount
 }
 
+bno_slut_sex_after_effects = {
+	stress_impact = {
+		bno_bbc = -50
+	}
+	add_character_modifier = {
+		modifier = bno_stress_relieved
+		years = 2
+	}
+	if = {
+		limit = {
+			this = scope:carn_sex_char_1
+		}
+		add_opinion = {
+			modifier = bno_slut_fucks_me
+			target = scope:carn_sex_char_2
+		}
+	}
+	else = {
+		add_opinion = {
+			modifier = bno_slut_fucks_me
+			target = scope:carn_sex_char_1
+		}
+	}
+	
+}
+
+bno_cuck_sex_after_effects = {
+	become_more_cuck_effect = yes
+	send_interface_message = {
+		type = bno_blacked_events
+		title = bno_happy_wife.0001.title
+		right_icon = root
+		desc = bno_happy_wife.0001.desc
+	}
+	stress_impact = {
+		bno_cuckish = -10
+		bno_cuck = -20
+		bno_beta = -30
+		bno_jos = -40
+	}
+}
+
+bno_bull_husband_sex_after_effects = {
+	if = {
+		limit = {
+			this = scope:carn_sex_char_1
+		}
+		add_opinion = {
+			modifier = bull_husband_takes_me
+			target = scope:carn_sex_char_2
+		}
+	}
+	else = {
+		add_opinion = {
+			modifier = bull_husband_takes_me
+			target = scope:carn_sex_char_1
+		}
+	}
+}
+
 bno_bbc_sex_after_effects = {
 	bno_increase_sluttyness = yes
+	stress_impact = {
+		bno_curious = -10
+		bno_blacked = -20
+		bno_snowbunny = -30
+		bno_qos = -40
+		bno_mindless_bbc_slut = -50
+	}
 	add_character_flag = {
 		flag = bno_naked
 		months = 1
@@ -377,6 +1056,30 @@ bno_bbc_sex_after_effects = {
 	add_character_flag = {
 		flag = bno_cum_shot
 		months = 1
+	}
+	add_character_modifier = {
+		modifier = bno_slut_stress_relieved
+		years = 1
+	}
+	add_character_modifier = {
+		modifier = bno_cumstuffed
+		months = 6
+	}
+	
+	if = {
+		limit = {
+			this = scope:carn_sex_char_1
+		}
+		add_opinion = {
+			modifier = bno_bull_fucks_me
+			target = scope:carn_sex_char_2
+		}
+	}
+	else = {
+		add_opinion = {
+			modifier = bno_bull_fucks_me
+			target = scope:carn_sex_char_1
+		}
 	}
 }
 
@@ -490,6 +1193,7 @@ bno_increase_sluttyness = {
 bno_decrease_sluttyness = {
 	if = {
 		limit = {
+			has_trait = bno_mindless_bbc_slut
 			has_trait_xp = {
 				trait = bno_mindless_bbc_slut
 				value <= 100
@@ -511,6 +1215,7 @@ bno_decrease_sluttyness = {
 	}
 	if = {
 		limit = {
+			has_trait = bno_qos
 			has_trait_xp = {
 				trait = bno_qos
 				value <= 100
@@ -532,6 +1237,7 @@ bno_decrease_sluttyness = {
 	}
 	if = {
 		limit = {
+			has_trait = bno_snowbunny
 			has_trait_xp = {
 				trait = bno_snowbunny
 				value <= 100
@@ -543,6 +1249,7 @@ bno_decrease_sluttyness = {
 		}
 		if = {
 			limit = {
+				has_trait = bno_snowbunny
 				has_trait_xp = {
 					trait = bno_snowbunny
 					value <= 0
@@ -553,6 +1260,7 @@ bno_decrease_sluttyness = {
 	}
 	if = {
 		limit = {
+			has_trait = bno_blacked
 			has_trait_xp = {
 				trait = bno_blacked
 				value <= 100
@@ -574,6 +1282,7 @@ bno_decrease_sluttyness = {
 	}
 	if = {
 		limit = {
+			has_trait = bno_curious
 			has_trait_xp = {
 				trait = bno_curious
 				value <= 100
@@ -632,51 +1341,10 @@ fuck_random_local_bbc = {
 		bno_have_sex_with_effects = {
 			PARTNER = scope:local_bbc
 		}
-		#impregnate = {
-			#	father = scope:local_bbc
-			#	mother = root
-			#}
 		desc = bno_slut_0015_notification.desc
 	}
 }
 
-sex_with_bbc = {
-	save_scope_as = slut
-	if = {
-		limit = {
-			is_spouse_of = scope:bbc
-		}
-		add_opinion = {
-			modifier = bull_husband_takes_me
-			target = scope:bbc
-		}
-	}
-	bno_have_sex_with_effects = {
-		PARTNER = scope:bbc
-	}
-	add_character_modifier = {
-		modifier = bno_slut_stress_relieved
-		years = 1
-	}
-	add_character_modifier = {
-		modifier = bno_cumstuffed
-		months = 6
-	}
-	add_opinion = {
-		modifier = bno_bull_fucks_me
-		target = scope:bbc
-	}
-	scope:bbc = {
-		add_character_modifier = {
-			modifier = bno_stress_relieved
-			years = 2
-		}
-		add_opinion = {
-			modifier = bno_slut_fucks_me
-			target = scope:slut
-		}
-	}
-}
 be_smartest = {
 	remove_trait = intellect_good_1
 	remove_trait = intellect_good_2
@@ -704,38 +1372,22 @@ be_strongest = {
 	add_trait = physique_good_3
 }
 
-get_random_cuck = {
-	random_courtier_or_guest = {
+get_random_cuck_scope = {
+	every_courtier_or_guest = {
 		limit = {
-			NOT = {
-				has_trait = bno_bbc
-			}
-			NOT = {
-				is_spouse_of = root
-			}
-			is_adult = yes
-			is_male = yes
-			is_imprisoned = no
-			is_ai = yes
+			NOT = { is_spouse_of = root }
+			is_ai_whiteguy = yes
 		}
-		save_scope_as = cuck
+		save_scope_as = $scope_name$
 	}
 }
 
-get_cuck_husband_scope = {
-	random_spouse = {
-		limit = {
-			is_male = yes
-			is_spouse_of = root
-			is_adult = yes
-			is_ai = yes
-			NOT = {
-				has_trait = bno_full_black
-			}
-		}
-		save_scope_as = cuck
+get_primary_spouse_scope = {
+	primary_spouse = {
+		save_scope_as = $scope_name$
 	}
 }
+
 become_lover_with_target = {
 	if = {
 		limit = {
@@ -749,12 +1401,16 @@ become_lover_with_target = {
 	}
 }
 
-get_whitegirl_scope = {
-	random_courtier_or_guest = {
+become_friend_with_target = {
+	if = {
 		limit = {
-			is_pure_whitegirl = yes
+			NOT  = { has_relation_friend = $target$ }
 		}
-		save_scope_as = whitegirl
+		set_relation_friend = {
+			target = $target$
+			reason = $reason$
+			province = $province$
+		}
 	}
 }
 

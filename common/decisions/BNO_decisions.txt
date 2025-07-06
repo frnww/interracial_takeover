@@ -189,11 +189,9 @@ bull_decision = {
 	selection_tooltip = bull_decision_tooltip
 	is_shown = {
 		is_ruler = yes
-		is_adult = yes
-		has_trait = bno_whiteboi
-		NOT = {
-			has_trait = bno_bbc
-		}
+		is_cuck = yes
+		does_blackbull_exist = yes
+		is_spouse_curious = yes
 	}
 	cooldown = {
 		months = 6

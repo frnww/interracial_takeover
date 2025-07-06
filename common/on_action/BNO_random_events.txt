@@ -32,6 +32,11 @@ bno_religion_maintenance = {
 			limit = {
 				is_ai = yes
 				is_bbc = yes
+				any_religion_global = {
+					any_faith = {
+						NOT = { religious_head = root }
+					}
+				}
 				NOT = {
 					faith = faith:bbcs
 				}

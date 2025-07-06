@@ -204,8 +204,10 @@ bno_ep3_laamp_flavour.0001 = {
 					left_icon = root
 					right_icon = scope:target1
 					scope:target1 = {
-						set_relation_friend = {
+						become_friend_with_target = {
 							target = root
+							reason = bbc_too_good
+							province = location
 						}
 						add_opinion = {
 							target = root

@@ -24,7 +24,7 @@ bno_curious.0001 = {
 			any_relation = {
 				type = guardian
 				OR = {
-					is_blacked_whitegirl = yes
+					is_blacked = yes
 					is_bbc = yes		
 				}
 			}
@@ -61,7 +61,7 @@ bno_curious.0001 = {
 		else_if = {
 			limit = {
 				exists = father
-				father= { is_ai = no }
+				father = { is_ai = no }
 			}
 			father= { bno_curious_trigger_event = yes }
 		}
@@ -74,12 +74,14 @@ bno_curious.0001 = {
 		}
 		else_if = {
 			limit = {
+				exists = father
 				father= { is_bbc = yes	}
 			}
 			father= { bno_curious_trigger_event = yes }
 		}
 		else_if = {
 			limit = {
+				exists = mother
 				mother = { is_bno_curious_and_up = yes }
 			}
 			mother = { bno_curious_trigger_event = yes }
@@ -96,6 +98,10 @@ bno_curious.1001 = {
 	desc = bno_curious.1001.desc
 	theme = learning
 	override_background = { reference = garden }
+
+	trigger = {
+		is_alive = yes
+	}
 	
 	left_portrait = scope:child
 	immediate = { save_scope_as = guardian }
@@ -212,6 +218,10 @@ bno_curious.1101 = {
 		animation = shame
 	}
 
+	trigger = {
+		is_alive = yes
+	}
+
 	immediate = {
 		root = { 
 			add_character_modifier = { 
@@ -284,6 +294,10 @@ bno_curious.1201 = {
 			}
 		}
 	}
+
+	trigger = {
+		is_alive = yes
+	}
 	
 	immediate = {
 		create_bbc = {
@@ -307,6 +321,7 @@ bno_curious.1201 = {
 	option = { #A future queen is born
 		name = bno_curious.1201.a
         scope:child = {
+			set_age = 16
             bno_have_sex_with_effects = {
                 PARTNER = scope:target1
             }
@@ -351,7 +366,8 @@ bno_curious.1201 = {
 		}
 		if = { 
             limit = {
-                scope:child.father= { 
+				exists = scope:child.father
+                scope:child.father = { 
                     is_alive = yes
                 }
             }
@@ -373,10 +389,6 @@ bno_curious.1301 = {
 	desc = bno_curious.1301.desc
 	theme = lover_relation
 	override_background = { reference = bedchamber }
-
-	trigger = {
-		is_alive = yes
-	}
 	
 	left_portrait = {
 		character = root
@@ -394,6 +406,10 @@ bno_curious.1301 = {
 	right_portrait = {
 		character = scope:child
 		animation = shame
+	}
+
+	trigger = {
+		is_alive = yes
 	}
 
 	immediate = {

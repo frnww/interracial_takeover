@@ -41,36 +41,22 @@ bno_cuck.0001 = {
 	
 	cooldown = { months = 24 }
 	trigger = {
-		is_married_whiteboy = yes
+		is_self_married_whiteguy = yes
 		does_blackbull_exist = yes
-		any_spouse = {
-			is_curious_whitegirl = yes
-		}
+		is_spouse_curious = yes
 	}
 	
 	immediate = {
-		random_courtier_or_guest = { #random bbc courtier
-			limit = {
-				is_blackbull = yes
-				is_ai = yes
-				NOT = { is_close_or_extended_family_of = liege.primary_spouse }
-			}
-			save_scope_as = target1
+		get_bbc_scope = {
+			scope_name = target1
 		}
-		random_spouse = {
-			limit = {
-				is_curious_whitegirl = yes
-			}
-			save_scope_as = target2
+		get_primary_spouse_scope = {
+			scope_name = target2
 		}
 		scope:target1 = {
 			bno_have_sex_with_effects = {
 				PARTNER = scope:target2
 			}
-		}
-		
-		scope:target2 = {
-			bno_increase_sluttyness = yes
 		}
 	}
 	
@@ -114,7 +100,6 @@ bno_cuck.0001 = {
 			}
 		}
 		trigger_event = bno_cuck.2001
-		
 	}
 }
 
@@ -157,25 +142,13 @@ bno_cuck.1001 = {
 		animation = eavesdrop
 	}
 	
+	trigger = {
+		is_bbc = no
+	}
+
 	option = {
 		name =  bno_cuck_1001.a
-		if = {
-			limit = {
-				scope:target2 = {
-					exists = primary_spouse
-					primary_spouse = {
-						NOT = {
-							has_trait = bno_bbc
-						}
-					}
-				}
-			}
-			scope:target2 = {
-				primary_spouse = {
-					become_more_cuck_effect = yes
-				}
-			}
-		}
+		become_more_cuck_effect = yes
 		scope:target1 = { #learn random secret of wife, probably this lovers one
 			random_secret = {
 				reveal_to = root
@@ -221,6 +194,11 @@ bno_cuck.2001 = { #follow up event, conclude it isn't wife, get anti stress / ba
 		character = root
 		animation = eavesdrop
 	}
+
+	trigger = {
+		is_bbc = no
+	}
+
 	option = {
 		name = bno_cuck_2001.a
 		add_character_modifier = {
@@ -296,29 +274,21 @@ bno_cuck.0003 = {
 			}
 		}
 	}
-	cooldown = { months = 12 }
+	cooldown = { months = { 12 18 } }
 	
 	trigger = {
-		is_bbc = no
-		does_blackbull_exist = yes
-		any_spouse = {
-			is_curious_whitegirl = yes
-		}
 		is_cuck = yes
+		is_ruler = yes
+		does_blackbull_exist = yes
+		is_spouse_curious = yes
 		gold > 50
 	}
 	immediate = {
-		random_courtier_or_guest = {
-			limit = {
-				is_ai_blackbull = yes
-			}
-			save_scope_as = target1
+		get_bbc_scope = {
+			scope_name = target1
 		}
-		random_spouse = {
-			limit = {
-				is_curious_whitegirl = yes
-			}
-			save_scope_as = target2
+		get_primary_spouse_scope = {
+			scope_name = target2
 		}
 		scope:target2 = {
 			bno_increase_sluttyness = yes
@@ -326,10 +296,8 @@ bno_cuck.0003 = {
 	}
 	option = {
 		name = bno_cuck_0003.a
-		root = {
-			add_prestige = -250
-			dynasty = { add_dynasty_prestige = -25 }
-		}
+		add_prestige = -250
+		dynasty = { add_dynasty_prestige = -25 }
 		scope:target1 = {
 			add_prestige = 250
 		}
@@ -347,10 +315,8 @@ bno_cuck.0003 = {
 	}
 	option = {
 		name = bno_cuck_0003.c
-		root = {
-			remove_short_term_gold = 100
-			add_prestige = -25
-		}
+		remove_short_term_gold = 100
+		add_prestige = -25
 		scope:target1 = {
 			add_gold = 100
 			add_prestige = 25
@@ -391,9 +357,9 @@ bno_cuck.0004 = {
 	}
 	cooldown = { months = 36 }
 	trigger = {
-		is_married_whiteboy = yes
+		is_self_married_whiteguy = yes
 		any_spouse = {
-			is_blacked_whitegirl = yes
+			is_blacked = yes
 		} 
 		any_martial_councillor = {
 			is_ai_blackbull = yes
@@ -409,7 +375,7 @@ bno_cuck.0004 = {
 			}
 			random_spouse = {
 				limit = {
-					is_blacked_whitegirl = yes
+					is_blacked = yes
 				}
 				save_scope_as = target2
 			}
@@ -735,19 +701,14 @@ bno_cuck.0005 = {
 		does_blackbull_exist = yes
 	}
 	immediate = {
-		root = {
-			random_courtier_or_guest = {
-				limit = {
-					is_ai_blackbull = yes
-				}
-				save_scope_as = target1
+		get_bbc_scope = {
+			scope_name = target1
+		}
+		if = {
+			limit = {
+				has_trait = paranoid
 			}
-			if = {
-				limit = {
-					has_trait = paranoid
-				}
-				remove_trait = paranoid
-			}
+			remove_trait = paranoid
 		}
 	}
 	option = {
@@ -883,7 +844,6 @@ bno_cuck.0007 = {
 		animation = anger
 	}
 	trigger = {
-		is_bbc = no
 		is_cuck = yes
 		OR = {
 			has_trait = brave
@@ -892,13 +852,8 @@ bno_cuck.0007 = {
 		does_blackbull_exist = yes
 	}
 	immediate = {
-		root = {
-			random_courtier_or_guest = {
-				limit = {
-					is_ai_blackbull = yes
-				}
-				save_scope_as = target1
-			}
+		get_bbc_scope = {
+			scope_name = target1
 		}
 	}
 	option = {
@@ -1153,12 +1108,12 @@ bno_cuck.0010 = {
 			is_ai_blackbull = yes
 		}
 		any_spouse = {
-			is_blacked_whitegirl = yes
+			is_blacked = yes
 		}
 		any_vassal = {
 			is_normal_whiteboy = yes
 		}
-		is_married_whiteboy = yes
+		is_self_married_whiteguy = yes
 	}
 	immediate = {
 		root = {
@@ -1170,7 +1125,7 @@ bno_cuck.0010 = {
 			}
 			random_courtier_or_guest = {
 				limit = {
-					is_blacked_whitegirl = yes
+					is_blacked = yes
 				}
 				save_scope_as = target2
 			}
@@ -1439,7 +1394,7 @@ bno_cuck.0012 = {
 		animation = steward
 	}
 	trigger = {
-		is_married_whiteboy = yes
+		is_self_married_whiteguy = yes
 		any_spouse = {
 			is_bno_snowbunny = yes
 		}
@@ -1486,13 +1441,12 @@ bno_cuck.0013 = {
 		animation = dismissal
 	}
 	trigger = {
-		is_bbc = no
+		is_cuck = yes
 		is_ruler = yes
 		exists = diarch
 		diarch = {
 			is_spouse_of = root
-			is_female = yes
-			is_bno_qos_and_up = yes
+			is_qos = yes
 		}
 		does_blackbull_exist = yes
 	}
@@ -1500,11 +1454,8 @@ bno_cuck.0013 = {
 		diarch = {
 			save_scope_as = target1
 		}
-		random_courtier_or_guest = {
-			limit = {
-				is_ai_blackbull = yes
-			}
-			save_scope_as = target2
+		get_bbc_scope = {
+			scope_name = target2
 		}
 		scope:target1 = {
 			bno_have_sex_with_effects = {
@@ -1545,7 +1496,7 @@ bno_cuck.0014 = {
 	cooldown = { months = 36 }
 	
 	trigger = {
-		is_married_whiteboy = yes
+		is_self_married_whiteguy = yes
 		any_courtier_or_guest = {
 			is_ai_blackbull = yes
 		}
@@ -1623,18 +1574,12 @@ bno_cuck.0015 = {
 		
 	}
 	trigger = {
-		is_bbc = no
 		is_cuck = yes
-		any_spouse = {
-			is_mindless_bbc_slut = yes
-		}
+		is_partner_mindless_bbc_slut = yes
 	}
 	immediate = {
-		random_spouse = {
-			limit = {
-				is_mindless_bbc_slut = yes
-			}
-			save_scope_as = target2
+		get_primary_spouse_scope = {
+			scope_name = target2
 		}
 		become_more_cuck_effect = yes
 		add_character_modifier = {

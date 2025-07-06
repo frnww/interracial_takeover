@@ -1953,9 +1953,8 @@ bno_random.0010 = {
 	cooldown = { months = 16 }
 	
 	trigger = {
-		is_female = yes
-		is_adult = yes
-		is_bno_snowbunny = yes
+		is_snowbunny = yes
+		is_ruler = yes
 		any_pool_character = {
 			province = root.location
 			has_trait = bno_bbc
@@ -4258,7 +4257,7 @@ bno_random.0025 = {
 		root = {
 			is_female = yes
 			is_adult = yes
-			is_blacked_whitegirl = yes
+			is_blacked = yes
 		}
 		any_pool_character = {
 			count >= 3
@@ -6336,12 +6335,8 @@ bno_random.0038 = {
 	cooldown = { months = 12 }
 	
 	trigger = {
-		root = {
-			is_female = yes
-			is_adult = yes
-			is_bno_qos_and_up = yes
-		}
-		
+		is_qos = yes
+		is_ruler = yes		
 		any_pool_character = {
 			province = root.location
 			has_trait = bno_bbc
@@ -6841,7 +6836,7 @@ bno_random.0042 = {
 	cooldown = { months = 99999 }
 	
 	trigger = {
-		is_married_whiteboy = yes
+		is_self_married_whiteguy = yes
 		any_courtier_or_guest = {
 			is_ai_not_married_blackbull = yes
 		}
@@ -6867,7 +6862,7 @@ bno_random.0042 = {
 		
 		scope:target1 = {
 			hidden_effect = {
-				set_relation_friend = {
+				become_friend_with_target = {
 					target = scope:target2
 					reason = bbc_too_good
 					province = root.location
@@ -7055,7 +7050,7 @@ bno_random.1042 = {
 			ambitious = medium_stress_impact_gain
 		}
 		scope:target1 = {
-			set_relation_friend = {
+			become_friend_with_target = {
 				target = root
 				reason = cuck_faped
 				province = root.location
@@ -7489,7 +7484,7 @@ bno_random.1044 = {
 			bno_jos = major_stress_impact_loss
 		}
 		scope:target1 = {
-			set_relation_friend = {
+			become_friend_with_target = {
 				target = root
 				reason = cuck_faped
 				province = root.location
@@ -7715,7 +7710,7 @@ bno_random.1045 = {
 			bno_jos = major_stress_impact_loss
 		}
 		scope:target1 = {
-			set_relation_friend = {
+			become_friend_with_target = {
 				target = root
 				reason = cuck_faped
 				province = root.location
@@ -7775,7 +7770,7 @@ bno_random.0046 = {
 	cooldown = { months = 18}
 	
 	trigger = {
-		is_married_whiteboy = yes
+		is_self_married_whiteguy = yes
 		any_courtier_or_guest = {
 			is_ai_blackbull = yes
 		}
@@ -7803,7 +7798,7 @@ bno_random.0046 = {
 		}
 		scope:target1 = {
 			hidden_effect = {
-				set_relation_friend = {
+				become_friend_with_target = {
 					target = scope:target2
 					reason = bbc_too_good
 					province = root.location
@@ -8211,7 +8206,7 @@ bno_random.0047 = {
 			is_ai = yes
 			is_bno_qos = yes
 		}
-		is_married_whiteboy = yes
+		is_self_married_whiteguy = yes
 	}
 	immediate = {
 		random_courtier_or_guest = {

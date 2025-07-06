@@ -39,31 +39,19 @@ bno_bull.0001 = {
 	cooldown = { months = 24 }
 	trigger = {
 		is_blackbull = yes
-		AND = {
-			exists = liege
-			liege = {
-				is_married_whiteboy = yes
-				NOT = { has_character_flag = bno_bull.0001 } #prevent cuck from getting spammed too much if he has many bbc courtiers
-				any_spouse = {
-					is_blacked_whitegirl = yes
-					is_ai = yes
-				}
-			}
+		exists = liege
+		liege = {
+			is_self_married_whiteguy = yes
+			NOT = { has_character_flag = bno_bull.0001 } #prevent cuck from getting spammed too much if he has many bbc courtiers
+			exists = primary_spouse
+			is_spouse_blacked = yes
 		}
 	}
 	immediate = {
-		root = {
-			liege = {
-				save_scope_as = target1
-				#taget1 is cuck
-				random_courtier_or_guest = {
-					limit = {
-						is_spouse_of = scope:target1
-						is_blacked_whitegirl = yes
-					}
-					save_scope_as = target2
-					#target2 is slut
-				}
+		liege = {
+			save_scope_as = target1
+			get_primary_spouse_scope = {
+				scope_name = target2
 			}
 		}
 	}
@@ -240,7 +228,7 @@ bno_bull.0002 = {
 				has_trait = profligate
 			}
 			any_courtier_or_guest = {
-				is_blacked_whitegirl = yes
+				is_blacked = yes
 			}
 		}
 	}
@@ -249,7 +237,7 @@ bno_bull.0002 = {
 		root = {
 			random_courtier_or_guest = {
 				limit = {
-					is_blacked_whitegirl = yes
+					is_blacked = yes
 				}
 				save_scope_as = target1
 			}
@@ -329,7 +317,7 @@ bno_bull.0003 = {
 			OR = {
 				liege = {
 					any_courtier_or_guest = {
-						is_blacked_whitegirl = yes
+						is_blacked = yes
 						OR = {
 							has_trait = drunkard
 							has_trait = inappetetic
@@ -339,7 +327,7 @@ bno_bull.0003 = {
 					}
 				}
 				any_courtier_or_guest = {
-					is_blacked_whitegirl = yes
+					is_blacked = yes
 					OR = {
 						has_trait = drunkard
 						has_trait = inappetetic
@@ -355,7 +343,7 @@ bno_bull.0003 = {
 		root = {
 			random_courtier_or_guest = {
 				limit = {
-					is_blacked_whitegirl = yes
+					is_blacked = yes
 					OR = {
 						has_trait = drunkard
 						has_trait = inappetetic
@@ -368,7 +356,7 @@ bno_bull.0003 = {
 			liege = {
 				random_courtier_or_guest = {
 					limit = {
-						is_blacked_whitegirl = yes
+						is_blacked = yes
 						OR = {
 							has_trait = drunkard
 							has_trait = inappetetic
@@ -473,6 +461,7 @@ bno_bull.1003 = {
 		if = {					#send notification to cuck husband if one exists
 			limit = {
 				scope:target1 = {
+					exists = primary_spouse
 					primary_spouse = {
 						NOT = { has_trait = bno_bbc }
 					}
@@ -525,10 +514,12 @@ bno_bull.2003 = {
 			}
 		}
 	}
+
 	immediate = {
 		if = {
 			limit = {
 				scope:target1 = {
+					exists = primary_spouse
 					primary_spouse = {
 						NOT = { has_trait = bno_bbc }
 					}
@@ -558,11 +549,21 @@ bno_bull.2003 = {
 				modifier = bno_fed_me_cum
 				target = root
 			}
-			primary_spouse = {
-				trigger_event = {
-					id = bno_bull.3003
-					months = 2
-					delayed = yes
+			if = {
+				limit = {
+					scope:target1 = {
+						exists = primary_spouse
+						primary_spouse = {
+							is_bbc = no
+						}
+					}
+				}
+				primary_spouse = {
+					trigger_event = {
+						id = bno_bull.3003
+						months = 2
+						delayed = yes
+					}
 				}
 			}
 		}
@@ -736,7 +737,7 @@ bno_bull.0005 = {
 			province = root.location
 			is_available_ai_adult_locale_person = yes
 			is_attracted_to_gender_of = root
-			is_blacked_whitegirl = yes
+			is_blacked = yes
 		}
 	}
 	immediate = {
@@ -745,7 +746,7 @@ bno_bull.0005 = {
 			limit = {
 				is_available_ai_adult_locale_person = yes
 				is_attracted_to_gender_of = root
-				is_blacked_whitegirl = yes
+				is_blacked = yes
 			}
 			save_scope_as = target1
 		}
@@ -793,41 +794,17 @@ bno_bull.0006 = {
 	trigger = {
 		is_ruler = yes
 		is_blackbull = yes
-		any_courtier_or_guest = {
-			is_male = yes
-			is_adult = yes
-			opinion = {
-				target = root
-				value < 0
-			}
-			NOT = { has_trait = bno_bbc }
-			NOT = { has_trait = bno_castrated }
-			NOT = { has_trait = bno_full_black }
-		}
+		does_hated_non_black_courtier_exist = yes
 	}
 	immediate = {
-		root = {
-			random_courtier_or_guest = {
-				limit = {
-					is_male = yes
-					is_adult = yes
-					NOT = { has_trait = bno_bbc }
-					NOT = { has_trait = bno_castrated }
-					NOT = { has_trait = bno_full_black }
-				}
-				save_scope_as = target1
-			}
+		get_hated_non_black_courtier_scope = {
+			scope_name = target1
 		}
 	}
 	option = {
 		name = bno_bull_0006.a
 		scope:target1 = {
-			become_more_chastity = yes
-			add_prestige = -150
-			remove_trait = lustful
-			remove_trait = fecund
-			add_trait = chaste
-			add_trait = celibate
+			bno_caged_effect = yes
 		}
 	}
 }
@@ -1010,14 +987,17 @@ bno_bull.0009 = {
 		is_ruler = yes
 		is_blackbull = yes
 		any_courtier_or_guest = {
-			is_blacked_whitegirl = yes
+			is_blacked = yes
+			is_lowborn = yes
+			is_ai = yes
 		}
 	}
 	immediate = {
 		random_courtier_or_guest = {
 			limit = {
-				is_blacked_whitegirl = yes
-				is_lowborn = no
+				is_blacked = yes
+				is_lowborn = yes
+				is_ai = yes
 			}
 			save_scope_as = target1
 		}
@@ -1025,6 +1005,7 @@ bno_bull.0009 = {
 			bno_increase_sluttyness = yes
 			if = {
 				limit = {
+					exists = primary_spouse
 					primary_spouse = {
 						NOT = { has_trait = bno_bbc }
 					}
@@ -1125,15 +1106,14 @@ bno_bull.0010 = {
 	cooldown = {months = 12 }
 	trigger = {
 		is_blackbull = yes
-		AND = {
-			exists = liege
-			liege = {
-				gold > 50
-				is_married_whiteboy = yes
-				NOT = {	has_character_flag = bno_bull.0010 }			#check to make sure liege doesn't have flag to avoid losing all gold too quickly if he has many bbc courtiers
-				primary_spouse = {
-					is_blacked_whitegirl = yes
-				}
+		exists = liege
+		liege = {
+			gold > 50
+			is_self_married_whiteguy = yes
+			NOT = {	has_character_flag = bno_bull.0010 }			#check to make sure liege doesn't have flag to avoid losing all gold too quickly if he has many bbc courtiers
+			exists = primary_spouse
+			primary_spouse = {
+				is_blacked = yes
 			}
 		}
 	}
@@ -1141,12 +1121,8 @@ bno_bull.0010 = {
 		root = {
 			liege = {
 				save_scope_as = target2
-				random_courtier_or_guest = {
-					limit = {
-						is_spouse_of = scope:target2
-						NOT = { is_close_or_extended_family_of = root }
-					}
-					save_scope_as = target1
+				get_primary_spouse_scope = {
+					scope_name = target1
 				}
 			}
 		}
@@ -1253,79 +1229,11 @@ bno_bull.0012 = {
 	trigger = {
 		is_blackbull = yes
 		is_ruler = yes
-		OR = {
-			any_courtier_or_guest = {						#check your own court
-				bno_whitegirl_husband_has_secret = yes
-			}
-			liege = {								#check liege's women
-				any_consort = {
-					bno_whitegirl_husband_has_secret = yes
-				}
-			}
-			liege = {
-				any_vassal = {						#check fellow vassal's women
-					any_consort = {
-						bno_whitegirl_husband_has_secret = yes
-					}
-				}
-			}
-		}
+		does_secret_haver_exist = yes
 	}
 	immediate = {
-		root = {
-			random_courtier_or_guest = {				#find every courtier blacked woman married to someone who has a secret you don't know, add to list
-				limit = {
-					bno_whitegirl_husband_has_secret = yes
-				}
-				add_to_list = potential_secret_giver
-			}
-			liege = {								#find every blacked woman consort of liege if liege has secret you don't know, add to list; only applies if liege does not have BBC
-				every_consort = {
-					limit = {
-						bno_whitegirl_husband_has_secret = yes
-					}
-					add_to_list = potential_secret_giver
-				}
-			}
-			liege = {								#find every blacked woman consort of fellow vassals who have a secret you don't know, add to list; only applies if vassal does not have BBC
-				every_vassal = {
-					every_consort = {
-						limit = {
-							bno_whitegirl_husband_has_secret = yes
-						}
-						add_to_list = potential_secret_giver
-					}
-				}
-			}
-		}
-		random_in_list = {						#choose random woman from list, prefer pretty women and liege's spouse or other vassal's spouse
-			list = potential_secret_giver
-			weight = {
-				base = 1
-				modifier = {	#more likely to chose pretty lady
-					add = 2
-					has_trait = beauty_good_1
-				}
-				modifier = {
-					add = 3
-					has_trait = beauty_good_2
-				}
-				modifier = {
-					add = 5
-					has_trait = beauty_good_3
-				}
-				modifier = {	#more likely to chose wife of liege
-					add = 5
-					is_spouse_of = liege
-				}
-				modifier = {	#more likely to chose wife of ruler
-					add = 3
-					any_spouse = {
-						is_ruler = yes
-					}
-				}
-			}
-			save_scope_as = target1
+		get_secret_haver_scope = {
+			scope_name = target1
 		}
 		scope:target1 = {			#identify spouse for loc and notifications
 			primary_spouse = {
@@ -1335,36 +1243,13 @@ bno_bull.0012 = {
 	}
 	option = {
 		name = bno_bull_0012.a
-		scope:target2 = {
-			every_secret = {				#reveal all husband's secrets to player
-				reveal_to = root
+		scope:target1 = {					#also reveal woman's secrets if she had any
+			bno_reveal_secret_effect = {
+				target = root
 			}
 		}
-		scope:target1 = {					#also reveal woman's secrets if she had any
-			every_secret = {
-				reveal_to = root
-			}
-			bno_increase_sluttyness = yes
-			add_character_modifier = {
-				modifier = bno_cant_keep_mouth_shut
-				years = 2
-			}
-			if = {
-				limit = {
-					primary_spouse = {
-						NOT = { has_trait = bno_bbc }
-					}
-				}
-				every_spouse = {		 #Cuck gets feeling his secrets are no longer just his
-					send_interface_message = {
-						type = bno_blacked_events
-						title = bno_bull_0012_notification.title
-						right_icon = scope:target1
-						left_icon = ROOT
-						desc = bno_bull_0012_notification.desc
-					}
-				}
-			}
+		bno_have_sex_with_effects = {
+			PARTNER = scope:target1
 		}
 		add_opinion = {
 			modifier = bno_good_slut
@@ -1471,49 +1356,11 @@ bno_bull.0014 = {
 		is_blackbull = yes
 		is_ruler = yes
 		allowed_more_spouses = yes
-		any_neighboring_and_across_water_top_liege_realm_owner = {
-			AND = {
-				exists = primary_spouse
-				primary_spouse = {
-					is_good_blacked_whitegirl = yes
-					is_ai = yes
-				}
-			}
-		}
+		does_good_looking_ai_foreign_lady_exist = yes
 	}
 	immediate = {
-		root = {
-			every_neighboring_and_across_water_top_liege_realm_owner = {
-				limit = {
-					is_male = yes
-					is_married = yes
-					primary_spouse = {
-						is_female = yes
-						NOT = { is_close_or_extended_family_of = root }
-						NOT = { has_trait = bno_full_black }
-						is_adult = yes
-						OR = {
-							has_trait = beauty_good_1
-							has_trait = beauty_good_2
-							has_trait = beauty_good_3
-							has_trait = tits_big_good_1
-							has_trait = tits_big_good_2
-							has_trait = tits_big_good_3
-							has_trait = tits_small_good_1
-							has_trait = tits_small_good_2
-							has_trait = tits_small_good_3
-							
-						}
-					}
-				}
-				primary_spouse = {
-					add_to_list = potential_foreign_targets
-				}
-			}
-		}
-		random_in_list = {
-			list = potential_foreign_targets
-			save_scope_as = target1
+		get_married_pure_girl_scope = {
+			scope_name = target1
 		}
 		scope:target1 = {
 			primary_spouse = {
@@ -1743,37 +1590,11 @@ bno_bull.3014 = { #follow up event, fuck and steal as wife
 	}
 	option = {
 		name = bno_bull_3014.a
-		marry = scope:target1
 		scope:target1 = {
-			add_opinion = {
-				modifier = stolen_by_new_bull_master
+			bno_marriage_effect = {
 				target = root
 			}
-			add_opinion = {
-				modifier = previous_cuck_husband
-				target = scope:target2
-			}
-			add_character_modifier = {
-				modifier = bno_stolen_as_bbc_wife
-				years = 15
-			}
 		}
-		scope:target2 = {
-			add_opinion = {
-				modifier = forced_divorce_opinion
-				target = root
-			}
-			add_character_modifier = {
-				modifier = bno_wife_stolen_by_bbc
-			}
-			add_trait = bno_beta
-			add_prestige = -150
-		}
-		add_character_modifier = {
-			modifier = bno_stole_married_white_wife
-			years = 15
-		}
-		add_prestige = 150
 	}
 }
 
@@ -1806,7 +1627,7 @@ bno_bull.0015 = {
 		is_ruler = yes
 		liege = {
 			any_vassal = {
-				is_married_whiteboy = yes
+				is_self_married_whiteguy = yes
 				primary_spouse = {
 					is_pure_whitegirl = yes
 				}
@@ -1818,7 +1639,7 @@ bno_bull.0015 = {
 			liege = {
 				random_vassal = {
 					limit = {
-						is_married_whiteboy = yes
+						is_self_married_whiteguy = yes
 						primary_spouse = {
 							is_pure_whitegirl = yes
 						}

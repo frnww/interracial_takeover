@@ -75,6 +75,9 @@ bno_ritual_of_purification.0001 = {
 
     option = {
         name = bno_ritual_of_purification.0001.approved
+        ai_chance = {
+            base = 100
+        }
         trigger_event = {
             id = bno_ritual_of_purification.1001
             days = 360
@@ -83,6 +86,9 @@ bno_ritual_of_purification.0001 = {
     }
 
     option = {
+         ai_chance = {
+            base = 20
+        }
         name = bno_ritual_of_purification.0001.rejected
         add_character_flag = {
             flag = bno_ritual_of_purification_rejected
@@ -111,11 +117,14 @@ bno_ritual_of_purification.1001 = {
         animation = personality_content
     }
 
+    trigger = {
+        is_alive = yes
+    }
+
     immediate = {
-        random_courtier_or_guest = {
+        every_courtier_or_guest = {
             limit = {
-                is_bbc = yes
-                is_ai = yes
+                is_ai_blackbull = yes
             }
             add_to_list = bbc_courtiers
         }
@@ -158,6 +167,10 @@ bno_ritual_of_purification.1001 = {
         name = bno_ritual_of_purification.1001.c
         trigger = {
             has_trait = bno_whitegirl
+            exists = primary_spouse
+            primary_spouse = {
+                is_bbc = yes
+            }
         }
         trigger_event = {
             id = bno_ritual_of_purification.1301
@@ -214,6 +227,10 @@ bno_ritual_of_purification.1101 = {
         outfit_tags = {
             no_clothes
         }
+    }
+
+    trigger = {
+        is_alive = yes
     }
 
     immediate = {
@@ -342,6 +359,10 @@ bno_ritual_of_purification.1201 = {
         }
     }
 
+    trigger = {
+        is_alive = yes
+    }
+
     immediate = {
         random_in_list = {
             list = bbc_courtiers
@@ -418,6 +439,10 @@ bno_ritual_of_purification.1301 = {
         }
     }
 
+    trigger = {
+        is_alive = yes
+    }
+
     option = {
         name = bno_ritual_of_purification.1301.a
 
@@ -450,6 +475,10 @@ bno_ritual_of_purification.2001 = {
         outfit_tags = {
             no_clothes
         }
+    }
+
+    trigger = {
+        is_alive = yes
     }
 
     immediate = {

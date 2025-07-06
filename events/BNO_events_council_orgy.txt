@@ -1,6 +1,7 @@
 ﻿namespace = bno_council_orgy
 
 #council event courtesy of @aobn
+#fixed by yours truly
 
 # Council Meeting Orgy - Setup
 bno_council_orgy.0001 = {
@@ -47,17 +48,16 @@ bno_council_orgy.0001 = {
 	
 	trigger = {
 		is_female = yes
-		is_adult = yes
-		
+		is_elligible_partner = yes
+		is_ruler = yes
 		any_councillor = {
-			has_trait = bno_bbc
-			is_adult = yes
-			is_ai = yes
+			is_ai_blackbull = yes
 		}
 		any_councillor = {
 			is_female = yes
-			is_adult = yes
+			is_elligible_partner = yes
 			is_ai = yes
+			count >= 3
 		}
 	}
 	
@@ -68,7 +68,7 @@ bno_council_orgy.0001 = {
 		clear_saved_scope = target_bbc_1
 		every_councillor = {
 			limit = {
-				is_female = yes
+				is_an_ai_girl = yes
 			}
 			add_to_temporary_list = bno_council_orgy_female_list
 		}
@@ -96,8 +96,7 @@ bno_council_orgy.0001 = {
 		
 		every_councillor = {
 			limit = {
-				is_male = yes
-				has_trait = bno_bbc
+				is_ai_blackbull = yes
 			}
 			add_to_temporary_list = bno_council_orgy_bbc_list
 		}
@@ -113,9 +112,7 @@ bno_council_orgy.0001 = {
 			NOT = { has_trait = bno_whitegirl }
 		}
 		name = bno_council_orgy_0001.a
-		root = {
-			bno_increase_sluttyness = yes
-		}
+		bno_increase_sluttyness = yes
 		set_variable = {
 			name = bno_council_orgy_rounds
 			value = -1
@@ -173,9 +170,7 @@ bno_council_orgy.0001 = {
 	# Decline
 	option = {
 		trigger = {
-			NOT = {
-				is_bno_mindless_bbc_slut = yes
-			}
+			NOT = { is_bno_mindless_bbc_slut = yes }
 		}
 		name = bno_council_orgy_0001.c
 		show_as_unavailable = {
@@ -186,7 +181,6 @@ bno_council_orgy.0001 = {
 			bno_blacked = minor_stress_impact_gain
 			bno_snowbunny = minor_stress_impact_gain
 			bno_qos = minor_stress_impact_gain
-			bno_mindless_bbc_slut = minor_stress_impact_gain
 		}
 		fire_councillor = scope:target_bbc_1
 		ai_chance = {
@@ -430,7 +424,7 @@ bno_council_orgy.0002 = {
 		clear_saved_scope = target_bbc_1
 		every_councillor = {
 			limit = {
-				is_female = yes
+				is_an_ai_girl = yes
 			}
 			add_to_temporary_list = bno_council_orgy_female_list
 		}
@@ -458,8 +452,7 @@ bno_council_orgy.0002 = {
 		
 		random_councillor = {
 			limit = {
-				is_male = yes
-				has_trait = bno_bbc
+				is_ai_blackbull = yes
 				has_character_flag = bno_council_orgy_leader
 			}
 			save_scope_as = target_bbc_1
@@ -479,6 +472,7 @@ bno_council_orgy.0002 = {
 				NOT = {
 					has_character_flag = bno_council_orgy_participated
 					has_character_flag = bno_council_orgy_left
+					exists = scope:target_last_character
 					this = scope:target_last_character
 				}
 			}
@@ -505,8 +499,10 @@ bno_council_orgy.0002 = {
 		name = {
 			trigger = {
 				scope:target_female_1 = {
-					is_bno_blacked_and_up = yes
-					is_bno_mindless_bbc_slut = no
+					OR = {
+						is_bno_blacked = yes
+						is_bno_snowbunny = yes
+					}
 				}
 			}
 			text = bno_council_orgy_0002.f1c
@@ -527,7 +523,6 @@ bno_council_orgy.0002 = {
 						has_trait = bno_whitegirl
 					}
 				}
-				
 				add_opinion = {
 					modifier = grateful_opinion
 					target = root
@@ -704,6 +699,7 @@ bno_council_orgy.0002 = {
 				NOT = {
 					has_character_flag = bno_council_orgy_participated
 					has_character_flag = bno_council_orgy_left
+					exists = scope:target_last_character
 					this = scope:target_last_character
 				}
 			}
@@ -730,8 +726,10 @@ bno_council_orgy.0002 = {
 		name = {
 			trigger = {
 				scope:target_female_2 = {
-					is_bno_blacked_and_up = yes
-					is_bno_mindless_bbc_slut = no
+					OR = {
+						is_bno_blacked = yes
+						is_bno_snowbunny = yes
+					}
 				}
 			}
 			text = bno_council_orgy_0002.f2c
@@ -926,6 +924,7 @@ bno_council_orgy.0002 = {
 				NOT = {
 					has_character_flag = bno_council_orgy_participated
 					has_character_flag = bno_council_orgy_left
+					exists = scope:target_last_character
 					this = scope:target_last_character
 				}
 			}
@@ -952,8 +951,10 @@ bno_council_orgy.0002 = {
 		name = {
 			trigger = {
 				scope:target_female_3 = {
-					is_bno_blacked_and_up = yes
-					is_bno_mindless_bbc_slut = no
+					OR = {
+						is_bno_blacked = yes
+						is_bno_snowbunny = yes
+					}
 				}
 			}
 			text = bno_council_orgy_0002.f3c

@@ -88,6 +88,26 @@ bno_trait_maintenance.0004 = { #make all non bbc male slaves caged if owner is b
 	}
 }
 
+bno_trait_maintenance.0005 = {
+	hidden = yes
+	trigger = {
+		is_ai = yes
+		is_african = yes
+		is_female = yes
+		is_slut = yes
+	}
+	immediate = {
+		switch = {
+			trigger = has_trait
+			bno_mindless_bbc_slut = { remove_trait = bno_mindless_bbc_slut }
+			bno_qos = { remove_trait = bno_qos }
+			bno_snowbunny = { remove_trait = bno_snowbunny }
+			bno_blacked = { remove_trait = bno_blacked }
+			bno_curious = { remove_trait = bno_curious }
+		}
+	}
+}
+
 #all africans have black trait
 bno_trait_maintenance.0006 = {
 	hidden = yes

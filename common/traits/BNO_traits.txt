@@ -674,7 +674,9 @@ bno_pure_white = {
 	attraction_opinion = 50
 	opposite_opinion = 100
 	
-	ruler_designer_cost = 30
+	physical = yes
+	shown_in_ruler_designer = yes
+	ruler_designer_cost = 50
 	
 	diplomacy_lifestyle_xp_gain_mult = 0.1
 	martial_lifestyle_xp_gain_mult = 0.1
