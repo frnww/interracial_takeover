@@ -1,0 +1,15 @@
+﻿on_16th_birthday = {
+	on_actions = {
+		bno_trait_maintenance
+	}
+}
+
+bno_trait_maintenance = {
+	trigger = {
+		has_game_rule = bno_mod_status_on
+	}
+	events = {
+		delay = { days = 1 }
+		bno_trait_maintenance.0001 		#makes sure bbc 16yo actually has big dick
+	}
+}

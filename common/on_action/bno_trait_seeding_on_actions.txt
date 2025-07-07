@@ -1,0 +1,24 @@
+﻿on_game_start_after_lobby = {
+	on_actions = {
+		bno_trait_initialization_pulse
+	}
+}
+
+bno_trait_initialization_pulse = {
+	trigger = {
+		has_game_rule = bno_seeding_yes
+		has_game_rule = bno_mod_status_on
+	}
+	effect = {
+		every_living_character = {
+			trigger_event = bno_trait_seeding.0001
+		}
+
+		if = {
+			limit = {
+				has_game_rule = inversed_gender_equality
+			}
+			bno_game_rule_inversed_gender_equality_effect = yes
+		}
+	}
+}

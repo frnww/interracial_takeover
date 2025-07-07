@@ -1,0 +1,1562 @@
+﻿namespace = bno_slut
+# BBC lays with innocent girl
+bno_slut.0001 = {
+	type = character_event
+	title = bno_slut_0001.title
+	desc = bno_slut_0001.desc
+	theme = realm
+	
+	override_background = {
+		reference = corridor_night
+	}
+	left_portrait = {
+		character = root
+		animation = ecstasy
+		triggered_outfit = {
+			trigger = {
+				exists = root
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:bbc
+		animation = personality_content
+		triggered_outfit = {
+			trigger = {
+				exists = scope:bbc
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	lower_center_portrait = {
+		character = root.primary_spouse
+		triggered_animation = {
+			trigger = {
+				exists = scope:cuck
+			}
+			animation = eavesdrop
+		}
+	}
+	cooldown = { months = { 12 18 } }
+	trigger = {
+		is_pure_whitegirl = yes
+		does_blackbull_exist = yes
+		is_partner_non_bbc = yes
+	}
+	immediate = {
+		get_bbc_scope = {
+			scope_name = bbc
+		}
+	}
+	option = {
+		name = bno_slut_0001.a
+		ai_chance = {
+			base = 100
+		}
+		bno_have_sex_with_effects = {
+			PARTNER = scope:bbc
+		}
+	}
+	option = {
+		name = bno_slut_0001.b
+		ai_chance = {
+			base = 100
+		}
+		become_lover_with_target = {
+			target = scope:bbc
+			LOCATION = location
+		}
+		bno_have_sex_with_effects = {
+			PARTNER = scope:bbc
+		}
+		convert_to_bbc_religion = yes
+	}
+	option = {
+		name = bno_slut_0001.c
+		ai_chance = {
+			base = 100
+		}
+		trigger = {
+			scope:bbc = {
+				has_bad_trait = yes
+			}
+		}
+		add_prestige = 50
+	}
+	option = {
+		ai_chance = {
+			base = 0
+		}
+		name = bno_slut_0001.d
+	}
+}
+# Slut anti-stress event
+bno_slut.0002 = {
+	type = character_event
+	title = bno_slut_0002.title
+	desc = bno_slut_0002.desc
+	theme = realm
+	
+	override_background = {
+		reference = feast
+	}
+	left_portrait = {
+		character = scope:bbc
+		animation = personality_content
+	}
+	right_portrait = {
+		character = root
+		animation = ecstasy
+		triggered_outfit = {
+			trigger = {
+				exists = root
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	
+	cooldown = { months = { 6 12 } }
+	
+	trigger = {
+		is_blacked = yes
+		is_stressed_out = yes
+		does_blackbull_exist = yes
+	}
+	
+	immediate = {
+		get_bbc_scope = {
+			scope_name = bbc
+		}
+		bno_have_sex_with_effects = {
+			PARTNER = scope:bbc
+		}
+	}
+	option = { #used bbc to remove stress
+		name = bno_slut_0002.a
+		bno_remove_stress = yes
+	}
+}
+#Slut getting a cum only diet
+bno_slut.0003 = {
+	type = character_event
+	title = bno_slut_0003.title
+	desc = bno_slut_0003.desc
+	theme = realm
+	
+	override_background = {
+		reference = throne_room
+	}
+	left_portrait = {
+		character = root
+		animation = drink_goblet
+		triggered_outfit = {
+			trigger = {
+				exists = root
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:bbc
+		animation = personality_content
+		triggered_outfit = {
+			trigger = {
+				exists = scope:bbc
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	cooldown = { months = { 6 12 } }
+	trigger = {
+		is_blacked = yes
+		has_eating_disorder = yes
+		does_blackbull_exist = yes
+		is_partner_non_bbc = yes
+	}
+	
+	immediate = {
+		get_bbc_scope = {
+			scope_name = bbc
+		}
+	}
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = bno_slut_0003.a
+		become_lover_with_target = {
+			target = scope:bbc
+			LOCATION = root.location
+		}
+		bno_have_sex_with_effects = {
+			PARTNER = scope:bbc
+		}
+		trigger_event = {
+			id = bno_slut.1003
+			months = 1
+			delayed = yes
+		}
+	}
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = bno_slut_0003.b
+	}
+}
+#Follow up events ^
+bno_slut.1003 = {
+	type = character_event
+	title = bno_slut_1003.title
+	desc = bno_slut_1003.desc
+	theme = realm
+	
+	override_background = {
+		reference = throne_room
+	}
+	left_portrait = {
+		character = root
+		animation = drink_goblet
+		triggered_outfit = {
+			trigger = {
+				exists = root
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:bbc
+		animation = personality_content
+		triggered_outfit = {
+			trigger = {
+				exists = scope:bbc
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	option = {
+		name = bno_slut_1003.a
+		trigger_event = {
+			id = bno_slut.2003
+			months = 3
+			delayed = yes
+		}
+		bno_remove_eating_disorder = {
+			target = scope:bbc
+		}
+	}
+}
+#follow up event^
+bno_slut.2003 = {
+	type = character_event
+	title = bno_slut_2003.title
+	desc = bno_slut_2003.desc
+	theme = realm
+	
+	override_background = {
+		reference = throne_room
+	}
+	left_portrait = {
+		character = root
+		animation = drink_goblet
+		triggered_outfit = {
+			trigger = {
+				exists = root
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:bbc
+		animation = personality_content
+		triggered_outfit = {
+			trigger = {
+				exists = scope:bbc
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+
+	option = {
+		name = bno_slut_2003.a
+		gain_blacked_cum_slut_status_from_eating_disorder_effect = {
+			target = scope:bbc
+		}
+		trigger_event = {
+			id = bno_slut.3003
+			months = 2
+			delayed = yes
+		}
+	}
+}
+#follow up ^ very basic flavor event if player is cumslut's husband, nothing actually happens for now
+bno_slut.3003 = {
+	type = character_event
+	title = bno_slut_3003.title
+	desc = bno_slut_3003.desc
+	theme = realm
+	
+	override_background = {
+		reference = bedchamber
+	}
+	left_portrait = {
+		character = root
+		animation = drink_goblet
+	}
+	right_portrait = {
+		character = scope:bbc
+		animation = personality_content
+	}
+	lower_center_portrait = {
+		character = root.primary_spouse
+		triggered_animation = {
+			trigger = {
+				exists = root.primary_spouse
+			}
+			animation = eavesdrop
+		}
+	}
+
+	trigger = {
+		is_partner_non_bbc = yes
+	}
+
+	immediate = {
+		bno_have_sex_with_effects = {
+			PARTNER = scope:bbc
+		}
+	}
+	option = {
+		name = bno_slut_3003.a
+	}
+}
+#slut introduce her non blacked friend to bbc
+bno_slut.0004 = {
+	type = character_event
+	title = bno_slut_0004.title
+	desc = bno_slut_0004.desc
+	theme = love
+	
+	override_background = {
+		reference = garden
+	}
+	lower_center_portrait = {
+		character = root
+		animation = personality_content
+		
+		outfit_tags = {
+			no_clothes
+		}
+	}
+	left_portrait = {
+		character = scope:bbc
+		animation = personality_content
+		triggered_outfit = {
+			trigger = {
+				exists = scope:bbc
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:whitegirl
+		animation = ecstasy
+		triggered_outfit = {
+			trigger = {
+				exists = scope:whitegirl
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	
+	cooldown = { months = { 24 36 } }
+	
+	trigger = {
+		is_blacked = yes
+		is_ruler = yes
+		does_pure_whitegirl_exist = yes
+		does_blackbull_exist = yes
+	}
+	immediate = {
+		get_pure_whitegirl_scope = {
+			scope_name = whitegirl
+		}
+		get_bbc_scope = {
+			scope_name = bbc
+		}
+		scope:bbc = {
+			bno_have_sex_with_effects = {
+				PARTNER = root
+			}
+			bno_have_sex_with_effects = {
+				PARTNER = scope:whitegirl
+			}
+		}
+	}
+	option = {
+		name = bno_slut_0004.a
+		add_prestige = 100
+		if = {
+			limit = {
+				exists = dynasty
+			}
+			dynasty = { add_dynasty_prestige = 50 }
+		}
+	}
+}
+#rando whitegirl appears
+bno_slut.0005 = {
+	type = character_event
+	title = bno_slut_0005.title
+	desc = bno_slut_0005.desc
+	theme = love
+	
+	override_background = {
+		reference = corridor_day
+	}
+	lower_center_portrait = {
+		character = root
+		animation = eavesdrop
+		triggered_outfit = {
+			trigger = {
+				exists = root
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	left_portrait = {
+		character = scope:bbc
+		animation = personality_content
+		triggered_outfit = {
+			trigger = {
+				exists = scope:bbc
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:whitegirl
+		animation = ecstasy
+		triggered_outfit = {
+			trigger = {
+				exists = scope:whitegirl
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	cooldown = { months = { 12 18 } }
+	trigger = {
+		is_blacked = yes
+		does_blackbull_exist = yes
+		does_wandering_curious_whitegirl_exist = yes
+	}
+	immediate = {
+		get_wandering_curious_whitegirl_scope = {
+			scope_name = whitegirl
+		}
+		get_bbc_scope = {
+			scope_name = bbc
+		}
+		scope:bbc = {
+			bno_have_sex_with_effects = {
+				PARTNER = root
+			}
+			bno_have_sex_with_effects = {
+				PARTNER = scope:whitegirl
+			}
+		}
+		scope:whitegirl = {
+			convert_to_bbc_religion = yes
+		}
+	}
+	option = {
+		name = bno_slut_0005.a
+	}
+}
+#black husband Caging non bbc courtier that slut hate
+bno_slut.0006 = {
+	type = character_event
+	title = bno_slut_0006.title
+	desc = bno_slut_0006.desc
+	theme = prison
+	
+	override_background = {
+		reference = dungeon
+	}
+	lower_center_portrait = {
+		character = scope:bbc
+		animation = anger
+	}
+	left_portrait = {
+		character = root
+		animation = personality_content
+		triggered_outfit = {
+			trigger = {
+				exists = root
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:cuck
+		animation = shame
+		triggered_outfit = {
+			trigger = {
+				exists = scope:cuck
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	cooldown = { months = { 12 18 } }
+	trigger = {
+		is_ruler = yes
+		is_blacked = yes
+		is_partner_bbc = yes
+		does_hated_non_black_courtier_exist = yes
+	}
+	immediate = {
+		get_hated_non_black_courtier_scope = {
+			scope_name = cuck
+		}
+		get_primary_spouse_scope = {
+			scope_name = bbc
+		}
+	}
+	option = {
+		name = bno_slut_0006.a
+		scope:cuck = {
+			bno_caged_effect = yes
+		}
+	}
+}
+#becoming darker skin, get strong trait, getting racks
+bno_slut.0007 = {
+	type = character_event
+	title = bno_slut_0007.title
+	desc = bno_slut_0007.desc
+	theme = diplomacy_family_focus
+	override_background = {
+		reference = market
+	}
+	right_portrait = {
+		character = primary_spouse
+		animation = personality_content
+	}
+	left_portrait = {
+		character = root
+		animation = drink_goblet
+		triggered_outfit = {
+			trigger = {
+				exists = root
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	trigger = {
+		has_game_rule = bno_body_modification_yes
+		is_mindless_bbc_slut = yes
+		NOT = {
+			exists = var:bno_becoming_dark
+		}
+		is_partner_bbc = yes
+	}
+	immediate = {
+		set_variable = {
+			name = bno_becoming_dark
+			value = 1
+		}
+		add_trait = strong
+		becoming_african = yes
+		get_primary_spouse_scope = {
+			scope_name = bbc
+		}
+	}
+	option = {
+		name = bno_slut_0007.a
+		trigger_event = {
+			id = bno_slut.7777
+			days = 2
+			delayed = yes
+		}
+		trigger_event = {
+			id = bno_slut.1007
+			months = 6
+			delayed = yes
+		}
+		trigger_event = {
+			id = bno_slut.2007
+			months = 12
+			delayed = yes
+		}
+		trigger_event = {
+			id = bno_slut.3007
+			months = 18
+			delayed = yes
+		}
+	}
+}
+bno_slut.7777 = {
+	hidden = yes
+	immediate = {
+		if = {
+			limit = {
+				var:bno_becoming_dark <= 4
+			}
+			change_variable = {
+				name = bno_becoming_dark
+				add = 0.006
+			}
+			trigger_event = {
+				id = bno_slut.7777
+				days = 2
+				delayed = yes
+			}
+		}
+		else = {
+			set_variable = {
+				name = bno_becoming_dark
+				value = 4
+			}
+		}
+	}
+}
+#Follow up event ^ darker amazonian
+bno_slut.1007 = {
+	type = character_event
+	title = bno_slut_1007.title
+	desc = bno_slut_1007.desc
+	theme = diplomacy_family_focus
+	override_background = {
+		reference = market
+	}
+	right_portrait = {
+		character = scope:bbc
+		animation = personality_content
+	}
+	left_portrait = {
+		character = root
+		animation = drink_goblet
+		triggered_outfit = {
+			trigger = {
+				exists = root
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	immediate = {
+		be_strongest = yes
+		becoming_african = yes
+	}
+	option = {
+		name = bno_slut_1007.a
+	}
+}
+#Follow up event ^ darker smarter
+bno_slut.2007 = {
+	type = character_event
+	title = bno_slut_2007.title
+	desc = bno_slut_2007.desc
+	theme = diplomacy_family_focus
+	override_background = {
+		reference = market
+	}
+	right_portrait = {
+		character = scope:bbc
+		animation = personality_content
+	}
+	left_portrait = {
+		character = root
+		animation = drink_goblet
+		triggered_outfit = {
+			trigger = {
+				exists = root
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	immediate = {
+		be_smartest = yes
+		becoming_african = yes
+	}
+	option = {
+		name = bno_slut_2007.a
+	}
+}
+#Follow up event ^ darker prettier
+bno_slut.3007 = {
+	type = character_event
+	title = bno_slut_3007.title
+	desc = bno_slut_3007.desc
+	theme = diplomacy_family_focus
+	override_background = {
+		reference = market
+	}
+	right_portrait = {
+		character = scope:bbc
+		animation = personality_content
+	}
+	left_portrait = {
+		character = root
+		animation = drink_goblet
+		triggered_outfit = {
+			trigger = {
+				exists = root
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	lower_center_portrait = {
+		character = scope:cuck
+		animation = anger
+	}
+	immediate = {
+		get_random_cuck_scope = {
+			scope_name = cuck
+		}
+		be_prettiest = yes
+		becoming_african = yes
+		add_trait = fecund
+		add_trait = pure_blooded
+	}
+	option = {
+		name = bno_slut_3007.a
+	}
+}
+#Slut becoming a whore for her BBC
+bno_slut.0008 = {
+	type = character_event
+	title = bno_slut_0008.title
+	desc = bno_slut_0008.desc
+	theme = realm
+	override_background = {
+		reference = market
+	}
+	left_portrait = {
+		character = root
+		animation = throne_room_curtsey_1
+		triggered_outfit = {
+			trigger = {
+				exists = root
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:bbc
+		animation = personality_content
+	}
+	
+	cooldown = { months = { 36 48 } }
+	trigger = {
+		is_curious = yes
+		does_blackbull_exist = yes
+	}
+	immediate = {
+		find_5_sex_partner = yes
+		get_bbc_scope = {
+			scope_name = bbc
+		}
+	}
+	option = {
+		name = bno_slut_0008.a
+		trigger_event = {
+			id = bno_slut.0009
+			days = 1
+			delayed = yes
+		}
+		scope:bbc = {
+			bbc_pimping = {
+				target = root
+			}
+			bno_have_sex_with_effects = {
+				PARTNER = root
+			}
+		}
+		sex_with_5_sex_partner = yes
+		slut_whoring = yes
+		become_lover_with_target = {
+			target = scope:bbc
+			LOCATION = root.location
+		}
+	}
+}
+#Slut friend got asked to whore for bbc
+bno_slut.0009 = {
+	type = character_event
+	title = bno_slut_0009.title
+	desc = bno_slut_0009.desc
+	theme = realm
+	override_background = {
+		reference = market
+	}
+	left_portrait = {
+		character = scope:whitegirl
+		animation = throne_room_curtsey_1
+		triggered_outfit = {
+			trigger = {
+				exists = scope:whitegirl
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:bbc
+		animation = personality_content
+	}
+	lower_center_portrait = {
+		character = root
+		animation = eavesdrop
+	}
+	cooldown = { months = { 24 36 } }
+	trigger = {
+		is_snowbunny = yes
+		does_blackbull_exist = yes
+		does_pure_whitegirl_exist = yes
+	}
+	immediate = {
+		get_bbc_scope = {
+			scope_name = bbc
+		}
+		get_pure_whitegirl_scope = {
+			scope_name = whitegirl
+		}
+		scope:whitegirl = {
+			find_5_sex_partner = yes
+		}
+	}
+	option = {
+		name = bno_slut_0009.a
+		scope:bbc = {
+			bbc_pimping = {
+				target = root
+			}
+		}
+		scope:whitegirl = {
+			sex_with_5_sex_partner = yes
+			bno_have_sex_with_effects = {
+				PARTNER = scope:bbc
+			}
+			become_lover_with_target = {
+				target = scope:bbc
+				LOCATION = location
+			}
+			slut_whoring = yes
+		}
+	}
+}
+#Slut steals husband money for his BBC
+bno_slut.0010 = {
+	type = character_event
+	title = bno_slut_0010.title
+	desc = bno_slut_0010.desc
+	theme = realm
+	
+	override_background = {
+		reference = throne_room
+	}
+	left_portrait = {
+		character = root
+		animation = throne_room_curtsey_1
+		triggered_outfit = {
+			trigger = {
+				exists = root
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:bbc
+		animation = personality_content
+		triggered_outfit = {
+			trigger = {
+				exists = scope:bbc
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	cooldown = {months = { 24 36 } }
+	trigger = {
+		is_blacked = yes
+		does_white_husband_has_gold = yes
+		does_blackbull_exist = yes
+	}
+	immediate = {
+		get_primary_spouse_scope = {
+			scope_name = cuck
+		}
+		get_bbc_scope = {
+			scope_name = bbc
+		}
+	}
+	option = {
+		name = bno_slut_0010.a
+		bno_steal_white_husband_gold_effect = yes
+		scope:bbc = {
+			add_gold = minor_gold_value
+			add_prestige = minor_prestige_gain
+			bno_have_sex_with_effects = {
+				PARTNER = root
+			}
+		}
+	}
+}
+#slut learns secret from other white girl that your bull husbands fuck
+bno_slut.0012 = {
+	type = character_event
+	title = bno_slut_0012.title
+	desc = bno_slut_0012.desc
+	theme = realm
+	
+	override_background = {
+		reference = throne_room
+	}
+	left_portrait = {
+		character = scope:whitegirl
+		animation = throne_room_curtsey_1
+		triggered_outfit = {
+			trigger = {
+				exists = scope:whitegirl
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:bbc
+		animation = personality_content
+		triggered_outfit = {
+			trigger = {
+				exists = scope:bbc
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	cooldown = {months = { 6 12 } }
+	trigger = {
+		is_blacked = yes
+		is_ruler = yes
+		is_partner_bbc = yes
+		does_secret_haver_exist = yes
+	}
+	immediate = {
+		get_secret_haver_scope = {
+			scope_name = whitegirl
+		}
+		get_primary_spouse_scope = {
+			scope_name = bbc
+		}
+	}
+	option = {
+		name = bno_slut_0012.a
+		scope:whitegirl = {					#also reveal woman's secrets if she had any
+			bno_reveal_secret_effect = {
+				target = scope:bbc
+			}
+			bno_have_sex_with_effects = {
+				PARTNER = scope:bbc
+			}
+		}
+		scope:bbc = {
+			bno_have_sex_with_effects = {
+				PARTNER = root
+			}
+			add_opinion = {
+				modifier = bno_good_slut
+				target = scope:whitegirl
+			}
+		}
+	}
+}
+#black husband will black wife if she is not blacked enough
+bno_slut.0013 = {
+	type = character_event
+	title = bno_slut_0013.title
+	desc = bno_slut_0013.desc
+	theme = love
+	
+	override_background = {
+		reference = bedchamber
+	}
+	left_portrait = {
+		character = root
+		animation = happiness
+		triggered_outfit = {
+			trigger = {
+				exists = root
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:bbc
+		animation = personality_content
+		triggered_outfit = {
+			trigger = {
+				exists = scope:bbc
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	cooldown = {months = { 12 18 } }
+	
+	trigger = {
+		is_curious = yes
+		is_bno_fucked_mindless = no
+		is_ruler = yes
+		is_partner_bbc = yes
+	}
+
+	immediate = {
+		get_primary_spouse_scope = {
+			scope_name = bbc
+		}
+		bno_have_sex_with_effects = {
+			PARTNER = scope:bbc
+		}
+		bno_becoming_lustful_effect = yes
+		convert_to_bbc_religion = yes
+	}
+	option = {
+		name = bno_slut_0013.a
+	}
+}
+#slut ruler notice bbc like a foreign noble lady
+bno_slut.0014 = {
+	type = character_event
+	title = bno_slut_0014.title
+	desc = bno_slut_0014.desc
+	theme = love
+	
+	override_background = {
+		reference = feast
+	}
+	left_portrait = {
+		character = scope:whitegirl
+		animation = admiration
+	}
+	right_portrait = {
+		character = scope:bbc
+		animation = toast_goblet
+	}
+	cooldown = {months = { 12 18 } }
+	trigger = {
+		is_blacked = yes
+		is_ruler = yes
+		does_unmarried_blackbull_exist = yes
+		does_good_looking_ai_foreign_lady_exist = yes
+	}
+	immediate = {
+		get_unmarried_bbc_scope = {
+			scope_name = bbc
+		}
+		get_married_pure_girl_scope = {
+			scope_name = whitegirl
+		}
+		scope:whitegirl = {
+			primary_spouse = {
+				save_scope_as = target2
+			}
+		}
+	}
+	option = { #fuck her and done focus
+		name = bno_slut_0014.a
+		ai_chance = {
+			base = 60
+		}
+		scope:whitegirl = {
+			bno_increase_sluttyness = yes
+			primary_spouse = {
+				trigger_event = {
+					id = bno_cuck.0015
+					days = 5
+					delayed = yes
+				}
+			}
+		}
+		trigger_event = {
+			id = bno_slut.1014
+			days = 5
+			delayed = yes
+		}
+	}
+	option = { #fuck her and be lovers focus
+		name = bno_slut_0014.b
+		ai_chance = {
+			base = 50
+		}
+		scope:whitegirl = {
+			primary_spouse = {
+				trigger_event = {
+					id = bno_cuck.0015
+					days = 5
+					delayed = yes
+				}
+			}
+			bno_increase_sluttyness = yes
+		}
+		trigger_event = {
+			id = bno_slut.2014
+			days = 5
+			delayed = yes
+		}
+	}
+	option = { #fuck her and steal her as wife focus
+		name = bno_slut_0014.c
+		ai_chance = {
+			base = 5
+		}
+		scope:whitegirl = {
+			bno_increase_sluttyness = yes
+			primary_spouse = {
+				trigger_event = {
+					id = bno_cuck.0016
+					days = 5
+					delayed = yes
+				}
+			}
+		}
+		trigger_event = {
+			id = bno_slut.3014
+			days = 5
+			delayed = yes
+		}
+	}
+	option = { #do nothing
+		name = bno_slut_0014.d
+		bno_decrease_sluttyness = yes
+	}
+}
+#follow up event, fuck and done
+bno_slut.1014 = {
+	type = character_event
+	title = bno_slut_1014.title
+	desc = bno_slut_1014.desc
+	theme = love
+	
+	override_background = {
+		reference = bedchamber
+	}
+	left_portrait = {
+		character = scope:whitegirl
+		animation = happiness
+		triggered_outfit = {
+			trigger = {
+				exists = scope:whitegirl
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:bbc
+		animation = personality_content
+		triggered_outfit = {
+			trigger = {
+				exists = scope:bbc
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	immediate = {
+		scope:whitegirl = {
+			bno_have_sex_with_effects = {
+				PARTNER = scope:bbc
+			}
+			convert_to_bbc_religion = yes
+		}
+	}
+	option = {
+		name = bno_slut_1014.a
+	}
+}
+#follow up event, fuck and become lovers
+bno_slut.2014 = { #follow up event, fuck and become lovers
+	type = character_event
+	title = bno_slut_2014.title
+	desc = bno_slut_2014.desc
+	theme = love
+	
+	override_background = {
+		reference = bedchamber
+	}
+	left_portrait = {
+		character = scope:whitegirl
+		animation = happiness
+		triggered_outfit = {
+			trigger = {
+				exists = scope:whitegirl
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:bbc
+		animation = personality_content
+		triggered_outfit = {
+			trigger = {
+				exists = scope:bbc
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	immediate = {
+		scope:whitegirl = {
+			bno_have_sex_with_effects = {
+				PARTNER = scope:bbc
+			}
+			convert_to_bbc_religion = yes
+			become_lover_with_target = {
+				target = scope:bbc
+				LOCATION = root.location
+			}
+		}
+	}
+	option = {
+		name = bno_slut_2014.a
+	}
+}
+#follow up event, fuck and steal as wife
+bno_slut.3014 = { #follow up event, fuck and steal as wife
+	type = character_event
+	title = bno_slut_3014.title
+	desc = bno_slut_3014.desc
+	theme = love
+	
+	override_background = {
+		reference = bedchamber
+	}
+	left_portrait = {
+		character = scope:whitegirl
+		animation = happiness
+		triggered_outfit = {
+			trigger = {
+				exists = scope:whitegirl
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:bbc
+		animation = personality_content
+		triggered_outfit = {
+			trigger = {
+				exists = scope:bbc
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	immediate = {
+		scope:whitegirl = {
+			bno_have_sex_with_effects = {
+				PARTNER = scope:bbc
+			}
+			convert_to_bbc_religion = yes
+		}
+	}
+	option = {
+		name = bno_slut_3014.a
+		scope:whitegirl = {
+			bno_marriage_effect = {
+				target = scope:bbc
+			}
+		}
+	}
+}
+
+#become a whore
+bno_slut.0015 = {
+	type = character_event
+	title = bno_slut_0015.title
+	desc = bno_slut_0015.desc
+	theme = love
+	
+	override_background = {
+		reference = feast
+	}
+	left_portrait = {
+		character = root
+		animation = admiration
+		triggered_outfit = {
+			trigger = {
+				exists = root
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:bbc
+		animation = personality_content
+		triggered_outfit = {
+			trigger = {
+				exists = scope:bbc
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	trigger = {
+		is_blacked = yes
+		NOT = {
+			has_character_flag = bno_slut.1015
+		}
+	}
+	immediate = {
+		get_bbc_scope = {
+			scope_name = bbc
+		}
+	}
+	option = {
+		name = bno_slut_0015.a
+		trigger_event = {
+			id = bno_slut.1015
+			days = 2
+			delayed = yes
+		}
+		add_character_flag = {
+			flag = bno_slut.1015
+		}
+		set_variable = {
+			name = slut_whoring_year
+			value = 0
+		}
+	}
+	option = {
+		name = bno_slut_0015.b
+	}
+}
+
+bno_slut.1015 = {
+	hidden = yes
+
+	trigger = {
+		has_character_flag = bno_slut.1015
+	}
+
+	immediate = {
+		save_scope_as = whore
+		while = {
+			count = { 1 3 }
+			fuck_random_local_bbc = yes
+		}
+		trigger_event = {
+			id = bno_slut.1015
+			months = bno_prostitution_interval
+			delayed = yes
+		}
+		trigger_event = {
+			id = bno_slut.2015
+			months = 12
+			delayed = yes
+		}
+		if = {
+			limit = {
+				var:slut_whoring_year = 1
+			}
+			trigger_event = {
+				id = bno_slut.3015
+				days = 2
+				delayed = yes
+			}
+		}
+	}
+}
+
+bno_slut.2015 = {
+	hidden = yes
+	immediate = {
+		change_variable = {
+			name = slut_whoring_year
+			add = 1
+		}
+	}
+}
+
+bno_slut.3015 = {
+	type = character_event
+	title = bno_slut_3015.title
+	desc = bno_slut_3015.desc
+	theme = love
+	
+	override_background = {
+		reference = feast
+	}
+	
+	left_portrait = {
+		character = root
+		animation = admiration
+		triggered_outfit = {
+			trigger = {
+				exists = root
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	
+	right_portrait = {
+		character = scope:bbc
+		animation = personality_content
+		triggered_outfit = {
+			trigger = {
+				exists = scope:bbc
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+
+	option = {
+		name = bno_slut_3015.a
+		bno_have_sex_with_effects = {
+			PARTNER = scope:bbc
+		}
+	}
+
+	option = {
+		name = bno_slut_3015.b
+		root = {
+			remove_character_flag = bno_slut.1015
+		}
+	}
+}
+
+namespace = pregnancy
+
+pregnancy.5001 = {
+	type = character_event
+	title = pregnancy.5001.t
+	desc = {
+		desc = pregnancy.5001.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:real_father = scope:real_father_inquirer }
+				desc = pregnancy.5001.real_father
+			}
+			desc = pregnancy.5001.not_father
+		}
+	}
+	theme = pregnancy
+	left_portrait = {
+		character = scope:real_father_inquirer
+		animation = worry
+	}
+	right_portrait = {
+		trigger = {
+			NOT = { scope:spouse = scope:real_father_inquirer }
+		}
+		character = scope:spouse
+	}
+
+	trigger = {
+		scope:mother = {
+			NOT = {
+				has_character_flag = bno_slut.1015
+			}
+			is_pregnant = yes
+		}
+	}
+
+	option = { #It is true!
+		name = pregnancy.5001.a
+		trigger = {
+			scope:real_father_inquirer = scope:real_father
+		}
+		custom_tooltip = reveal_illegitimate_pregnancy_to_real_father_tt
+		ai_chance = {
+			base = 100
+		}
+		scope:real_father = {
+			trigger_event = {
+				id = pregnancy.5002 #The truth is revealed to them
+				days = { 3 5 }
+			}
+		}
+	}
+
+	option = { #Insist real_father is wrong
+		name = pregnancy.5001.b
+		trigger = { NOT = { scope:real_father_inquirer = scope:real_father } }
+		fallback = yes # Only show if they are not the father
+		ai_chance = {
+			base = 100
+		}
+		scope:real_father = {
+			trigger_event = {
+				id = pregnancy.5003 #Denial
+				days = { 3 5 }
+			}
+		}
+	}
+}

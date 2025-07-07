@@ -1,0 +1,159 @@
+﻿bno_prostitution_interval = {
+	
+	categories = {
+		interaccial_takeover
+	}
+	
+	default = bno_interval_one_month
+
+	bno_interval_one_month = {
+	
+	}
+	
+	bno_interval_three_months = {
+		
+	}
+
+	bno_interval_six_months = {
+
+	}
+}
+
+bno_mod_status = {
+	categories = {
+		interaccial_takeover
+	}
+
+	default = bno_mod_status_on
+
+	bno_mod_status_on = {
+
+	}
+
+	bno_mod_status_off = {
+		
+	}
+
+}
+
+bno_body_modification = {
+	categories = {
+		interaccial_takeover
+	}
+
+	default = bno_body_modification_yes
+
+	bno_body_modification_yes = {
+
+	}
+
+	bno_body_modification_no = {
+		
+	}
+}
+
+bno_religion_allowed = {
+	categories = {
+		interaccial_takeover
+	}
+
+	default = bno_religion_yes
+
+	bno_religion_yes = {
+
+	}
+
+	bno_religion_no = {
+
+	}
+
+}
+
+bno_decision_npc = {
+	categories = {
+		interaccial_takeover
+	}
+
+	default = bno_decision_npc_yes
+
+	bno_decision_npc_yes = {
+
+	}
+
+	bno_decision_npc_no = {
+
+	}
+
+}
+
+bno_global_bbc_activities = {
+	categories = {
+		interaccial_takeover
+	}
+
+	default = bno_global_bbc_activities_yes
+
+	bno_global_bbc_activities_yes = {
+
+	}
+
+	bno_global_bbc_activities_no = {
+		
+	}
+
+}
+
+bno_seeding = {
+	categories = {
+		interaccial_takeover
+	}
+
+	default = bno_seeding_yes
+
+	bno_seeding_yes = {
+
+	}
+
+	bno_seeding_no = {
+		
+	}
+
+}
+
+bno_event_frequency = {
+	categories = {
+		interaccial_takeover
+	}
+
+	default = bno_event_frequency_three_months
+
+	bno_event_frequency_three_months = {
+
+	}
+
+	bno_event_frequency_six_months = {
+
+	}
+
+	bno_event_frequency_twelve_months = {
+		
+	}
+
+}
+
+bno_tattoo = {
+	categories = {
+		interaccial_takeover
+	}
+
+	default = bno_tattoo_yes
+
+	bno_tattoo_yes = {
+
+	}
+
+	bno_tattoo_no = {
+		
+	}
+
+}

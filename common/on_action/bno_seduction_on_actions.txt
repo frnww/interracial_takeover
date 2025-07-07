@@ -1,0 +1,24 @@
+﻿bno_seduce_success = {
+    effect = {
+        scope:owner = {
+            bno_have_sex_with_effects = {
+                PARTNER = scope:target
+            }
+            become_lover_with_target = {
+                target = scope:target
+                LOCATION = location
+            }
+        }
+        scope:scheme = {
+            end_scheme = yes
+        }
+    }
+}
+
+bno_seduce_failure = {
+    effect = {
+        scope:scheme = {
+            end_scheme = yes
+        }
+    }
+}

@@ -1,0 +1,75 @@
+﻿is_self_whiteguy = {
+	is_bbc = no
+	is_african = no
+	is_elligible_partner = yes
+	is_male = yes
+}
+
+is_self_married_whiteguy = {
+	is_self_whiteguy = yes
+	is_married = yes
+}
+
+is_spouse_curious = {
+	exists = primary_spouse
+	primary_spouse = {
+		is_curious = yes
+		is_ai = yes
+	}
+}
+
+is_spouse_blacked = {
+	exists = primary_spouse
+	primary_spouse = {
+		is_blacked = yes
+		is_ai = yes
+	}
+}
+
+is_cuck = {
+	has_trait = bno_whiteboi
+	is_self_whiteguy = yes
+}
+
+is_whiteboy = {
+	is_married = yes
+	is_adult = yes
+	is_bbc = no
+	is_male = yes
+	is_imprisoned = no
+}
+
+is_normal_whiteboy = {
+	is_imprisoned = no
+	is_ruler = yes
+	is_adult = yes
+	is_male = yes
+	is_bbc = no
+}
+
+is_ruler_whiteboy = {
+	is_ruler = yes
+	is_adult = yes
+	is_imprisoned = no
+	is_male = yes
+	NOT = { has_trait = bno_bbc }
+}
+
+is_ai_not_married_blackbull = {
+	is_ai_blackbull = yes
+	is_married = no
+}
+
+is_ai_curious = {
+	is_bno_curious = yes
+	is_ruler = no
+	is_ai = yes
+	is_prime_girl = yes
+}
+
+is_ai_snowbunny = {
+	is_bno_snowbunny = yes
+	is_ruler = no
+	is_ai = yes
+	is_prime_girl = yes
+}

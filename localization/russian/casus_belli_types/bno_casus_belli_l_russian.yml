@@ -1,0 +1,32 @@
+﻿l_russian:
+  
+ bno_war: "Bnwo War" #NT!
+ bno_war_victory_desc_attacker: "Вы получаете оспариваемый [titles|E]." #NT!
+ bno_war_victory_desc: "[attacker.GetShortUIName|U] получает оспариваемые [title|E]." #NT!
+ bno_war_white_peace_desc_defender: "Вы сохраняете оспариваемый [title|E]." #NT!
+ bno_war_white_peace_desc: "[defender.GetShortUIName|U] сохраняет оспариваемые [title|E]." #NT!
+ bno_war_defeat_desc_defender: "Вы сохраняете оспариваемый [title|E]." #NT!
+ bno_war_defeat_desc_attacker: "[defender.GetShortUIName|U] сохраняет оспариваемые [title|E]. Все [factions|E] против вас увеличивают их [discontent|E]." #NT!
+ bno_war_defeat_desc: "[defender.GetShortUIName|U] сохраняет оспариваемые [title|E]." #NT!
+  
+ BNO_WAR_NAME: "$ORDER$ [ATTACKER.GetPrimaryTitle.GetAdjective] Расовое захват [TITLE.GetBaseName]" #NT!
+ BNO_WAR_NAME_BASE: "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]" #NT!
+ BNO_WAR_CB_NAME: "Расовое поглощение [TITLE.GetBaseName]" #NT!
+  
+ bno_subj_war: "Bnwo subjugation War" #NT!
+ bno_subj_war_victory_desc_attacker: "Вы получаете оспариваемый [titles|E]." #NT!
+ bno_subj_war_victory_desc: "[attacker.GetShortUIName|U] получает оспариваемые [title|E]." #NT!
+ bno_subj_war_white_peace_desc_defender: "Вы сохраняете оспариваемый [title|E]." #NT!
+ bno_subj_war_white_peace_desc: "[defender.GetShortUIName|U] сохраняет оспариваемые [title|E]." #NT!
+ bno_subj_war_defeat_desc_defender: "Вы сохраняете оспариваемый [title|E]." #NT!
+ bno_subj_war_defeat_desc_attacker: "[defender.GetShortUIName|U] сохраняет оспариваемые [title|E]. Все [factions|E] против вас увеличивают их [discontent|E]." #NT!
+ bno_subj_war_defeat_desc: "[defender.GetShortUIName|U] сохраняет оспариваемые [title|E]." #NT!
+  
+ BNO_SUBJ_WAR_NAME: "$ORDER$ [ATTACKER.GetPrimaryTitle.GetAdjective] Расовое подчинение [TITLE.GetBaseName]" #NT!
+ BNO_SUBJ_WAR_NAME_BASE: "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]" #NT!
+ BNO_SUBJ_WAR_CB_NAME: "Расовое подчинение [TITLE.GetBaseName]" #NT!
+  
+ bno_varangian_adventure: "Bnwo Invasion" #NT!
+ BNO_VARANGIAN_ADVENTURE_WAR_NAME: "$ORDER$ [ATTACKER.GetPrimaryTitle.GetAdjective] Вторжение против [DEFENDER.GetPrimaryTitle.GetNameNoTier]" #NT!
+ BNO_VARANGIAN_ADVENTURE_WAR_NAME_BASE: "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]" #NT!
+ BNO_VARANGIAN_ADVENTURE_CB_NAME: "Вторжение в [DEFENDER.GetPrimaryTitle.GetNameNoTier]" #NT!
