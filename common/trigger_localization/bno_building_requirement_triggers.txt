@@ -1,3 +1,0 @@
-﻿bbc_or_whitegirl_trigger = {
-    global_not = NOT_bbc_or_whitegirl_trigger
-}
