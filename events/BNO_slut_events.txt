@@ -795,7 +795,6 @@ bno_slut.0008 = {
 		does_blackbull_exist = yes
 	}
 	immediate = {
-		find_5_sex_partner = yes
 		get_bbc_scope = {
 			scope_name = bbc
 		}
@@ -815,6 +814,7 @@ bno_slut.0008 = {
 				PARTNER = root
 			}
 		}
+		find_5_sex_partner = yes
 		sex_with_5_sex_partner = yes
 		slut_whoring = yes
 		become_lover_with_target = {
@@ -939,13 +939,8 @@ bno_slut.0010 = {
 	}
 	option = {
 		name = bno_slut_0010.a
-		bno_steal_white_husband_gold_effect = yes
-		scope:bbc = {
-			add_gold = minor_gold_value
-			add_prestige = minor_prestige_gain
-			bno_have_sex_with_effects = {
-				PARTNER = root
-			}
+		bno_steal_white_husband_gold_effect = {
+			target = scope:bbc
 		}
 	}
 }
@@ -1004,17 +999,10 @@ bno_slut.0012 = {
 			bno_reveal_secret_effect = {
 				target = scope:bbc
 			}
-			bno_have_sex_with_effects = {
-				PARTNER = scope:bbc
-			}
 		}
 		scope:bbc = {
 			bno_have_sex_with_effects = {
 				PARTNER = root
-			}
-			add_opinion = {
-				modifier = bno_good_slut
-				target = scope:whitegirl
 			}
 		}
 	}

@@ -17,51 +17,43 @@ does_blacked_girl_white_husband_has_secret = {
 	}
 }
 
-does_secret_haver_exist = {
+does_white_guy_liege_has_money = {
+	exists = liege
+	liege = {
+		gold > 50
+		is_self_married_whiteguy = yes
+		exists = primary_spouse
+		primary_spouse = {
+			is_blacked = yes
+		}
+	}
+}
+
+does_white_vassal_has_non_blacked_wife = {
 	OR = {
-		any_courtier_or_guest = {
-			does_blacked_girl_white_husband_has_secret = yes
-		}
 		any_vassal_or_below = {
-			does_blacked_girl_white_husband_has_secret = yes
-		}
-		any_vassal_or_below = {
-			any_courtier_or_guest = {
-				does_blacked_girl_white_husband_has_secret = yes
-			}
+			is_white_guy_with_pure_wife = yes
 		}
 		AND = {
 			exists = liege
 			liege = {
-				does_blacked_girl_white_husband_has_secret = yes
-			}
-		}
-		AND = {
-			exists = liege
-			liege = {
-				any_courtier_or_guest = {
-					does_blacked_girl_white_husband_has_secret = yes
-				}
-			}
-		}
-		AND = {
-			exists = liege
-			liege = {
-				any_vassal_or_below = {
-					does_blacked_girl_white_husband_has_secret = yes
-				}
-			}
-		}
-		AND = {
-			exists = liege
-			liege = {
-				any_vassal_or_below = {
-					any_courtier_or_guest = {
-						does_blacked_girl_white_husband_has_secret = yes
+				OR = {
+					is_white_guy_with_pure_wife = yes
+					any_vassal_or_below = {
+						NOT = { this = root }
+						is_white_guy_with_pure_wife = yes
 					}
 				}
 			}
 		}
+	}
+}
+
+is_white_guy_with_pure_wife = {
+	is_self_married_whiteguy = yes
+	exists = primary_spouse
+	primary_spouse = {
+		is_pure_whitegirl = yes
 	}
 }
 
@@ -113,6 +105,12 @@ does_something_exist = {
 	}
 }
 
+does_secret_haver_exist = {
+	does_something_exist = {
+		trigger_key = does_blacked_girl_white_husband_has_secret
+	}
+}
+
 does_blacked_noble_exist = {
 	does_something_exist = {
 		trigger_key = is_ai_blacked_noble
@@ -122,6 +120,36 @@ does_blacked_noble_exist = {
 does_blacked_peasant_exist = {
 	does_something_exist = {
 		trigger_key = is_ai_blacked_peasant
+	}
+}
+
+does_unmarried_blackbull_exist = {
+	does_something_exist = {
+		trigger_key = is_unmarried_ai_blackbull
+	}
+}
+
+does_blacked_with_eating_disorder_exist = {
+	does_something_exist = {
+		trigger_key = is_ai_blacked_has_eating_disorder
+	}
+}
+
+does_blacked_girl_exist = {
+	does_something_exist = {
+		trigger_key = is_ai_blacked
+	}
+}
+
+does_blackbull_exist = {
+	does_something_exist = {
+		trigger_key = is_ai_blackbull
+	}
+}
+
+does_pure_whitegirl_exist = {
+	does_something_exist = {
+		trigger_key = is_ai_pure_white_girl
 	}
 }
 
@@ -168,6 +196,19 @@ is_ai_blacked_has_eating_disorder = {
 	has_eating_disorder = yes
 }
 
+is_not_blacked_enough = {
+	is_ai = yes
+	is_bno_curious_and_up = yes
+	is_bno_fucked_mindless = no
+}
+
+is_partner_not_blacked_enough = {
+	exists = primary_spouse
+	primary_spouse = {
+		is_not_blacked_enough = yes
+	}
+}
+
 is_blacked = {
 	is_bno_blacked_and_up = yes
 	is_white_girl = yes
@@ -203,6 +244,7 @@ is_body_modification_ok = {
 }
 
 is_bno_fucked_mindless = {
+	is_bno_mindless_bbc_slut = yes
 	has_trait_xp = {
 		trait = bno_mindless_bbc_slut
 		value >= 80
@@ -410,246 +452,6 @@ is_unmarried_ai_blackbull = {
 	is_married = no
 }
 
-does_unmarried_blackbull_exist = {
-	OR = {
-		any_courtier_or_guest = {
-			is_unmarried_ai_blackbull = yes
-		}
-		any_vassal_or_below = {
-			is_unmarried_ai_blackbull = yes
-		}
-		any_vassal_or_below = {
-			any_courtier_or_guest = {
-				is_unmarried_ai_blackbull = yes
-			}
-		}
-		AND = {
-			exists = liege
-			liege = {
-				is_unmarried_ai_blackbull = yes
-			}
-		}
-		AND = {
-			exists = liege
-			liege = {
-				any_courtier_or_guest = {
-					is_unmarried_ai_blackbull = yes
-				}
-			}
-		}
-		AND = {
-			exists = liege
-			liege = {
-				any_vassal_or_below = {
-					is_unmarried_ai_blackbull = yes
-				}
-			}
-		}
-		AND = {
-			exists = liege
-			liege = {
-				any_vassal_or_below = {
-					any_courtier_or_guest = {
-						is_unmarried_ai_blackbull = yes
-					}
-				}
-			}
-		}
-	}
-}
-
-does_blacked_with_eating_disorder_exist = {
-	OR = {
-		any_courtier_or_guest = {
-			is_ai_blacked_has_eating_disorder = yes
-		}
-		any_vassal_or_below = {
-			is_ai_blacked_has_eating_disorder = yes
-		}
-		any_vassal_or_below = {
-			any_courtier_or_guest = {
-				is_ai_blacked_has_eating_disorder = yes
-			}
-		}
-		AND = {
-			exists = liege
-			liege = {
-				is_ai_blacked_has_eating_disorder = yes
-			}
-		}
-		AND = {
-			exists = liege
-			liege = {
-				any_courtier_or_guest = {
-					is_ai_blacked_has_eating_disorder = yes
-				}
-			}
-		}
-		AND = {
-			exists = liege
-			liege = {
-				any_vassal_or_below = {
-					is_ai_blacked_has_eating_disorder = yes
-				}
-			}
-		}
-		AND = {
-			exists = liege
-			liege = {
-				any_vassal_or_below = {
-					any_courtier_or_guest = {
-						is_ai_blacked_has_eating_disorder = yes
-					}
-				}
-			}
-		}
-	}
-}
-
-does_blacked_girl_exist = {
-	OR = {
-		any_courtier_or_guest = {
-			is_ai_blacked = yes
-		}
-		any_vassal_or_below = {
-			is_ai_blacked = yes
-		}
-		any_vassal_or_below = {
-			any_courtier_or_guest = {
-				is_ai_blacked = yes
-			}
-		}
-		AND = {
-			exists = liege
-			liege = {
-				is_ai_blacked = yes
-			}
-		}
-		AND = {
-			exists = liege
-			liege = {
-				any_courtier_or_guest = {
-					is_ai_blacked = yes
-				}
-			}
-		}
-		AND = {
-			exists = liege
-			liege = {
-				any_vassal_or_below = {
-					is_ai_blacked = yes
-				}
-			}
-		}
-		AND = {
-			exists = liege
-			liege = {
-				any_vassal_or_below = {
-					any_courtier_or_guest = {
-						is_ai_blacked = yes
-					}
-				}
-			}
-		}
-	}
-}
-
-does_blackbull_exist = {
-	OR = {
-		any_courtier_or_guest = {
-			is_ai_blackbull = yes
-		}
-		any_vassal_or_below = {
-			is_ai_blackbull = yes
-		}
-		any_vassal_or_below = {
-			any_courtier_or_guest = {
-				is_ai_blackbull = yes
-			}
-		}
-		AND = {
-			exists = liege
-			liege = {
-				is_ai_blackbull = yes
-			}
-		}
-		AND = {
-			exists = liege
-			liege = {
-				any_courtier_or_guest = {
-					is_ai_blackbull = yes
-				}
-			}
-		}
-		AND = {
-			exists = liege
-			liege = {
-				any_vassal_or_below = {
-					is_ai_blackbull = yes
-				}
-			}
-		}
-		AND = {
-			exists = liege
-			liege = {
-				any_vassal_or_below = {
-					any_courtier_or_guest = {
-						is_ai_blackbull = yes
-					}
-				}
-			}
-		}
-	}
-}
-
-does_pure_whitegirl_exist = {
-	OR = {
-		any_courtier_or_guest = {
-			is_ai_pure_white_girl = yes
-		}
-		any_vassal_or_below = {
-			is_ai_pure_white_girl = yes
-		}
-		any_vassal_or_below = {
-			any_courtier_or_guest = {
-				is_ai_pure_white_girl = yes
-			}
-		}
-		AND = {
-			exists = liege
-			liege = {
-				is_ai_pure_white_girl = yes
-			}
-		}
-		AND = {
-			exists = liege
-			liege = {
-				any_courtier_or_guest = {
-					is_ai_pure_white_girl = yes
-				}
-			}
-		}
-		AND = {
-			exists = liege
-			liege = {
-				any_vassal_or_below = {
-					is_ai_pure_white_girl = yes
-				}
-			}
-		}
-		AND = {
-			exists = liege
-			liege = {
-				any_vassal_or_below = {
-					any_courtier_or_guest = {
-						is_ai_pure_white_girl = yes
-					}
-				}
-			}
-		}
-	}
-}
-
 is_prime_girl = {
 	is_adult = yes
 	is_female = yes
@@ -755,26 +557,5 @@ is_good_pure_whitegirl = {
 		has_trait = shrewd
 		has_trait = zealous
 	}
-	NOR = {
-		has_trait = beauty_bad_1
-		has_trait = beauty_bad_2
-		has_trait = beauty_bad_3
-		has_trait = disfigured
-		has_trait = infirm
-		has_trait = gout_ridden
-		has_trait = cancer
-		has_trait = consumption
-		has_trait = incapable
-		has_trait = typhus
-		has_trait = bubonic_plague
-		has_trait = smallpox
-		has_trait = one_legged
-		has_trait = one_eyed
-		has_trait = great_pox
-		has_trait = maimed
-		has_trait = leper
-		has_trait = early_great_pox
-		has_trait = lovers_pox
-		has_trait = scaly
-	}
+	has_bad_trait = no
 }

@@ -39,7 +39,7 @@ bno_cuck.0001 = {
 		animation = eavesdrop
 	}
 	
-	cooldown = { months = 24 }
+	cooldown = { months = { 24 36 } }
 	trigger = {
 		is_self_married_whiteguy = yes
 		does_blackbull_exist = yes
@@ -143,6 +143,7 @@ bno_cuck.1001 = {
 	}
 	
 	trigger = {
+		is_alive = yes
 		is_bbc = no
 	}
 
@@ -196,6 +197,7 @@ bno_cuck.2001 = { #follow up event, conclude it isn't wife, get anti stress / ba
 	}
 
 	trigger = {
+		is_alive = yes
 		is_bbc = no
 	}
 

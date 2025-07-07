@@ -587,7 +587,7 @@ bno_bull.0008 = {
 		does_blacked_peasant_exist = yes
 	}
 	immediate = {
-		get_blacked_girl_scope = {
+		get_blacked_peasant_scope = {
 			scope_name = target1
 		}
 	}
@@ -660,50 +660,25 @@ bno_bull.0009 = {
 		does_blacked_noble_exist = yes
 	}
 	immediate = {
-		random_courtier_or_guest = {
-			limit = {
-				is_blacked = yes
-				is_lowborn = yes
-				is_ai = yes
-			}
-			save_scope_as = target1
-		}
-		scope:target1 = {
-			bno_increase_sluttyness = yes
-			if = {
-				limit = {
-					exists = primary_spouse
-					primary_spouse = {
-						NOT = { has_trait = bno_bbc }
-					}
-				}
-				every_spouse = { #cuck informed someone who looks like wife is whoring
-					send_interface_message = {
-						type = bno_blacked_events
-						title = bno_bull_0008_notification.title		#using same notif from .0008 since it's basically the same event but for non lowborns
-						right_icon = scope:target1
-						desc = bno_bull_0008_notification.desc
-					}
-				}
-			}
+		get_blacked_noble_scope = {
+			scope_name = target1
 		}
 	}
 	option = {
 		name = bno_bull_0008.a
-		
-		add_gold = 75
-		add_prestige = 100
 		ai_chance = {
 			base = 5
 		}
-		add_character_modifier = {
-			modifier = bno_pimping_noble_white_whores
-			months = 12
+
+		bbc_pimping = {
+			target = scope:target1
 		}
+
 		scope:target1 = {
-			add_character_modifier = {
-				modifier = bno_whore_for_liege
-				months = 12
+			find_5_sex_partner = yes
+			sex_with_5_sex_partner = yes
+			bno_have_sex_with_effects = {
+				PARTNER = root
 			}
 		}
 	}
@@ -718,16 +693,15 @@ bno_bull.0009 = {
 			}
 		}
 		name = bno_bull_0008.b
-		add_gold = 150
-		add_prestige = 200									#maybe too OP? not sure what good amount would be
-		add_character_modifier = {
-			modifier = bno_pimping_noble_white_whores
-			months = 12
+		bbc_pimping = {
+			target = scope:target1
 		}
+
 		scope:target1 = {
-			add_character_modifier = {
-				modifier = bno_pretty_whore_for_liege
-				months = 12
+			find_5_sex_partner = yes
+			sex_with_5_sex_partner = yes
+			bno_have_sex_with_effects = {
+				PARTNER = root
 			}
 		}
 		ai_chance = {
@@ -735,7 +709,6 @@ bno_bull.0009 = {
 		}
 	}
 }
-
 #liege's wife steals his money for BBC
 bno_bull.0010 = {
 	type = character_event
@@ -770,64 +743,25 @@ bno_bull.0010 = {
 			}
 		}
 	}
-	cooldown = {months = 12 }
+	cooldown = {months = { 12 18 } }
 	trigger = {
 		is_blackbull = yes
 		exists = liege
-		liege = {
-			gold > 50
-			is_self_married_whiteguy = yes
-			NOT = {	has_character_flag = bno_bull.0010 }			#check to make sure liege doesn't have flag to avoid losing all gold too quickly if he has many bbc courtiers
-			exists = primary_spouse
-			primary_spouse = {
-				is_blacked = yes
-			}
-		}
+		does_white_guy_liege_has_money = yes
 	}
 	immediate = {
-		root = {
-			liege = {
-				save_scope_as = target2
-				get_primary_spouse_scope = {
-					scope_name = target1
-				}
+		liege = {
+			save_scope_as = target2
+			get_primary_spouse_scope = {
+				scope_name = target1
 			}
 		}
 	}
 	option = {
 		name = bno_bull_0010.a
-		
-		add_gold = 50
-		add_prestige = 50
-		
-		scope:target2 = {
-			remove_short_term_gold = 50
-			add_prestige = -50
-			add_character_flag = {
-				flag = bno_bull.0010				#give flag to make sure liege doesn't get spammed to lose all gold too quickly if he has many bbc courtiers
-				years = 1
-			}
-		}
 		scope:target1 = {
-			bno_increase_sluttyness = yes
-			add_character_modifier = {
-				modifier = bno_wife_stealing_cucks_gold
-				months = 12
-			}
-			if = {
-				limit = {
-					primary_spouse = {
-						NOT = { has_trait = bno_bbc }
-					}
-				}
-				every_spouse = {		 #Cuck notices he's missing gold. Just flavor text, doesn't make cuck do anything for now
-					send_interface_message = {
-						type = bno_blacked_events
-						title = bno_bull_0010_notification.title
-						right_icon = scope:target1
-						desc = bno_bull_0010_notification.desc
-					}
-				}
+			bno_steal_white_husband_gold_effect = {
+				target = root
 			}
 		}
 	}
@@ -892,7 +826,7 @@ bno_bull.0012 = {
 			}
 		}
 	}
-	cooldown = {months = 12 }
+	cooldown = {months = { 12 18 } }
 	trigger = {
 		is_blackbull = yes
 		is_ruler = yes
@@ -915,16 +849,8 @@ bno_bull.0012 = {
 				target = root
 			}
 		}
-		bno_have_sex_with_effects = {
-			PARTNER = scope:target1
-		}
-		add_opinion = {
-			modifier = bno_good_slut
-			target = scope:target1
-		}
 	}
 }
-
 #ruler bbc blacks wife if she's not blacked enough
 bno_bull.0013 = {
 	type = character_event
@@ -959,38 +885,21 @@ bno_bull.0013 = {
 			}
 		}
 	}
-	cooldown = {months = 12 }
+	cooldown = {months = { 12 18 } }
 	trigger = {
 		is_blackbull = yes
 		is_ruler = yes
-		any_spouse = {
-			is_ai = yes
-			is_bno_curious = yes
-			is_bno_mindless_bbc_slut = no
-		}
+		is_partner_not_blacked_enough = yes
 	}
 	immediate = {
-		root = {
-			random_spouse = {
-				limit = {
-					is_ai = yes
-					is_bno_curious = yes
-					is_bno_mindless_bbc_slut = no
-				}
-				save_scope_as = target1
-			}
+		get_primary_spouse_scope = {
+			scope_name = target1
 		}
 		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
 		scope:target1 = {
-			bno_increase_sluttyness = yes
-			add_opinion = {
-				modifier = bull_husband_takes_me
-				target = root
-			}
-			add_trait = lustful
-			convert_to_bbc_religion = yes
+			bno_becoming_lustful_effect = yes
 		}
 	}
 	option = {
@@ -1018,7 +927,7 @@ bno_bull.0014 = {
 		animation = toast_goblet
 		
 	}
-	cooldown = {months = 12 }
+	cooldown = { months = { 12 18 } }
 	trigger = {
 		is_blackbull = yes
 		is_ruler = yes
@@ -1136,17 +1045,14 @@ bno_bull.1014 = { #follow up event, fuck and done
 			}
 		}
 	}
+
+	trigger = {
+		is_alive = yes
+	}
+
 	immediate = {
 		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
-		}
-		scope:target1 = {
-			add_opinion = {
-				modifier = bno_bull_fucks_me
-				target = root
-			}
-			bno_increase_sluttyness = yes
-			convert_to_bbc_religion = yes
 		}
 	}
 	option = {
@@ -1187,17 +1093,14 @@ bno_bull.2014 = { #follow up event, fuck and become lovers
 			}
 		}
 	}
+
+	trigger = {
+		is_alive = yes
+	}
+
 	immediate = {
 		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
-		}
-		scope:target1 = {
-			add_opinion = {
-				modifier = bno_bull_fucks_me
-				target = root
-			}
-			bno_increase_sluttyness = yes
-			convert_to_bbc_religion = yes
 		}
 	}
 	option = {
@@ -1242,17 +1145,14 @@ bno_bull.3014 = { #follow up event, fuck and steal as wife
 			}
 		}
 	}
+
+	trigger = {
+		is_alive = yes
+	}
+
 	immediate = {
 		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
-		}
-		scope:target1 = {
-			add_opinion = {
-				modifier = bno_bull_fucks_me
-				target = root
-			}
-			convert_to_bbc_religion = yes
-			bno_increase_sluttyness = yes
 		}
 	}
 	option = {
@@ -1286,36 +1186,21 @@ bno_bull.0015 = {
 	}
 
 	cooldown = {
-		months = 12
+		months = { 12 18 }
 	}
 
 	trigger = {
 		is_blackbull = yes
 		is_ruler = yes
-		liege = {
-			any_vassal = {
-				is_self_married_whiteguy = yes
-				primary_spouse = {
-					is_pure_whitegirl = yes
-				}
-			}
-		}
+		does_white_vassal_has_non_blacked_wife = yes
 	}
 	immediate = {
-		root = {
-			liege = {
-				random_vassal = {
-					limit = {
-						is_self_married_whiteguy = yes
-						primary_spouse = {
-							is_pure_whitegirl = yes
-						}
-					}
-					save_scope_as = target1
-					primary_spouse = {
-						save_scope_as = target2
-					}
-				}
+		get_white_vassal_with_non_blacked_wife_scope = {
+			scope_name = target1
+		}
+		scope:target1 = {
+			primary_spouse = {
+				save_scope_as = target2
 			}
 		}
 	}
@@ -1348,7 +1233,7 @@ bno_bull.0016 = {
 	}
 
 	cooldown = {
-		months = 12
+		months = { 12 18 }
 	}
 
 	trigger = {
@@ -1360,14 +1245,12 @@ bno_bull.0016 = {
 		}
 	}
 	immediate = {
-		root = {
-			random_spouse = {
-				limit = {
-					NOT = { has_character_flag = bimbo }
-					is_bno_mindless_bbc_slut = yes
-				}
-				save_scope_as = target1
+		random_spouse = {
+			limit = {
+				NOT = { has_character_flag = bimbo }
+				is_bno_mindless_bbc_slut = yes
 			}
+			save_scope_as = target1
 		}
 	}
 	option = { #make her a bimbo. Cosmetic only.
