@@ -168,10 +168,9 @@ bno_reveal_secret_effect = {
 }
 
 get_secret_haver_scope = {
-	every_courtier_or_guest = { # Player's Court
+	random_courtier_or_guest = { # Player's Court
 		limit = {
 			does_blacked_girl_white_husband_has_secret = yes
-			exists = this
 		}
 		save_scope_as = $scope_name$
 	}
@@ -179,10 +178,9 @@ get_secret_haver_scope = {
 		limit = {
 			NOT = { exists = scope:$scope_name$ }
 		}
-		every_vassal_or_below = { # Player's Vassal
+		random_vassal_or_below = { # Player's Vassal
 			limit = {
 				does_blacked_girl_white_husband_has_secret = yes
-				exists = this
 			}
 			save_scope_as = $scope_name$
 		}
@@ -191,11 +189,11 @@ get_secret_haver_scope = {
 		limit = {
 			NOT = { exists = scope:$scope_name$ }
 		}
-		every_vassal_or_below = {
-			every_courtier_or_guest = {
+		random_vassal_or_below = {
+			limit = { highest_held_title_tier >= tier_county }
+			random_courtier_or_guest = {
 				limit = {
 					does_blacked_girl_white_husband_has_secret = yes
-					exists = this
 				}
 				save_scope_as = $scope_name$
 			}
@@ -219,10 +217,9 @@ get_secret_haver_scope = {
 			exists = liege
 		}
 		liege = {
-			every_courtier_or_guest = {
+			random_courtier_or_guest = {
 				limit = {
 					does_blacked_girl_white_husband_has_secret = yes
-					exists = this
 				}
 				save_scope_as = $scope_name$
 			}
@@ -234,10 +231,10 @@ get_secret_haver_scope = {
 			exists = liege
 		}
 		liege = {
-			every_vassal_or_below = {
+			random_vassal_or_below = {
 				limit = {
+					highest_held_title_tier >= tier_county
 					does_blacked_girl_white_husband_has_secret = yes
-					exists = this
 				}
 				save_scope_as = $scope_name$
 			}
@@ -249,11 +246,11 @@ get_secret_haver_scope = {
 			exists = liege
 		}
 		liege = {
-			every_vassal_or_below = {
-				every_courtier_or_guest = {
+			random_vassal_or_below = {
+				limit = { highest_held_title_tier >= tier_county }
+				random_courtier_or_guest = {
 					limit = {
 						does_blacked_girl_white_husband_has_secret = yes
-						exists = this
 					}
 					save_scope_as = $scope_name$
 				}
@@ -263,10 +260,9 @@ get_secret_haver_scope = {
 }
 
 get_pure_whitegirl_scope = {
-	every_courtier_or_guest = { # Player's Court
+	random_courtier_or_guest = { # Player's Court
 		limit = {
 			is_ai_pure_white_girl = yes
-			exists = this
 		}
 		save_scope_as = $scope_name$
 	}
@@ -274,10 +270,9 @@ get_pure_whitegirl_scope = {
 		limit = {
 			NOT = { exists = scope:$scope_name$ }
 		}
-		every_vassal_or_below = { # Player's Vassal
+		random_vassal_or_below = { # Player's Vassal
 			limit = {
 				is_ai_pure_white_girl = yes
-				exists = this
 			}
 			save_scope_as = $scope_name$
 		}
@@ -286,8 +281,9 @@ get_pure_whitegirl_scope = {
 		limit = {
 			NOT = { exists = scope:$scope_name$ }
 		}
-		every_vassal_or_below = {
-			every_courtier_or_guest = {
+		random_vassal_or_below = {
+			limit = { highest_held_title_tier >= tier_county }
+			random_courtier_or_guest = {
 				limit = {
 					is_ai_pure_white_girl = yes
 					exists = this
@@ -314,10 +310,9 @@ get_pure_whitegirl_scope = {
 			exists = liege
 		}
 		liege = {
-			every_courtier_or_guest = {
+			random_courtier_or_guest = {
 				limit = {
 					is_ai_pure_white_girl = yes
-					exists = this
 				}
 				save_scope_as = $scope_name$
 			}
@@ -329,10 +324,9 @@ get_pure_whitegirl_scope = {
 			exists = liege
 		}
 		liege = {
-			every_vassal_or_below = {
+			random_vassal_or_below = {
 				limit = {
 					is_ai_pure_white_girl = yes
-					exists = this
 				}
 				save_scope_as = $scope_name$
 			}
@@ -344,11 +338,11 @@ get_pure_whitegirl_scope = {
 			exists = liege
 		}
 		liege = {
-			every_vassal_or_below = {
-				every_courtier_or_guest = {
+			random_vassal_or_below = {
+				limit = { highest_held_title_tier >= tier_county }
+				random_courtier_or_guest = {
 					limit = {
 						is_ai_pure_white_girl = yes
-						exists = this
 					}
 					save_scope_as = $scope_name$
 				}
@@ -431,7 +425,7 @@ get_married_pure_girl_scope = {
 			limit = {
 				is_alive = yes
 			}
-			every_vassal_or_below = {
+			random_vassal_or_below = {
 				limit = {
 					is_ai_whiteguy = yes
 					exists = primary_spouse
@@ -449,10 +443,9 @@ get_married_pure_girl_scope = {
 }
 
 get_unmarried_bbc_scope = {
-	every_courtier_or_guest = { # Player's Court
+	random_courtier_or_guest = { # Player's Court
 		limit = {
 			is_unmarried_ai_blackbull = yes
-			exists = this
 		}
 		save_scope_as = $scope_name$
 	}
@@ -460,10 +453,9 @@ get_unmarried_bbc_scope = {
 		limit = {
 			NOT = { exists = scope:$scope_name$ }
 		}
-		every_vassal_or_below = { # Player's Vassal
+		random_vassal_or_below = { # Player's Vassal
 			limit = {
 				is_unmarried_ai_blackbull = yes
-				exists = this
 			}
 			save_scope_as = $scope_name$
 		}
@@ -472,8 +464,9 @@ get_unmarried_bbc_scope = {
 		limit = {
 			NOT = { exists = scope:$scope_name$ }
 		}
-		every_vassal_or_below = {
-			every_courtier_or_guest = {
+		random_vassal_or_below = {
+			limit = { highest_held_title_tier >= tier_county }
+			random_courtier_or_guest = {
 				limit = {
 					is_unmarried_ai_blackbull = yes
 					exists = this
@@ -500,10 +493,9 @@ get_unmarried_bbc_scope = {
 			exists = liege
 		}
 		liege = {
-			every_courtier_or_guest = {
+			random_courtier_or_guest = {
 				limit = {
 					is_unmarried_ai_blackbull = yes
-					exists = this
 				}
 				save_scope_as = $scope_name$
 			}
@@ -515,10 +507,9 @@ get_unmarried_bbc_scope = {
 			exists = liege
 		}
 		liege = {
-			every_vassal_or_below = {
+			random_vassal_or_below = {
 				limit = {
 					is_unmarried_ai_blackbull = yes
-					exists = this
 				}
 				save_scope_as = $scope_name$
 			}
@@ -530,11 +521,11 @@ get_unmarried_bbc_scope = {
 			exists = liege
 		}
 		liege = {
-			every_vassal_or_below = {
-				every_courtier_or_guest = {
+			random_vassal_or_below = {
+				limit = { highest_held_title_tier >= tier_county }
+				random_courtier_or_guest = {
 					limit = {
 						is_unmarried_ai_blackbull = yes
-						exists = this
 					}
 					save_scope_as = $scope_name$
 				}
@@ -544,10 +535,9 @@ get_unmarried_bbc_scope = {
 }
 
 get_bbc_scope = {
-	every_courtier_or_guest = { # Player's Court
+	random_courtier_or_guest = { # Player's Court
 		limit = {
 			is_ai_blackbull = yes
-			exists = this
 		}
 		save_scope_as = $scope_name$
 	}
@@ -555,10 +545,9 @@ get_bbc_scope = {
 		limit = {
 			NOT = { exists = scope:$scope_name$ }
 		}
-		every_vassal_or_below = { # Player's Vassal
+		random_vassal_or_below = { # Player's Vassal
 			limit = {
 				is_ai_blackbull = yes
-				exists = this
 			}
 			save_scope_as = $scope_name$
 		}
@@ -567,11 +556,11 @@ get_bbc_scope = {
 		limit = {
 			NOT = { exists = scope:$scope_name$ }
 		}
-		every_vassal_or_below = {
-			every_courtier_or_guest = {
+		random_vassal_or_below = {
+			limit = { highest_held_title_tier >= tier_county }
+			random_courtier_or_guest = {
 				limit = {
 					is_ai_blackbull = yes
-					exists = this
 				}
 				save_scope_as = $scope_name$
 			}
@@ -595,10 +584,9 @@ get_bbc_scope = {
 			exists = liege
 		}
 		liege = {
-			every_courtier_or_guest = {
+			random_courtier_or_guest = {
 				limit = {
 					is_ai_blackbull = yes
-					exists = this
 				}
 				save_scope_as = $scope_name$
 			}
@@ -610,10 +598,9 @@ get_bbc_scope = {
 			exists = liege
 		}
 		liege = {
-			every_vassal_or_below = {
+			random_vassal_or_below = {
 				limit = {
 					is_ai_blackbull = yes
-					exists = this
 				}
 				save_scope_as = $scope_name$
 			}
@@ -625,22 +612,101 @@ get_bbc_scope = {
 			exists = liege
 		}
 		liege = {
-			every_vassal_or_below = {
-				every_courtier_or_guest = {
+			random_vassal_or_below = {
+				limit = { highest_held_title_tier >= tier_county }
+				random_courtier_or_guest = {
 					limit = {
 						is_ai_blackbull = yes
-						exists = this
 					}
 					save_scope_as = $scope_name$
 				}
 			}
 		}
 	}
-	scope:$scope_name$ = {
-		add_character_flag = {
-			flag = bbc_cooldown
-			months = 6
+}
+
+get_blacked_girl_scope = {
+	get_something = {
+		trigger_key = is_ai_blacked
+		scope_name = $scope_name$
+	}
+}
+
+get_blacked_girl_with_eating_disorder_scope = {
+	get_something = {
+		trigger_key = is_ai_blacked_has_eating_disorder
+		scope_name = $scope_name$
+	}
+}
+
+get_something = {
+	random_courtier_or_guest = { # Player's Court
+		limit = {
+			$trigger_key$ = yes
 		}
+		add_to_temporary_list = temp
+	}
+	random_vassal_or_below = { # Player's Vassal
+		limit = {
+			$trigger_key$ = yes
+		}
+		add_to_temporary_list = temp
+	}
+	random_vassal_or_below = {
+		limit = { highest_held_title_tier >= tier_county }
+		random_courtier_or_guest = {
+			limit = {
+				$trigger_key$ = yes
+			}
+			add_to_temporary_list = temp
+		}
+	}
+	if = { # Liege
+		limit = {
+			exists = liege
+			liege = {
+				$trigger_key$ = yes
+			}
+		}
+		liege = {
+			add_to_temporary_list = temp
+		}
+	}
+	if = {
+		limit = {
+			exists = liege
+		}
+		liege = {
+			random_courtier_or_guest = {
+				limit = {
+					$trigger_key$ = yes
+				}
+				add_to_temporary_list = temp
+			}
+			random_vassal_or_below = {
+				limit = {
+					$trigger_key$ = yes
+				}
+				add_to_temporary_list = temp
+			}
+			random_vassal_or_below = {
+				limit = { highest_held_title_tier >= tier_county }
+				random_courtier_or_guest = {
+					limit = {
+						$trigger_key$ = yes
+					}
+					add_to_temporary_list = temp
+				}
+			}
+		}
+	}
+	random_in_list = {
+		list = temp
+		weight = {
+			base = 1
+			bno_good_female_modifier = yes
+		}
+		save_scope_as = $scope_name$
 	}
 }
 
@@ -883,6 +949,29 @@ bbc_sex = {
 				bno_bull_husband_sex_after_effects = yes
 			}
 		}
+	}
+}
+
+gain_blacked_cum_slut_status_from_eating_disorder_effect = {
+	bno_have_sex_with_effects = {
+		PARTNER = $target$
+	}
+	add_learning_lifestyle_perk_points = 1
+	add_stress = -20
+	if = {
+		limit = {
+			NOT = { has_trait = temperate }
+		}
+		add_trait = temperate
+	}
+	give_nickname = nick_bcm
+	add_character_modifier = {
+		modifier = bno_cumstuffed
+		years = 10
+	}
+	add_opinion = {
+		modifier = bno_fed_me_cum
+		target = $target$
 	}
 }
 
@@ -1177,6 +1266,7 @@ bno_increase_sluttyness = {
 				}
 			}
 			become_more_slut = yes
+			convert_to_bbc_religion = yes
 		}
 	}
 	if = {
@@ -1373,7 +1463,7 @@ be_strongest = {
 }
 
 get_random_cuck_scope = {
-	every_courtier_or_guest = {
+	random_courtier_or_guest = {
 		limit = {
 			NOT = { is_spouse_of = root }
 			is_ai_whiteguy = yes
@@ -1415,6 +1505,21 @@ become_friend_with_target = {
 }
 
 slut_whoring = {
+	save_temporary_scope_as = temp
+	if = {
+		limit = {
+			exists = primary_spouse
+			primary_spouse = { is_bbc = no }
+		}
+		primary_spouse = {
+			send_interface_message = {
+				type = bno_blacked_events
+				title = bno_bull_0008_notification.title
+				right_icon = scope:temp
+				desc = bno_bull_0008_notification.desc
+			}
+		}
+	}
 	if = {
 		limit = {
 			OR = {
@@ -1451,7 +1556,7 @@ slut_whoring = {
 bbc_pimping = {
 	if = {
 		limit = {
-			scope:slut = {
+			$target$ = {
 				is_lowborn = yes
 			}
 		}
@@ -1464,7 +1569,7 @@ bbc_pimping = {
 	}
 	else_if = {
 		limit = {
-			scope:slut = {
+			$target$ = {
 				is_lowborn = no
 			}
 		}

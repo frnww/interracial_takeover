@@ -1,0 +1,614 @@
+﻿
+from Dragul17:
+Forgot to add this part: 
+
+There could even be events that reduce or extend the cool down.
+
+For example:
+
+Your master after a particularly steamy night laments being lonely and ostracized in court. Your heart cannot stand seeing him look forlorn his heart yearns for home and his clan. What can you do to please him.
+
+Suddenly it hits you like a Big Black Cock! If he can't go home why not bring home to him! You have many baronies in your domain that are naught but wasteland maybe you could give him land to bring his family over. What better way to spread the supremacy of BBC than for the locals to experience it first hand.
+
+A. Develop city
+
+B. Develop a castle
+convert_whole_realm_to_feudalism_effect = {
+	#TOOLTIP INFO
+	#PLAYER EFFECTS
+	##Liege has clan? Convert to clan!
+	if = {
+		limit = {
+			is_independent_ruler = no
+			OR = {
+				liege = { government_has_flag = government_is_clan }
+				AND = {
+					liege = { government_has_flag = government_is_tribal }
+					religion = religion:islam_religion
+				}
+			}
+		}
+		change_government = clan_government
+	}
+	##Liege has feudal? Convert to feudal!
+	else_if = {
+		limit = {
+			is_independent_ruler = no
+			OR = {
+				liege = { government_has_flag = government_is_feudal }
+				AND = {
+					liege = { government_has_flag = government_is_tribal }
+					NOT = { religion = religion:islam_religion }
+				}
+			}
+		}
+		change_government = feudal_government
+	}
+	##You're an independent Muslim? Convert to clan!
+	else_if = {
+		limit = {
+			is_independent_ruler = yes
+			faith = { religion_tag = islam_religion }
+		}
+		change_government = clan_government
+	}
+	##You're an independent anything else? Convert to feudal!
+	else = { change_government = feudal_government }
+	if = {
+		limit = {
+			government_has_flag = government_is_tribal
+		}
+		##General
+		custom_tooltip = all_holding_will_change
+		##Liege has clan? Convert to clan!
+		if = {
+			limit = {
+				is_independent_ruler = no
+				liege = { government_has_flag = government_is_clan }
+			}
+			custom_tooltip = clan_liege_vassals_will_convert
+		}
+		#Liege has feudal? Convert to feudal!
+		if = {
+			limit = {
+				is_independent_ruler = no
+				liege = { government_has_flag = government_is_feudal }
+			}
+			custom_tooltip = feudal_liege_vassals_will_convert
+		}
+		##If I am Islamic, we will become clan.
+		if = {
+			limit = {
+				is_independent_ruler = yes
+				faith = { religion_tag = islam_religion }
+			}
+			custom_tooltip = islamic_vassals_will_convert
+		}
+		##If I am not Islamic, we will become feudal.
+		else_if = {
+			limit = { is_independent_ruler = yes }
+			custom_tooltip = other_vassals_will_convert
+		}
+	}
+
+	hidden_effect = {
+		#Nuke tribal authorities.
+		if = {
+			limit = { has_realm_law = tribal_authority_0 }
+			remove_realm_law = tribal_authority_0
+		}
+		if = {
+			limit = { has_realm_law = tribal_authority_1 }
+			remove_realm_law = tribal_authority_1
+		}
+		if = {
+			limit = { has_realm_law = tribal_authority_2 }
+			remove_realm_law = tribal_authority_2
+		}
+		if = {
+			limit = { has_realm_law = tribal_authority_3 }
+			remove_realm_law = tribal_authority_3
+		}
+		#Start off crown authorities.
+		if = {
+			limit = {
+				NOT = { has_realm_law = crown_authority_0 }
+			}
+			add_realm_law_skip_effects = crown_authority_0
+		}
+
+		#Also convert every vassal.
+		#Liege has taken clan, so become clan.
+		if = {
+			limit = {
+				government_has_flag = government_is_clan
+			}
+			every_vassal_or_below = {
+				limit = { government_has_flag = government_is_tribal }
+				change_government = clan_government
+				#Nuke tribal authorities.
+				if = {
+					limit = { has_realm_law = tribal_authority_0 }
+					remove_realm_law = tribal_authority_0
+				}
+				if = {
+					limit = { has_realm_law = tribal_authority_1 }
+					remove_realm_law = tribal_authority_1
+				}
+				if = {
+					limit = { has_realm_law = tribal_authority_2 }
+					remove_realm_law = tribal_authority_2
+				}
+				if = {
+					limit = { has_realm_law = tribal_authority_3 }
+					remove_realm_law = tribal_authority_3
+				}
+				if = {
+					limit = {
+						NOT = { has_realm_law = crown_authority_0 }
+					}
+					add_realm_law_skip_effects = crown_authority_0
+				}
+			}
+		}
+		#Liege is not clan, become feudal.
+		else = {
+			every_vassal_or_below = {
+				limit = { government_has_flag = government_is_tribal }
+				change_government = feudal_government
+				#Nuke tribal authorities.
+				if = {
+					limit = { has_realm_law = tribal_authority_0 }
+					remove_realm_law = tribal_authority_0
+				}
+				if = {
+					limit = { has_realm_law = tribal_authority_1 }
+					remove_realm_law = tribal_authority_1
+				}
+				if = {
+					limit = { has_realm_law = tribal_authority_2 }
+					remove_realm_law = tribal_authority_2
+				}
+				if = {
+					limit = { has_realm_law = tribal_authority_3 }
+					remove_realm_law = tribal_authority_3
+				}
+				if = {
+					limit = {
+						NOT = { has_realm_law = crown_authority_0 }
+					}
+					add_realm_law_skip_effects = crown_authority_0
+				}
+			}
+		}
+		
+		## Spawn holdings in tribal counties
+		
+		every_sub_realm_county = { # Spawn temples in your holy sites
+			limit = {
+				any_county_province = {
+					has_holding_type = tribal_holding
+				}
+				NOT = {
+					any_county_province = {
+						has_holding_type = church_holding
+					}
+				}
+				any_county_province = {
+					has_holding = no
+					barony = {
+						is_holy_site_of = root.faith
+					}
+				}
+			}
+			random_county_province = {
+				limit = {
+					has_holding = no
+					barony_cannot_construct_holding = no
+					barony = {
+						is_holy_site_of = root.faith
+					}
+				}
+				set_holding_type = church_holding
+			}
+		}
+		
+		every_sub_realm_county = { # Spawn a City
+			limit = {
+				any_county_province = {
+					has_holding_type = tribal_holding
+				}
+				any_county_province = {
+					has_holding = no
+				}
+				NOT = {
+					any_county_province = {
+						has_holding_type = city_holding
+					}
+				}
+			}
+			random_county_province = {
+				limit = {
+					has_holding = no
+					OR = {
+						terrain = floodplains
+						terrain = oasis
+						terrain = farmlands
+					}
+					is_coastal = yes
+					has_special_building_slot = no
+					barony_cannot_construct_holding = no
+				}
+				alternative_limit = {
+					has_holding = no
+					OR = {
+						terrain = floodplains
+						terrain = oasis
+						terrain = farmlands
+					}
+					has_special_building_slot = no
+					barony_cannot_construct_holding = no
+				}
+				alternative_limit = {
+					has_holding = no
+					OR = {
+						terrain = floodplains
+						terrain = oasis
+						terrain = farmlands
+					}
+					barony_cannot_construct_holding = no
+				}
+				alternative_limit = {
+					has_holding = no
+					barony_cannot_construct_holding = no
+				}
+				random = {
+					chance = 60
+					modifier = {
+						add = county.development_level
+					}
+					modifier = {
+						add = 50
+						this.county = root.capital_county
+					}
+					modifier = {
+						add = 20
+						OR = {
+							terrain = floodplains
+							terrain = oasis
+							terrain = farmlands
+						}
+					}
+					set_holding_type = city_holding
+				}
+			}
+		}
+		
+		every_sub_realm_county = { # Spawn a Temple
+			limit = {
+				any_county_province = {
+					has_holding_type = tribal_holding
+				}
+				any_county_province = {
+					has_holding = no
+				}
+				NOT = {
+					any_county_province = {
+						has_holding_type = church_holding
+					}
+				}
+			}
+			random_county_province = {
+				limit = {
+					has_holding = no
+					OR = {
+						terrain = floodplains
+						terrain = oasis
+						terrain = farmlands
+					}
+					is_coastal = yes
+					has_special_building_slot = no
+					barony_cannot_construct_holding = no
+				}
+				alternative_limit = {
+					has_holding = no
+					OR = {
+						terrain = floodplains
+						terrain = oasis
+						terrain = farmlands
+					}
+					has_special_building_slot = no
+					barony_cannot_construct_holding = no
+				}
+				alternative_limit = {
+					has_holding = no
+					OR = {
+						terrain = floodplains
+						terrain = oasis
+						terrain = farmlands
+					}
+					barony_cannot_construct_holding = no
+				}
+				alternative_limit = {
+					has_holding = no
+					barony_cannot_construct_holding = no
+				}
+				random = {
+					chance = 50
+					modifier = {
+						add = county.development_level
+					}
+					modifier = {
+						add = 50
+						this.county = root.capital_county
+					}
+					modifier = {
+						add = 20
+						OR = {
+							terrain = floodplains	
+							terrain = oasis
+							terrain = farmlands
+						}
+					}
+					set_holding_type = church_holding
+				}
+			}
+		}
+
+		##Sort out new buildings for liege and all vassals
+		every_realm_province = {
+			limit = {
+				has_holding_type = tribal_holding
+				NOT = { is_in_list = feudal_conversion }
+			}
+			add_to_list = feudal_conversion
+
+		}
+		every_vassal_or_below = {
+			every_realm_province = {
+				limit = {
+					has_holding_type = tribal_holding
+					NOT = { is_in_list = feudal_conversion }
+				}
+				add_to_list = feudal_conversion
+
+			}
+		}
+		every_in_list = {
+			list = feudal_conversion
+			set_variable = {
+				name = tribal_to_feudal_building_level
+				value = combined_building_level
+				days = 1
+			}
+			set_holding_type = castle_holding
+			while = {
+				limit = {
+					var:tribal_to_feudal_building_level > 1
+				}
+				generate_building = yes
+				change_variable = {
+					name = tribal_to_feudal_building_level
+					subtract = 1
+				}
+			}
+			remove_variable = tribal_to_feudal_building_level
+			remove_from_list = feudal_conversion
+		}
+	}
+}
+
+C. hand over a county culture will change to african.
+set_county_culture = culture:danish
+
+D. Promise to bring in more allies (decrease cool down by 1 year)
+remove_decision_cooldown = decision_name
+
+#Done
+from TinyLynx:
+hi i know that i asked this before but will there be a game toggle to turn this mod off so that i can also play as another race without being cucked
+
+from kotvald:
+I have few suggestions I would like to leave here. I know the mod is called interracial takeover, but i feel like taking over part is bit too easy, i think at some point of expansion npcs should start resisting. Scheming and declaring wars on you instead of just everyone willingly turning into cucks. Also NPCs with caged trait should be able to remove it by some decision (nevermind if they can), depending on their character traits, some prerequisites or whatever. Maybe even adding some counterbalance, NPCs with some sort of BWC trait? Well I guess that breaks the point of this mod, but snowball gets crazy at certain point and then AI can't do anything to stop it or at least that was the case in the version before.
+
+Addition of new scheme to give target character "curious" trait instead of just events randomly firing and instantly making someone straight into "blacked/snowbunny". Like there's no point of using seduce schemes in your court/camp, cause event that makes them blacked fires soon after they join. Also I find the "BLACKED" trait progression too fast, so maybe needs bit of xp reduction in the events. And maybe losing xp when girls keep fucking white dudes and having kids with them.
+
+Also would welcome more reluctant events and stuff for female character runs, because now you just get "curious" trait and then you can't really do anything to stop progressing, especially when you get events with only one option.
+
+More settings for body modifications. Such as disabling only skin color changes, tattoos or both at once. Personally not a fan of face tattoos and whole "characters changing into africans", especially the latter just breaks immersion for me.
+
+Then maybe new dynasty trait path down the line. No clue what should be there though, cause BBC trait gives you so many buffs anyway.
+
+I guess "african warriors" MAA are leftovers from the mod before, but they're really broken stat wise and kinda unfinished, for example as an adventurer they take no provisions during travel.
+
+Anyway good work with reviving this mod, looking forward to more updates.
+
+from Zdun:
+Could body modification be even more granular. I would like to split body modification from skin color change if possible. Multi racial fetish really cool but I would distinct it from body shape modification. 
+
+from HexYoF
+
+
+I feel like the story progresses too fast, maybe there could be a long and detailed storyline. For example, after having sex with a black man a few times, she is suddenly sold to be a prostitute by the black man, which feels very abrupt.
+
+And I think the "green hat" trait should be obtained after discovering that the wife is cheating.
+Edited yesterday at 05:14 AM by HexYoF 
+
+from JankinT
+ Also, some times the blacked or white bunny or whatever trait it is at the moment will disapear, it has no event or any thing, and the character has no children or pregnant at the moment, it just made the girl not blacked. it's weird…
+
+And the bbc seduce scheme, it's great, but you can use it to any one at any moment. I think it's because it's just for testing. My suggestion is to make it a look term scheme, which has mutiple phase, and the bbc event will more likely to happend to the scheme target. And at the final phase, it will turn the woman into a bbc slut. And if you are bbc and you still can have a wife, it will make the womam your wife and also continue the scheme to make the womam slowly turn to black bimbo, if the woman has a white husband, he will be castrated, and all the title the woman has will be yours. And if you are a white woman, the final phase will turn you into a mindless slut, but in other phases, you have a choice to quit, and if the black man is not married, you can castrate your husband and leave him for the bull.
+
+I'm not good with words, especially with English, but I hope you can get the idea :) 
+
+Again thanks A lot for updating the Mod, I really enjoying this kind of content where you can corrupt a entire nation with a strong and agressive race.
+
+from Karelian
+For the future. I propose a very unusual plot. For example, as the BBC scale progresses, the BBC will require the whore to become an adventurer and move to Africa, closer to his relatives. Conversely, if you play for the BBC while in Africa, you will go to Europe to conquer the whites. And if you are a land ruler, then you will have the decision to "Invite a white whore to the court." 
+
+
+from Beasstmaster
+Thoughts about making just a Huge Dick varriant for Asian, White and Latin rulers?  
+
+from lolington6969
+
+
+I really enjoy stories and rp content in the game. I hope you are able to develop lengthy and sophisticated event chains, bcoz currently you are busy trying to fix the codes in the game, which is very important since I played as a landless character > landed character progression, and the BBC events are not optimized for unlanded gameplay, which made it all very chaotic.
+
+ 
+
+The events also do not seem to fire chronologically, their timing doesn't make sense which I think you already know about. I hope this mod eventually comes on par with Phazestar's Milfy mod or Futanari mod. I was wondering if you could try to add white MILF content too maybe, for mature women fetishists...
+
+
+from DiabloSamaKun
+
+ive noticed that the curious traits and its progressive traits disappear for some reason.. i know there is some sort of exp loss over time when they haven't experienced anything, but it will go from curious 2 to not having the trait at all the next moment, then having to restart from curious 1, this is the same thing ive seen with blacked as well, dissapearing and restarting from curious... also another thing ive seen happen is a bbc vassal will take your child as a ward, and when you give him the ward, he will keep asking for it over and over even though you've already agreed... and 1 other thing, i'm not entire sure if the bbc army units are balanced lol, i was fighting kingdom that was the same size as me, but they had a bbc vassal, and their vassal had a 22 thousand army of black warriors lol... there was no way of defeating that. 
+
+also skullgirls, after you told me about elf destiny, i tried it, and i liked the system they had for the red sisters, we should maybe have something like that for black supremacy faith, you can appoint a blacked revolutionary, and they will have a holding like a bbc camp, and in that camp, you can send female hostages or people women you've kidnapped there to be forced to breed. I thought of this because when I was at war with a BBC vassal, during a battle, my wife was imprisoned, so it would have been engaging if they tried to use that to force me to get chastity, and maybe all my sons, to free her from prison, instead of a ransom (which should be super expensive), also, should make it to where the chastity and castrated trait makes you unable to have children instead of just fertility loss, and a way to get out of chastity, but causes stress each time you fail. & if a husband has chastity trait, should make the spouse ai get something that makes her more susceptible to seduction schemes and things like that, because she would be sexually frustrated obviously lol. This should be fun in terms of being involved in that gameplay, and seeing how it effects the ai, if a bbc ruler manages to capture a wife in battle, and causing her husband, and his sons, to have chastity and unable to have children, and stressing out hoping their attempts at getting it off is successful. Hope you like the ideas, and keep up the great work 💪also I think i've noticed performance improvements in the latest update, very great job :smile:
+
+from ilske
+Really like that your changes to this mod! Have any changes or are any changes planned with unlanded adventurers? I remember when the DLC came out people were excited for it with the previous mods 
+
+from me
+mix + mix = mix and so on
+
+from Akashi_1944
+To avoid repetition as the player becomes white again various choices in the event chain could perhaps let them become dominant could occur, becoming a snow-wolf rather than a snowbunny as it were.  
+If a mixed woman or man is captured he can be turned into a breeder after their mixed heritage is removed, no rest and only food needed to keep their libido and fertility up in prison or house arrest. Any children born this way are essentially born into the care of the Church of BBC and are guanteed to be exposed to BBC at a young age, thus only really capable of being sluts, so no land or claims (to avoid potential claim spam). 
+There could also be a "white bitches found" event where a BBC landed ruler could capture a trove of hidden white women in a raid. 
+
+from yuasf
+
+Maybe it's better to make a decision or a event?
+
+After which you could get a blacked tattoo when you play as a white girl.
+
+ 
+
+A new activity to travel to Africa is also an interesting idea,I think.
+
+
+from An0thername
+
+ *Before rechecking AGOT mod*
+
+As Touhoustar said above Summer Isles have "heir skin color includes nut brown, teak, ebony, and polished jet. Their hair and eyes are black." (from the wiki).
+
+The Dothraki and Rhoynar cultures are more a mix of Hispanic/Indian/Arabic/Persian colouring; and the now extinct Tall Men with their "long of limb, brown of skin, like the Zoqora, and with eyes and hair as black as night; were probably the same. (Zoqora being "brown-skinned and pale-haired").
+
+Ultimately the ASOIAF universe underwent several large cultural migrations meaning it has a number of mixed/mongrel/crossbreed cultures/ethnicities and only the Summer Isles due in part to their isolation have the kind of homogeneous culture that fits the mods requirement.
+
+To make it more complex, the Islands are not currently in the mod.
+
+*Check mod*
+
+So using a cheat mod (Divine Intervention (you will need the AGOT patch for it))
+
+The cultures for the Summer Islands are in the game, and there are a handful of characters scattered throughout the courts (less than 5) of 4 of 7 game starts tested, (none in ‘Fire and Blood’)
+
+So the cultures that would have the trait are the 'Jhalani, Moluuni, Naathi, Omborui, Walanoi'
+
+Now which ‘culture’ should be used for the recruit event is up in the air. If you can get the mod to detect AGOT mod and have it pick a different localisation folder to rename African to ‘Summer Islander’ that would work (MAA might need a rename, same with some events).
+
+Or you could do a AGOT patch; to either, overwrite the AGOT five Summer Islander cultures with a unified ‘Summer Islander’ culture, or just add a new ‘Summer Islander’ culture to the game.  (Still would need to change MAA and some events , but might be able to 'Find and Replace' most of it.) 
+
+from Mephisto9
+
+
+I'm excited to share some awesome ideas with you—why don’t we create a brand-new dynasty legacy? Here’s my vision for it:
+
+1、Embrace Migrants: Increases cultural affinity and unlocks the “Embrace Migrants” event chain or decision. These events depict conflicts between migrants and locals, with demands such as joining the court, securing court positions, gaining prestige, obtaining gold, or requesting duels. Fulfilling migrant demands boosts territory control and levies but reduces income. Siding with locals increases income but lowers control. (Repeatedly ignoring migrants could spark rebellions?)
+2、Utilize Migrants: Raises the knight cap (unlocks a “BBC Camp” building?) and introduces new decisions or court positions to trigger migrant appeasement events. Send female or BBC characters to the camp to pacify migrants, triggering fun events and granting buffs like increased levies, control, or development.
+
+3、Understand Migrants: Boosts language learning speed and cap, and unlocks a “Learn About Migrants” decision to delve into the mysteries of BBC strength. Through various options or events, this provides bonuses to cultural acceptance, innovation speed, or dynasty perks.
+4、Recognize Migrants: Increases scheme success or discovery rates, improves acceptance of marriages with BBC characters and grants legitimacy, provides bonus competence for BBC characters in court positions, and boosts council efficiency (just like family business tradition but for BBC).
+5、Integrate Migrants: Increases demesne size, unlocks interactions to share power with BBC characters, and unlocks unique Men-at-Arms. Failing to share power causes discontent and periodic penalty events, while sharing power triggers some “intriguing” events.
+
+This gives us an engaging goal to pursue during gameplay, allowing us to experience this content progressively. We could even try gaining dynasty prestige through sex with black bull!
+
+from JankinT
+And is there any way you can play as a refugee camp leader? the idea of a low life black refugee takeover a nation with the help of his own dick always fascinate me. 
+
+from Akashi_1944
+https://www.loverslab.com/files/file/41992-mystic-subjugation-%E2%80%93-a-witch%E2%80%99s-touch-nsfw-femdom-mtf/
+mtf
+
+from ASDhgfj 
+
+ Hey Ive got some ideas:
+
+ 
+
+1. Add a white man trait, (or fully white) and pair it with a small white cock trait that maybe could reduce attraction opinion etc.
+
+
+2. When you replace a culture to african the new courtiers and nobles does not have the african traits. 
+ 
+
+3. Add option to castrate/chast. any white men you control (white sons of your new white wife or maybe courtiers?)
+
+ 
+
+4. (Ive been deleting files so Im not sure its still an issue) The body transformation event was still happening to me even when I turned it off in the gamerules.
+
+ 
+
+5. Add a scheme for a black men to get a white girl blacked/impregnate her. 
+
+from Mephisto9
+I came up with a very RPG-flavored event where a husband discovers his wife’s sex with a Black Bull and can choose to initiate a duel. If he miraculously wins, he reclaims his wife. Otherwise, he’s defeated by the Black Bull, leading to a delightfully dramatic outcome. Or turn it into an option included in cuck events. 
+
+from DonPerdo89
+I enjoy your mods very much. I don't have any experience with development or coding, so I am always weary when requesting anything for a mod because I don't understand how they work, LOL. My thoughts on BWC content, and I could be way out of touch here, but was to have a similar thing with BNO, but with Norsemen invading Europe with their BWC's taking over Europe. Side note: I have noticed that if I start a game without BNO, then exit and re-enter with BNO, I get White Pictish characters as the BBC's. Don't know why.  
+
+from Alexios1113
+
+
+Hey there. First off, huge thanks for all the amazing work you've already put into the mod u might as well be Santa for all the updates u have been droping.
+
+I have an idea that builds on a previous idea I have seen brought up earlier about playing as an immortal non-BBC male ruler with an immortal white wife, defending the realm against interracial takeover until the wife eventually turns ruler into a cuck and that kinda gameplay etc. I'd love more content to fit this playstyle. One suggestion to help in this could be to perhaps introduce a trait we could assign to key people (like the ruler, wife, and close family members etc) that makes them  immune  to BBC influences for a time. It could even have a chance to be taught during guaridanship perhaps smtg like chaste? This way, we could protect the core until we feel the realm has been sufficiently "Blacked" enough and infiltrated from the outside in. The way I enjoy playing is letting the realm's vassals fall one by one, then courtiers, and  then  close family. Currently, from what I have seen from how the mod works it just targets the wife and close ones immediately, which doesn't always make a whole lot of sense, especially if you have a big, far-off realm. 
+
+Another thing perhaps to make the takeover feel more organic could be mechanics that would force interracial marriages (on either gender) upon losing or white-peacing a war? This would ensure the infiltration of black courtiers and nobility into the realm, slowly corrupting things and making sure upcoming generations are at least mixed. Something similar could be done with the hostage exchange mechanic. It is already underutilized right now. Hostages could become really interesting for spreading outside influence. This would really enhance that long-term "defense crumbling slowly" narrative, and during the "crumbling" hell friction events could be introduced between local cultures and African ones that would force concessions out of the ruler. Anyhow, I don't know how or whether any of this would work but massive thanks again for all the work you have done for the mod already.
+
+from JankinT
+
+Don't is that a bug or intented to be like that. some times the blacked traits will disapear, some times the bbc mindless slut trait will became blacked trait, and when it goes away, it tooks too long to get them back.
+
+And when you get the event where you blacked a girl, the girl will get the bbc religion. but if you reformed the religion, the girl will get the old bbc religion instead of the reformed one, and for some reason, the event turns a mindless girl into a black girl will not trigger.
+
+There's also a event where a black court member going around with his dick out, which will give you debuff modifier for a year, and bbc character will get it too, which is wierd.
+
+from JuliusCaesar1
+A Suggestion for bull content, maybe Bull can have a character interaction with non-curios females within Diplo range to subjugate them and humiliate their husband, also ik there's an event in vanilla ck3 to sleep with your nemesis wife maybe that could be implemented too somehow.   
+
+##### Section A
+random_vassal_or_below = {
+	limit = {
+		exists = this
+	}
+	random_courtier_or_guest = {
+		limit = {
+			exists = this
+			is_adult = yes
+			has_trait = brave
+			has_trait = strong
+		}
+		save_scope_as = good_knight
+	}
+}
+
+##### Section B
+every_vassal_or_below = {
+	limit = {
+		exists = this
+	}
+	every_courtier_or_guest = {
+		limit = {
+			exists = this
+			is_adult = yes
+			has_trait = brave
+			has_trait = strong
+		}
+		save_scope_as = good_knight
+	}
+}

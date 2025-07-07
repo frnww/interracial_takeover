@@ -36,7 +36,7 @@ bno_bull.0001 = {
 		animation = eavesdrop
 	}
 	
-	cooldown = { months = 24 }
+	cooldown = { months = { 24 36 } }
 	trigger = {
 		is_blackbull = yes
 		exists = liege
@@ -66,32 +66,7 @@ bno_bull.0001 = {
 		}
 		scope:target2 = {
 			bno_increase_sluttyness = yes
-		}
-		if = {
-			limit = {
-				scope:target2 = {
-					exists = primary_spouse
-					primary_spouse = {
-						NOT = {
-							has_trait = bno_bbc
-						}
-					}
-				}
-			}
-			scope:target2 = {
-				primary_spouse = {
-					become_more_cuck_effect = yes
-				}
-			}
-		}
-		scope:target2 = {
-			every_spouse = { #Inform cuck husband she's happy.
-				send_interface_message = {
-					type = bno_blacked_events
-					title = bno_happy_wife.0001.title
-					right_icon = scope:target2
-					desc = bno_happy_wife.0001.desc
-				}
+			primary_spouse = {
 				add_character_flag = {
 					flag = bno_bull.0001		#add flag to prevent this guy from getting spammed multiple times in same event pulse
 					years = 2
@@ -109,34 +84,10 @@ bno_bull.0001 = {
 			PARTNER = scope:target2
 		}
 		scope:target2 = {
-			bno_increase_sluttyness = yes
-			every_spouse = { #Inform cuck husband she's happy.
-				send_interface_message = {
-					type = bno_blacked_events
-					title = bno_happy_wife.0001.title
-					right_icon = scope:target2
-					desc = bno_happy_wife.0001.desc
-				}
-			}
-			add_character_flag = {
-				flag = bno_bull.0001		#add flag to prevent this guy from getting spammed multiple times in same event pulse
-				years = 1
-			}
-		}
-		if = {
-			limit = {
-				scope:target2 = {
-					exists = primary_spouse
-					primary_spouse = {
-						NOT = {
-							has_trait = bno_bbc
-						}
-					}
-				}
-			}
-			scope:target2 = {
-				primary_spouse = {
-					become_more_cuck_effect = yes
+			primary_spouse = {
+				add_character_flag = {
+					flag = bno_bull.0001		#add flag to prevent this guy from getting spammed multiple times in same event pulse
+					years = 1
 				}
 			}
 		}
@@ -148,28 +99,7 @@ bno_bull.0001 = {
 		}
 		trigger = {
 			scope:target2 = {
-				OR = {
-					has_trait = beauty_bad_1
-					has_trait = beauty_bad_2
-					has_trait = beauty_bad_3
-					has_trait = disfigured
-					has_trait = infirm
-					has_trait = gout_ridden
-					has_trait = cancer
-					has_trait = consumption
-					has_trait = incapable
-					has_trait = typhus
-					has_trait = bubonic_plague
-					has_trait = smallpox
-					has_trait = one_legged
-					has_trait = one_eyed
-					has_trait = great_pox
-					has_trait = maimed
-					has_trait = leper
-					has_trait = early_great_pox
-					has_trait = lovers_pox
-					has_trait = scaly
-				}
+				has_bad_trait = yes
 			}
 		}
 		add_prestige = 50
@@ -181,7 +111,6 @@ bno_bull.0001 = {
 		name = bno_bull_0001.d
 	}
 }
-
 # bull anti-stress event
 bno_bull.0002 = {
 	type = character_event
@@ -209,38 +138,20 @@ bno_bull.0002 = {
 		}
 	}
 	
-	cooldown = { months = 12 }
+	cooldown = { months = { 12 18 } }
 	
 	trigger = {
 		root = {
 			is_ruler = yes
 			is_blackbull = yes
-			OR = {
-				stress > 70
-				has_trait = drunkard
-				has_trait = rakish
-				has_trait = reclusive
-				has_trait = flagellant
-				has_trait = improvident
-				has_trait = contrite
-				has_trait = inappetetic
-				has_trait = comfort_eater
-				has_trait = profligate
-			}
-			any_courtier_or_guest = {
-				is_blacked = yes
-			}
+			is_stressed_out = yes
+			does_blacked_girl_exist = yes
 		}
 	}
 	
 	immediate = {
-		root = {
-			random_courtier_or_guest = {
-				limit = {
-					is_blacked = yes
-				}
-				save_scope_as = target1
-			}
+		get_blacked_girl_scope = {
+			scope_name = target1
 		}
 		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
@@ -250,29 +161,13 @@ bno_bull.0002 = {
 	option = { #used slut to remove stress
 		name = bno_bull_0002.a
 		
-		add_stress = -100
-		remove_trait = drunkard
-		remove_trait = rakish
-		remove_trait = reclusive
-		remove_trait = flagellant
-		remove_trait = improvident
-		remove_trait = contrite
-		remove_trait = inappetetic
-		remove_trait = comfort_eater
-		remove_trait = profligate
+		bno_remove_stress = yes
 		add_character_modifier = {
 			modifier = bno_stress_relieved
 			years = 2
 		}
-		scope:target1 = {
-			add_opinion = {
-				modifier = bno_bull_fucks_me
-				target = root
-			}
-		}
 	}
 }
-
 #bull gives food disordered slut a cum diet
 bno_bull.0003 = {
 	type = character_event
@@ -308,92 +203,24 @@ bno_bull.0003 = {
 		}
 	}
 	
-	cooldown = { months = 8 }
+	cooldown = { months = { 8 12 } }
 	
 	trigger = {
-		root = {
-			is_blackbull = yes
-			is_ruler = yes
-			OR = {
-				liege = {
-					any_courtier_or_guest = {
-						is_blacked = yes
-						OR = {
-							has_trait = drunkard
-							has_trait = inappetetic
-							has_trait = comfort_eater
-							has_trait = gluttonous
-						}
-					}
-				}
-				any_courtier_or_guest = {
-					is_blacked = yes
-					OR = {
-						has_trait = drunkard
-						has_trait = inappetetic
-						has_trait = comfort_eater
-						has_trait = gluttonous
-					}
-				}
-			}
-		}
+		is_blackbull = yes
+		is_ruler = yes
+		does_blacked_with_eating_disorder_exist = yes
 	}
 	
 	immediate = {
-		root = {
-			random_courtier_or_guest = {
-				limit = {
-					is_blacked = yes
-					OR = {
-						has_trait = drunkard
-						has_trait = inappetetic
-						has_trait = comfort_eater
-						has_trait = gluttonous
-					}
-				}
-				add_to_list = potential_cumsluts
-			}
-			liege = {
-				random_courtier_or_guest = {
-					limit = {
-						is_blacked = yes
-						OR = {
-							has_trait = drunkard
-							has_trait = inappetetic
-							has_trait = comfort_eater
-							has_trait = gluttonous
-						}
-					}
-					add_to_list = potential_cumsluts
-				}
-			}
-		}
-		random_in_list = {
-			list = potential_cumsluts
-			weight = {
-				base = 1
-				modifier = {
-					add = 2
-					has_trait = beauty_good_1
-				}
-				modifier = {
-					add = 3
-					has_trait = beauty_good_2
-				}
-				modifier = {
-					add = 5
-					has_trait = beauty_good_3
-				}
-				modifier = {
-					add = 2
-					is_spouse_of = liege
-				}
-			}
-			save_scope_as = target1
+		get_blacked_girl_with_eating_disorder_scope = {
+			scope_name = target1
 		}
 	}
 	option = {
 		name = bno_bull_0003.a
+		ai_chance = {
+			base = 100
+		}
 		trigger_event = {
 			id = bno_bull.1003
 			months = 2
@@ -401,10 +228,12 @@ bno_bull.0003 = {
 		}
 	}
 	option = {
+		ai_chance = {
+			base = 10
+		}
 		name = bno_bull_0003.b
 	}
 }
-
 bno_bull.1003 = {
 	type = character_event
 	title = bno_bull_1003.title
@@ -438,6 +267,11 @@ bno_bull.1003 = {
 			}
 		}
 	}
+
+	trigger = {
+		is_alive = yes
+	}
+
 	option = {
 		name = bno_bull_1003.a
 		trigger_event = {
@@ -447,40 +281,12 @@ bno_bull.1003 = {
 		}
 		add_stress = -20
 		scope:target1 = {
-			bno_increase_sluttyness = yes
-			add_stress = -20
-			remove_trait = drunkard
-			remove_trait = gluttonous
-			remove_trait = inappetetic
-			remove_trait = comfort_eater
-			add_opinion = {
-				modifier = bno_fed_me_cum
+			bno_remove_eating_disorder = {
 				target = root
-			}
-		}
-		if = {					#send notification to cuck husband if one exists
-			limit = {
-				scope:target1 = {
-					exists = primary_spouse
-					primary_spouse = {
-						NOT = { has_trait = bno_bbc }
-					}
-				}
-			}
-			scope:target1 = {
-				primary_spouse = {
-					send_interface_message = {
-						type = bno_blacked_events
-						title = bno_bull_0004_notification.title
-						right_icon = scope:target1
-						desc = bno_bull_0004_notification.desc
-					}
-				}
 			}
 		}
 	}
 }
-
 bno_bull.2003 = {
 	type = character_event
 	title = bno_bull_2003.title
@@ -515,48 +321,19 @@ bno_bull.2003 = {
 		}
 	}
 
-	immediate = {
-		if = {
-			limit = {
-				scope:target1 = {
-					exists = primary_spouse
-					primary_spouse = {
-						NOT = { has_trait = bno_bbc }
-					}
-				}
-			}
-			scope:target1 = {
-				primary_spouse = {
-					become_more_cuck_effect = yes
-				}
-			}
-		}
+	trigger = {
+		is_alive = yes
 	}
+
 	option = {
 		name = bno_bull_2003.a
-		add_stress = -20
-		add_learning_lifestyle_perk_points = 1
+		gain_blacked_cum_slut_status_from_eating_disorder_effect = {
+			target = root
+		}
 		scope:target1 = {
-			bno_increase_sluttyness = yes
-			add_stress = -20
-			add_trait = temperate
-			give_nickname = nick_bcm
-			add_character_modifier = {
-				modifier = bno_cumstuffed
-				years = 10
-			}
-			add_opinion = {
-				modifier = bno_fed_me_cum
-				target = root
-			}
 			if = {
 				limit = {
-					scope:target1 = {
-						exists = primary_spouse
-						primary_spouse = {
-							is_bbc = no
-						}
-					}
+					exists = primary_spouse
 				}
 				primary_spouse = {
 					trigger_event = {
@@ -569,7 +346,6 @@ bno_bull.2003 = {
 		}
 	}
 }
-
 bno_bull.3003 = { #very basic flavor event if player is cumslut's husband, nothing actually happens for now
 	type = character_event
 	title = bno_bull_3003.title
@@ -587,11 +363,15 @@ bno_bull.3003 = { #very basic flavor event if player is cumslut's husband, nothi
 		character = root
 		animation = personality_content
 	}
+
+	trigger = {
+		is_alive = yes
+	}
+
 	option = {
 		name = bno_bull_3003.a
 	}
 }
-
 #black ruler fucks non-blacked courtier
 bno_bull.0004 = {
 	type = character_event
@@ -627,73 +407,29 @@ bno_bull.0004 = {
 		}
 	}
 	
-	cooldown = { months = 8 }
+	cooldown = { months = { 8 12 } }
 	
 	trigger = {
-		root = {
-			is_ruler = yes
-			is_blackbull = yes
-			any_courtier_or_guest = {
-				is_pure_whitegirl = yes
-			}
-		}
+		is_ruler = yes
+		is_blackbull = yes
+		does_pure_whitegirl_exist = yes
 	}
+
 	immediate = {
-		root = {
-			random_courtier_or_guest = {
-				limit = {
-					is_pure_whitegirl = yes
-				}
-				weight = {
-					base = 1
-					modifier = {
-						add = 2
-						has_trait = beauty_good_1
-					}
-					modifier = {
-						add = 3
-						has_trait = beauty_good_2
-					}
-					modifier = {
-						add = 5
-						has_trait = beauty_good_3
-					}
-				}
-				save_scope_as = target1
-			}
+		get_pure_whitegirl_scope = {
+			scope_name = target1
 		}
 		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
-		scope:target1 = {
-			bno_increase_sluttyness = yes
-		}
-		if = {
-			limit = {
-				scope:target1 = {
-					exists = primary_spouse
-					primary_spouse = {
-						NOT = {
-							has_trait = bno_bbc
-						}
-					}
-				}
-			}
-			scope:target1 = {
-				primary_spouse = {
-					become_more_cuck_effect = yes
-				}
-				convert_to_bbc_religion = yes
-			}
-		}
 	}
+
 	option = {
 		name = bno_bull_0004.a
 		add_prestige = 100
 		dynasty = { add_dynasty_prestige = 50 }
 	}
 }
-
 #rando pretty white woman appears
 bno_bull.0005 = {
 	type = character_event
@@ -728,35 +464,20 @@ bno_bull.0005 = {
 			}
 		}
 	}
-	cooldown = { months = 36 }
+
+	cooldown = { months = { 36 48 } }
+
 	trigger = {
 		is_ruler = yes
 		is_blackbull = yes
-		
-		any_pool_character = {
-			province = root.location
-			is_available_ai_adult_locale_person = yes
-			is_attracted_to_gender_of = root
-			is_blacked = yes
-		}
+		does_wandering_curious_whitegirl_exist = yes
 	}
 	immediate = {
-		random_pool_character = {
-			province = root.location
-			limit = {
-				is_available_ai_adult_locale_person = yes
-				is_attracted_to_gender_of = root
-				is_blacked = yes
-			}
-			save_scope_as = target1
+		get_wandering_curious_whitegirl_scope = {
+			scope_name = target1
 		}
-		root = {
-			bno_have_sex_with_effects = {
-				PARTNER = scope:target1
-			}
-		}
-		scope:target1 = {
-			bno_increase_sluttyness = yes
+		bno_have_sex_with_effects = {
+			PARTNER = scope:target1
 		}
 	}
 	option = {
@@ -790,7 +511,7 @@ bno_bull.0006 = {
 			}
 		}
 	}
-	cooldown = { months = 12 }
+	cooldown = { months = { 12 24 } }
 	trigger = {
 		is_ruler = yes
 		is_blackbull = yes
@@ -808,7 +529,6 @@ bno_bull.0006 = {
 		}
 	}
 }
-
 #get strong trait
 bno_bull.0007 = {
 	type = character_event
@@ -833,7 +553,6 @@ bno_bull.0007 = {
 		add_trait = strong
 	}
 }
-
 #BBC pimps out lowborn white whore
 bno_bull.0008 = {
 	type = character_event
@@ -861,97 +580,51 @@ bno_bull.0008 = {
 		animation = personality_content
 	}
 	
-	cooldown = { months = 8 }
+	cooldown = { months = { 8 12 } }
 	
 	trigger = {
-		is_male = yes
-		is_bbc = yes
-		is_elligible_partner = yes
-		any_courtier_or_guest = {
-			NOT = { is_spouse_of = root }
-			is_female = yes
-			is_elligible_partner = yes
-			is_bno_blacked_and_up = yes
-		}
+		is_blackbull =yes
+		does_blacked_peasant_exist = yes
 	}
 	immediate = {
-		every_courtier_or_guest = {
-			limit = {
-				NOT = { is_spouse_of = root }
-				is_female = yes
-				is_elligible_partner = yes
-				is_bno_blacked_and_up = yes
-			}
-			save_scope_as = target1
-		}
-		scope:target1 = {
-			bno_increase_sluttyness = yes
-			if = {
-				limit = {
-					exists = primary_spouse
-					primary_spouse = {
-						NOT = { has_trait = bno_bbc }
-					}
-				}
-				every_spouse = { #cuck informed someone who looks like wife is whoring
-					send_interface_message = {
-						type = bno_blacked_events
-						title = bno_bull_0008_notification.title
-						right_icon = scope:target1
-						desc = bno_bull_0008_notification.desc
-					}
-				}
-			}
+		get_blacked_girl_scope = {
+			scope_name = target1
 		}
 	}
 	option = {
 		name = bno_bull_0008.a
-		
-		add_gold = 30
-		add_prestige = 50
 		ai_chance = {
 			base = 5
 		}
-		add_character_modifier = {
-			modifier = bno_pimping_lowborn_white_whores
-			months = 12
+		bbc_pimping = {
+			target = scope:target1
 		}
 		scope:target1 = {
-			add_character_modifier = {
-				modifier = bno_whore_for_bbc
-				months = 12
-			}
+			find_5_sex_partner = yes
+			sex_with_5_sex_partner = yes
+			slut_whoring = yes
 		}
 	}
 	option = {
 		trigger = {
 			scope:target1 = {
-				OR = {
-					has_trait = beauty_good_1
-					has_trait = beauty_good_2
-					has_trait = beauty_good_3
-				}
+				has_desirable_looks_or_breast = yes
 			}
 		}
 		name = bno_bull_0008.b
-		add_gold = 75
-		add_prestige = 100
-		add_character_modifier = {
-			modifier = bno_pimping_lowborn_white_whores
-			months = 12
+		bbc_pimping = {
+			target = scope:target1
 		}
 		scope:target1 = {
-			add_character_modifier = {
-				modifier = bno_pretty_whore_for_bbc
-				months = 12
-			}
+			find_5_sex_partner = yes
+			sex_with_5_sex_partner = yes
+			slut_whoring = yes
 		}
 		ai_chance = {
 			base = 95
 		}
 	}
 }
-
 #BBC ruler pimps out noble white whore
 bno_bull.0009 = {
 	type = character_event
@@ -979,18 +652,12 @@ bno_bull.0009 = {
 		animation = personality_content
 	}
 
-	cooldown = {
-		months = 12
-	}
+	cooldown = { months = { 12 18 } }
 
 	trigger = {
 		is_ruler = yes
 		is_blackbull = yes
-		any_courtier_or_guest = {
-			is_blacked = yes
-			is_lowborn = yes
-			is_ai = yes
-		}
+		does_blacked_noble_exist = yes
 	}
 	immediate = {
 		random_courtier_or_guest = {

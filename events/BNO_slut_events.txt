@@ -296,23 +296,9 @@ bno_slut.2003 = {
 		}
 	}
 
-	immediate = {
-		bno_have_sex_with_effects = {
-			PARTNER = scope:bbc
-		}
-	}
 	option = {
 		name = bno_slut_2003.a
-		add_stress = -20
-		add_learning_lifestyle_perk_points = 1
-		add_trait = temperate
-		give_nickname = nick_bcm
-		add_character_modifier = {
-			modifier = bno_cumstuffed
-			years = 10
-		}
-		add_opinion = {
-			modifier = bno_fed_me_cum
+		gain_blacked_cum_slut_status_from_eating_disorder_effect = {
 			target = scope:bbc
 		}
 		trigger_event = {
@@ -822,7 +808,9 @@ bno_slut.0008 = {
 			delayed = yes
 		}
 		scope:bbc = {
-			bbc_pimping = yes
+			bbc_pimping = {
+				target = root
+			}
 			bno_have_sex_with_effects = {
 				PARTNER = root
 			}
@@ -884,7 +872,9 @@ bno_slut.0009 = {
 	option = {
 		name = bno_slut_0009.a
 		scope:bbc = {
-			bbc_pimping = yes
+			bbc_pimping = {
+				target = root
+			}
 		}
 		scope:whitegirl = {
 			sex_with_5_sex_partner = yes

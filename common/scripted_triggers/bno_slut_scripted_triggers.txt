@@ -65,6 +65,66 @@ does_secret_haver_exist = {
 	}
 }
 
+does_something_exist = {
+	OR = {
+		any_courtier_or_guest = {
+			$trigger_key$ = yes
+		}
+		any_vassal_or_below = {
+			$trigger_key$ = yes
+		}
+		any_vassal_or_below = {
+			any_courtier_or_guest = {
+				$trigger_key$ = yes
+			}
+		}
+		AND = {
+			exists = liege
+			liege = {
+				$trigger_key$ = yes
+			}
+		}
+		AND = {
+			exists = liege
+			liege = {
+				any_courtier_or_guest = {
+					$trigger_key$ = yes
+				}
+			}
+		}
+		AND = {
+			exists = liege
+			liege = {
+				any_vassal_or_below = {
+					$trigger_key$ = yes
+				}
+			}
+		}
+		AND = {
+			exists = liege
+			liege = {
+				any_vassal_or_below = {
+					any_courtier_or_guest = {
+						$trigger_key$ = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+does_blacked_noble_exist = {
+	does_something_exist = {
+		trigger_key = is_ai_blacked_noble
+	}
+}
+
+does_blacked_peasant_exist = {
+	does_something_exist = {
+		trigger_key = is_ai_blacked_peasant
+	}
+}
+
 is_a_girl = {
 	is_female = yes
 	is_elligible_partner = yes
@@ -76,8 +136,7 @@ is_an_ai_girl = {
 }
 
 is_white_girl = {
-	is_female = yes
-	is_elligible_partner = yes
+	is_a_girl = yes
 	is_african = no
 }
 
@@ -87,6 +146,26 @@ is_curious = {
 		has_trait = lustful
 		is_bno_curious_and_up = yes
 	}
+}
+
+is_ai_blacked = {
+	is_blacked = yes
+	is_ai = yes
+}
+
+is_ai_blacked_noble = {
+	is_ai_blacked = yes
+	is_lowborn = no
+}
+
+is_ai_blacked_peasant = {
+	is_ai_blacked = yes
+	is_lowborn = yes
+}
+
+is_ai_blacked_has_eating_disorder = {
+	is_ai_blacked = yes
+	has_eating_disorder = yes
 }
 
 is_blacked = {
@@ -219,28 +298,7 @@ is_good_blacked_whitegirl = {
 		has_trait = shrewd
 		has_trait = zealous
 	}
-	NOR = {
-		has_trait = beauty_bad_1
-		has_trait = beauty_bad_2
-		has_trait = beauty_bad_3
-		has_trait = disfigured
-		has_trait = infirm
-		has_trait = gout_ridden
-		has_trait = cancer
-		has_trait = consumption
-		has_trait = incapable
-		has_trait = typhus
-		has_trait = bubonic_plague
-		has_trait = smallpox
-		has_trait = one_legged
-		has_trait = one_eyed
-		has_trait = great_pox
-		has_trait = maimed
-		has_trait = leper
-		has_trait = early_great_pox
-		has_trait = lovers_pox
-		has_trait = scaly
-	}
+	has_bad_trait = no
 }
 
 is_partner_non_bbc = {
@@ -320,7 +378,6 @@ is_bbc = {
 }
 
 is_ai_blackbull = {
-	NOT = { has_character_flag = bbc_cooldown }
 	is_blackbull = yes
 	is_ai = yes
 }
@@ -394,6 +451,102 @@ does_unmarried_blackbull_exist = {
 				any_vassal_or_below = {
 					any_courtier_or_guest = {
 						is_unmarried_ai_blackbull = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+does_blacked_with_eating_disorder_exist = {
+	OR = {
+		any_courtier_or_guest = {
+			is_ai_blacked_has_eating_disorder = yes
+		}
+		any_vassal_or_below = {
+			is_ai_blacked_has_eating_disorder = yes
+		}
+		any_vassal_or_below = {
+			any_courtier_or_guest = {
+				is_ai_blacked_has_eating_disorder = yes
+			}
+		}
+		AND = {
+			exists = liege
+			liege = {
+				is_ai_blacked_has_eating_disorder = yes
+			}
+		}
+		AND = {
+			exists = liege
+			liege = {
+				any_courtier_or_guest = {
+					is_ai_blacked_has_eating_disorder = yes
+				}
+			}
+		}
+		AND = {
+			exists = liege
+			liege = {
+				any_vassal_or_below = {
+					is_ai_blacked_has_eating_disorder = yes
+				}
+			}
+		}
+		AND = {
+			exists = liege
+			liege = {
+				any_vassal_or_below = {
+					any_courtier_or_guest = {
+						is_ai_blacked_has_eating_disorder = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+does_blacked_girl_exist = {
+	OR = {
+		any_courtier_or_guest = {
+			is_ai_blacked = yes
+		}
+		any_vassal_or_below = {
+			is_ai_blacked = yes
+		}
+		any_vassal_or_below = {
+			any_courtier_or_guest = {
+				is_ai_blacked = yes
+			}
+		}
+		AND = {
+			exists = liege
+			liege = {
+				is_ai_blacked = yes
+			}
+		}
+		AND = {
+			exists = liege
+			liege = {
+				any_courtier_or_guest = {
+					is_ai_blacked = yes
+				}
+			}
+		}
+		AND = {
+			exists = liege
+			liege = {
+				any_vassal_or_below = {
+					is_ai_blacked = yes
+				}
+			}
+		}
+		AND = {
+			exists = liege
+			liege = {
+				any_vassal_or_below = {
+					any_courtier_or_guest = {
+						is_ai_blacked = yes
 					}
 				}
 			}
