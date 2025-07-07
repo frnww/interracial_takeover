@@ -17,7 +17,7 @@ bno_title_change.0001 = { #BBC demands title from cuck player, pays 200
 		character = scope:target1
 		animation = personality_content
 	}
-	cooldown = { months = 24 }
+	cooldown = { months = { 24 36 } }
 	trigger = {
 		root = {
 			is_adult = yes

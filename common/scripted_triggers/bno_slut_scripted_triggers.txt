@@ -57,6 +57,14 @@ is_white_guy_with_pure_wife = {
 	}
 }
 
+is_ai_blackbull_just_or_zealous = {
+	is_ai_blackbull = yes
+	OR = {
+		has_trait = zealous
+		has_trait = just
+	}
+}
+
 does_something_exist = {
 	OR = {
 		any_courtier_or_guest = {
@@ -102,6 +110,12 @@ does_something_exist = {
 				}
 			}
 		}
+	}
+}
+
+does_just_or_zealous_blackbull_exist = {
+	does_something_exist = {
+		trigger_key = is_ai_blackbull_just_or_zealous
 	}
 }
 

@@ -330,6 +330,14 @@ get_blacked_girl_with_eating_disorder_scope = {
 	}
 }
 
+get_just_or_zealous_bbc_scope = {
+	get_something = {
+		trigger_key = is_ai_blackbull_just_or_zealous
+		target_scope = $scope_name$
+	}
+}
+
+
 get_something = {
 	random_courtier_or_guest = { # Player's Court
 		limit = {
