@@ -45,7 +45,7 @@ becoming_african = {
 
 get_wandering_male_scope = {
 	random_pool_character = {
-		province = location
+		province = root.location
 		limit = {
 			is_male = yes
 			is_elligible_partner = yes
@@ -184,9 +184,17 @@ bno_reveal_secret_effect = {
 }
 
 bno_marriage_effect = {
+	save_temporary_scope_as = temp
 	if = {
 		limit = {
 			exists = primary_spouse
+		}
+		$target$ = {
+			add_character_modifier = {
+				modifier = bno_stole_married_white_wife
+				years = 15
+			}
+			add_prestige = 150
 		}
 		add_opinion = {
 			modifier = previous_cuck_husband
@@ -218,6 +226,10 @@ bno_marriage_effect = {
 	}
 	set_sexuality = heterosexual
 	marry = $target$
+	become_lover_with_target = {
+		target = $target$
+		LOCATION = location
+	}
 	add_opinion = {
 		modifier = stolen_by_new_bull_master
 		target = $target$
@@ -226,13 +238,37 @@ bno_marriage_effect = {
 		modifier = bno_stolen_as_bbc_wife
 		years = 15
 	}
-	$target$ = {
-		add_character_modifier = {
-			modifier = bno_stole_married_white_wife
-			years = 15
-		}
-		add_prestige = 150
+	bno_get_all_gold = {
+		target = $target$
 	}
+}
+
+bno_get_all_gold = {
+	if = { #bbc takes all of wife's gold if she had any
+		limit = { gold > 0 }
+		pay_short_term_gold = {
+			target = $target$
+			gold = this.gold
+		}
+	}
+}
+
+bno_bbc_divorce_effect = {
+	save_temporary_scope_as = temp
+	primary_spouse = {
+		add_character_modifier = {
+			modifier = bno_no_longer_black_breedable
+			years = 1
+		}
+		bno_get_all_gold = {
+			target = scope:temp
+		}
+	}
+	add_character_modifier = {
+		modifier = bno_divorced_worthless_wife
+	}
+	remove_relation_lover = primary_spouse
+	divorce = primary_spouse
 }
 
 get_married_pure_girl_scope = {
@@ -274,9 +310,83 @@ get_married_pure_girl_scope = {
 	}
 }
 
+get_blacked_girl_married_to_a_ruler_scope = {
+	get_something = {
+		trigger_key = is_blacked_girl_married_to_a_ruler
+		target_scope = $scope_name$
+	}
+}
+
+get_something_foreign = {
+	every_neighboring_and_across_water_top_liege_realm_owner = {
+		limit = {
+			$trigger_key$ = yes
+		}
+		add_to_temporary_list = temp
+	}
+	every_neighboring_and_across_water_top_liege_realm_owner = {
+		every_courtier_or_guest = {
+			limit = {
+				$trigger_key$ = yes
+			}
+			add_to_temporary_list = temp
+		}
+	}
+	every_neighboring_and_across_water_top_liege_realm_owner = {
+		every_vassal_or_below = {
+			limit = {
+				$trigger_key$ = yes
+			}
+			add_to_temporary_list = temp
+		}
+	}
+	every_neighboring_and_across_water_top_liege_realm_owner = {
+		every_vassal_or_below = {
+			limit = {
+				highest_held_title_tier >= tier_county 
+			}
+			every_courtier_or_guest = {
+				limit = {
+					$trigger_key$ = yes
+				}
+				add_to_temporary_list = temp
+			}
+		}
+	}
+	random_in_list = {
+		list = temp
+		weight = {
+			base = 1
+			bno_good_female_modifier = yes
+		}
+		save_scope_as = $target_scope$
+	}
+}
+
+get_foreign_married_blacked_girl_scope = {
+	get_something_foreign = {
+		trigger_key = does_blacked_ai_girl_has_white_guy_husband
+		target_scope = $scope_name$
+	}
+}
+
+get_foreign_unmarried_pure_white_girl_scope = {
+	get_something_foreign = {
+		trigger_key = is_unmarried_ai_pure_white_girl
+		target_scope = $scope_name$
+	}
+}
+
 get_secret_haver_scope = {
 	get_something = {
 		trigger_key = does_blacked_girl_white_husband_has_secret
+		target_scope = $scope_name$
+	}
+}
+
+get_unmarried_pure_white_girl_scope = {
+	get_something = {
+		trigger_key = is_unmarried_ai_pure_white_girl
 		target_scope = $scope_name$
 	}
 }
@@ -339,29 +449,25 @@ get_just_or_zealous_bbc_scope = {
 
 
 get_something = {
-	random_courtier_or_guest = { # Player's Court
+	every_courtier_or_guest = { # Player's Court
 		limit = {
 			$trigger_key$ = yes
-			exists = this
 		}
 		add_to_temporary_list = temp
 	}
-	random_vassal_or_below = { # Player's Vassal
+	every_vassal_or_below = { # Player's Vassal
 		limit = {
 			$trigger_key$ = yes
-			exists = this
 		}
 		add_to_temporary_list = temp
 	}
-	random_vassal_or_below = {
+	every_vassal_or_below = {
 		limit = { 
 			highest_held_title_tier >= tier_county 
-			exists = this
 		}
-		random_courtier_or_guest = {
+		every_courtier_or_guest = {
 			limit = {
 				$trigger_key$ = yes
-				exists = this
 			}
 			add_to_temporary_list = temp
 		}
@@ -382,29 +488,25 @@ get_something = {
 			exists = liege
 		}
 		liege = {
-			random_courtier_or_guest = {
+			every_courtier_or_guest = {
 				limit = {
 					$trigger_key$ = yes
-					exists = this
 				}
 				add_to_temporary_list = temp
 			}
-			random_vassal_or_below = {
+			every_vassal_or_below = {
 				limit = {
 					$trigger_key$ = yes
-					exists = this
 				}
 				add_to_temporary_list = temp
 			}
-			random_vassal_or_below = {
+			every_vassal_or_below = {
 				limit = { 
 					highest_held_title_tier >= tier_county 
-					exists = this
 				}
-				random_courtier_or_guest = {
+				every_courtier_or_guest = {
 					limit = {
 						$trigger_key$ = yes
-						exists = this
 					}
 					add_to_temporary_list = temp
 				}
@@ -1270,6 +1372,16 @@ slut_whoring = {
 				right_icon = scope:temp
 				desc = bno_bull_0008_notification.desc
 			}
+		}
+	}
+	if = {
+		limit = {
+			exists = liege
+			liege = $target$
+		}
+		add_character_modifier = {
+			modifier = bno_whore_for_liege
+			months = 12
 		}
 	}
 	if = {

@@ -22,28 +22,60 @@ become_more_cuck_effect = {
 }
 
 bno_castrated_effect = {
-	switch = {
-		trigger = has_trait
-		lustful = { remove_trait = lustful }
-		fecund = { remove_trait = fecund }
-		bno_chastity = { remove_trait = bno_chastity }
+	if = {
+		limit = {
+			has_trait = bno_caged
+		}
+		remove_trait = bno_caged
+	}
+	bno_remove_lustful_and_fecund = yes
+	if = {
+		limit = {
+			NOT = { has_trait = bno_castrated }
+		}
+		add_trait = bno_castrated
+		add_trait = eunuch_1
 	}
 	add_prestige = -500
-	add_trait = chaste
-	add_trait = celibate
-	add_trait = bno_castrated
+}
+
+bno_remove_lustful_and_fecund = {
+	if = {
+		limit = {
+			has_trait = lustful
+		}
+		remove_trait = lustful
+	}
+	if = {
+		limit = {
+			has_trait = fecund
+		}
+		remove_trait = fecund
+	}
+	if = {
+		limit = {
+			NOT = { has_trait = chaste }
+		}
+		add_trait = chaste
+	}
+	if = {
+		limit = {
+			NOT = { has_trait = celibate }
+		}
+		add_trait = celibate
+	}
 }
 
 bno_caged_effect = {
-	switch = {
-		trigger = has_trait
-		lustful = { remove_trait = lustful }
-		fecund = { remove_trait = fecund }
-	}
+	bno_remove_lustful_and_fecund = yes
 	add_prestige = -250
-	add_trait = chaste
-	add_trait = celibate
-	add_trait = bno_caged
+	if = {
+		limit = {
+			NOT = { has_trait = bno_caged }
+			NOT = { has_trait = bno_castrated }
+		}
+		add_trait = bno_caged
+	}
 }
 
 become_smaller_dick_effect = {			#check dick size, then force 1 size smaller

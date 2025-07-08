@@ -816,7 +816,9 @@ bno_slut.0008 = {
 		}
 		find_5_sex_partner = yes
 		sex_with_5_sex_partner = yes
-		slut_whoring = yes
+		slut_whoring = {
+			target = scope:bbc
+		}
 		become_lover_with_target = {
 			target = scope:bbc
 			LOCATION = root.location
@@ -865,9 +867,6 @@ bno_slut.0009 = {
 		get_pure_whitegirl_scope = {
 			scope_name = whitegirl
 		}
-		scope:whitegirl = {
-			find_5_sex_partner = yes
-		}
 	}
 	option = {
 		name = bno_slut_0009.a
@@ -877,6 +876,7 @@ bno_slut.0009 = {
 			}
 		}
 		scope:whitegirl = {
+			find_5_sex_partner = yes
 			sex_with_5_sex_partner = yes
 			bno_have_sex_with_effects = {
 				PARTNER = scope:bbc
@@ -885,7 +885,9 @@ bno_slut.0009 = {
 				target = scope:bbc
 				LOCATION = location
 			}
-			slut_whoring = yes
+			slut_whoring = {
+				target = scope:bbc
+			}
 		}
 	}
 }

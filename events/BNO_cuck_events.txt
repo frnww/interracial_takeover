@@ -721,13 +721,14 @@ bno_cuck.0006 = { #Just cuck bonds with bbc, gives court position
 	}
 	cooldown = { months = 24 }
 	trigger = {
+		is_ruler = yes
+		is_self_whiteguy = yes
+		has_trait = just
 		NOR = {
 			employs_court_position = bodyguard_court_position
 			employs_court_position = master_of_horse_court_position
 			employs_court_position = master_of_hunt_court_position
 		}
-		is_self_whiteguy = yes
-		has_trait = just
 		does_just_or_zealous_blackbull_exist = yes
 	}
 	immediate = {
@@ -1256,11 +1257,15 @@ bno_cuck.0011 = {
 		animation = personality_greedy
 		
 	}
+
+	cooldown = { months = { 24 36 } }
+
 	trigger = {
 		is_cuck = yes
 		any_close_family_member = {
 			is_female = yes
 			is_adult = no
+			NOT = { has_character_flag = bno_cuck.0011 }
 			NOT = { has_trait = bno_blood }
 		}
 		any_vassal = {
@@ -1305,6 +1310,9 @@ bno_cuck.0011 = {
 			set_relation_ward = scope:target1
 		}
 		scope:target1 = {
+			add_character_flag = {
+				flag = bno_cuck.0011
+			}
 			bno_increase_sluttyness = yes
 			add_character_modifier = {
 				modifier = bno_family_betrothed_me_to_bbc

@@ -113,7 +113,7 @@ bno_curious.1001 = {
 		}
 		trigger_event = {
 			id = bno_curious.1101
-			days = 1
+			months = 1
 			delayed = yes
 		}
 		ai_chance = {
@@ -137,7 +137,7 @@ bno_curious.1001 = {
 		name = bno_curious.1001.b
 		trigger_event = {
 			id = bno_curious.1201
-			days = 1
+			months = 1
 			delayed = yes
 		}
 		ai_chance = {
@@ -187,7 +187,7 @@ bno_curious.1001 = {
 		add_internal_flag = special
 		trigger_event = {
 			id = bno_curious.1301
-			days = 7
+			months = 1
 			delayed = yes
 		}
 	}
@@ -321,7 +321,6 @@ bno_curious.1201 = {
 	option = { #A future queen is born
 		name = bno_curious.1201.a
         scope:child = {
-			set_age = 16
             bno_have_sex_with_effects = {
                 PARTNER = scope:target1
             }

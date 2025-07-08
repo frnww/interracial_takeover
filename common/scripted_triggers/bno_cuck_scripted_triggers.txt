@@ -5,6 +5,11 @@
 	is_male = yes
 }
 
+is_jos = {
+	has_trait = bno_jos
+	is_self_whiteguy = yes
+}
+
 is_self_married_whiteguy = {
 	is_self_whiteguy = yes
 	is_married = yes

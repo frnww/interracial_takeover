@@ -55,12 +55,12 @@ bno_chastity_interaction = {
 				flag = is_being_tortured
 				months = 6 # Players in MP can keep the event window open...
 			}
-			add_trait = bno_caged
+			bno_caged_effect = yes
 		}
 		
 		show_as_tooltip = {
 			scope:recipient = {
-				add_trait = bno_caged
+				bno_caged_effect = yes
 				release_from_prison = yes
 				add_opinion = {
 					target = scope:actor
@@ -71,7 +71,7 @@ bno_chastity_interaction = {
 		}
 		hidden_effect = {
 			scope:recipient = {
-				add_trait = bno_caged
+				bno_caged_effect = yes
 				release_from_prison = yes
 				add_opinion = {
 					target = scope:actor
@@ -197,13 +197,12 @@ bno_castration_interaction = {
 				flag = is_being_tortured
 				months = 6 # Players in MP can keep the event window open...
 			}
-			add_trait = bno_castrated
-			add_trait = eunuch_1
+			bno_castrated_effect = yes
 		}
 		
 		show_as_tooltip = {
 			scope:recipient = {
-				add_trait = bno_castrated
+				bno_castrated_effect = yes
 				release_from_prison = yes
 				add_opinion = {
 					target = scope:actor
@@ -214,8 +213,7 @@ bno_castration_interaction = {
 		}
 		hidden_effect = {
 			scope:recipient = {
-				remove_trait = bno_caged
-				add_trait = bno_castrated
+				bno_castrated_effect = yes
 				release_from_prison = yes
 				add_opinion = {
 					target = scope:actor

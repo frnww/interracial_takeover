@@ -78,34 +78,29 @@ does_something_exist = {
 				$trigger_key$ = yes
 			}
 		}
-		AND = {
-			exists = liege
-			liege = {
-				$trigger_key$ = yes
+		trigger_if = {
+			limit = {
+				exists = liege
 			}
-		}
-		AND = {
-			exists = liege
-			liege = {
-				any_courtier_or_guest = {
+			OR = {
+				liege = {
 					$trigger_key$ = yes
 				}
-			}
-		}
-		AND = {
-			exists = liege
-			liege = {
-				any_vassal_or_below = {
-					$trigger_key$ = yes
-				}
-			}
-		}
-		AND = {
-			exists = liege
-			liege = {
-				any_vassal_or_below = {
+				liege = {
 					any_courtier_or_guest = {
 						$trigger_key$ = yes
+					}
+				}
+				liege = {
+					any_vassal_or_below = {
+						$trigger_key$ = yes
+					}
+				}
+				liege = {
+					any_vassal_or_below = {
+						any_courtier_or_guest = {
+							$trigger_key$ = yes
+						}
 					}
 				}
 			}
@@ -165,6 +160,31 @@ does_pure_whitegirl_exist = {
 	does_something_exist = {
 		trigger_key = is_ai_pure_white_girl
 	}
+}
+
+does_unmarried_pure_white_girl_exist = {
+	does_something_exist = {
+		trigger_key = is_unmarried_ai_pure_white_girl
+	}
+}
+
+does_blacked_girl_married_to_a_ruler_exist = {
+	does_something_exist = {
+		trigger_key = is_blacked_girl_married_to_a_ruler
+	}
+}
+
+is_blacked_girl_married_to_a_ruler = {
+	is_ai_blacked = yes
+	exists = primary_spouse
+	primary_spouse = {
+		is_self_married_whiteguy = yes
+	}
+}
+
+is_unmarried_ai_pure_white_girl = {
+	is_ai_pure_white_girl = yes
+	is_married = no
 }
 
 is_a_girl = {
@@ -320,6 +340,17 @@ has_bad_trait = {
 	}
 }
 
+does_partner_has_bad_trait = {
+	exists = primary_spouse
+	primary_spouse = {
+		AND = {
+			is_immortal = no
+			is_visibly_fertile = no
+		}
+		has_bad_trait = yes
+	}
+}
+
 has_desirable_looks_or_breast = {
 	OR = {
 		has_trait = beauty_good_1
@@ -458,6 +489,51 @@ does_good_looking_ai_foreign_lady_exist = {
 				}
 			}
 		}
+	}
+}
+
+does_blacked_ai_girl_has_white_guy_husband = {
+	is_ai_blacked = yes
+	exists = primary_spouse
+	primary_spouse = {
+		is_ai_whiteguy = yes
+	}
+}
+
+does_something_foreign_exist = {
+	OR = {
+		any_neighboring_and_across_water_top_liege_realm_owner = {
+			$trigger_key$ = yes
+		}
+		any_neighboring_and_across_water_top_liege_realm_owner = {
+			any_courtier_or_guest = {
+				$trigger_key$ = yes
+			}
+		}
+		any_neighboring_and_across_water_top_liege_realm_owner = {
+			any_vassal_or_below = {
+				$trigger_key$ = yes
+			}
+		}
+		any_neighboring_and_across_water_top_liege_realm_owner = {
+			any_vassal_or_below = {
+				any_courtier_or_guest = {
+					$trigger_key$ = yes
+				}
+			}
+		}
+	}
+}
+
+does_blacked_ai_girl_has_white_guy_husband_exist = {
+	does_something_foreign_exist = {
+		trigger_key = does_blacked_ai_girl_has_white_guy_husband
+	}
+}
+
+does_unmarried_ai_pure_foreign_lady_exist = {
+	does_something_foreign_exist = {
+		trigger_key = is_unmarried_ai_pure_white_girl
 	}
 }
 
