@@ -9,3 +9,20 @@
  bno_stop_becoming_bbc_slut_desc: "После многих лет того, что я был пониженным смиркой, я наконец -то нашел в нем свою идеальную матч - личный черный бык, который заботится о моем ненасытном аппетите к Big Dick Daily. Он удовлетворяет меня так, как никто не мог, гарантировать, что моя киска всегда наполнена и капала с его толстым семенами." #NT!
  bno_stop_becoming_bbc_slut_confirm: "Это то, для чего я родился -" #NT!
  bno_stop_becoming_bbc_slut_tooltip: "быть не более чем набором отверстий, принадлежащих сильным" #NT!
+  
+ bno_invite_slut_decision: "Пригласите любопытного благородного на свой суд" #NT!
+ bno_invite_slut_decision_desc: "По мере приближения любопытного благородного, я приветствую ее теплой улыбкой. Я всегда стремлюсь сделать новых знакомых, особенно тех, кто разделяет мои интересы в искусстве и культуре. Возможно, мы могли бы обсудить некоторые из этих произведений за ужин? Я был бы рад показать вам и поделиться большим количеством их происхождения. \ N \ n the Noble Noss в согласии, явно заинтригованные тем, что она видит, и стремясь узнать больше." #NT!
+ bno_invite_slut_decision_tooltip: "Иностранцы были вызваны, чтобы посетить ваше Высочество" #NT!
+ bno_invite_slut_decision_confirm: "Добро пожаловать здесь" #NT!
+  
+ bno_build_african_camps_decision: "Строить $building_type_bbc_camp_01$" #NT!
+ bno_build_african_camps_decision_desc: "Поскольку популяция #V [GetTrait('bno_full_black').GetName( GetNullCharacter )]#! продолжает расти, вы решили, что для вас было высокое время, чтобы сделать урегулирование только для них." #NT!
+ bno_build_african_camps_decision_tooltip: "Конструкция $building_type_bbc_camp_01$" #NT!
+ bno_build_african_camps_decision_confirm: "Будь так" #NT!
+ bno_build_african_camps_toast: "$building_type_bbc_camp_01$ построено" #NT!
+  
+ bno_change_county_culture: "Влияйте округ на принятие $bnoc$" #NT!
+ bno_change_county_culture_desc: "Вы - $bnoc$, разве не так ли так много, чтобы повлиять на ваших людей, чтобы стать $bnoc_collective_noun$?" #NT!
+ bno_change_county_culture_tooltip: "Влияйте на людей на принятие $bnoc$ образ жизни" #NT!
+ bno_change_county_culture_confirm: "Мне нужно больше $bnoc$" #NT!
+ bno_change_county_culture_toast: "$bnoc$ был распространен" #NT!

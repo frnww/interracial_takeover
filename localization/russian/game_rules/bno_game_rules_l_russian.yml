@@ -59,3 +59,15 @@
  setting_bno_tattoo_yes_desc: "Я не могу дождаться, когда все эти сильные чернокожие люди увидят это, и я знаю, что я один из них сейчас - грязная маленькая каминку, которая живет только для того, чтобы использовать их огромные члены!" #NT!
  setting_bno_tattoo_no: "Нет, спасибо" #NT!
  setting_bno_tattoo_no_desc: "Если бы я отказался от татуировки королевы пик, это означало бы отвергнуть всю мою личность как белую девушку, которая живет только для того, чтобы использовать сильные черные мужчины с огромными членами." #NT!
+  
+ rule_bno_rarity: "@bnobbc! #X Межрасовое поглощение: #! BBC Rarity" #NT!
+ setting_bno_rarity_never: "Никогда" #NT!
+ setting_bno_rarity_never_desc: "Мне все равно, если я никогда больше не вижу другого #V [GetTrait('bno_bbc').GetName( GetNullCharacter )]#!." #NT!
+ setting_bno_rarity_rare: "Редкий" #NT!
+ setting_bno_rarity_rare_desc: "#V [GetTrait('bno_bbc').GetName( GetNullCharacter )]#! - редкая порода, но когда они приходят, они всегда оставляют меня желать большего." #NT!
+ setting_bno_rarity_sometimes: "Иногда" #NT!
+ setting_bno_rarity_sometimes_desc: "Мне нравится ощущение, когда я знал, что иногда я мог бы снова испытать удовольствие от #V [GetTrait('bno_bbc').GetName( GetNullCharacter )]#!." #NT!
+ setting_bno_rarity_often: "Часто" #NT!
+ setting_bno_rarity_often_desc: "Я не могу насытиться этим #V [GetTrait('bno_bbc').GetName( GetNullCharacter )]#!! Чем чаще я могу их иметь, тем лучше." #NT!
+ setting_bno_rarity_always: "Всегда" #NT!
+ setting_bno_rarity_always_desc: "Мне всегда нужно #V [GetTrait('bno_bbc').GetName( GetNullCharacter )]#!s в моей жизни. Это единственное, что может удовлетворить мой ненасытный голод для #V [GetTrait('bno_bbc').GetName( GetNullCharacter )]#!." #NT!

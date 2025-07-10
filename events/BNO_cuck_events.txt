@@ -1352,6 +1352,9 @@ bno_cuck.0012 = {
 			NOT = { has_building_or_higher = bbc_camp_01 }
 		}
 	}
+
+	cooldown = { months = { 12 18 } }
+
 	immediate = {
 		get_primary_spouse_scope = {
 			SCOPE_NAME = target1
