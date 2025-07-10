@@ -4,7 +4,7 @@
 			has_game_rule = bno_religion_yes
 			is_bno_mindless_bbc_slut = yes
 		}
-		set_character_faith = faith:bbcs
+		set_character_faith = var:recent_sex_partner.faith
 	}
 }
 
@@ -31,15 +31,25 @@ bno_becoming_lustful_effect = {
 becoming_african = {
 	switch = {
 		trigger = has_trait
-		bno_mostly_black = {}
-		bno_mixed = {}
-		bno_barely_mixed = {
+		bno_mostly_black = {
 			change_trait_rank = {
-				trait = bno_blood
+				trait = bno_slut_blood
 				rank = 1
 			}
 		}
-		fallback = { add_trait = bno_barely_mixed }
+		bno_mixed = {
+			change_trait_rank = {
+				trait = bno_slut_blood
+				rank = 1
+			}
+		}
+		bno_barely_mixed = {
+			change_trait_rank = {
+				trait = bno_slut_blood
+				rank = 1
+			}
+		}
+		fallback = { add_trait = bno_barely_mixed_slut }
 	}
 }
 
@@ -901,9 +911,17 @@ bno_have_sex_with_effects = {
 			NOT = { is_male = yes }
 			NOT = { $PARTNER$ = { is_male = yes } }
 		}
+		set_variable = {
+			name = recent_sex_partner
+			value = $PARTNER$
+		}
 		bno_father_or_mother = yes
 		$PARTNER$ = {
 			bno_father_or_mother = yes
+			set_variable = {
+				name = recent_sex_partner
+				value = prev
+			}
 		}
 		carn_had_sex_with_effect = {
 			CHARACTER_1 = this

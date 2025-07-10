@@ -372,7 +372,9 @@ bbcconversion.0001 = {
 	}
 	trigger = {
 		has_trait = bno_mindless_bbc_slut
-		NOT = {faith = faith:bbcs}
+		NOR = {
+			faith = faith:bbcs
+		}
 	}
 	left_portrait = {
 		character = root

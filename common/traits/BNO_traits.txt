@@ -662,6 +662,35 @@ bno_barely_mixed = {
 	level = 1
 }
 
+bno_full_black_slut = {
+	icon = bno_full_black.dds
+	physical = yes
+	group = bno_slut_blood
+	level = 4
+	
+}
+
+bno_mostly_black_slut = {
+	icon = bno_mostly_black.dds
+	physical = yes
+	group = bno_slut_blood
+	level = 3
+}
+
+bno_mixed_slut ={
+	icon = bno_mixed.dds
+	physical = yes
+	group = bno_slut_blood
+	level = 2
+}
+
+bno_barely_mixed_slut = {
+	icon = bno_barely_mixed.dds
+	physical = yes
+	group = bno_slut_blood
+	level = 1
+}
+
 bno_pure_white = {
 	category = fame
 	opposites = {
