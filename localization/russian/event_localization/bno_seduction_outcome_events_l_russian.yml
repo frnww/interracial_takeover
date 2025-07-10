@@ -1,16 +1,16 @@
 ﻿l_russian:
-  
- bno_seduction_outcome.0001.title: "Сейчас или никогда" #NT!
- bno_seduction_outcome.0001.desc: "[target.GetTitledFirstNamePossessive] Реакция на мои достижения рассказывают мне все, что мне нужно знать. Пришло время привести мой план в действие. \ N \ n" #NT!
- bno_seduction_outcome.0001.positive.desc: "Я думаю, что мои шансы хороши, но я должен помнить, что [discoverer.Custom2('NamePossessiveCharacterIntroduction', target)] всегда смотрит ..." #NT!
- bno_seduction_outcome.0001.negative.desc: "Тем не менее, я боюсь последствий. [discoverer.Custom2('NamePossessiveCharacterIntroduction', target)|U] и [discoverer.GetHerHis] Агенты могут скрываться в любой тени, слушая любую стену ..." #NT!
- bno_seduction_outcome.0001.a: "[target.GetFirstNameNoTooltip] будет моим!" #NT!
- bno_seduction_outcome.0001.a.tooltip: "Я продолжаю свою попытку соблазнить [target.GetTitledFirstName]" #NT!
- bno_seduction_outcome.0001.b: "Я не могу рисковать обнаружением." #NT!
-  
- bno_seduction_outcome.0003.title: "Чувственное предложение" #NT!
- bno_seduction_outcome.0003.success.desc: "[owner.Custom2('MyCharacterIntroduction', ROOT.Char)|U] сделал [owner.GetHerHis] в мою жизнь со сладкими словами и более сладкими штрихами. Поздно ночью я изо всех сил пытаюсь удержать [owner.GetHerHim] в своем уме ... \ n \ n Чувства, тлеющие между нами, скоро либо разразится пламенем, либо размирится." #NT!
- bno_seduction_outcome.0003.failure.desc: "Куда бы я ни пошел, [owner.Custom2('MyCharacterIntroduction', ROOT.Char)] обязательно последует. Этот взгляд в глазах [owner.GetHerHis], слова на губах [owner.GetHerHis] ... Я точно знаю, что такое [owner.GetSheHe]" #NT!
- bno_seduction_outcome.0003.a: "Это роман, который сгорит ярко, но короткий." #NT!
- bno_seduction_outcome.0003.b: "Я хочу остановиться навсегда в Анферно!" #NT!
- bno_seduction_outcome.0003.c: "Как мило ... но нет." #NT!
+
+bno_seduction_outcome.0001.title: "Сейчас или никогда"
+bno_seduction_outcome.0001.desc: "Реакция [target.GetTitledFirstNamePossessive] на мои ухаживания говорит мне всё, что нужно знать. Пришло время воплотить мой план в жизнь.\n\n"
+bno_seduction_outcome.0001.positive.desc: "Думаю, мои шансы хороши, но я должен помнить, что [discoverer.Custom2('NamePossessiveCharacterIntroduction', target)] всегда следит..."
+bno_seduction_outcome.0001.negative.desc: "Но я боюсь последствий. [discoverer.Custom2('NamePossessiveCharacterIntroduction', target)|U] и [discoverer.GetHerHis] шпионы могут прятаться в любой тени, подслушивать за любой стеной..."
+bno_seduction_outcome.0001.a: "[target.GetFirstNameNoTooltip] будет моим!"
+bno_seduction_outcome.0001.a.tooltip: "Я иду вперёд с попыткой соблазнить [target.GetTitledFirstName]"
+bno_seduction_outcome.0001.b: "Я не могу рисковать разоблачением."
+
+bno_seduction_outcome.0003.title: "Чувственное предложение"
+bno_seduction_outcome.0003.success.desc: "[owner.Custom2('MyCharacterIntroduction', ROOT.Char)|U] пробрался в мою жизнь со сладкими словами и ещё более сладкими прикосновениями. Поздно ночью я борюсь с собой, чтобы не думать о [owner.GetHerHim]...\n\nТлеющие между нами чувства скоро либо вспыхнут ярким пламенем, либо угаснут."
+bno_seduction_outcome.0003.failure.desc: "Куда бы я ни пошёл, [owner.Custom2('MyCharacterIntroduction', ROOT.Char)] следует за мной. Этот взгляд в [owner.GetHerHis] глазах, слова на [owner.GetHerHis] губах... Я точно знаю, чего [owner.GetSheHe] хочет."
+bno_seduction_outcome.0003.a: "Это будет роман, который вспыхнет ярко, но недолго."
+bno_seduction_outcome.0003.b: "Я хочу вечно гореть в этом адском пламени!"
+bno_seduction_outcome.0003.c: "Как мило... но нет."
