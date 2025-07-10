@@ -246,3 +246,66 @@ bno_build_african_camps_decision = {
         bno_decision_modifier = yes
 	}
 }
+
+#Set a County to have african culture
+bno_change_county_culture = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
+	}
+	sort_order = 10
+	decision_group_type = courtier
+	desc = bno_change_county_culture_desc
+	selection_tooltip = bno_change_county_culture_tooltip
+	widget = {
+		controller = create_holy_order
+		barony_valid = {
+			trigger_if = {
+				limit = { exists = this }
+				holder = scope:ruler
+				title_province = {
+					NOT = { culture = culture:bnoc }
+				}
+			}
+		}
+	}
+	is_shown = {
+		is_ruler = yes
+		is_adult = yes
+		culture = culture:bnoc
+		OR = {
+			is_bbc = yes
+			has_trait = bno_whitegirl
+		}
+		OR = { 
+			is_ai = no 
+			has_game_rule = bno_decision_npc_yes 
+		}
+	}
+	cooldown = {
+		months = 12
+	}
+	cost = {
+		prestige = 300
+	}
+	effect = {
+		send_interface_toast = {
+			type = event_toast_effect_good
+			title = bno_change_county_culture_toast
+			scope:barony ?= {
+				county = {
+					set_county_culture = culture:bnoc
+				}
+			}
+		}
+	}
+	ai_check_interval = 12
+	ai_potential = {
+		any_held_title = {
+			tier >= tier_county
+		}
+	}
+	ai_will_do = {
+        base = 0
+        bno_decision_modifier = yes
+	}
+}
