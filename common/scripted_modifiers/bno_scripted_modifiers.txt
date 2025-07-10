@@ -120,6 +120,96 @@
 	}
 }
 
+bno_decision_modifier = {
+	modifier = {
+        add = 25
+        trigger = {
+            is_bno_blacked_and_up = yes
+        }
+    } #+25 cause she's horny
+    modifier = {
+        add = 50
+        trigger = {
+            is_bno_qos_and_up = yes
+		}
+    } #+50 cause she's horny
+    modifier = {
+        add = 20
+        trigger = {
+            number_of_knights < max_number_of_knights
+        }
+	} #+20 as there cheap knights
+    modifier = {
+        add = 100
+        trigger = {
+            is_bno_snowbunny_and_up = yes
+            number_of_knights < max_number_of_knights
+        }
+    } #+100, as there cheap knights and she's horny
+    modifier = {
+        factor = 5
+        trigger = {
+			location = {
+				geographical_region = world_europe
+			}
+        }
+    } #+5, as its the region the player is probaly looking to see corrupted
+    modifier = {
+        add = 10
+        trigger = {
+            has_trait = compassionate
+        }
+    } #+10 falls for sob story
+    modifier = {
+        add = 10
+        trigger = {
+            has_trait = generous
+        }
+    } #+10 falls for sob story
+    modifier = {
+        add = 25
+        trigger = {
+            has_trait = bno_cuckish
+        }
+    } #+25 he's wife is wispering in his ear
+    modifier = {
+        add = 50
+        trigger = {
+            has_trait = bno_cuck
+        }
+    } #+50 he knows what he's into
+    modifier = {
+        add = 75
+        trigger = {
+            has_trait = bno_beta
+        }
+    } #+75 he knows what he's into
+    modifier = {
+        add = 100
+        trigger = {
+            has_trait = bno_jos
+        }
+    } #+100 he knows what he's into
+	modifier = {
+        add = -10
+        trigger = {
+            has_trait = cynical
+        }
+    } #-10 not beliving sob story, helps cull number of AI inviting
+	modifier = {
+        add = -10
+        trigger = {
+            has_trait = greedy
+        }
+    } #-10 not wanting to hand out gold, helps cull number of AI inviting
+	modifier = {
+        add = -10
+        trigger = {
+            has_trait = paranoid
+        }
+    } #-10 not trusting strangers, helps cull number of AI inviting
+}
+
 bno_white_girl_modifier_small = {
 	modifier = {
 		add = 5

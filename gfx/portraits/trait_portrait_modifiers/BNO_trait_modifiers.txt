@@ -162,7 +162,7 @@ bno_pure_white_portrait_modifier = {
 					mode = modify
 
 					x = 0.0
-					y = -1.0
+					y = -0.8
 				}
 				color = {
 					gene = hair_color
@@ -174,7 +174,7 @@ bno_pure_white_portrait_modifier = {
 					mode = add
 					gene = hairstyles
 					template = indian_hairstyles_wavy
-					value = 1.0
+					range = { 0 1 }
 				}
 			}
 		}

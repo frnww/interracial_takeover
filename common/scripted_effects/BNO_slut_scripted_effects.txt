@@ -628,6 +628,49 @@ create_bbc = {
 	}
 }
 
+create_slut = {
+	random_character_with_royal_court = {
+		limit = {
+			culture_has_european_heritage_pillar_trigger = yes
+		}
+		save_scope_as = european
+	}
+	create_character = {
+		gender = female
+		save_scope_as = $SCOPE_NAME$
+		location = root.location
+		age = $age$
+		dynasty = scope:european.dynasty
+		trait = bno_curious
+		trait = bno_pure_white
+		trait = tits_big_good_3
+		trait = lustful
+		trait = beauty_good_3
+		trait = fecund
+		random_traits = yes
+		faith = scope:european.faith
+		culture = scope:european.culture
+		diplomacy = {
+			min_template_decent_skill
+			max_template_decent_skill
+		}
+		learning = {
+			min_template_decent_skill
+			max_template_decent_skill
+		}
+		intrigue = {
+			min_template_decent_skill
+			max_template_decent_skill
+		}
+		after_creation = {
+			set_sexuality = heterosexual
+		}
+	}
+	scope:$SCOPE_NAME$ = {
+		remove_bad_traits = yes
+	}
+}
+
 bno_kill_character = {
 	death = {
 		death_reason = death_disappearance

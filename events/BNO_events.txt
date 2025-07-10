@@ -186,40 +186,6 @@ bno_events.0003 = {
 		name = bno_events03.a
 	}
 }
-
-# conversion event for 'convert to bbc' decision
-namespace = bbcconversion
-bbcconversion.0001 = {
-	type = character_event
-	title = bbcconversion.title
-	desc = bbcconversion.desc
-	theme = realm
-	override_background = {
-		reference = tavern
-	}
-	trigger = {
-		has_trait = bno_mindless_bbc_slut
-		NOT = {faith = faith:bbcs}
-	}
-	left_portrait = {
-		character = root
-		animation = personality_content
-		triggered_outfit = {
-			trigger = {
-				exists = scope:target1
-			}
-			outfit_tags = {
-				no_clothes
-			}
-		}
-	}
-	option = {
-		name = bbcconversion.a
-		convert_to_bbc_religion = yes
-		add_piety = medium_piety_loss
-	}
-}
-
 # Have bull fuck your wife
 bno_events.0005 = {
 	type = character_event
@@ -310,3 +276,121 @@ bno_events.0005 = {
 		}
 	}
 }
+#Choose 1 of 3 White Girl
+bno_events.0006 = {
+	type = character_event
+	title = bno_events.0006.title
+	desc = bno_events.0006.desc
+	theme = realm
+	
+	override_background = {
+		reference = throne_room 
+	}
+	left_portrait = {
+		character = scope:target1
+		animation = personality_content
+	}
+	right_portrait = {
+		character = scope:target2
+		animation = personality_content
+	}
+	lower_center_portrait = {
+		character = scope:target3
+		animation = personality_content
+	}
+	immediate = {
+		create_slut = {
+			age = bno_younger_adult
+			SCOPE_NAME = target1
+		}
+		create_slut = {
+			age = bno_younger_adult
+			SCOPE_NAME = target2
+		}
+		create_slut = {
+			age = bno_younger_adult
+			SCOPE_NAME = target3
+		}
+	}
+	option = {
+		name = bno_events01.a
+		add_courtier = scope:target1
+		hidden_effect = {
+			scope:target2 ?= {
+				bno_kill_character = yes
+			}
+			scope:target3 = {
+				bno_kill_character = yes
+			}
+		}
+	}
+	option = {
+		name = bno_events01.c
+		add_courtier = scope:target3
+		hidden_effect = {
+			scope:target1 ?= {
+				bno_kill_character = yes
+			}
+			scope:target2 ?= {
+				bno_kill_character = yes
+			}
+		}
+	}
+	option = {
+		name = bno_events01.b
+		add_courtier = scope:target2
+		hidden_effect = {
+			scope:target1 ?= {
+				bno_kill_character = yes
+			}
+			scope:target3 = {
+				bno_kill_character = yes
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_trait = bno_bbc
+		}
+		name = bno_events01.d
+		add_courtier = scope:target1
+		add_courtier = scope:target2
+		add_courtier = scope:target3
+	}
+}
+
+
+# conversion event for 'convert to bbc' decision
+namespace = bbcconversion
+bbcconversion.0001 = {
+	type = character_event
+	title = bbcconversion.title
+	desc = bbcconversion.desc
+	theme = realm
+	override_background = {
+		reference = tavern
+	}
+	trigger = {
+		has_trait = bno_mindless_bbc_slut
+		NOT = {faith = faith:bbcs}
+	}
+	left_portrait = {
+		character = root
+		animation = personality_content
+		triggered_outfit = {
+			trigger = {
+				exists = scope:target1
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	option = {
+		name = bbcconversion.a
+		convert_to_bbc_religion = yes
+		add_piety = medium_piety_loss
+	}
+}
+
+
