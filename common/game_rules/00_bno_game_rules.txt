@@ -157,3 +157,33 @@ bno_tattoo = {
 	}
 
 }
+
+bno_rarity = {
+	categories = {
+		interaccial_takeover
+	}
+
+	default = bno_rarity_always
+
+
+	bno_rarity_never = {
+
+	}
+
+	bno_rarity_rare = {
+		
+	}
+
+	bno_rarity_sometimes = {
+		
+	}
+
+	bno_rarity_often = {
+		
+	}
+	
+	bno_rarity_always = {
+
+	}
+
+}

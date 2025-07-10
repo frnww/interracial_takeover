@@ -11,10 +11,25 @@ bno_trait_maintenance.0001 = {
 			has_trait = bno_mostly_black
 			has_trait = bno_full_black
 		}
+		NOT = { has_character_flag = no_bbc }
 		is_male = yes
 		is_adult = yes
 	}
-	immediate = {
+	option = {
+		ai_chance = {
+			base = 0
+			bno_bbc_trait_counter_occurance_chance_modifier = yes
+		}
+		add_character_flag = {
+			flag = no_bbc
+			years = 5
+		}
+	}
+	option = {
+		ai_chance = {
+			base = 0
+			bno_bbc_trait_occurance_chance_modifier = yes
+		}
 		add_trait = bno_bbc
 	}
 }

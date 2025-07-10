@@ -16,7 +16,7 @@ bno_invite_slut_decision_tooltip: "Foreigners have been summoned to visit your h
 bno_invite_slut_decision_confirm: "You are welcome here"
 
 bno_build_african_camps_decision: "Build $building_type_bbc_camp_01$"
-bno_build_african_camps_decision_desc: "As the population of [GetTrait('bno_full_black')] keep growing you have decided it was high times for you to make a settlement just for them."
+bno_build_african_camps_decision_desc: "As the population of #V [GetTrait('bno_full_black').GetName( GetNullCharacter )]#! keep growing you have decided it was high times for you to make a settlement just for them."
 bno_build_african_camps_decision_tooltip: "Construct $building_type_bbc_camp_01$"
 bno_build_african_camps_decision_confirm: "So be it"
 bno_build_african_camps_toast: "$building_type_bbc_camp_01$ Constructed"
