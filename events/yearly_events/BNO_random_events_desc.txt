@@ -6702,9 +6702,12 @@ bno_random.0040 = {
 	#please, comfort me
 	option = {
 		trigger = {
-			has_trait = bno_curious
+			is_bno_curious_and_up = yes
 		}
 		name = bno_random_0040.b
+		bno_have_sex_with_effects = {
+			PARTNER = scope:target1
+		}
 	}
 	
 	#I know you did it.
@@ -6712,7 +6715,17 @@ bno_random.0040 = {
 		trigger = {
 			is_bno_snowbunny_and_up = yes
 		}
+		exclusive = yes
 		name = bno_random_0040.c
+		bno_have_sex_with_effects = {
+			PARTNER = scope:target1
+		}
+		bno_have_sex_with_effects = {
+			PARTNER = scope:target1
+		}
+		bno_have_sex_with_effects = {
+			PARTNER = scope:target1
+		}
 	}
 }
 

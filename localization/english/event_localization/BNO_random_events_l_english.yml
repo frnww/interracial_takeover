@@ -526,8 +526,8 @@ bno_random_2039.desc: "takes a deep breath and gathers her courage before making
 bno_random_2039.a: "It was the most intense, mind-blowing sex I've ever had..."
 bno_random_2039.b: "I will make sure your rival is punished properly...and trust me when I say he won't be leaving prison anytime soon."
 
-bno_random_0040.title: "Not-So-Friendly Brawl"
-bno_random_0040.desc: ""
-bno_random_0040.a: ""
-bno_random_0040.b: ""
-bno_random_0040.c: ""
+bno_random_0040.title: "[ROOT.Char.GetFirstName]'s Tragic Discovery: The BBC Bull's Dark Secret"
+bno_random_0040.desc: "#weak As I sat in my chamber, the news of [target2.GetFirstName]'s death reached me. My heart sank as I realized that he had been a loyal courtier who served me well over the years. #!\n\n#weak But then, something clicked in my mind - a memory resurfaced of an argument between [target1.GetFirstName] and him just days before. The words they exchanged were heated, filled with jealousy and resentment. #!\n\n#weak I knew deep down that it was no mere coincidence that he had died so suddenly after their confrontation. No, there could only be one explanation: [target2] had murdered my courtier in a fit of rage over my affections. #!\n\n#weak The thought sent shivers down my spine - to think that such an act could have been committed by the very man I shared my bed with every night...it was almost too much to bear. #!"
+bno_random_0040.a: "I sniffle loudly as I pretend to weep"
+bno_random_0040.b: "Oh [target1.GetFirstName], hold me tighter! I need you so badly right now!"
+bno_random_0040.c: "I know it was you who killed my courtier. Fuck me hard and I won't tell anyone about it."

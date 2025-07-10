@@ -31,19 +31,19 @@ bno_becoming_lustful_effect = {
 becoming_african = {
 	switch = {
 		trigger = has_trait
-		bno_mostly_black = {
+		bno_mostly_black_slut = {
 			change_trait_rank = {
 				trait = bno_slut_blood
 				rank = 1
 			}
 		}
-		bno_mixed = {
+		bno_mixed_slut = {
 			change_trait_rank = {
 				trait = bno_slut_blood
 				rank = 1
 			}
 		}
-		bno_barely_mixed = {
+		bno_barely_mixed_slut = {
 			change_trait_rank = {
 				trait = bno_slut_blood
 				rank = 1
