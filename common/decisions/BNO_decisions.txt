@@ -185,3 +185,64 @@ bno_invite_slut_decision = {
         bno_decision_modifier = yes
 	}
 }
+
+#Build African Camps
+bno_build_african_camps_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
+	}
+	sort_order = 10
+	decision_group_type = courtier
+	desc = bno_build_african_camps_decision_desc
+	selection_tooltip = bno_build_african_camps_decision_tooltip
+	widget = {
+		controller = create_holy_order
+		barony_valid = {
+			trigger_if = {
+				limit = { exists = this }
+				holder = scope:ruler
+				title_province = {
+					NOT = { has_building_or_higher = bbc_camp_01 }
+				}
+			}
+		}
+	}
+	is_shown = {
+		is_ruler = yes
+		is_adult = yes
+		OR = {
+			is_bbc = yes
+			has_trait = bno_whitegirl
+		}
+		OR = { 
+			is_ai = no 
+			has_game_rule = bno_decision_npc_yes 
+		}
+	}
+
+	cost = {
+		gold = 300
+	}
+	effect = {
+		send_interface_toast = {
+			type = event_toast_effect_good
+			title = bno_build_african_camps_toast
+			scope:barony ?= {
+				title_province = {
+					add_special_building_slot  = bbc_camp_01
+					add_special_building = bbc_camp_01
+				}
+			}
+		}
+	}
+	ai_check_interval = 12
+	ai_potential = {
+		any_held_title = {
+			tier >= tier_county
+		}
+	}
+	ai_will_do = {
+        base = 0
+        bno_decision_modifier = yes
+	}
+}

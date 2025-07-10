@@ -173,7 +173,7 @@ bno_pure_white_portrait_modifier = {
 				accessory = {
 					mode = add
 					gene = hairstyles
-					template = indian_hairstyles_wavy
+					template = legacy_dna_hairstyles
 					range = { 0 1 }
 				}
 			}
