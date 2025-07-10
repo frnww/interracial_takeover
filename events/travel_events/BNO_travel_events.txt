@@ -394,7 +394,7 @@ bno_travel_events.0004 = {
 		root = {
 			is_female = yes
 			is_adult = yes
-			has_trait = bno_curious
+			is_bno_curious_and_up = yes
 		}
 		current_travel_plan = {
 			any_entourage_character = {
@@ -423,10 +423,9 @@ bno_travel_events.0004 = {
 		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
-		trigger_event = bno_travel_events.1004
 	}
 	
-	option = { #sex +
+	option = { #sex + more sex
 		trigger = {
 			is_bno_snowbunny_and_up = yes
 		}
@@ -434,85 +433,18 @@ bno_travel_events.0004 = {
 		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
-		trigger_event = bno_travel_events.2004
+		bno_have_sex_with_effects = {
+			PARTNER = scope:target1
+		}
+		bno_have_sex_with_effects = {
+			PARTNER = scope:target1
+		}
+		become_lover_with_target = {
+			TARGET = scope:target1
+			LOCATION = location
+		}
 	}
 }
-
-bno_travel_events.1004 = {
-	type = character_event
-	title = bno_travel_events_1004.title
-	desc = bno_travel_events_1004.desc
-	theme = travel
-	
-	right_portrait = {
-		character = scope:target1
-		animation = personality_content
-		triggered_outfit = {
-			trigger = {
-				exists = scope:target1
-			}
-			outfit_tags = {
-				no_clothes
-			}
-		}
-	}
-	
-	left_portrait = {
-		character = root
-		animation = personality_content
-		triggered_outfit = {
-			trigger = {
-				exists = root
-			}
-			outfit_tags = {
-				no_clothes
-			}
-		}
-	}
-	
-	option = {
-		name = bno_travel_events_0004.a
-	}
-}
-
-bno_travel_events.2004 = {
-	type = character_event
-	title = bno_travel_events_2004.title
-	desc = bno_travel_events_2004.desc
-	theme = travel
-	
-	right_portrait = {
-		character = scope:target1
-		animation = personality_content
-		triggered_outfit = {
-			trigger = {
-				exists = scope:target1
-			}
-			outfit_tags = {
-				no_clothes
-			}
-		}
-	}
-	
-	left_portrait = {
-		character = root
-		animation = personality_content
-		triggered_outfit = {
-			trigger = {
-				exists = root
-			}
-			outfit_tags = {
-				no_clothes
-			}
-		}
-	}
-	
-	option = {
-		name = bno_travel_events_0004.a
-		bno_increase_sluttyness = yes
-	}
-}
-
 #if you are blacked, get horny and be forced to make due with what you have
 bno_travel_events.0005 = {
 	type = character_event
@@ -553,7 +485,6 @@ bno_travel_events.0005 = {
 		name = bno_travel_events_0005.a
 		bno_increase_sluttyness = yes
 		add_stress = -5
-		trigger_event = bno_travel_events.1005
 	}
 	
 	option = { #dubious dildo
@@ -567,69 +498,11 @@ bno_travel_events.0005 = {
 			}
 			add_stress = -15
 		}
-		
-		trigger_event = bno_travel_events.2005
 	}
 	
 	option = { #suppress desires
 		name = bno_travel_events_0005.c
 		add_stress = 15
-	}
-}
-
-bno_travel_events.1005 = {
-	type = character_event
-	title = bno_travel_events_1005.title
-	desc = bno_travel_events_1005.desc
-	theme = travel
-	
-	override_background = {
-		reference = army_camp
-	}
-	
-	left_portrait = {
-		character = root
-		animation = personality_content
-		triggered_outfit = {
-			trigger = {
-				exists = root
-			}
-			outfit_tags = {
-				no_clothes
-			}
-		}
-	}
-	
-	option = {
-		name = bno_travel_events_1005.a
-	}
-}
-
-bno_travel_events.2005 = {
-	type = character_event
-	title = bno_travel_events_2005.title
-	desc = bno_travel_events_2005.desc
-	theme = travel
-	
-	override_background = {
-		reference = army_camp
-	}
-	
-	left_portrait = {
-		character = root
-		animation = personality_content
-		triggered_outfit = {
-			trigger = {
-				exists = root
-			}
-			outfit_tags = {
-				no_clothes
-			}
-		}
-	}
-	
-	option = {
-		name = bno_travel_events_2005.a
 	}
 }
 
