@@ -1,7 +1,6 @@
 ﻿is_blackbull = {
 	is_bbc = yes
 	is_male = yes
-	is_african = yes
 	is_elligible_partner = yes
 }
 
@@ -65,112 +64,112 @@ is_ai_blackbull_just_or_zealous = {
 	}
 }
 
-does_something_exist = {
-	OR = {
-		any_courtier_or_guest = {
-			$trigger_key$ = yes
-		}
-		any_vassal_or_below = {
-			$trigger_key$ = yes
-		}
-		any_vassal_or_below = {
-			any_courtier_or_guest = {
-				$trigger_key$ = yes
-			}
-		}
-		trigger_if = {
-			limit = {
-				exists = liege
-			}
-			OR = {
-				liege = {
-					$trigger_key$ = yes
-				}
-				liege = {
-					any_courtier_or_guest = {
-						$trigger_key$ = yes
-					}
-				}
-				liege = {
-					any_vassal_or_below = {
-						$trigger_key$ = yes
-					}
-				}
-				liege = {
-					any_vassal_or_below = {
-						any_courtier_or_guest = {
-							$trigger_key$ = yes
-						}
-					}
-				}
-			}
-		}
+does_wandering_male_exist = {
+	any_pool_character = {
+		province = location
+		is_male = yes
+		is_elligible_partner = yes
+		count >= 1
 	}
+}
+
+does_something_exist = {
+    OR = {
+        any_courtier_or_guest = {
+            $TRIGGER_KEY$ = yes
+        }
+        any_vassal_or_below = {
+            $TRIGGER_KEY$ = yes
+        }
+        any_vassal_or_below = {
+            highest_held_title_tier >= tier_county
+            any_courtier_or_guest = {
+                $TRIGGER_KEY$ = yes
+            }
+        }
+        liege ?= {
+            OR = {
+                $TRIGGER_KEY$ = yes
+                any_courtier_or_guest = {
+                    $TRIGGER_KEY$ = yes
+                }
+                any_vassal_or_below = {
+                    $TRIGGER_KEY$ = yes
+                }
+                any_vassal_or_below = {
+                    highest_held_title_tier >= tier_county
+                    any_courtier_or_guest = {
+                        $TRIGGER_KEY$ = yes
+                    }
+                }
+            }
+        }
+    }
 }
 
 does_just_or_zealous_blackbull_exist = {
 	does_something_exist = {
-		trigger_key = is_ai_blackbull_just_or_zealous
+		TRIGGER_KEY = is_ai_blackbull_just_or_zealous
 	}
 }
 
 does_secret_haver_exist = {
 	does_something_exist = {
-		trigger_key = does_blacked_girl_white_husband_has_secret
+		TRIGGER_KEY = does_blacked_girl_white_husband_has_secret
 	}
 }
 
 does_blacked_noble_exist = {
 	does_something_exist = {
-		trigger_key = is_ai_blacked_noble
+		TRIGGER_KEY = is_ai_blacked_noble
 	}
 }
 
 does_blacked_peasant_exist = {
 	does_something_exist = {
-		trigger_key = is_ai_blacked_peasant
+		TRIGGER_KEY = is_ai_blacked_peasant
 	}
 }
 
 does_unmarried_blackbull_exist = {
 	does_something_exist = {
-		trigger_key = is_unmarried_ai_blackbull
+		TRIGGER_KEY = is_unmarried_ai_blackbull
 	}
 }
 
 does_blacked_with_eating_disorder_exist = {
 	does_something_exist = {
-		trigger_key = is_ai_blacked_has_eating_disorder
+		TRIGGER_KEY = is_ai_blacked_has_eating_disorder
 	}
 }
 
 does_blacked_girl_exist = {
 	does_something_exist = {
-		trigger_key = is_ai_blacked
+		TRIGGER_KEY = is_ai_blacked
 	}
 }
 
 does_blackbull_exist = {
 	does_something_exist = {
-		trigger_key = is_ai_blackbull
+		TRIGGER_KEY = is_ai_blackbull
 	}
 }
 
 does_pure_whitegirl_exist = {
 	does_something_exist = {
-		trigger_key = is_ai_pure_white_girl
+		TRIGGER_KEY = is_ai_pure_white_girl
 	}
 }
 
 does_unmarried_pure_white_girl_exist = {
 	does_something_exist = {
-		trigger_key = is_unmarried_ai_pure_white_girl
+		TRIGGER_KEY = is_unmarried_ai_pure_white_girl
 	}
 }
 
 does_blacked_girl_married_to_a_ruler_exist = {
 	does_something_exist = {
-		trigger_key = is_blacked_girl_married_to_a_ruler
+		TRIGGER_KEY = is_blacked_girl_married_to_a_ruler
 	}
 }
 
@@ -185,6 +184,14 @@ is_blacked_girl_married_to_a_ruler = {
 is_unmarried_ai_pure_white_girl = {
 	is_ai_pure_white_girl = yes
 	is_married = no
+}
+
+is_married_ai_pure_white_girl_has_white_husband = {
+	is_ai_pure_white_girl = yes
+	is_married = yes
+	primary_spouse ?= {
+		is_self_married_whiteguy = yes
+	}
 }
 
 is_a_girl = {
@@ -204,10 +211,7 @@ is_white_girl = {
 
 is_curious = {
 	is_white_girl = yes
-	OR = {
-		has_trait = lustful
-		is_bno_curious_and_up = yes
-	}
+	is_bno_curious_and_up = yes
 }
 
 is_ai_blacked = {
@@ -448,8 +452,9 @@ is_ai_pure_white_girl = {
 }
 
 is_pure_whitegirl = {
-	is_slut = no
 	is_female = yes
+	is_african = no
+	is_slut = no
 	is_elligible_partner = yes
 }
 
@@ -470,25 +475,8 @@ is_ai_blackbull = {
 }
 
 does_good_looking_ai_foreign_lady_exist = {
-	OR = {
-		any_neighboring_and_across_water_top_liege_realm_owner = {
-			is_ai_whiteguy = yes
-			exists = primary_spouse
-			primary_spouse = {
-				is_ai_pure_white_girl = yes
-				has_desirable_looks_or_breast = yes
-			}
-		}
-		any_neighboring_and_across_water_top_liege_realm_owner = {
-			any_vassal_or_below = {
-				is_ai_whiteguy = yes
-				exists = primary_spouse
-				primary_spouse = {
-					is_ai_pure_white_girl = yes
-					has_desirable_looks_or_breast = yes
-				}
-			}
-		}
+	does_something_foreign_exist = {
+		TRIGGER_KEY = is_married_ai_pure_white_girl_has_white_husband
 	}
 }
 
@@ -501,39 +489,36 @@ does_blacked_ai_girl_has_white_guy_husband = {
 }
 
 does_something_foreign_exist = {
-	OR = {
-		any_neighboring_and_across_water_top_liege_realm_owner = {
-			$trigger_key$ = yes
-		}
-		any_neighboring_and_across_water_top_liege_realm_owner = {
-			any_courtier_or_guest = {
-				$trigger_key$ = yes
-			}
-		}
-		any_neighboring_and_across_water_top_liege_realm_owner = {
-			any_vassal_or_below = {
-				$trigger_key$ = yes
-			}
-		}
-		any_neighboring_and_across_water_top_liege_realm_owner = {
-			any_vassal_or_below = {
-				any_courtier_or_guest = {
-					$trigger_key$ = yes
-				}
-			}
-		}
-	}
+    any_neighboring_and_across_water_top_liege_realm_owner = {
+        OR = {
+            $TRIGGER_KEY$ = yes
+            any_courtier_or_guest = {
+                $TRIGGER_KEY$ = yes
+            }
+            any_vassal_or_below = {
+              or = {
+                  $TRIGGER_KEY$ = yes
+                  and = {
+                      highest_held_title_tier >= tier_county
+                      any_courtier_or_guest = {
+                          $TRIGGER_KEY$ = yes
+                      }
+                  }
+                }
+            }
+        }
+    }
 }
 
 does_blacked_ai_girl_has_white_guy_husband_exist = {
 	does_something_foreign_exist = {
-		trigger_key = does_blacked_ai_girl_has_white_guy_husband
+		TRIGGER_KEY = does_blacked_ai_girl_has_white_guy_husband
 	}
 }
 
 does_unmarried_ai_pure_foreign_lady_exist = {
 	does_something_foreign_exist = {
-		trigger_key = is_unmarried_ai_pure_white_girl
+		TRIGGER_KEY = is_unmarried_ai_pure_white_girl
 	}
 }
 
@@ -607,6 +592,7 @@ is_elligible_partner = {
 	is_adult = yes
 	is_imprisoned = no
 	is_alive = yes
+	is_travelling = no
 	OR = {
 		is_visibly_fertile = yes
 		is_immortal = yes

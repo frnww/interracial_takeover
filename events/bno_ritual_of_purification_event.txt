@@ -236,15 +236,15 @@ bno_ritual_of_purification.1101 = {
     immediate = {
         create_bbc = {
             age = 16
-            scope_name = bbc_1
+            SCOPE_NAME = bbc_1
         }
         create_bbc = {
             age = 16
-            scope_name = bbc_2
+            SCOPE_NAME = bbc_2
         }
         create_bbc = {
             age = 16
-            scope_name = bbc_3
+            SCOPE_NAME = bbc_3
         }
     }
 

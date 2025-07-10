@@ -15,13 +15,13 @@ bno_marriage.0001 = {
 	
 	immediate = {
 		get_unmarried_pure_white_girl_scope = {
-			scope_name = target1
+			SCOPE_NAME = target1
 		}
 		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
 		become_lover_with_target = {
-			target = scope:target1
+			TARGET = scope:target1
 			LOCATION = location
 		}
 	}
@@ -30,9 +30,9 @@ bno_marriage.0001 = {
 		ai_chance = {
 			base = 100
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			bno_marriage_effect = {
-				target = root
+				TARGET = root
 			}
 		}
 	}
@@ -82,7 +82,7 @@ bno_marriage.0002 = {
 	
 	immediate = {
 		get_blacked_girl_married_to_a_ruler_scope = {
-			scope_name = target1
+			SCOPE_NAME = target1
 		}
 	}
 	option = {
@@ -93,9 +93,9 @@ bno_marriage.0002 = {
 		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			bno_marriage_effect = {
-				target = root
+				TARGET = root
 			}
 		}
 	}
@@ -126,25 +126,21 @@ bno_marriage.0004 = { #unmarried bbc looks to other realms for single woman
 	trigger = {
 		is_unmarried_ai_blackbull = yes
 		is_ruler = no
-		any_neighboring_and_across_water_top_liege_realm_owner = {
-			any_courtier_or_guest = {
-				is_married = no
-				is_good_pure_whitegirl = yes
-				is_ai = yes
-			}
-		}
+		does_unmarried_ai_pure_foreign_lady_exist = yes
 	}
 	
 	immediate = {
 		get_foreign_unmarried_pure_white_girl_scope = {
-			scope_name = target1
+			SCOPE_NAME = target1
 		}
-		bno_have_sex_with_effects = {
-			PARTNER = scope:target1
-		}
-		become_lover_with_target = {
-			target = scope:target1
-			LOCATION = root.location
+		scope:target1 ?= {
+			bno_have_sex_with_effects = {
+				PARTNER = root
+			}
+			become_lover_with_target = {
+				TARGET = root
+				LOCATION = location
+			}
 		}
 	}
 	
@@ -156,9 +152,9 @@ bno_marriage.0004 = { #unmarried bbc looks to other realms for single woman
 			modifier = bno_took_foreign_unmarried_white_wife
 			years = 15
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			bno_marriage_effect = {
-				target = root
+				TARGET = root
 			}
 		}
 	}
@@ -173,12 +169,13 @@ bno_marriage.0005 = {
 	trigger = {
 		is_unmarried_ai_blackbull = yes
 		is_ruler = no
+		is_courtier = yes
 		does_blacked_ai_girl_has_white_guy_husband_exist = yes
 	}
 	
 	immediate = {
 		get_foreign_married_blacked_girl_scope = {
-			scope_name = target1
+			SCOPE_NAME = target1
 		}
 	}
 	option = {
@@ -186,17 +183,17 @@ bno_marriage.0005 = {
 			base = 100
 		}
 		add_stress = -100
-		bno_have_sex_with_effects = {
-			PARTNER = scope:target1
+		scope:target1 ?= {
+			bno_have_sex_with_effects = {
+				PARTNER = root
+			}
+			bno_marriage_effect = {
+				TARGET = root
+			}
 		}
 		add_character_modifier = {
 			modifier = bno_stole_foreign_married_white_wife
 			years = 15
-		}
-		scope:target1 = {
-			bno_marriage_effect = {
-				target = root
-			}
 		}
 	}
 }

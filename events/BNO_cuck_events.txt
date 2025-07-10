@@ -48,12 +48,12 @@ bno_cuck.0001 = {
 	
 	immediate = {
 		get_bbc_scope = {
-			scope_name = target1
+			SCOPE_NAME = target1
 		}
 		get_primary_spouse_scope = {
-			scope_name = target2
+			SCOPE_NAME = target2
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			bno_have_sex_with_effects = {
 				PARTNER = scope:target2
 			}
@@ -150,7 +150,7 @@ bno_cuck.1001 = {
 	option = {
 		name =  bno_cuck_1001.a
 		become_more_cuck_effect = yes
-		scope:target1 = { #learn random secret of wife, probably this lovers one
+		scope:target1 ?= { #learn random secret of wife, probably this lovers one
 			random_secret = {
 				reveal_to = root
 			}
@@ -283,12 +283,12 @@ bno_cuck.0003 = {
 	}
 	immediate = {
 		get_bbc_scope = {
-			scope_name = target1
+			SCOPE_NAME = target1
 		}
 		get_primary_spouse_scope = {
-			scope_name = target2
+			SCOPE_NAME = target2
 		}
-		scope:target2 = {
+		scope:target2 ?= {
 			bno_increase_sluttyness = yes
 		}
 	}
@@ -296,7 +296,7 @@ bno_cuck.0003 = {
 		name = bno_cuck_0003.a
 		add_prestige = -250
 		dynasty = { add_dynasty_prestige = -25 }
-		scope:target1 = {
+		scope:target1 ?= {
 			add_prestige = 250
 		}
 	}
@@ -306,7 +306,7 @@ bno_cuck.0003 = {
 		remove_short_term_gold = 50
 		add_prestige = -150
 		
-		scope:target1 = {
+		scope:target1 ?= {
 			add_gold = 50
 			add_prestige = 150
 		}
@@ -315,7 +315,7 @@ bno_cuck.0003 = {
 		name = bno_cuck_0003.c
 		remove_short_term_gold = 100
 		add_prestige = -25
-		scope:target1 = {
+		scope:target1 ?= {
 			add_gold = 100
 			add_prestige = 25
 		}
@@ -477,13 +477,13 @@ bno_cuck.2004 = {
 	}
 
 	immediate = {
-		scope:target1 = {
+		scope:target1 ?= {
 			bno_have_sex_with_effects = {
 				PARTNER = scope:target2
 			}
 			hidden_effect = {
 				become_lover_with_target = {
-					target = scope:target2
+					TARGET = scope:target2
 					LOCATION = root.location
 				}
 			}
@@ -591,7 +591,7 @@ bno_cuck.3004 = {
 		name = bno_cuck_3004.a
 		if = {
 			limit = {
-				scope:target2 = {
+				scope:target2 ?= {
 					exists = primary_spouse
 					primary_spouse = {
 						NOT = {
@@ -600,12 +600,12 @@ bno_cuck.3004 = {
 					}
 				}
 			}
-			scope:target2 = {
+			scope:target2 ?= {
 				primary_spouse = { become_more_cuck_effect = yes }
 			}
 		}
 
-		scope:target2 = {
+		scope:target2 ?= {
 			
 			hidden_effect = {
 				bno_have_sex_with_effects = {
@@ -622,10 +622,10 @@ bno_cuck.3004 = {
 			bno_increase_sluttyness = yes
 			give_nickname = nick_bcamps
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			hidden_effect = {
 				become_lover_with_target = {
-					target = scope:target2
+					TARGET = scope:target2
 					LOCATION = root.location
 				}
 			}
@@ -633,7 +633,7 @@ bno_cuck.3004 = {
 		scope:target3 = {
 			hidden_effect = {
 				become_lover_with_target = {
-					target = scope:target2
+					TARGET = scope:target2
 					LOCATION = root.location
 				}
 			}
@@ -641,7 +641,7 @@ bno_cuck.3004 = {
 		scope:target4 = {
 			hidden_effect = {
 				become_lover_with_target = {
-					target = scope:target2
+					TARGET = scope:target2
 					LOCATION = root.location
 				}
 			}
@@ -683,7 +683,7 @@ bno_cuck.0005 = {
 	}
 	immediate = {
 		get_bbc_scope = {
-			scope_name = target1
+			SCOPE_NAME = target1
 		}
 		if = {
 			limit = {
@@ -729,17 +729,22 @@ bno_cuck.0006 = { #Just cuck bonds with bbc, gives court position
 			employs_court_position = master_of_horse_court_position
 			employs_court_position = master_of_hunt_court_position
 		}
-		does_just_or_zealous_blackbull_exist = yes
+		any_courtier_or_guest = {
+			is_ai_blackbull_just_or_zealous = yes
+		}
 	}
 	immediate = {
-		get_just_or_zealous_bbc_scope = {
-			scope_name = target1
+		random_courtier_or_guest = {
+			limit = {
+				is_ai_blackbull_just_or_zealous = yes
+			}
+			save_scope_as = target1
 		}
 		add_opinion = {
 			modifier = friendly_interaction
 			target = scope:target1
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			add_opinion = {
 				modifier = friendly_interaction
 				target = root
@@ -783,7 +788,7 @@ bno_cuck.0006 = { #Just cuck bonds with bbc, gives court position
 	option = {
 		name = bno_cuck_0006.d
 		remove_short_term_gold = 30
-		scope:target1 = {
+		scope:target1 ?= {
 			add_gold = 30
 			add_prestige = 50
 		}
@@ -818,7 +823,7 @@ bno_cuck.0007 = {
 	}
 	immediate = {
 		get_bbc_scope = {
-			scope_name = target1
+			SCOPE_NAME = target1
 		}
 	}
 	option = {
@@ -838,7 +843,7 @@ bno_cuck.0007 = {
 		}
 		become_smaller_dick_effect = yes
 		add_prestige = -250
-		scope:target1 = {
+		scope:target1 ?= {
 			add_prestige = 250
 		}
 	}
@@ -880,12 +885,12 @@ bno_cuck.0008 = {
 			save_scope_as = target1
 		}
 		get_primary_spouse_scope = {
-			scope_name = target2
+			SCOPE_NAME = target2
 		}
 	}
 	option = { #BBC does cuck a favor and doesn't fuck his wife
 		name = bno_cuck_0008.a
-		scope:target1 = {
+		scope:target1 ?= {
 			add_hook = {
 				type = favor_hook
 				target = root
@@ -898,12 +903,12 @@ bno_cuck.0008 = {
 	}
 	option = { #BBC fucks cuck's wife
 		name = bno_cuck_0008.b
-		scope:target1 = {
+		scope:target1 ?= {
 			bno_have_sex_with_effects = {
 				PARTNER = scope:target2
 			}
 		}
-		scope:target2 = {
+		scope:target2 ?= {
 			add_opinion = {
 				modifier = bno_pathetic_cuck_husband
 				target = root
@@ -973,7 +978,7 @@ bno_cuck.0009 = {
 			save_scope_as = cucked_son
 		}
 		get_bbc_scope = {
-			scope_name = target1
+			SCOPE_NAME = target1
 		}
 		add_opinion = {
 			modifier = supportive_parent
@@ -995,7 +1000,7 @@ bno_cuck.0009 = {
 	}
 	option = {
 		name = bno_cuck_0009.a
-		scope:target2 = {
+		scope:target2 ?= {
 			bno_have_sex_with_effects = {
 				PARTNER = scope:target1
 			}
@@ -1063,7 +1068,7 @@ bno_cuck.0010 = {
 			save_scope_as = target1
 		}
 		get_primary_spouse_scope = {
-			scope_name = target2
+			SCOPE_NAME = target2
 		}
 		random_vassal = {
 			limit = {
@@ -1153,7 +1158,7 @@ bno_cuck.1010 = { #followup event, spymaster frames cuck's vassal, gives and get
 			modifier = loyalty_opinion
 			target = scope:target1
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			add_hook = {
 				type = favor_hook
 				target = root
@@ -1196,12 +1201,12 @@ bno_cuck.2010 = { #follow up event, bbc spymaster lays with cuck's wife
 	}
 	immediate = {
 		hidden_effect = {
-			scope:target2 = {
+			scope:target2 ?= {
 				bno_have_sex_with_effects = {
 					PARTNER = scope:target1
 				}
 				become_lover_with_target = {
-					target = scope:target1
+					TARGET = scope:target1
 					LOCATION = location
 				}
 			}
@@ -1218,20 +1223,20 @@ bno_cuck.2010 = { #follow up event, bbc spymaster lays with cuck's wife
 				modifier = bno_cuck_blissfully_unaware
 				months = 12
 			}
-			scope:target1 = {
+			scope:target1 ?= {
 				add_character_modifier = {
 					modifier = bno_cheating_well_hidden
 					months = 12
 				}
 			}
 		}
-		scope:target2 = {
+		scope:target2 ?= {
 			add_opinion = {
 				modifier = bno_spymaster_guarded_me
 				target = scope:target1
 			}
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			add_prestige = 150
 		}
 	}
@@ -1289,7 +1294,7 @@ bno_cuck.0011 = {
 			}
 			save_scope_as = target2
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			if = {
 				limit = {
 					NAND = {
@@ -1304,12 +1309,12 @@ bno_cuck.0011 = {
 	}
 	option = {
 		name = bno_cuck_0011.a
-		scope:target2 = {
+		scope:target2 ?= {
 			create_betrothal = scope:target1
 			add_courtier = scope:target1
 			set_relation_ward = scope:target1
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			add_character_flag = {
 				flag = bno_cuck.0011
 			}
@@ -1340,22 +1345,25 @@ bno_cuck.0012 = {
 		animation = steward
 	}
 	trigger = {
+		gold > 500
 		is_self_married_whiteguy = yes
 		is_spouse_blacked = yes
 		any_directly_owned_province = {
-			free_building_slots > 0
+			NOT = { has_building_or_higher = bbc_camp_01 }
 		}
 	}
 	immediate = {
 		get_primary_spouse_scope = {
-			scope_name = target1
+			SCOPE_NAME = target1
 		}
 		random_directly_owned_province  = {
 			limit = {
-				free_building_slots > 0
+				NOT = { has_building_or_higher = bbc_camp_01 }
 			}
-			add_building = bbc_camp_01
+			add_special_building_slot  = bbc_camp_01
+			add_special_building = bbc_camp_01
 		}
+
 		remove_short_term_gold = 300
 	}
 	option = {
@@ -1396,9 +1404,9 @@ bno_cuck.0013 = {
 			save_scope_as = target1
 		}
 		get_bbc_scope = {
-			scope_name = target2
+			SCOPE_NAME = target2
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			bno_have_sex_with_effects = {
 				PARTNER = scope:target2
 			}
@@ -1445,10 +1453,10 @@ bno_cuck.0014 = {
 	}
 	immediate = {
 		get_primary_spouse_scope = {
-			scope_name = target1
+			SCOPE_NAME = target1
 		}
 		get_blacked_girl_scope = {
-			scope_name = target2
+			SCOPE_NAME = target2
 		}
 		hidden_effect = {
 			primary_spouse = {
@@ -1498,7 +1506,7 @@ bno_cuck.0015 = {
 
 	immediate = {
 		get_primary_spouse_scope = {
-			scope_name = target2
+			SCOPE_NAME = target2
 		}
 		become_more_cuck_effect = yes
 		add_character_modifier = {
@@ -1517,7 +1525,7 @@ bno_cuck.0015 = {
 			}
 			add_trait = humble
 		}
-		scope:target2 = {
+		scope:target2 ?= {
 			add_opinion = {
 				modifier = bno_happy_cuck_husband
 				target = root
@@ -1530,7 +1538,7 @@ bno_cuck.0015 = {
 			base = 40
 		}
 		add_stress = 25
-		scope:target2 = {
+		scope:target2 ?= {
 			add_opinion = {
 				modifier = bno_pathetic_cuck_husband
 				target = root
@@ -1565,7 +1573,7 @@ bno_cuck.0016 = {
 	}
 	immediate = {
 		get_primary_spouse_scope = {
-			scope_name = target2
+			SCOPE_NAME = target2
 		}
 	}
 	option = { # Accept your fate in silence

@@ -1,6 +1,5 @@
 ﻿is_self_whiteguy = {
 	is_bbc = no
-	is_african = no
 	is_elligible_partner = yes
 	is_male = yes
 }

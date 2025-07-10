@@ -5,7 +5,7 @@
                 PARTNER = scope:target
             }
             become_lover_with_target = {
-                target = scope:target
+                TARGET = scope:target
                 LOCATION = location
             }
         }

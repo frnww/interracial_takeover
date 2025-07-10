@@ -51,7 +51,7 @@ bno_bull.0001 = {
 		liege = {
 			save_scope_as = target1
 			get_primary_spouse_scope = {
-				scope_name = target2
+				SCOPE_NAME = target2
 			}
 		}
 	}
@@ -64,7 +64,7 @@ bno_bull.0001 = {
 		bno_have_sex_with_effects = {
 			PARTNER = scope:target2
 		}
-		scope:target2 = {
+		scope:target2 ?= {
 			bno_increase_sluttyness = yes
 			primary_spouse = {
 				add_character_flag = {
@@ -77,13 +77,13 @@ bno_bull.0001 = {
 	option = {
 		name = bno_bull_0001.b
 		become_lover_with_target = {
-			target = scope:target2
+			TARGET = scope:target2
 			LOCATION = root.location
 		}
 		bno_have_sex_with_effects = {
 			PARTNER = scope:target2
 		}
-		scope:target2 = {
+		scope:target2 ?= {
 			primary_spouse = {
 				add_character_flag = {
 					flag = bno_bull.0001		#add flag to prevent this guy from getting spammed multiple times in same event pulse
@@ -98,7 +98,7 @@ bno_bull.0001 = {
 			base = 1000
 		}
 		trigger = {
-			scope:target2 = {
+			scope:target2 ?= {
 				has_bad_trait = yes
 			}
 		}
@@ -151,7 +151,7 @@ bno_bull.0002 = {
 	
 	immediate = {
 		get_blacked_girl_scope = {
-			scope_name = target1
+			SCOPE_NAME = target1
 		}
 		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
@@ -213,7 +213,7 @@ bno_bull.0003 = {
 	
 	immediate = {
 		get_blacked_girl_with_eating_disorder_scope = {
-			scope_name = target1
+			SCOPE_NAME = target1
 		}
 	}
 	option = {
@@ -280,9 +280,9 @@ bno_bull.1003 = {
 			delayed = yes
 		}
 		add_stress = -20
-		scope:target1 = {
+		scope:target1 ?= {
 			bno_remove_eating_disorder = {
-				target = root
+				TARGET = root
 			}
 		}
 	}
@@ -327,10 +327,10 @@ bno_bull.2003 = {
 
 	option = {
 		name = bno_bull_2003.a
-		gain_blacked_cum_slut_status_from_eating_disorder_effect = {
-			target = root
-		}
-		scope:target1 = {
+		scope:target1 ?= {
+			gain_blacked_cum_slut_status_from_eating_disorder_effect = {
+				TARGET = root
+			}
 			if = {
 				limit = {
 					exists = primary_spouse
@@ -418,7 +418,7 @@ bno_bull.0004 = {
 
 	immediate = {
 		get_pure_whitegirl_scope = {
-			scope_name = target1
+			SCOPE_NAME = target1
 		}
 		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
@@ -475,7 +475,7 @@ bno_bull.0005 = {
 	}
 	immediate = {
 		get_wandering_curious_whitegirl_scope = {
-			scope_name = target1
+			SCOPE_NAME = target1
 		}
 		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
@@ -520,12 +520,12 @@ bno_bull.0006 = {
 	}
 	immediate = {
 		get_hated_non_black_courtier_scope = {
-			scope_name = target1
+			SCOPE_NAME = target1
 		}
 	}
 	option = {
 		name = bno_bull_0006.a
-		scope:target1 = {
+		scope:target1 ?= {
 			bno_caged_effect = yes
 		}
 	}
@@ -584,12 +584,13 @@ bno_bull.0008 = {
 	cooldown = { months = { 8 12 } }
 	
 	trigger = {
-		is_blackbull =yes
+		is_blackbull = yes
 		does_blacked_peasant_exist = yes
+		does_wandering_male_exist = yes
 	}
 	immediate = {
 		get_blacked_peasant_scope = {
-			scope_name = target1
+			SCOPE_NAME = target1
 		}
 		find_5_sex_partner = yes
 	}
@@ -599,35 +600,36 @@ bno_bull.0008 = {
 			base = 5
 		}
 		bbc_pimping = {
-			target = scope:target1
+			TARGET = scope:target1
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			sex_with_5_sex_partner = yes
 			slut_whoring = {
-				target = root
+				TARGET = root
 			}
 		}
 	}
 	option = {
 		trigger = {
-			scope:target1 = {
+			scope:target1 ?= {
 				has_desirable_looks_or_breast = yes
 			}
 		}
 		name = bno_bull_0008.b
 		bbc_pimping = {
-			target = scope:target1
+			TARGET = scope:target1
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			sex_with_5_sex_partner = yes
 			slut_whoring = {
-				target = root
+				TARGET = root
 			}
 		}
 		ai_chance = {
 			base = 95
 		}
 	}
+	
 }
 #BBC ruler pimps out noble white whore
 bno_bull.0009 = {
@@ -662,10 +664,11 @@ bno_bull.0009 = {
 		is_ruler = yes
 		is_blackbull = yes
 		does_blacked_noble_exist = yes
+		does_wandering_male_exist = yes
 	}
 	immediate = {
 		get_blacked_noble_scope = {
-			scope_name = target1
+			SCOPE_NAME = target1
 		}
 		find_5_sex_partner = yes
 	}
@@ -676,10 +679,10 @@ bno_bull.0009 = {
 		}
 
 		bbc_pimping = {
-			target = scope:target1
+			TARGET = scope:target1
 		}
 
-		scope:target1 = {
+		scope:target1 ?= {
 			sex_with_5_sex_partner = yes
 			bno_have_sex_with_effects = {
 				PARTNER = root
@@ -688,7 +691,7 @@ bno_bull.0009 = {
 	}
 	option = {
 		trigger = {
-			scope:target1 = {
+			scope:target1 ?= {
 				OR = {
 					has_trait = beauty_good_1
 					has_trait = beauty_good_2
@@ -698,10 +701,10 @@ bno_bull.0009 = {
 		}
 		name = bno_bull_0008.b
 		bbc_pimping = {
-			target = scope:target1
+			TARGET = scope:target1
 		}
 
-		scope:target1 = {
+		scope:target1 ?= {
 			sex_with_5_sex_partner = yes
 			bno_have_sex_with_effects = {
 				PARTNER = root
@@ -711,6 +714,7 @@ bno_bull.0009 = {
 			base = 95
 		}
 	}
+	
 }
 #liege's wife steals his money for BBC
 bno_bull.0010 = {
@@ -756,15 +760,15 @@ bno_bull.0010 = {
 		liege = {
 			save_scope_as = target2
 			get_primary_spouse_scope = {
-				scope_name = target1
+				SCOPE_NAME = target1
 			}
 		}
 	}
 	option = {
 		name = bno_bull_0010.a
-		scope:target1 = {
+		scope:target1 ?= {
 			bno_steal_white_husband_gold_effect = {
-				target = root
+				TARGET = root
 			}
 		}
 	}
@@ -837,9 +841,9 @@ bno_bull.0012 = {
 	}
 	immediate = {
 		get_secret_haver_scope = {
-			scope_name = target1
+			SCOPE_NAME = target1
 		}
-		scope:target1 = {			#identify spouse for loc and notifications
+		scope:target1 ?= {			#identify spouse for loc and notifications
 			primary_spouse = {
 				save_scope_as = target2
 			}
@@ -847,9 +851,9 @@ bno_bull.0012 = {
 	}
 	option = {
 		name = bno_bull_0012.a
-		scope:target1 = {					#also reveal woman's secrets if she had any
+		scope:target1 ?= {					#also reveal woman's secrets if she had any
 			bno_reveal_secret_effect = {
-				target = root
+				TARGET = root
 			}
 		}
 	}
@@ -896,12 +900,12 @@ bno_bull.0013 = {
 	}
 	immediate = {
 		get_primary_spouse_scope = {
-			scope_name = target1
+			SCOPE_NAME = target1
 		}
 		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			bno_becoming_lustful_effect = yes
 		}
 	}
@@ -939,9 +943,9 @@ bno_bull.0014 = {
 	}
 	immediate = {
 		get_married_pure_girl_scope = {
-			scope_name = target1
+			SCOPE_NAME = target1
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			primary_spouse = {
 				save_scope_as = target2
 			}
@@ -952,10 +956,10 @@ bno_bull.0014 = {
 		ai_chance = {
 			base = 60
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			bno_increase_sluttyness = yes
 		}
-		scope:target2 = {
+		scope:target2 ?= {
 			trigger_event = {
 				id = bno_cuck.0015
 				days = 5
@@ -973,10 +977,10 @@ bno_bull.0014 = {
 		ai_chance = {
 			base = 50
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			bno_increase_sluttyness = yes
 		}
-		scope:target2 = {
+		scope:target2 ?= {
 			trigger_event = {
 				id = bno_cuck.0015
 				days = 5
@@ -994,7 +998,7 @@ bno_bull.0014 = {
 		ai_chance = {
 			base = 5
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			bno_increase_sluttyness = yes
 		}
 		trigger_event = {
@@ -1002,7 +1006,7 @@ bno_bull.0014 = {
 			days = 5
 			delayed = yes
 		}
-		scope:target2 = {
+		scope:target2 ?= {
 			trigger_event = {
 				id = bno_cuck.0016
 				days = 5
@@ -1054,8 +1058,10 @@ bno_bull.1014 = { #follow up event, fuck and done
 	}
 
 	immediate = {
-		bno_have_sex_with_effects = {
-			PARTNER = scope:target1
+		scope:target1 ?= {
+			bno_have_sex_with_effects = {
+				PARTNER = root
+			}
 		}
 	}
 	option = {
@@ -1102,15 +1108,19 @@ bno_bull.2014 = { #follow up event, fuck and become lovers
 	}
 
 	immediate = {
-		bno_have_sex_with_effects = {
-			PARTNER = scope:target1
+		scope:target1 ?= {
+			bno_have_sex_with_effects = {
+				PARTNER = root
+			}
 		}
 	}
 	option = {
 		name = bno_bull_2014.a
-		become_lover_with_target = {
-			target = scope:target1
-			LOCATION = root.location
+		scope:target1 ?= {
+			become_lover_with_target = {
+				TARGET = root
+				LOCATION = location
+			}
 		}
 	}
 }
@@ -1154,15 +1164,17 @@ bno_bull.3014 = { #follow up event, fuck and steal as wife
 	}
 
 	immediate = {
-		bno_have_sex_with_effects = {
-			PARTNER = scope:target1
+		scope:target1 ?= {
+			bno_have_sex_with_effects = {
+				PARTNER = root
+			}
 		}
 	}
 	option = {
 		name = bno_bull_3014.a
-		scope:target1 = {
+		scope:target1 ?= {
 			bno_marriage_effect = {
-				target = root
+				TARGET = root
 			}
 		}
 	}
@@ -1199,9 +1211,9 @@ bno_bull.0015 = {
 	}
 	immediate = {
 		get_white_vassal_with_non_blacked_wife_scope = {
-			scope_name = target1
+			SCOPE_NAME = target1
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			primary_spouse = {
 				save_scope_as = target2
 			}
@@ -1209,7 +1221,7 @@ bno_bull.0015 = {
 	}
 	option = { #let her long for bbc
 		name = bno_bull_0015.a
-		scope:target2 = {
+		scope:target2 ?= {
 			bno_increase_sluttyness = yes
 		}
 	}
@@ -1258,7 +1270,7 @@ bno_bull.0016 = {
 	}
 	option = { #make her a bimbo. Cosmetic only.
 		name = bno_bull_0016.a
-		scope:target1 = {
+		scope:target1 ?= {
 			add_character_flag = bimbo
 			become_bigger_tits_effect = yes
 		}

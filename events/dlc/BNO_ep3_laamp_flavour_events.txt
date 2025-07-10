@@ -203,11 +203,11 @@ bno_ep3_laamp_flavour.0001 = {
 					title = bno_ep3_laamp_flavour_0001.success
 					left_icon = root
 					right_icon = scope:target1
-					scope:target1 = {
+					scope:target1 ?= {
 						become_friend_with_target = {
-							target = root
-							reason = bbc_too_good
-							province = location
+							TARGET = root
+							REASON = bbc_too_good
+							PROVINCE = location
 						}
 						add_opinion = {
 							target = root
@@ -217,7 +217,7 @@ bno_ep3_laamp_flavour.0001 = {
 					}
 				}
 				add_courtier = scope:target1
-				scope:target1 = {
+				scope:target1 ?= {
 					bno_increase_sluttyness = yes
 				}
 				bno_have_sex_with_effects = {
@@ -230,7 +230,7 @@ bno_ep3_laamp_flavour.0001 = {
 					title = bno_ep3_laamp_flavour_0001.failure
 					left_icon = root
 					right_icon = scope:target1
-					scope:target1 = {
+					scope:target1 ?= {
 						add_opinion = {
 							target = root
 							modifier = humiliated_opinion
@@ -246,7 +246,7 @@ bno_ep3_laamp_flavour.0001 = {
 	option = {
 		name = bno_ep3_laamp_flavour_0001.c
 		hidden_effect = {
-			scope:target1 = {
+			scope:target1 ?= {
 				bno_kill_character = yes
 			}
 		}
@@ -393,7 +393,7 @@ bno_ep3_laamp_flavour.0002 = {
 					title = bno_ep3_laamp_flavour_0002.success
 					left_icon = root
 					right_icon = scope:target1
-					scope:target1 = {
+					scope:target1 ?= {
 						add_opinion = {
 							target = root
 							modifier = friendliness_opinion
@@ -401,7 +401,7 @@ bno_ep3_laamp_flavour.0002 = {
 						}
 					}
 				}
-				scope:target1 = {
+				scope:target1 ?= {
 					bno_increase_sluttyness = yes	#curiosity
 				}
 			}
@@ -415,7 +415,7 @@ bno_ep3_laamp_flavour.0002 = {
 					title = bno_ep3_laamp_flavour_0002.failure
 					left_icon = root
 					right_icon = scope:target1
-					scope:target1 = {
+					scope:target1 ?= {
 						add_opinion = {
 							target = root
 							modifier = friendliness_opinion
@@ -450,7 +450,7 @@ bno_ep3_laamp_flavour.0002 = {
 					title = bno_ep3_laamp_flavour_0002.success
 					left_icon = root
 					right_icon = scope:target1
-					scope:target1 = {
+					scope:target1 ?= {
 						add_opinion = {
 							target = root
 							modifier = friendliness_opinion
@@ -469,7 +469,7 @@ bno_ep3_laamp_flavour.0002 = {
 					title = bno_ep3_laamp_flavour_0002.failure
 					left_icon = root
 					right_icon = scope:target1
-					scope:target1 = {
+					scope:target1 ?= {
 						add_opinion = {
 							target = root
 							modifier = friendliness_opinion
@@ -497,7 +497,7 @@ bno_ep3_laamp_flavour.0002 = {
 				}
 				modifier = {
 					add = 200
-					scope:target1 = {
+					scope:target1 ?= {
 						has_trait = bno_whitegirl
 					}
 				}
@@ -505,7 +505,7 @@ bno_ep3_laamp_flavour.0002 = {
 					title = bno_ep3_laamp_flavour_0002.success
 					left_icon = root
 					right_icon = scope:target1
-					scope:target1 = {
+					scope:target1 ?= {
 						add_opinion = {
 							target = root
 							modifier = friendliness_opinion
@@ -524,7 +524,7 @@ bno_ep3_laamp_flavour.0002 = {
 					title = bno_ep3_laamp_flavour_0002.failure
 					left_icon = root
 					right_icon = scope:target1
-					scope:target1 = {
+					scope:target1 ?= {
 						add_opinion = {
 							target = root
 							modifier = friendliness_opinion
@@ -557,7 +557,7 @@ bno_ep3_laamp_flavour.2002 = {
 	option = {
 		name = bno_ep3_laamp_flavour_2002.a
 		
-		scope:target1 = {
+		scope:target1 ?= {
 			bno_increase_sluttyness = yes
 			add_piety = -25
 		}
@@ -597,7 +597,7 @@ bno_ep3_laamp_flavour.3002 = {
 	override_background = { reference = bedchamber }
 	
 	immediate = {
-		scope:target1 = {
+		scope:target1 ?= {
 			bno_increase_sluttyness = yes
 		}
 	}
@@ -606,7 +606,7 @@ bno_ep3_laamp_flavour.3002 = {
 	option = {
 		name = bno_ep3_laamp_flavour_3002.a
 		
-		scope:target1 = {
+		scope:target1 ?= {
 			bno_increase_sluttyness = yes
 		}
 	}
@@ -621,7 +621,7 @@ bno_ep3_laamp_flavour.3002 = {
 			}
 		}
 		
-		scope:target1 = {
+		scope:target1 ?= {
 			bno_increase_sluttyness = yes
 		}
 	}

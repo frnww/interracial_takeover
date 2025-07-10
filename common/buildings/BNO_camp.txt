@@ -8,9 +8,6 @@ bbc_camp_01 = {
 		bno_building_requirement_camp = yes
 	}
 	
-	is_enabled = {
-		county.holder = { has_title = prev.duchy }
-	}
 	show_disabled = yes
 	
 	province_modifier = { # add province modifiers here
@@ -25,7 +22,7 @@ bbc_camp_01 = {
 	
 	type_icon = "icon_building_warcamps.dds"
 	
-	type = duchy_capital
+	type = special
 	
 	next_building = bbc_camp_02
 	
@@ -44,9 +41,7 @@ bbc_camp_02 = {
 		bno_building_requirement_camp = yes
 	}
 	
-	is_enabled = {
-		county.holder = { has_title = prev.duchy }
-	}
+	
 	
 	province_modifier = { # add province modifiers here
 		monthly_income = 1
@@ -60,7 +55,7 @@ bbc_camp_02 = {
 	
 	type_icon = "icon_building_warcamps.dds"
 	
-	type = duchy_capital
+	type = special
 	
 	next_building = bbc_camp_03
 	
@@ -91,7 +86,7 @@ bbc_camp_03 = {
 	
 	type_icon = "icon_building_warcamps.dds"
 	
-	type = duchy_capital
+	type = special
 	
 	next_building = bbc_camp_04
 	
@@ -122,7 +117,7 @@ bbc_camp_04 = {
 	
 	type_icon = "icon_building_warcamps.dds"
 	
-	type = duchy_capital
+	type = special
 	
 	next_building = bbc_camp_05
 	
@@ -153,7 +148,7 @@ bbc_camp_05 = {
 	
 	type_icon = "icon_building_warcamps.dds"
 	
-	type = duchy_capital
+	type = special
 	
 	next_building = bbc_camp_06
 	
@@ -187,7 +182,7 @@ bbc_camp_06 = {
 	
 	type_icon = "icon_building_warcamps.dds"
 	
-	type = duchy_capital
+	type = special
 	
 	ai_value = { # The priority to build the building
 		base = 100

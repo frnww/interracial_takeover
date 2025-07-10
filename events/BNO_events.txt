@@ -27,22 +27,22 @@ bno_events.0001 = {
 	immediate = {
 		create_bbc = {
 			age = bno_young_adult
-			scope_name = target1
+			SCOPE_NAME = target1
 		}
 		create_bbc = {
 			age = bno_young_adult
-			scope_name = target2
+			SCOPE_NAME = target2
 		}
 		create_bbc = {
 			age = bno_young_adult
-			scope_name = target3
+			SCOPE_NAME = target3
 		}
 	}
 	option = {
 		name = bno_events01.a
 		add_courtier = scope:target1
 		hidden_effect = {
-			scope:target2 = {
+			scope:target2 ?= {
 				bno_kill_character = yes
 			}
 			scope:target3 = {
@@ -54,10 +54,10 @@ bno_events.0001 = {
 		name = bno_events01.c
 		add_courtier = scope:target3
 		hidden_effect = {
-			scope:target1 = {
+			scope:target1 ?= {
 				bno_kill_character = yes
 			}
-			scope:target2 = {
+			scope:target2 ?= {
 				bno_kill_character = yes
 			}
 		}
@@ -66,7 +66,7 @@ bno_events.0001 = {
 		name = bno_events01.b
 		add_courtier = scope:target2
 		hidden_effect = {
-			scope:target1 = {
+			scope:target1 ?= {
 				bno_kill_character = yes
 			}
 			scope:target3 = {
@@ -263,23 +263,23 @@ bno_events.0005 = {
 
 	immediate = {
 		get_bbc_scope = {
-			scope_name = target1
+			SCOPE_NAME = target1
 		}
 		get_primary_spouse_scope = {
-			scope_name = target2
+			SCOPE_NAME = target2
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			bno_have_sex_with_effects = {
 				PARTNER = scope:target2
 			}
 			hidden_effect = {
 				become_lover_with_target = {
-					target = scope:target2
+					TARGET = scope:target2
 					LOCATION = scope:target1.location
 				}
 			}
 		}
-		scope:target2 = {
+		scope:target2 ?= {
 			hidden_effect = {
 				stress_impact = {
 					bno_curious = massive_stress_impact_loss
@@ -301,11 +301,11 @@ bno_events.0005 = {
 		random_list = {
 			10 = { give_nickname = nick_cuck }
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			become_friend_with_target = {
-				target = root
-				reason = cuck_faped
-				province = location
+				TARGET = root
+				REASON = cuck_faped
+				PROVINCE = location
 			}
 		}
 	}

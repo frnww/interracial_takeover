@@ -79,17 +79,17 @@ bno_random.0001 = {
 		}
 		
 		
-		scope:target2 = {
+		scope:target2 ?= {
 			bno_have_sex_with_effects = {
 				PARTNER = scope:target1
 			}
 			bno_increase_sluttyness = yes
 		}
 		
-		scope:target1 = {
+		scope:target1 ?= {
 			hidden_effect = {
 				become_lover_with_target = {
-					target = scope:target2
+					TARGET = scope:target2
 					LOCATION = root.location
 				}
 			}
@@ -97,7 +97,7 @@ bno_random.0001 = {
 		
 		if = {
 			limit = {
-				scope:target2 = {
+				scope:target2 ?= {
 					exists = primary_spouse
 					primary_spouse = {
 						NOT = {
@@ -106,7 +106,7 @@ bno_random.0001 = {
 					}
 				}
 			}
-			scope:target2 = {
+			scope:target2 ?= {
 				primary_spouse = {
 					become_more_cuck_effect = yes
 				}
@@ -307,9 +307,9 @@ bno_random.2001 = {
 		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			become_lover_with_target = {
-				target = root
+				TARGET = root
 				LOCATION = root.location
 			}
 		}
@@ -401,16 +401,16 @@ bno_random.0002 = {
 			save_scope_as = target2
 		}
 		
-		scope:target2 = {
+		scope:target2 ?= {
 			bno_have_sex_with_effects = {
 				PARTNER = scope:target1
 			}
 		}
 		
-		scope:target1 = {
+		scope:target1 ?= {
 			hidden_effect = {
 				become_lover_with_target = {
-					target = scope:target2
+					TARGET = scope:target2
 					LOCATION = root.location
 				}
 			}
@@ -418,7 +418,7 @@ bno_random.0002 = {
 		
 		if = {
 			limit = {
-				scope:target2 = {
+				scope:target2 ?= {
 					exists = primary_spouse
 					primary_spouse = {
 						NOT = {
@@ -427,7 +427,7 @@ bno_random.0002 = {
 					}
 				}
 			}
-			scope:target2 = {
+			scope:target2 ?= {
 				primary_spouse = {
 					become_more_cuck_effect = yes
 				}
@@ -578,9 +578,9 @@ bno_random.2002 = {
 		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			become_lover_with_target = {
-				target = root
+				TARGET = root
 				LOCATION = root.location
 			}
 		}
@@ -666,16 +666,16 @@ bno_random.0003 = {
 			save_scope_as = target2
 		}
 		
-		scope:target2 = {
+		scope:target2 ?= {
 			bno_have_sex_with_effects = {
 				PARTNER = scope:target1
 			}
 		}
 		
-		scope:target1 = {
+		scope:target1 ?= {
 			hidden_effect = {
 				become_lover_with_target = {
-					target = scope:target2
+					TARGET = scope:target2
 					LOCATION = root.location
 				}
 			}
@@ -683,7 +683,7 @@ bno_random.0003 = {
 		
 		if = {
 			limit = {
-				scope:target2 = {
+				scope:target2 ?= {
 					exists = primary_spouse
 					primary_spouse = {
 						NOT = {
@@ -692,7 +692,7 @@ bno_random.0003 = {
 					}
 				}
 			}
-			scope:target2 = {
+			scope:target2 ?= {
 				primary_spouse = {
 					become_more_cuck_effect = yes
 				}
@@ -720,9 +720,9 @@ bno_random.0003 = {
 		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			become_lover_with_target = {
-				target = root
+				TARGET = root
 				LOCATION = root.location
 			}
 		}
@@ -741,7 +741,7 @@ bno_random.0003 = {
 			bno_mindless_bbc_slut = medium_stress_impact_gain
 		}
 		
-		scope:target1 = {
+		scope:target1 ?= {
 			add_opinion = {
 				target = root
 				modifier = disappointed_opinion
@@ -749,7 +749,7 @@ bno_random.0003 = {
 			}
 		}
 		
-		scope:target2 = {
+		scope:target2 ?= {
 			add_opinion = {
 				target = root
 				modifier = disappointed_opinion
@@ -871,7 +871,7 @@ bno_random.0004 = {
 			}
 			save_scope_as = target2
 		}
-		scope:target2 = {
+		scope:target2 ?= {
 			primary_spouse = {
 				save_scope_as = target1
 			}
@@ -1086,9 +1086,9 @@ bno_random.0005 = {
 			PARTNER = scope:target1
 		}
 		
-		scope:target1 = {
+		scope:target1 ?= {
 			become_lover_with_target = {
-				target = root
+				TARGET = root
 				LOCATION = root.location
 			}
 		}
@@ -1247,9 +1247,9 @@ bno_random.0006 = {
 		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			become_lover_with_target = {
-				target = root
+				TARGET = root
 				LOCATION = root.location
 			}
 		}
@@ -1382,9 +1382,9 @@ bno_random.0007 = {
 		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			become_lover_with_target = {
-				target = root
+				TARGET = root
 				LOCATION = root.location
 			}
 		}
@@ -1413,9 +1413,9 @@ bno_random.0007 = {
 		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			become_lover_with_target = {
-				target = root
+				TARGET = root
 				LOCATION = root.location
 			}
 		}
@@ -1563,9 +1563,9 @@ bno_random.0008 = {
 			PARTNER = scope:target1
 		}
 		
-		scope:target1 = {
+		scope:target1 ?= {
 			become_lover_with_target = {
-				target = root
+				TARGET = root
 				LOCATION = root.location
 			}
 		}
@@ -1593,9 +1593,9 @@ bno_random.0008 = {
 		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			become_lover_with_target = {
-				target = root
+				TARGET = root
 				LOCATION = root.location
 			}
 		}
@@ -1765,9 +1765,9 @@ bno_random.0009 = {
 		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			become_lover_with_target = {
-				target = root
+				TARGET = root
 				LOCATION = root.location
 			}
 		}
@@ -1800,9 +1800,9 @@ bno_random.0009 = {
 		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			become_lover_with_target = {
-				target = root
+				TARGET = root
 				LOCATION = root.location
 			}
 		}
@@ -1996,9 +1996,9 @@ bno_random.0010 = {
 		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			become_lover_with_target = {
-				target = root
+				TARGET = root
 				LOCATION = root.location
 			}
 		}
@@ -2030,9 +2030,9 @@ bno_random.0010 = {
 		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			become_lover_with_target = {
-				target = root
+				TARGET = root
 				LOCATION = root.location
 			}
 		}
@@ -2050,7 +2050,7 @@ bno_random.0010 = {
 			bno_mindless_bbc_slut = major_stress_impact_gain
 		}
 		hidden_effect = {
-			scope:target1 = {
+			scope:target1 ?= {
 				bno_kill_character = yes
 			}
 		}
@@ -2235,7 +2235,7 @@ bno_random.0011 = {
 			root = {
 			}
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			marry = root
 		}
 		
@@ -3289,7 +3289,7 @@ bno_random.0017 = {
 	
 	option = { #perhaps another time?
 		name = bno_random_0017.c
-		scope:target1 = {
+		scope:target1 ?= {
 			add_opinion = {
 				target = root
 				modifier = disappointed_opinion
@@ -3556,7 +3556,7 @@ bno_random.0019 = {
 	
 	option = { #perhaps another time?
 		name = bno_random_0019.b
-		scope:target1 = {
+		scope:target1 ?= {
 			add_opinion = {
 				target = root
 				modifier = disappointed_opinion
@@ -3661,7 +3661,7 @@ bno_random.0020 = {
 			random_liege_or_above = {
 				save_scope_as = target2
 			}
-			scope:target2 = {
+			scope:target2 ?= {
 				random_courtier_or_guest = {
 					limit = {
 						has_trait = bno_bbc
@@ -4546,7 +4546,7 @@ bno_random.0026 = {
 			}
 			bno_increase_sluttyness = yes
 		}
-		scope:target2 = {
+		scope:target2 ?= {
 			if = {
 				limit = {
 					NOT = { has_trait = bno_whitegirl }
@@ -4564,7 +4564,7 @@ bno_random.0026 = {
 		trigger = {
 			is_bno_qos_and_up = yes
 		}
-		scope:target2 = {
+		scope:target2 ?= {
 			if = {
 				limit = {
 					NOT = { has_trait = bno_whitegirl }
@@ -4641,7 +4641,7 @@ bno_random.2026 = {
 	option = {
 		name = bno_random_2026.a
 		bno_increase_sluttyness = yes
-		scope:target2 = {
+		scope:target2 ?= {
 			bno_increase_sluttyness = yes
 		}
 	}
@@ -6524,7 +6524,7 @@ bno_random.0039 = {
 			}
 		}
 		
-		scope:target2 = {
+		scope:target2 ?= {
 			increase_wounds_no_death_effect = { REASON = fight }
 			
 			add_opinion = {
@@ -6535,7 +6535,7 @@ bno_random.0039 = {
 			add_stress = 35
 		}
 		
-		scope:target1 = {
+		scope:target1 ?= {
 			add_opinion = {
 				target = scope:target2
 				modifier = disappointed_opinion
@@ -6686,7 +6686,7 @@ bno_random.0040 = {
 			}
 		}
 		
-		scope:target2 = {
+		scope:target2 ?= {
 			death = {
 				death_reason = death_contest_melee_accident
 				killer = scope:target1
@@ -6854,24 +6854,24 @@ bno_random.0042 = {
 		primary_spouse = {
 			save_scope_as = target2
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			bno_have_sex_with_effects = {
 				PARTNER = scope:target2
 			}
 		}
 		
-		scope:target1 = {
+		scope:target1 ?= {
 			hidden_effect = {
 				become_friend_with_target = {
-					target = scope:target2
-					reason = bbc_too_good
-					province = root.location
+					TARGET = scope:target2
+					REASON = bbc_too_good
+					PROVINCE = root.location
 				}
 			}
 		}
 		if = {
 			limit = {
-				scope:target2 = {
+				scope:target2 ?= {
 					NOT = {
 						has_trait = bno_mindless_bbc_slut
 					}
@@ -6880,7 +6880,7 @@ bno_random.0042 = {
 		}
 		else_if = {
 			limit = {
-				scope:target2 = {
+				scope:target2 ?= {
 					exists = primary_spouse
 					primary_spouse = {
 						NOT = {
@@ -6889,7 +6889,7 @@ bno_random.0042 = {
 					}
 				}
 			}
-			scope:target2 = {
+			scope:target2 ?= {
 				primary_spouse = {
 					become_more_cuck_effect = yes
 					random_list = {
@@ -6900,7 +6900,7 @@ bno_random.0042 = {
 					}
 				}
 			}
-			scope:target2 = {
+			scope:target2 ?= {
 				if = {
 					limit = {
 						highest_held_title_tier >= tier_kingdom
@@ -6929,12 +6929,12 @@ bno_random.0042 = {
 					}
 				}
 			}
-			scope:target1 = {
+			scope:target1 ?= {
 				add_trait = bno_camp_leader
 			}
 		}
 		else = {
-			scope:target2 = {
+			scope:target2 ?= {
 				marry = scope:target1
 				if = {
 					limit = {
@@ -6964,7 +6964,7 @@ bno_random.0042 = {
 					}
 				}
 			}
-			scope:target1 = {
+			scope:target1 ?= {
 				add_trait = bno_camp_leader
 			}
 		}
@@ -6985,7 +6985,7 @@ bno_random.0042 = {
 			type = dungeon
 			target = scope:target2
 		}
-		scope:target2 = {
+		scope:target2 ?= {
 			add_opinion = {
 				target = root
 				modifier = bno_pathetic_cuck_husband
@@ -7049,11 +7049,11 @@ bno_random.1042 = {
 			lustful = minor_stress_impact_loss
 			ambitious = medium_stress_impact_gain
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			become_friend_with_target = {
-				target = root
-				reason = cuck_faped
-				province = root.location
+				TARGET = root
+				REASON = cuck_faped
+				PROVINCE = root.location
 			}
 		}
 	}
@@ -7152,20 +7152,20 @@ bno_random.0043 = {
 			save_scope_as = target2
 		}
 		
-		scope:target1 = {
+		scope:target1 ?= {
 			bno_have_sex_with_effects = {
 				PARTNER = scope:target2
 			}
 		}
 		
-		scope:target2 = {
+		scope:target2 ?= {
 			bno_increase_sluttyness = yes
 		}
 		
-		scope:target1 = {
+		scope:target1 ?= {
 			hidden_effect = {
 				become_lover_with_target = {
-					target = scope:target2
+					TARGET = scope:target2
 					LOCATION = root.location
 				}
 			}
@@ -7173,7 +7173,7 @@ bno_random.0043 = {
 		
 		if = {
 			limit = {
-				scope:target2 = {
+				scope:target2 ?= {
 					exists = primary_spouse
 					primary_spouse = {
 						NOT = {
@@ -7182,7 +7182,7 @@ bno_random.0043 = {
 					}
 				}
 			}
-			scope:target2 = {
+			scope:target2 ?= {
 				primary_spouse = {
 					become_more_cuck_effect = yes
 				}
@@ -7363,7 +7363,7 @@ bno_random.0044 = {
 			location = root.capital_province
 		}
 		hidden_effect = {
-			scope:target1 = {
+			scope:target1 ?= {
 				bno_increase_sluttyness = yes
 			}
 		}
@@ -7377,14 +7377,14 @@ bno_random.0044 = {
 			bno_beta = minor_stress_impact_gain
 			bno_jos = minor_stress_impact_gain
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			add_opinion = {
 				target = root
 				modifier = bno_pathetic_cuck_husband
 				opinion = -30
 			}
 		}
-		scope:target2 = {
+		scope:target2 ?= {
 			add_opinion = {
 				target = root
 				modifier = disappointed_opinion
@@ -7448,20 +7448,20 @@ bno_random.1044 = {
 			}
 			save_scope_as = target2
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			bno_have_sex_with_effects = {
 				PARTNER = scope:target2
 			}
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			hidden_effect = {
 				become_lover_with_target = {
-					target = scope:target2
+					TARGET = scope:target2
 					LOCATION = root.location
 				}
 			}
 		}
-		scope:target2 = {
+		scope:target2 ?= {
 			hidden_effect = {
 				stress_impact = {
 					bno_curious = massive_stress_impact_loss
@@ -7483,11 +7483,11 @@ bno_random.1044 = {
 			bno_beta = medium_stress_impact_loss
 			bno_jos = major_stress_impact_loss
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			become_friend_with_target = {
-				target = root
-				reason = cuck_faped
-				province = root.location
+				TARGET = root
+				REASON = cuck_faped
+				PROVINCE = root.location
 			}
 		}
 		
@@ -7613,7 +7613,7 @@ bno_random.0045 = {
 			bno_beta = minor_stress_impact_gain
 			bno_jos = minor_stress_impact_gain
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			add_opinion = {
 				target = root
 				modifier = bno_pathetic_cuck_husband
@@ -7674,20 +7674,20 @@ bno_random.1045 = {
 			}
 			save_scope_as = target2
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			bno_have_sex_with_effects = {
 				PARTNER = scope:target2
 			}
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			hidden_effect = {
 				become_lover_with_target = {
-					target = scope:target2
+					TARGET = scope:target2
 					LOCATION = root.location
 				}
 			}
 		}
-		scope:target2 = {
+		scope:target2 ?= {
 			hidden_effect = {
 				stress_impact = {
 					bno_curious = massive_stress_impact_loss
@@ -7709,11 +7709,11 @@ bno_random.1045 = {
 			bno_beta = medium_stress_impact_loss
 			bno_jos = major_stress_impact_loss
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			become_friend_with_target = {
-				target = root
-				reason = cuck_faped
-				province = root.location
+				TARGET = root
+				REASON = cuck_faped
+				PROVINCE = root.location
 			}
 			add_opinion = {
 				target = root
@@ -7721,7 +7721,7 @@ bno_random.1045 = {
 				opinion = 30
 			}
 		}
-		scope:target2 = {
+		scope:target2 ?= {
 			add_opinion = {
 				target = root
 				modifier = bno_bull_fucks_me
@@ -7791,23 +7791,23 @@ bno_random.0046 = {
 			}
 			save_scope_as = target2
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			bno_have_sex_with_effects = {
 				PARTNER = scope:target2
 			}
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			hidden_effect = {
 				become_friend_with_target = {
-					target = scope:target2
-					reason = bbc_too_good
-					province = root.location
+					TARGET = scope:target2
+					REASON = bbc_too_good
+					PROVINCE = root.location
 				}
 			}
 		}
 		if = {
 			limit = {
-				scope:target2 = {
+				scope:target2 ?= {
 					NOT = {
 						has_trait = bno_whitegirl
 					}
@@ -7816,7 +7816,7 @@ bno_random.0046 = {
 		}
 		else_if = {
 			limit = {
-				scope:target2 = {
+				scope:target2 ?= {
 					exists = primary_spouse
 					primary_spouse = {
 						NOT = {
@@ -7825,7 +7825,7 @@ bno_random.0046 = {
 					}
 				}
 			}
-			scope:target2 = {
+			scope:target2 ?= {
 				primary_spouse = {
 					become_more_cuck_effect = yes
 					random_list = {
@@ -7836,7 +7836,7 @@ bno_random.0046 = {
 					}
 				}
 			}
-			scope:target2 = {
+			scope:target2 ?= {
 				if = {
 					limit = {
 						highest_held_title_tier >= tier_kingdom
@@ -7867,7 +7867,7 @@ bno_random.0046 = {
 			}
 		}
 		else = {
-			scope:target2 = {
+			scope:target2 ?= {
 				if = {
 					limit = {
 						highest_held_title_tier >= tier_kingdom
@@ -7907,7 +7907,7 @@ bno_random.0046 = {
 	option = {
 		name = bno_random_0046.b
 		trigger_event = bno_random.2046
-		scope:target2 = {
+		scope:target2 ?= {
 			add_opinion = {
 				modifier = bno_pathetic_cuck_husband
 				target = root
@@ -7974,15 +7974,15 @@ bno_random.1046 = {
 			PARTNER = scope:target2
 		}
 		
-		scope:target1 = {
+		scope:target1 ?= {
 			hidden_effect = {
 				become_lover_with_target = {
-					target = scope:target2
+					TARGET = scope:target2
 					LOCATION = root.location
 				}
 			}
 		}
-		scope:target2 = {
+		scope:target2 ?= {
 			bno_have_sex_with_effects = {
 				PARTNER = scope:target1
 			}
@@ -8013,7 +8013,7 @@ bno_random.1046 = {
 			}
 		}
 		
-		scope:target2 = {
+		scope:target2 ?= {
 			add_opinion = {
 				target = root
 				modifier = taken_by_new_bull_master
@@ -8077,21 +8077,21 @@ bno_random.2046 = {
 			}
 			save_scope_as = target2
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			bno_have_sex_with_effects = {
 				PARTNER = scope:target2
 			}
 		}
 		
-		scope:target1 = {
+		scope:target1 ?= {
 			hidden_effect = {
 				become_lover_with_target = {
-					target = scope:target2
+					TARGET = scope:target2
 					LOCATION = root.location
 				}
 			}
 		}
-		scope:target2 = {
+		scope:target2 ?= {
 			hidden_effect = {
 				stress_impact = {
 					bno_curious = massive_stress_impact_loss
@@ -8114,7 +8114,7 @@ bno_random.2046 = {
 			bno_jos = major_stress_impact_loss
 		}
 		
-		scope:target2 = {
+		scope:target2 ?= {
 			add_opinion = {
 				target = root
 				modifier = taken_by_new_bull_master
@@ -8247,13 +8247,13 @@ bno_random.0047 = {
 			save_scope_as = target4
 		}
 		hidden_effect = {
-			scope:target1 = {
+			scope:target1 ?= {
 				add_character_flag = {
 					flag = no_headgear
 					months = 1
 				}
 			}
-			scope:target2 = {
+			scope:target2 ?= {
 				add_character_flag = {
 					flag = no_headgear
 					months = 1

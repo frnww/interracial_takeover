@@ -50,7 +50,7 @@ bno_slut.0001 = {
 	}
 	immediate = {
 		get_bbc_scope = {
-			scope_name = bbc
+			SCOPE_NAME = bbc
 		}
 	}
 	option = {
@@ -68,7 +68,7 @@ bno_slut.0001 = {
 			base = 100
 		}
 		become_lover_with_target = {
-			target = scope:bbc
+			TARGET = scope:bbc
 			LOCATION = location
 		}
 		bno_have_sex_with_effects = {
@@ -132,7 +132,7 @@ bno_slut.0002 = {
 	
 	immediate = {
 		get_bbc_scope = {
-			scope_name = bbc
+			SCOPE_NAME = bbc
 		}
 		bno_have_sex_with_effects = {
 			PARTNER = scope:bbc
@@ -187,7 +187,7 @@ bno_slut.0003 = {
 	
 	immediate = {
 		get_bbc_scope = {
-			scope_name = bbc
+			SCOPE_NAME = bbc
 		}
 	}
 	option = {
@@ -196,7 +196,7 @@ bno_slut.0003 = {
 		}
 		name = bno_slut_0003.a
 		become_lover_with_target = {
-			target = scope:bbc
+			TARGET = scope:bbc
 			LOCATION = root.location
 		}
 		bno_have_sex_with_effects = {
@@ -257,7 +257,7 @@ bno_slut.1003 = {
 			delayed = yes
 		}
 		bno_remove_eating_disorder = {
-			target = scope:bbc
+			TARGET = scope:bbc
 		}
 	}
 }
@@ -299,7 +299,7 @@ bno_slut.2003 = {
 	option = {
 		name = bno_slut_2003.a
 		gain_blacked_cum_slut_status_from_eating_disorder_effect = {
-			target = scope:bbc
+			TARGET = scope:bbc
 		}
 		trigger_event = {
 			id = bno_slut.3003
@@ -402,10 +402,10 @@ bno_slut.0004 = {
 	}
 	immediate = {
 		get_pure_whitegirl_scope = {
-			scope_name = whitegirl
+			SCOPE_NAME = whitegirl
 		}
 		get_bbc_scope = {
-			scope_name = bbc
+			SCOPE_NAME = bbc
 		}
 		scope:bbc = {
 			bno_have_sex_with_effects = {
@@ -419,12 +419,7 @@ bno_slut.0004 = {
 	option = {
 		name = bno_slut_0004.a
 		add_prestige = 100
-		if = {
-			limit = {
-				exists = dynasty
-			}
-			dynasty = { add_dynasty_prestige = 50 }
-		}
+		dynasty ?= { add_dynasty_prestige = 50 }
 	}
 }
 #rando whitegirl appears
@@ -481,10 +476,10 @@ bno_slut.0005 = {
 	}
 	immediate = {
 		get_wandering_curious_whitegirl_scope = {
-			scope_name = whitegirl
+			SCOPE_NAME = whitegirl
 		}
 		get_bbc_scope = {
-			scope_name = bbc
+			SCOPE_NAME = bbc
 		}
 		scope:bbc = {
 			bno_have_sex_with_effects = {
@@ -494,7 +489,7 @@ bno_slut.0005 = {
 				PARTNER = scope:whitegirl
 			}
 		}
-		scope:whitegirl = {
+		scope:whitegirl ?= {
 			convert_to_bbc_religion = yes
 		}
 	}
@@ -549,10 +544,10 @@ bno_slut.0006 = {
 	}
 	immediate = {
 		get_hated_non_black_courtier_scope = {
-			scope_name = cuck
+			SCOPE_NAME = cuck
 		}
 		get_primary_spouse_scope = {
-			scope_name = bbc
+			SCOPE_NAME = bbc
 		}
 	}
 	option = {
@@ -603,7 +598,7 @@ bno_slut.0007 = {
 		add_trait = strong
 		becoming_african = yes
 		get_primary_spouse_scope = {
-			scope_name = bbc
+			SCOPE_NAME = bbc
 		}
 	}
 	option = {
@@ -752,7 +747,7 @@ bno_slut.3007 = {
 	}
 	immediate = {
 		get_random_cuck_scope = {
-			scope_name = cuck
+			SCOPE_NAME = cuck
 		}
 		be_prettiest = yes
 		becoming_african = yes
@@ -793,11 +788,13 @@ bno_slut.0008 = {
 	trigger = {
 		is_curious = yes
 		does_blackbull_exist = yes
+		does_wandering_male_exist = yes
 	}
 	immediate = {
 		get_bbc_scope = {
-			scope_name = bbc
+			SCOPE_NAME = bbc
 		}
+		find_5_sex_partner = yes
 	}
 	option = {
 		name = bno_slut_0008.a
@@ -808,22 +805,22 @@ bno_slut.0008 = {
 		}
 		scope:bbc = {
 			bbc_pimping = {
-				target = root
+				TARGET = root
 			}
 			bno_have_sex_with_effects = {
 				PARTNER = root
 			}
 		}
-		find_5_sex_partner = yes
 		sex_with_5_sex_partner = yes
 		slut_whoring = {
-			target = scope:bbc
+			TARGET = scope:bbc
 		}
 		become_lover_with_target = {
-			target = scope:bbc
+			TARGET = scope:bbc
 			LOCATION = root.location
 		}
 	}
+	
 }
 #Slut friend got asked to whore for bbc
 bno_slut.0009 = {
@@ -859,37 +856,41 @@ bno_slut.0009 = {
 		is_snowbunny = yes
 		does_blackbull_exist = yes
 		does_pure_whitegirl_exist = yes
+		does_wandering_male_exist = yes
 	}
 	immediate = {
 		get_bbc_scope = {
-			scope_name = bbc
+			SCOPE_NAME = bbc
 		}
 		get_pure_whitegirl_scope = {
-			scope_name = whitegirl
+			SCOPE_NAME = whitegirl
 		}
+		find_5_sex_partner = yes
 	}
 	option = {
 		name = bno_slut_0009.a
-		scope:bbc = {
-			bbc_pimping = {
-				target = root
-			}
-		}
-		scope:whitegirl = {
-			find_5_sex_partner = yes
+		scope:whitegirl ?= {
 			sex_with_5_sex_partner = yes
-			bno_have_sex_with_effects = {
-				PARTNER = scope:bbc
-			}
-			become_lover_with_target = {
-				target = scope:bbc
-				LOCATION = location
-			}
-			slut_whoring = {
-				target = scope:bbc
+			scope:bbc ?= {
+				bbc_pimping = {
+					TARGET = scope:whitegirl
+				}
+				become_lover_with_target = {
+					TARGET = scope:whitegirl
+					LOCATION = location
+				}
+				scope:whitegirl = {
+					slut_whoring = {
+						TARGET = scope:bbc
+					}
+				}
+				bno_have_sex_with_effects = {
+					PARTNER = scope:bbc
+				}
 			}
 		}
 	}
+	
 }
 #Slut steals husband money for his BBC
 bno_slut.0010 = {
@@ -933,16 +934,16 @@ bno_slut.0010 = {
 	}
 	immediate = {
 		get_primary_spouse_scope = {
-			scope_name = cuck
+			SCOPE_NAME = cuck
 		}
 		get_bbc_scope = {
-			scope_name = bbc
+			SCOPE_NAME = bbc
 		}
 	}
 	option = {
 		name = bno_slut_0010.a
 		bno_steal_white_husband_gold_effect = {
-			target = scope:bbc
+			TARGET = scope:bbc
 		}
 	}
 }
@@ -989,17 +990,17 @@ bno_slut.0012 = {
 	}
 	immediate = {
 		get_secret_haver_scope = {
-			scope_name = whitegirl
+			SCOPE_NAME = whitegirl
 		}
 		get_primary_spouse_scope = {
-			scope_name = bbc
+			SCOPE_NAME = bbc
 		}
 	}
 	option = {
 		name = bno_slut_0012.a
-		scope:whitegirl = {					#also reveal woman's secrets if she had any
+		scope:whitegirl ?= {					#also reveal woman's secrets if she had any
 			bno_reveal_secret_effect = {
-				target = scope:bbc
+				TARGET = scope:bbc
 			}
 		}
 		scope:bbc = {
@@ -1054,7 +1055,7 @@ bno_slut.0013 = {
 
 	immediate = {
 		get_primary_spouse_scope = {
-			scope_name = bbc
+			SCOPE_NAME = bbc
 		}
 		bno_have_sex_with_effects = {
 			PARTNER = scope:bbc
@@ -1093,13 +1094,13 @@ bno_slut.0014 = {
 	}
 	immediate = {
 		get_unmarried_bbc_scope = {
-			scope_name = bbc
+			SCOPE_NAME = bbc
 		}
 		get_married_pure_girl_scope = {
-			scope_name = whitegirl
+			SCOPE_NAME = whitegirl
 		}
-		scope:whitegirl = {
-			primary_spouse = {
+		scope:whitegirl ?= {
+			primary_spouse ?= {
 				save_scope_as = target2
 			}
 		}
@@ -1109,9 +1110,9 @@ bno_slut.0014 = {
 		ai_chance = {
 			base = 60
 		}
-		scope:whitegirl = {
+		scope:whitegirl ?= {
 			bno_increase_sluttyness = yes
-			primary_spouse = {
+			primary_spouse ?= {
 				trigger_event = {
 					id = bno_cuck.0015
 					days = 5
@@ -1130,7 +1131,7 @@ bno_slut.0014 = {
 		ai_chance = {
 			base = 50
 		}
-		scope:whitegirl = {
+		scope:whitegirl ?= {
 			primary_spouse = {
 				trigger_event = {
 					id = bno_cuck.0015
@@ -1151,7 +1152,7 @@ bno_slut.0014 = {
 		ai_chance = {
 			base = 5
 		}
-		scope:whitegirl = {
+		scope:whitegirl ?= {
 			bno_increase_sluttyness = yes
 			primary_spouse = {
 				trigger_event = {
@@ -1207,7 +1208,7 @@ bno_slut.1014 = {
 		}
 	}
 	immediate = {
-		scope:whitegirl = {
+		scope:whitegirl ?= {
 			bno_have_sex_with_effects = {
 				PARTNER = scope:bbc
 			}
@@ -1253,13 +1254,12 @@ bno_slut.2014 = { #follow up event, fuck and become lovers
 		}
 	}
 	immediate = {
-		scope:whitegirl = {
+		scope:whitegirl ?= {
 			bno_have_sex_with_effects = {
 				PARTNER = scope:bbc
 			}
-			convert_to_bbc_religion = yes
 			become_lover_with_target = {
-				target = scope:bbc
+				TARGET = scope:bbc
 				LOCATION = root.location
 			}
 		}
@@ -1303,7 +1303,7 @@ bno_slut.3014 = { #follow up event, fuck and steal as wife
 		}
 	}
 	immediate = {
-		scope:whitegirl = {
+		scope:whitegirl ?= {
 			bno_have_sex_with_effects = {
 				PARTNER = scope:bbc
 			}
@@ -1312,9 +1312,9 @@ bno_slut.3014 = { #follow up event, fuck and steal as wife
 	}
 	option = {
 		name = bno_slut_3014.a
-		scope:whitegirl = {
+		scope:whitegirl ?= {
 			bno_marriage_effect = {
-				target = scope:bbc
+				TARGET = scope:bbc
 			}
 		}
 	}
@@ -1362,7 +1362,7 @@ bno_slut.0015 = {
 	}
 	immediate = {
 		get_bbc_scope = {
-			scope_name = bbc
+			SCOPE_NAME = bbc
 		}
 	}
 	option = {

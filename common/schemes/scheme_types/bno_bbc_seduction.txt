@@ -94,43 +94,38 @@
 		
 		modifier = {
 			add = 5
-			exists = scope:owner
-			scope:owner = {
+			scope:owner ?= {
 				is_bno_curious_and_up = yes
 			}
 		}
 		modifier = {
 			add = 10
-			exists = scope:owner
-			scope:owner = {
+			scope:owner ?= {
 				is_bno_blacked_and_up = yes
 			}
 		}
 		modifier = {
 			add = 15
-			exists = scope:owner
-			scope:owner = {
+			scope:owner ?= {
 				is_bno_snowbunny_and_up = yes
 			}
 		}
 		modifier = {
 			add = 20
-			exists = scope:owner
-			scope:owner = {
+			scope:owner ?= {
 				is_bno_qos_and_up = yes
 			}
 		}
 		modifier = {
 			add = 25
-			exists = scope:owner
-			scope:owner = {
+			scope:owner ?= {
 				is_bno_mindless_bbc_slut = yes
 			}
 		}
 
 		modifier = {
 			add = 100
-			scope:owner = {
+			scope:owner ?= {
 				is_bbc = yes
 			}
 		}

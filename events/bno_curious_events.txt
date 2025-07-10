@@ -302,7 +302,7 @@ bno_curious.1201 = {
 	immediate = {
 		create_bbc = {
             age = 16
-            scope_name = target1
+            SCOPE_NAME = target1
         }
 		
 		root = {
@@ -325,7 +325,7 @@ bno_curious.1201 = {
                 PARTNER = scope:target1
             }
 			become_lover_with_target = {
-				target = scope:target1
+				TARGET = scope:target1
 				LOCATION = root.location
 			}
         }
@@ -431,7 +431,7 @@ bno_curious.1301 = {
 			PARTNER = scope:child
 		}
 		become_lover_with_target = {
-			target = scope:child
+			TARGET = scope:child
 			LOCATION = location
 		}
 	}

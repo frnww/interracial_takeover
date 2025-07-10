@@ -96,7 +96,7 @@ bno_war.0001 = {
 				target = scope:target1
 			}
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			add_character_modifier = {
 				modifier = bno_gave_husband_to_enemy
 			}
@@ -129,7 +129,7 @@ bno_war.0001 = {
 		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			add_opinion = {
 				modifier = stolen_by_new_bull_master
 				target = root

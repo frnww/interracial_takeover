@@ -5,6 +5,7 @@
 	    	OR = {
 	    		has_trait = bno_bbc
 	    		is_bno_qos_and_up = yes
+				has_trait = bno_jos
 	    	}
 	    }
     }

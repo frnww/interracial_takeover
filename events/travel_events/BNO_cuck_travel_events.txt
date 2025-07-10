@@ -56,7 +56,7 @@ bno_cuck_travel.0001 = {
 				}
 			}
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			bno_have_sex_with_effects = {
 				PARTNER = scope:target2
 			}

@@ -65,7 +65,7 @@ bno_title_change.0001 = { #BBC demands title from cuck player, pays 200
 			generous = major_stress_impact_loss
 			arrogant = medium_stress_impact_gain
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			remove_short_term_gold = 200
 			add_trait = bno_camp_leader
 		}
@@ -347,7 +347,7 @@ bno_title_change.0004 = {
 			add_trait = bno_camp_leader
 			marry = scope:killer_slut
 			become_lover_with_target = {
-				target = scope:killer_slut
+				TARGET = scope:killer_slut
 				LOCATION = root.location
 			}
 		}
@@ -399,7 +399,7 @@ bno_title_change.0005 = { #Wife takes cucks titles
 	}
 	immediate = {
 		get_primary_spouse_scope = {
-			scope_name = target1
+			SCOPE_NAME = target1
 		}
 	}
 	option = {
@@ -488,7 +488,7 @@ bno_title_change.0005 = { #Wife takes cucks titles
 				number_of_concubines > 0
 			}
 			every_concubine = {
-				scope:target1 = {
+				scope:target1 ?= {
 					remove_concubine = prev
 				}
 			}
@@ -550,7 +550,7 @@ bno_title_change.0006 = {
 		liege = {
 			save_scope_as = target1
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			if = {
 				limit = {
 					is_married = yes
@@ -563,7 +563,7 @@ bno_title_change.0006 = {
 	}
 	option = {
 		name = bno_title_change_0006.a
-		scope:target1 = {
+		scope:target1 ?= {
 			create_title_and_vassal_change = {
 				type = usurped
 				save_scope_as = change
@@ -604,7 +604,7 @@ bno_title_change.0006 = {
 	}
 	option = {
 		name = bno_title_change_0006.b
-		scope:target1 = {
+		scope:target1 ?= {
 			create_title_and_vassal_change = {
 				type = usurped
 				save_scope_as = change
@@ -629,7 +629,7 @@ bno_title_change.0006 = {
 				}
 			}
 			bno_marriage_effect = {
-				target = root
+				TARGET = root
 			}
 		}
 		trigger_event = {

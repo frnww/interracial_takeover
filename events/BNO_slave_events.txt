@@ -51,7 +51,7 @@ bno_slave.0001 = {
 		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
-		scope:target1 = {
+		scope:target1 ?= {
 			set_sexuality = heterosexual
 			add_opinion = {
 				modifier = bno_bull_fucks_me
