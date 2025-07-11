@@ -1,5 +1,5 @@
 ﻿bno_war = {
-	group = religious
+	group = religious_disorganised
 	icon = religious_war
 	
 	combine_into_one = yes
@@ -113,7 +113,7 @@
 }
 
 bno_subj_war = {
-	group = religious
+	group = religious_disorganised
 	icon = invasion
 	
 	combine_into_one = yes
@@ -267,7 +267,7 @@ bno_subj_war = {
 
 bno_varangian_adventure = {
 	icon = fp1_varangian_adventurer_conquest
-	group = religious
+	group = religious_disorganised
 	
 	combine_into_one = yes
 	should_show_war_goal_subview = yes
