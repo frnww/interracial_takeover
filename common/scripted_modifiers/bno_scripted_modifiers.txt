@@ -120,44 +120,6 @@
 	}
 }
 
-bno_bbc_trait_occurance_chance_modifier = {
-	modifier = {
-		add = 100
-		trigger = { has_game_rule = bno_rarity_always }
-	}
-	modifier = {
-		add = 50
-		trigger = { has_game_rule = bno_rarity_often }
-	}
-	modifier = {
-		add = 25
-		trigger = { has_game_rule = bno_rarity_sometimes }
-	}
-	modifier = {
-		add = 5
-		trigger = { has_game_rule = bno_rarity_rare }
-	}
-}
-
-bno_bbc_trait_counter_occurance_chance_modifier = {
-	modifier = {
-		add = 100
-		trigger = { has_game_rule = bno_rarity_never }
-	}
-	modifier = {
-		add = 50
-		trigger = { has_game_rule = bno_rarity_often }
-	}
-	modifier = {
-		add = 75
-		trigger = { has_game_rule = bno_rarity_sometimes }
-	}
-	modifier = {
-		add = 95
-		trigger = { has_game_rule = bno_rarity_rare }
-	}
-}
-
 bno_decision_modifier = {
 	modifier = {
         add = 25

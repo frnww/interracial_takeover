@@ -11,26 +11,18 @@ bno_trait_maintenance.0001 = {
 			has_trait = bno_mostly_black
 			has_trait = bno_full_black
 		}
-		NOT = { has_character_flag = no_bbc }
 		is_male = yes
 		is_adult = yes
-	}
-	option = {
-		ai_chance = {
-			base = 0
-			bno_bbc_trait_counter_occurance_chance_modifier = yes
-		}
-		add_character_flag = {
-			flag = no_bbc
-			years = 5
+		NOT = {
+			has_character_flag = no_bbc_maint
 		}
 	}
-	option = {
-		ai_chance = {
-			base = 0
-			bno_bbc_trait_occurance_chance_modifier = yes
+	immediate = {
+		random = {
+			chance = bno_bbc_trait_occurance_chance
+			add_trait = bno_bbc
 		}
-		add_trait = bno_bbc
+		add_character_flag = no_bbc_maint #once a character has been checked it should never happen again.
 	}
 }
 
@@ -126,10 +118,11 @@ bno_trait_maintenance.0005 = {
 #all africans have black trait
 bno_trait_maintenance.0006 = {
 	hidden = yes
-	
 	trigger = {
+		has_game_rule = bno_mod_status_on
+		has_game_rule = bno_seeding_yes
 		is_ai = yes
-		bno_is_graphically_african = yes
+		bno_is_graphically_african = ye
 		NOR = {
 			has_trait = bno_mixed
 			has_trait = bno_mostly_black

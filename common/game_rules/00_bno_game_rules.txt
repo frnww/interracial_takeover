@@ -163,7 +163,7 @@ bno_rarity = {
 		interaccial_takeover
 	}
 
-	default = bno_rarity_always
+	default = bno_rarity_race
 
 
 	bno_rarity_never = {
@@ -186,4 +186,11 @@ bno_rarity = {
 
 	}
 
+	bno_rarity_size = {
+
+	}
+
+	bno_rarity_race = {
+		
+	}
 }

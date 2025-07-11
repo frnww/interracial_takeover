@@ -71,3 +71,9 @@ setting_bno_rarity_often: "Often"
 setting_bno_rarity_often_desc: "I can't get enough of those #V [GetTrait('bno_bbc').GetName( GetNullCharacter )]#! ! The more often I can have them, the better."
 setting_bno_rarity_always: "Always"
 setting_bno_rarity_always_desc: "I need #V [GetTrait('bno_bbc').GetName( GetNullCharacter )]#!s in my life at all times. They are the only thing that can satisfy my insatiable hunger for #V [GetTrait('bno_bbc').GetName( GetNullCharacter )]#! ."
+
+setting_bno_rarity_size: "Size Matters"
+setting_bno_rarity_size_desc: "Dicks come in all shapes and sizes! I want the biggest #V [GetTrait('bno_bbc').GetName( GetNullCharacter )]#!s\n(The BBC trait will be more common in Africans based on dick size.)
+
+setting_bno_rarity_race: "Black is Bigger"
+setting_bno_rarity_race_desc: "The rumors are true! The blacker the berries the bigger the #V [GetTrait('bno_bbc').GetName( GetNullCharacter )]#!s get! (The BBC trait will be more common based on African purity and dick size)"
