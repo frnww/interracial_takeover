@@ -52,11 +52,7 @@ bno_inactivate_bbc_trait_effect = {
 bno_activate_bbc_trait_effect = {
     if = {
         limit = {
-            OR = {
-                is_a_male = yes
-                has_trait = futa
-                has_trait = futa_genetic
-            }
+            is_a_male = yes
         }
         if = {
             limit = { has_inactive_trait = bno_bbc }

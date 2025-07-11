@@ -34,5 +34,6 @@ bno_trait_seeding.0003 = {
 
 	immediate = {
 		bno_activate_bbc_trait_effect = yes
+		bno_futa_bisexual = yes
 	}
 }

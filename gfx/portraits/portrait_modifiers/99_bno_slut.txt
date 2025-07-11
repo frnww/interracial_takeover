@@ -207,17 +207,17 @@ bno_bigger_boobs = {
 	usage = game
 	bno_bigger_boobs = {
 		dna_modifiers = {
-			#morph = {
-			#	mode = add
-			#	gene = gene_areolas
-			#	template = areolas_2
-			#	value = {
-			#		add = {
-			#			value = var:bno_becoming_dark
-			#			multiply = 0.25
-			#		}
-			#	}
-			#}
+			morph = {
+				mode = add
+				gene = gene_areolas
+				template = areolas_2
+				value = {
+					add = {
+						value = var:bno_becoming_dark
+						multiply = 0.25
+					}
+				}
+			}
 			#Changes Breast Size
 			morph = {
 				mode = modify 
@@ -230,26 +230,26 @@ bno_bigger_boobs = {
 				}
 			}
 			#Changes Breast Size
-			#morph = {
-			#	mode = add 
-			#	gene = gene_breast_excess
-			#	template = breast_excess
-			#	value = {
-			#		add = {
-			#			value = var:bno_becoming_dark
-			#			multiply = 0.03
-			#		}
-			#	}
-			#}
-			#morph = {
-			#	mode = modify gene = gene_bs_nipples
-			#	value = {
-			#		add = {
-			#			value = var:bno_becoming_dark
-			#			divide = 10
-			#		}
-			#	}
-			#}
+			morph = {
+				mode = add 
+				gene = gene_breast_excess
+				template = breast_excess
+				value = {
+					add = {
+						value = var:bno_becoming_dark
+						multiply = 0.03
+					}
+				}
+			}
+			morph = {
+				mode = modify gene = gene_bs_nipples
+				value = {
+					add = {
+						value = var:bno_becoming_dark
+						divide = 10
+					}
+				}
+			}
 		}
 		weight = {
 			base = 0
@@ -277,15 +277,15 @@ bno_bigger_butts = {
 				}
 			}
 			#Changes Hip Size
-			#morph = {
-			#	mode = modify gene = gene_bs_hips
-			#	value = {
-			#		add = {
-			#			value = var:bno_becoming_dark
-			#			divide = 10
-			#		}
-			#	}
-			#}
+			morph = {
+				mode = modify gene = gene_bs_hips_size
+				value = {
+					add = {
+						value = var:bno_becoming_dark
+						divide = 10
+					}
+				}
+			}
 		}
 		weight = {
 			base = 0
@@ -303,26 +303,26 @@ bno_smaller_waist = {
 	bno_smaller_waist = {
 		dna_modifiers = {
 			#Changes Waist Size
-			#morph = {
-			#	mode = modify gene = gene_bs_waist
-			#	value = {
-			#		add = {
-			#			value = var:bno_becoming_dark
-			#			multiply = -1
-			#			divide = 10
-			#		}
-			#	}
-			#}
-			#morph = {
-			#	mode = modify gene = gene_bs_shoulders
-			#	value = {
-			#		add = {
-			#			value = var:bno_becoming_dark
-			#			multiply = -1
-			#			divide = 10
-			#		}
-			#	}
-			#}
+			morph = {
+				mode = modify gene = gene_bs_waist_size
+				value = {
+					add = {
+						value = var:bno_becoming_dark
+						multiply = -1
+						divide = 10
+					}
+				}
+			}
+			morph = {
+				mode = modify gene = gene_bs_shoulders_size
+				value = {
+					add = {
+						value = var:bno_becoming_dark
+						multiply = -1
+						divide = 10
+					}
+				}
+			}
 		}
 		weight = {
 			base = 0
@@ -330,28 +330,6 @@ bno_smaller_waist = {
 				add = 1000
 				exists = var:bno_becoming_dark
 				is_body_modification_ok = yes
-			}
-		}
-	}
-}
-
-bno_wavy_hair = {
-	usage = game
-	bno_wavy_hair = {
-		dna_modifiers = {
-			accessory = {
-				mode = add
-				gene = hairstyles
-				template = indian_hairstyles_curly
-				range = { 0 1 } # For the randomness to work correctly
-			}
-		}
-		weight = {
-			base = 0
-			modifier = {
-				add = 1000
-				is_body_modification_ok = yes
-				has_trait = bno_pure_white
 			}
 		}
 	}

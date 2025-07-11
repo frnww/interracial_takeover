@@ -4132,7 +4132,7 @@ bno_random.1023 = {
 	}
 }
 
-#curious level event. accept or imprison/run. courtyard_night, arranged to exchange info with a foriegner. multiple forms of payment
+#curious level event. accept or imprison/run. courtyard_night, arranged to exchange info with a foreigner. multiple forms of payment
 bno_random.0024 = {
 	type = character_event
 	title = bno_random_0024.title

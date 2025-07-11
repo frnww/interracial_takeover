@@ -2,7 +2,7 @@
 
 namespace = bno_travel_events
 
-#astray from your group of travelers, run into a foriegner. bestow alms or arouse
+#astray from your group of travelers, run into a foreigner. bestow alms or arouse
 bno_travel_events.0001 = { #charity for a wandering african
 	type = character_event
 	title = bno_travel_events_0001.title
@@ -218,7 +218,7 @@ bno_travel_events.2002 = {
 	}
 }
 
-#foriegner sneaks into your camp, has heard of your sexual grandeur, prepares to do the deed
+#foreigner sneaks into your camp, has heard of your sexual grandeur, prepares to do the deed
 bno_travel_events.0003 = {
 	
 	type = character_event
