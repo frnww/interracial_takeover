@@ -48,11 +48,3 @@
 
 bno_events.0006.title: "Your Chosen Noble Woman"
 bno_events.0006.desc: "#weak As the curious noble approaches my court, I greet her with a warm smile and extend an invitation. #!\n\nWelcome, [target1.GetFirstName], [target3.GetFirstName] or [target2.GetFirstName]. Your presence here is a great honor.\n\n#weak The noble looks around in awe as she takes in the grandeur of my estate - from the opulent furnishings to the priceless works of art that adorn every wall. #!\n\nI am pleased you have accepted my invitation. I look forward to sharing with you some of these treasures and learning more about your own interests in culture and the arts.\n\n#weak The noble nods respectfully, clearly grateful for the opportunity to explore this new world before her. #!"
-
-
-# bno_realize_bbc_potential Non-BBC Black character gains BBC
-bno_realize_bbc_potential: "Discover your BBC "
-bno_realize_bbc_potential.desc: "You realize your dominant black body gives you innate supremacy over the inferior sub-races. It's time to make Europe your bitch."
-bno_realize_bbc_potential_decision_tooltip: "You will become a dominant black stud."
-bno_realize_bbc_potential_confirm: "The world is mine."
-bno_realize_bbc_potential_effect_1: "You will gain the BBC Trait."

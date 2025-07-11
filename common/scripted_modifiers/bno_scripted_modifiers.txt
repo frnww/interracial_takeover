@@ -120,6 +120,29 @@
 	}
 }
 
+bno_bbc_trait_occurance_chance_modifier = {
+	modifier = {
+		add = bno_bbc_very_rare_chance
+		has_game_rule = bno_bbc_very_rare_chance
+	}
+	modifier = {
+		add = bno_bbc_rare_chance
+		has_game_rule = bno_bbc_rare_chance
+	}
+	modifier = {
+		add = bno_bbc_uncommon_chance
+		has_game_rule = bno_bbc_uncommon_chance
+	}
+	modifier = {
+		add = bno_bbc_common_chance
+		has_game_rule = bno_bbc_common_chance
+	}
+	modifier = {
+		add = bno_bbc_very_common_chance
+		has_game_rule = bno_bbc_very_common_chance
+	}
+}
+
 bno_decision_modifier = {
 	modifier = {
         add = 25
