@@ -122,39 +122,24 @@
 
 bno_bbc_trait_occurance_chance_modifier = {
 	modifier = {
-		add = 100
-		trigger = { has_game_rule = bno_rarity_always }
+		add = bno_bbc_very_rare_chance
+		has_game_rule = bno_bbc_very_rare_chance
 	}
 	modifier = {
-		add = 50
-		trigger = { has_game_rule = bno_rarity_often }
+		add = bno_bbc_rare_chance
+		has_game_rule = bno_bbc_rare_chance
 	}
 	modifier = {
-		add = 25
-		trigger = { has_game_rule = bno_rarity_sometimes }
+		add = bno_bbc_uncommon_chance
+		has_game_rule = bno_bbc_uncommon_chance
 	}
 	modifier = {
-		add = 5
-		trigger = { has_game_rule = bno_rarity_rare }
-	}
-}
-
-bno_bbc_trait_counter_occurance_chance_modifier = {
-	modifier = {
-		add = 100
-		trigger = { has_game_rule = bno_rarity_never }
+		add = bno_bbc_common_chance
+		has_game_rule = bno_bbc_common_chance
 	}
 	modifier = {
-		add = 50
-		trigger = { has_game_rule = bno_rarity_often }
-	}
-	modifier = {
-		add = 75
-		trigger = { has_game_rule = bno_rarity_sometimes }
-	}
-	modifier = {
-		add = 95
-		trigger = { has_game_rule = bno_rarity_rare }
+		add = bno_bbc_very_common_chance
+		has_game_rule = bno_bbc_very_common_chance
 	}
 }
 

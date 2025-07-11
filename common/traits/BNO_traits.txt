@@ -224,13 +224,16 @@ bno_bbc = {
 
 	ruler_designer_cost = 30
 	
-	valid_sex = male
+	genetic = yes
+	physical = yes
+	good = yes
+
+	birth = 0
+	random_creation = 0
 	
 	fertility = 0.7
 	#number_of_spouses = 1
 	#number_of_consorts = 3
-
-	physical = yes
 	
 	flag = carn_no_consequences_for_extramarital_sex_with_others
 	
@@ -663,31 +666,31 @@ bno_barely_mixed = {
 }
 
 bno_full_black_slut = {
-	icon = bno_full_black.dds
 	physical = yes
 	group = bno_slut_blood
+	shown_in_ruler_designer = no
 	level = 4
 	
 }
 
 bno_mostly_black_slut = {
-	icon = bno_mostly_black.dds
 	physical = yes
 	group = bno_slut_blood
+	shown_in_ruler_designer = no
 	level = 3
 }
 
 bno_mixed_slut ={
-	icon = bno_mixed.dds
 	physical = yes
 	group = bno_slut_blood
+	shown_in_ruler_designer = no
 	level = 2
 }
 
 bno_barely_mixed_slut = {
-	icon = bno_barely_mixed.dds
 	physical = yes
 	group = bno_slut_blood
+	shown_in_ruler_designer = no
 	level = 1
 }
 
