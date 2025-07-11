@@ -45,5 +45,13 @@
  bno_events_0005.title: "黑爹征服了你的妻子"
  bno_events_0005.desc: " 你的公牛 [target1.GetFirstName] 猛地打开门，看着你和你的妻子 [target2.GetFirstName]. 你的妻子似乎很惊讶，问你发生了什么事。你的骑士 [target1.GetFirstName] 一把抓住了她, 强迫她给他口交, 在短暂的疑惑后, 没有恐惧, 没有愤怒, 你的妻子却兴奋了起来. 你不争气得勃起了并且毫不犹豫得瘫坐在了沙发上开始自慰. 你挚爱的妻子 [target2.GetFirstName] , 你从没有见她和你在一起的时候这么湿过. [target1.GetFirstName] 撕开她的衣服，拍打着她的屁股开始向她湿润的阴户猛烈进攻, 她被干得淫叫连连, 依然不忘记观察你的反应. 在你的妻子被干得高潮迭起的当下, 你也再也忍耐不住开始了射精. 此时 [target1.GetFirstName] 开始内射本该属于你的妻子, 而你对此却无能为力"
  bno_events_0005.a: "老天啊多么美的场面, 亲爱的我爱你..."
+
 bno_events.0006.title: "你选中的贵族女性"
 bno_events.0006.desc: "#weak 当这位好奇的贵族走近我的宫廷时，我以温暖的微笑向她问好并发出邀请。 #!\n\n欢迎，[target1.GetFirstName]、[target3.GetFirstName]还有[target2.GetFirstName]。你们大驾光临令我倍感荣幸。\n\n#weak 贵族环顾四周，打量着我的庄园的奢华环境——从富丽堂皇的家具到满墙都是的无价艺术品。 #!\n\n很高兴您接受了我的邀请。我期待着与您分享其中的一些珍品，并更多地了解您自己对文化和艺术的兴趣。\n\n#weak 贵族恭敬地点点头，显然她很高兴有机会探索眼前的这个新世界。 #!"
+
+# bno_realize_bbc_potential Non-BBC Black character gains BBC
+bno_realize_bbc_potential: "探索你的大黑鸡巴"
+bno_realize_bbc_potential.desc: "你们意识到，黑人的优势体质赋予了你们凌驾于劣等亚种族之上的先天优势。是时候让欧洲成为你的婊子了。"
+bno_realize_bbc_potential_decision_tooltip: "你将成为强势的黑人种马。"
+bno_realize_bbc_potential_confirm: "整个世界唾手可得。"
+bno_realize_bbc_potential_effect_1: "你将获得大黑鸡巴特质。"
