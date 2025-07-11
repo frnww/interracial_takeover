@@ -6646,6 +6646,8 @@ bno_random.0040 = {
 		animation = fear
 	}
 	
+	cooldown = { months = { 24 36 } }
+
 	trigger = {
 		root = {
 			is_female = yes
