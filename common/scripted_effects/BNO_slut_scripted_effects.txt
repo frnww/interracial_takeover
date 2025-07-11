@@ -1347,13 +1347,7 @@ be_strongest = {
 	add_trait = physique_good_3
 }
 
-get_white_vassal_with_non_blacked_wife_scope = {
-	random_courtier_or_guest = {
-		limit = {
-			is_white_guy_with_pure_wife = yes
-		}
-		add_to_temporary_list = temp
-	}
+get_white_vassal_with_non_blacked_wife_scope = { 
 	if = {
 		limit = {
 			exists = liege
@@ -1365,18 +1359,9 @@ get_white_vassal_with_non_blacked_wife_scope = {
 			add_to_temporary_list = temp
 		}
 	}
-	if = {
-		limit = {
-			exists = liege
-		}
-		liege = {
-			random_courtier_or_guest = {
-				limit = {
-					is_white_guy_with_pure_wife = yes
-				}
-				add_to_temporary_list = temp
-			}
-		}
+	random_vassal = {
+		limit = {is_white_guy_with_pure_wife = yes}
+		add_to_temporary_list = temp
 	}
 	random_in_list = {
 		list = temp
