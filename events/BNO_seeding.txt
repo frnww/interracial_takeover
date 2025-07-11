@@ -15,6 +15,7 @@ bno_trait_seeding.0001 = {
 	immediate = {
 		add_trait = bno_full_black
 		bno_seed_bbc_trait_effect = yes
+		bno_futa_bisexual = yes
 	}
 }
 #Make the BBC trait inactive when a kid is born root is mother

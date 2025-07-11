@@ -8,7 +8,7 @@ bno_trait_maintenance.0002 = {			#makes all caged characters have tiniest dick
 		root = {
 			has_trait = bno_caged
 			is_adult = yes
-			is_male = yes
+			is_a_male = yes
 		}
 	}
 	immediate = {
@@ -57,7 +57,7 @@ bno_trait_maintenance.0004 = { #make all non bbc male slaves caged if owner is b
 			has_trait = slave
 			NOT = { has_trait = bno_bbc }
 			is_adult = yes
-			is_male = yes
+			is_a_male = yes
 		}
 	}
 	immediate = {

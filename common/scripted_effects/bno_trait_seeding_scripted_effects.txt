@@ -31,6 +31,15 @@ bno_seed_bbc_trait_effect = {
     }
 }
 
+bno_futa_bisexual = {
+    if = {
+        limit = {
+            is_a_futa = yes
+        }
+        set_sexuality = bisexual
+    }
+}
+
 bno_inactivate_bbc_trait_effect = {
     if = {
         limit = {
@@ -44,7 +53,7 @@ bno_activate_bbc_trait_effect = {
     if = {
         limit = {
             OR = {
-                is_male = yes
+                is_a_male = yes
                 has_trait = futa
                 has_trait = futa_genetic
             }
