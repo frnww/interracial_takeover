@@ -26,6 +26,7 @@ bno_trait_maintenance.0001 = {
 	}
 }
 
+
 bno_trait_maintenance.0002 = {			#makes all caged characters have tiniest dick
 	hidden = yes
 	trigger = {

@@ -166,23 +166,23 @@ bno_rarity = {
 	default = bno_rarity_race
 
 
-	bno_rarity_never = {
+	bno_bbc_very_rare_chance = {
 
 	}
 
-	bno_rarity_rare = {
+	bno_bbc_rare_chance = {
 		
 	}
 
-	bno_rarity_sometimes = {
+	bno_bbc_uncommon_chance = {
 		
 	}
 
-	bno_rarity_often = {
+	bno_bbc_common_chance = {
 		
 	}
 	
-	bno_rarity_always = {
+	bno_bbc_very_common_chance = {
 
 	}
 

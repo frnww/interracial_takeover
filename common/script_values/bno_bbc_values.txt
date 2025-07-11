@@ -1,0 +1,5 @@
+﻿bno_bbc_very_rare_chance = 0.2
+bno_bbc_rare_chance = 1
+bno_bbc_uncommon_chance = 5
+bno_bbc_common_chance = 20
+bno_bbc_very_common_chance = 50
