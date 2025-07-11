@@ -7,7 +7,6 @@ bno_seed_bbc_trait_effect = {
     if = {
         limit = {
             is_bbc = no
-            is_african = yes
             NOT = { has_inactive_trait = bno_bbc }
         }
     }
