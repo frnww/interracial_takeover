@@ -2,17 +2,30 @@
 
 # Give BBC trait to any half-or-more black character with a big dick
 # NOTE assumes the player's carnalitas game rules are big dick = good and small dick = bad. If they are playing with bid dick = bad rules, idk why they play this mod
-#bno_trait_maintenance.0001 = {
-#	hidden = yes
-#	
-#	trigger = {
-#		NOT = { has_character_flag = bno_bbc_trait_seeded }
-#		is_alive = yes
-#	}
-#	immediate = {
-#		bno_seed_bbc_trait_effect = yes
-#	}
-#}
+bno_trait_maintenance.0001 = {
+	hidden = yes
+	
+	trigger = {
+		OR = {
+			has_trait = bno_mixed
+			has_trait = bno_mostly_black
+			has_trait = bno_full_black
+		}
+		is_male = yes
+		is_adult = yes
+		NOT = {
+			has_character_flag = no_bbc_maint
+		}
+	}
+	immediate = {
+		random = {
+			chance = bno_bbc_trait_occurance_chance
+			add_trait = bno_bbc
+		}
+		add_character_flag = no_bbc_maint #once a character has been checked it should never happen again.
+	}
+}
+
 
 bno_trait_maintenance.0002 = {			#makes all caged characters have tiniest dick
 	hidden = yes
@@ -106,10 +119,11 @@ bno_trait_maintenance.0005 = {
 #all africans have black trait
 bno_trait_maintenance.0006 = {
 	hidden = yes
-	
 	trigger = {
+		has_game_rule = bno_mod_status_on
+		has_game_rule = bno_seeding_yes
 		is_ai = yes
-		bno_is_graphically_african = yes
+		bno_is_graphically_african = ye
 		NOR = {
 			has_trait = bno_mixed
 			has_trait = bno_mostly_black
