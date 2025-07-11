@@ -1,14 +1,34 @@
 ﻿on_birthday = {
-	on_actions = {
-		bbc_trait_pulse
+	on_actions = { bno_bbc_trait_pulse }
+}
+
+bno_bbc_trait_pulse = {
+	trigger = { has_game_rule = bno_mod_status_on }
+	events = {
+		bno_trait_seeding.0001
 	}
 }
 
-bbc_trait_pulse = {
-	trigger = {
-		has_game_rule = bno_mod_status_on
-	}
+on_join_court = {
+	on_actions = { bno_bbc_trait_pulse }
+}
+
+on_title_gain = {
+	on_actions = { bno_bbc_trait_pulse }
+}
+
+on_birth_child = {
+	on_actions = { bno_bbc_trait_pulse }
+}
+
+on_birth_child = {
 	events = {
-		bno_trait_maintenance.0001	
+		bno_trait_seeding.0002
+	}
+}
+
+on_16th_birthday = {
+	events = {
+		bno_trait_seeding.0003
 	}
 }

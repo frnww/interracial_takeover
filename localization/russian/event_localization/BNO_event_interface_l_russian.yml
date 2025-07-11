@@ -1,45 +1,46 @@
 ﻿l_russian:
-  
- #BBC's POV if wife is white breeder 
- bno_birth.0001.wife.t: "Белая плодородная матка жены" #NT!
- bno_birth.0001.wife.desc: "Ваша жена [ROOT.GetCharacter.GetName] снова родила черного ребенка, закрепив свою репутацию достойного заводчика. Она была заставлена ​​медленной детей." #NT!
- #Cuck's POV if wife is white breeder 
- bno_birth.0001.cuck.wife.t: "Жена рождение много детей" #NT!
- bno_birth.0001.cuck.wife.desc: "Ваша жена [ROOT.GetCharacter.GetName] родила нескольких детей. Хотя в глубине души вы обнаружите, что это странно, не похоже на все остальные." #NT!
-  
- bno_birth.0001.lover.t: "Белая плодородная матка любовника" #NT!
- bno_birth.0001.lover.desc: "Ваш любовник [ROOT.GetCharacter.GetName] продолжает предавать свою расу, привлекая еще одного черного ребенка в мир. Это ее самая большая радость для дальнейшего черного превосходства." #NT!
-  
- bno_birth.0001.t: "Моя белая плодородная матка" #NT!
- bno_birth.0001.personal_desc: "Еще один черный ребенок, родившийся от моей плодородной матки. Сопоставление кожи моего ребенка и моя собственная наполняет меня гордостью и возобновляет мое желание укрепить превосходную расу." #NT!
-  
- bno_birth.0002.t: "Мое семя распространяется" #NT!
- bno_birth.0002.personal_desc: "Я благословил мир многими черными детьми." #NT!
-  
- bno_birth_real_father_notification.title: "Мой ребенок" #NT!
- bno_birth_real_father_notification.desc: "[ROOT.GetCharacter.GetName] родила, и вы знаете, что в своем сердце ее ребенок, независимо от того, можете ли вы это доказать." #NT!
- bno_birth_cuck_father_notification.title: "Мой ребенок" #NT!
- bno_birth_cuck_father_notification.desc: "[ROOT.GetCharacter.GetName] родил, и вы немного удивлены тем, насколько болезненно это выглядит. Нормально ли для ребенка иметь такую ​​темную комплексную кожу?" #NT!
-  
- bno_happy_wife.0001.title: "Жена выглядит счастливой" #NT!
- bno_happy_wife.0001.desc: "Вы рады видеть, что [ROOT.GetCharacter.GetName] в последнее время находится в приподнятом настроении." #NT!
-  
- bno_married.title: "Взял жену" #NT!
- bno_married_desc: "Вы вступаете в свой вклад в дальнейшее черное превосходство, взяв жену. Пусть она даст вам много новых детей." #NT!
-  
- bno_bull_0004_notification.title: "Жена хорошо ест" #NT!
- bno_bull_0004_notification.desc: "В последнее время ваша жена [ROOT.GetCharacter.GetName], кажется, сломала ее прошлые бедные привычки в еде. Она сказала, что переключилась на почти жидкую диету. Ей должно понравиться, так как ее иногда видят с ее жидкой пищей, все еще вокруг ее губ." #NT!
-  
- bno_bull_0008_notification.title: "Странное сходство" #NT!
- bno_bull_0008_notification.desc: "Слухи крутятся о шлюхой, идущей среди лагерей черных беженцев, которые странно похожи на вашу дорогую жену [target1.GetFirstName]." #NT!
-  
- bno_bull_0010_notification.title: "Ошибка бухгалтерского учета?" #NT!
- bno_bull_0010_notification.desc: "Я уверен, что я не ошибаюсь, кажется, что в казначействе не хватает золота. Кто мог бы это принять?" #NT!
-  
- bno_bull_0012_notification.title: "Он что -то знает?" #NT!
- bno_bull_0012_notification.desc: "В последнее время я заметил [ROOT.GetCharacter.GetName], глядя на меня по -другому, как будто он знает, что не должен." #NT!
-  
- bno_slut_0008_notification.title: "Странное сходство" #NT!
- bno_slut_0008_notification.desc: "Слухи крутятся о шлюхой, идущей среди лагерей черных беженцев, которые странно похожи на вашу дорогую жену [slut.GetFirstName]." #NT!
-  
- bbc_diarch: "Би -би -си" #NT!
+
+#BBC's POV if wife is white breeder
+bno_birth.0001.wife.t: "Белое плодородное лоно жены"  
+bno_birth.0001.wife.desc: "Твоя жена [ROOT.GetCharacter.GetName] снова родила чёрного ребёнка, укрепляя свою репутацию достойной племенной кобылы. Она создана, чтобы рожать чёрных детей."  
+
+bno_birth.0001.cuck.wife.t: "Жена рожает много детей"  
+bno_birth.0001.cuck.wife.desc: "Твоя жена [ROOT.GetCharacter.GetName] родила несколько детей. Но в глубине души ты находишь странным, что большинство из них не похожи на остальных."  
+
+bno_birth.0001.lover.t: "Белое плодородное лоно любовницы"  
+bno_birth.0001.lover.desc: "Твоя любовница [ROOT.GetCharacter.GetName] продолжает предавать свою расу, принося в мир ещё одного чёрного ребёнка. Её величайшая радость — продвигать чёрное превосходство."  
+
+bno_birth.0001.t: "Моё белое плодородное лоно"  
+bno_birth.0001.personal_desc: "Ещё один чёрный ребёнок родился из моего плодородного лона. Контраст кожи моего дитя и моей собственной наполняет меня гордостью и возрождает желание укреплять высшую расу."  
+
+bno_birth.0002.t: "Моё семя распространяется"  
+bno_birth.0002.personal_desc: "Я благословил мир множеством чёрных детей."  
+
+bno_birth_real_father_notification.title: "Мой ребёнок"  
+bno_birth_real_father_notification.desc: "[ROOT.GetCharacter.GetName] родила, и в глубине души ты знаешь, что её ребёнок — твой, даже если доказать это невозможно."  
+
+bno_birth_cuck_father_notification.title: "Мой ребёнок"  
+bno_birth_cuck_father_notification.desc: "[ROOT.GetCharacter.GetName] родила, и ты немного удивлён, насколько болезненно выглядит ребёнок. Нормально ли, что у младенца такой тёмный цвет кожи?"  
+
+bno_happy_wife.0001.title: "Жена выглядит счастливой"  
+bno_happy_wife.0001.desc: "Ты рад видеть, что [ROOT.GetCharacter.GetName] в последнее время в приподнятом настроении."  
+
+bno_married.title: "Взял жену"  
+bno_married_desc: "Ты делаешь свой вклад в продвижение чёрного превосходства, взяв жену. Пусть она родит тебе много новых детей."  
+
+bno_bull_0004_notification.title: "Жена хорошо питается"  
+bno_bull_0004_notification.desc: "В последнее время твоя жена [ROOT.GetCharacter.GetName], похоже, избавилась от своих дурных пищевых привычек. Она сказала, что перешла на почти полностью жидкую диету. Ей, должно быть, нравится, раз её иногда видят с остатками жидкой пищи на губах."  
+
+bno_bull_0008_notification.title: "Необычное сходство"  
+bno_bull_0008_notification.desc: "Ходят слухи о шлюхе, что бродит среди лагерей чёрных беженцев и странно похожа на твою дорогую жену [target1.GetFirstName]."  
+
+bno_bull_0010_notification.title: "Ошибка в учёте?"  
+bno_bull_0010_notification.desc: "Я уверен, что не ошибаюсь, но кажется, что из казны пропало немного золота. Кто мог его взять?"  
+
+bno_bull_0012_notification.title: "Он что-то знает?"  
+bno_bull_0012_notification.desc: "В последнее время я замечаю, что [ROOT.GetCharacter.GetName] смотрит на меня иначе, будто знает что-то, чего ему не следует."  
+
+bno_slut_0008_notification.title: "Необычное сходство"  
+bno_slut_0008_notification.desc: "Ходят слухи о шлюхе, что бродит среди лагерей чёрных беженцев и странно похожа на твою дорогую жену [slut.GetFirstName]."  
+
+bbc_diarch: "BBC"

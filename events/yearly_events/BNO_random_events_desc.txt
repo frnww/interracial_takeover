@@ -3754,7 +3754,7 @@ bno_random.0021 = {
 				}
 				is_adult = yes
 				is_ai = yes
-				is_male = yes
+				is_a_male = yes
 			}
 			any_courtier_or_guest = {
 				has_trait = bno_bbc
@@ -3774,7 +3774,7 @@ bno_random.0021 = {
 					}
 					is_adult = yes
 					is_ai = yes
-					is_male = yes
+					is_a_male = yes
 				}
 				save_scope_as = target2
 			}
@@ -4132,7 +4132,7 @@ bno_random.1023 = {
 	}
 }
 
-#curious level event. accept or imprison/run. courtyard_night, arranged to exchange info with a foriegner. multiple forms of payment
+#curious level event. accept or imprison/run. courtyard_night, arranged to exchange info with a foreigner. multiple forms of payment
 bno_random.0024 = {
 	type = character_event
 	title = bno_random_0024.title
@@ -6496,7 +6496,7 @@ bno_random.0039 = {
 			is_ai = yes
 		}
 		any_courtier_or_guest = {
-			is_male = yes
+			is_a_male = yes
 			NOT = { has_trait = bno_bbc }
 			is_adult = yes
 			is_ai = yes
@@ -6515,7 +6515,7 @@ bno_random.0039 = {
 			}
 			random_courtier_or_guest = {
 				limit = {
-					is_male = yes
+					is_a_male = yes
 					NOT = { has_trait = bno_bbc }
 					is_adult = yes
 					is_ai = yes
@@ -6646,6 +6646,8 @@ bno_random.0040 = {
 		animation = fear
 	}
 	
+	cooldown = { months = { 24 36 } }
+
 	trigger = {
 		root = {
 			is_female = yes
@@ -6659,7 +6661,7 @@ bno_random.0040 = {
 				NOT = { has_trait = bno_bbc }
 				is_adult = yes
 				is_ai = yes
-				is_male = yes
+				is_a_male = yes
 			}
 		}
 	}
@@ -6680,7 +6682,7 @@ bno_random.0040 = {
 					NOT = { has_trait = bno_bbc }
 					is_adult = yes
 					is_ai = yes
-					is_male = yes
+					is_a_male = yes
 				}
 				save_scope_as = target2
 			}
@@ -6761,7 +6763,7 @@ bno_random.0041 = {
 	trigger = {
 		is_adult = yes
 		is_married = yes
-		is_male = yes
+		is_a_male = yes
 		is_bbc = no
 		root = {
 			any_courtier_or_guest = {
@@ -7134,7 +7136,7 @@ bno_random.0043 = {
 				}
 			}
 			is_bbc = no
-			is_male = yes
+			is_a_male = yes
 			is_adult = yes
 		}
 	}
@@ -7326,7 +7328,7 @@ bno_random.0044 = {
 			is_concubine_of = root
 		}
 		root = {
-			is_male = yes
+			is_a_male = yes
 			is_adult = yes
 			is_bbc = no
 		}
@@ -7560,7 +7562,7 @@ bno_random.0045 = {
 	cooldown = { months = 18 }
 	
 	trigger = {
-		is_male = yes
+		is_a_male = yes
 		is_adult = yes
 		has_trait = bno_whiteboi
 		any_courtier_or_guest = {

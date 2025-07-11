@@ -44,7 +44,7 @@ bno_war.0001 = {
 			is_war_leader = root
 			is_attacker = root
 			primary_defender = {
-				is_male = yes
+				is_a_male = yes
 				is_married = yes
 				NOT = { has_trait = bno_bbc }
 				primary_spouse = {
@@ -63,7 +63,7 @@ bno_war.0001 = {
 				is_war_leader = root
 				is_attacker = root
 				primary_defender = {
-					is_male = yes
+					is_a_male = yes
 					is_married = yes
 					NOT = { has_trait = bno_bbc }
 					primary_spouse = {

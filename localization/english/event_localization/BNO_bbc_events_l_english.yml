@@ -1,4 +1,4 @@
-﻿l_english:
+﻿                        l_english:
 # bno_events00 - invite influence decision
  bno_events00: "Host an African Refugee in your Court"
  bno_events00.desc: "Strange, charcoal colored men fleeing lands from far away have been reported in your realm. Whether they are here under hostile circumstances is unknown. However, their strength is visible, just from a glance.\n\nOnly a few have been sighted among your people. Perhaps they carry foreign culture that may be beneficial? Gifts and insight?\n\nMaybe you should see what they are up to?"
@@ -16,12 +16,12 @@
  
  #bno_events02 - when receiving a kingdom title and being married to a BBC
  bno_events02.title: "An African King"
- bno_events02.desc: "'My love, you mean to share this? Your lordship of this land?'\n\nYour heart flutters, hands crossed before you submissvely, wholly dedicated to your scheme to end your nation.\n\nYour offspring will bear the strength, color, and intelligence of your beloved.\n\nThe man who was a lion in war, and in the bed.\n\nYour king."
+ bno_events02.desc: "'My love, you mean to share this? Your lordship of this land?'\n\nYour heart flutters, hands crossed before you submissively, wholly dedicated to your scheme to end your nation.\n\nYour offspring will bear the strength, color, and intelligence of your beloved.\n\nThe [target1.GetLadyLord] who was a lion in war, and in the bed.\n\nYour king."
  bno_events02.a: "Let's... head to our bedchambers."
  
  #bno_events03 - when receiving an empire title and being married to a BBC
  bno_events03.title: "The Beginning of the End"
- bno_events03.desc: "With your succession and claim of the highest throne in your realm, your spouse has donned a fitting title. \n\nComing from a far away land, scarecely known by 'white folk,' your lover has not only captivated your heart, but your lands. \n\nThis is only just the beginning, however, as his culture, faith, and complexion invades the native population."
+ bno_events03.desc: "With your succession and claim of the highest throne in your realm, your spouse has donned a fitting title. \n\nComing from a far away land, scarcely known by 'white folk,' your lover has not only captivated your heart, but your lands. \n\nThis is only just the beginning, however, as [target1.GetHerHis] culture, faith, and complexion invades the native population."
  bno_events03.a: "My race's end is nigh."
 
 #bbcconversion - decision
@@ -37,14 +37,21 @@
  bno_election_decision.a: "Yippee!!! Head first!"
 
  bull_decision: "Call a bull to fuck your Wife"
- bull_decision_desc: "Your wife is addicted to the big black cocks of these new strange men from Africa and you kinda like that, why not tell on of them to have her in front of you?"
+ bull_decision_desc: "Your wife is addicted to the big black cocks of these new strange men from Africa and you kinda like that, why not tell on of them to have [ROOT.Char.GetPrimarySpouse.GetHerHis] in front of you?"
  bull_decision_tooltip: "A bull will come in your bed"
  bull_decision_confirm: "Call the bull!"
 
 #
  bno_events_0005.title: "Bull destroys your Wife"
- bno_events_0005.desc: " Your bull [target1.GetFirstName] slams the door open immediately and looks you both you and your wife [target2.GetFirstName]. Your wife seems surprised and asks you what's going on. Your knight [target1.GetFirstName] grabs her and forces her too blow him, but your wife gets really excited. Your cocks gets hard and you start masturbating without any hesitation, while sitting on your couch. Your wife [target2.GetFirstName] gets wet like never before. [target1.GetFirstName] tears her clothes apart and starts pounding her creamy pussy and spanking he ass, while she screams out of pleasure, while giving you stares. You can't hold anymore and cum loudly while you being cucked, your wife having orgasm after orgasm. Suddenly [target1.GetFirstName] starts cumming in your wife's pussy and you can't do nothing..."
- bno_events_0005.a: "Oh god, what a great sight, honey i love you"
+ bno_events_0005.desc: " Your bull [target1.GetFirstName] slams the door open immediately and looks you both you and your wife [target2.GetFirstName]. Your wife seems surprised and asks you what's going on. Your knight [target1.GetFirstName] grabs [target2.GetHerHis] and forces [target2.GetHerHis] too blow him, but your wife gets really excited. Your cocks gets hard and you start masturbating without any hesitation, while sitting on your couch. Your wife [target2.GetFirstName] gets wet like never before. [target1.GetFirstName] tears [target2.GetHerHis] clothes apart and starts pounding [target2.GetHerHis] creamy pussy and spanking [target2.GetHerHis] ass, while [target2.GetSheHe] screams out of pleasure, while giving you stares. You can't hold anymore and cum loudly while you being cucked, your wife having orgasm after orgasm. Suddenly [target1.GetFirstName] starts cumming in your wife's pussy and you can't do nothing..."
+ bno_events_0005.a: "Oh god, what a great sight, honey I love you"
 
 bno_events.0006.title: "Your Chosen Noble Woman"
-bno_events.0006.desc: "#weak As the curious noble approaches my court, I greet her with a warm smile and extend an invitation. #!\n\nWelcome, [target1.GetFirstName], [target3.GetFirstName] or [target2.GetFirstName]. Your presence here is a great honor.\n\n#weak The noble looks around in awe as she takes in the grandeur of my estate - from the opulent furnishings to the priceless works of art that adorn every wall. #!\n\nI am pleased you have accepted my invitation. I look forward to sharing with you some of these treasures and learning more about your own interests in culture and the arts.\n\n#weak The noble nods respectfully, clearly grateful for the opportunity to explore this new world before her. #!"
+bno_events.0006.desc: "#weak As the curious noble approaches my court, I greet [target1.GetHerHis] with a warm smile and extend an invitation. #!\n\nWelcome, [target1.GetFirstName], [target3.GetFirstName] or [target2.GetFirstName]. Your presence here is a great honor.\n\n#weak The noble looks around in awe as [target1.GetSheHe] takes in the grandeur of my estate - from the opulent furnishings to the priceless works of art that adorn every wall. #!\n\nI am pleased you have accepted my invitation. I look forward to sharing with you some of these treasures and learning more about your own interests in culture and the arts.\n\n#weak The noble nods respectfully, clearly grateful for the opportunity to explore this new world before [target1.GetHerHis]. #!"
+
+# bno_realize_bbc_potential Non-BBC Black character gains BBC
+bno_realize_bbc_potential: "Discover your BBC "
+bno_realize_bbc_potential.desc: "You realize your dominant black body gives you innate supremacy over the inferior sub-races. It's time to make Europe your bitch."
+bno_realize_bbc_potential_decision_tooltip: "You will become a dominant black stud."
+bno_realize_bbc_potential_confirm: "The world is mine."
+bno_realize_bbc_potential_effect_1: "You will gain the BBC Trait."

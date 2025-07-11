@@ -3,15 +3,37 @@
 bno_trait_seeding.0001 = {
 	hidden = yes
 	trigger = {
-		bno_is_graphically_african = yes
+		NOT = { has_character_flag = bno_bbc_trait_seeded }
+		OR = {
+			bno_is_graphically_african = yes
+			has_trait = bno_full_black
+			has_trait = bno_mostly_black
+			has_trait = bno_mixed
+		}
+		is_alive = yes
 	}
 	immediate = {
-		if = {
-			limit = {
-				is_male = yes
-			}
-			add_trait = bno_bbc
-		}
 		add_trait = bno_full_black
+		bno_seed_bbc_trait_effect = yes
+		bno_futa_bisexual = yes
+	}
+}
+#Make the BBC trait inactive when a kid is born root is mother
+bno_trait_seeding.0002 = {
+	hidden = yes
+
+	immediate = {
+		scope:child = {
+			bno_inactivate_bbc_trait_effect = yes
+		}
+	}
+}
+
+bno_trait_seeding.0003 = {
+	hidden = yes
+
+	immediate = {
+		bno_activate_bbc_trait_effect = yes
+		bno_futa_bisexual = yes
 	}
 }

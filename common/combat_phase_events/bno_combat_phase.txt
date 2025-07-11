@@ -23,7 +23,7 @@
                     any_side_commander = {
                         is_bbc = no
                         is_ai = yes
-                        is_male = yes
+                        is_a_male = yes
                         NOT = { has_trait = bno_chastity }
                     }
                 }
@@ -31,7 +31,7 @@
                     limit = {
                         is_bbc = no
                         is_ai = yes
-                        is_male = yes
+                        is_a_male = yes
                         NOT = { has_trait = bno_chastity }
                     }
                     save_scope_as = bbc_enemy_commander

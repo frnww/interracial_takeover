@@ -57,7 +57,7 @@ get_wandering_male_scope = {
 	random_pool_character = {
 		province = root.location
 		limit = {
-			is_male = yes
+			is_a_male = yes
 			is_elligible_partner = yes
 		}
 		save_scope_as = $SCOPE_NAME$
@@ -282,14 +282,14 @@ bno_bbc_divorce_effect = {
 get_married_pure_girl_scope = {
 	get_something_foreign = {
 		TRIGGER_KEY = is_married_ai_pure_white_girl_has_white_husband
-		TARGET_SCOPE = $SCOPE_NAME$
+		SCOPE_NAME = $SCOPE_NAME$
 	}
 }
 
 get_blacked_girl_married_to_a_ruler_scope = {
 	get_something = {
 		TRIGGER_KEY = is_blacked_girl_married_to_a_ruler
-		TARGET_SCOPE = $SCOPE_NAME$
+		SCOPE_NAME = $SCOPE_NAME$
 	}
 }
 
@@ -354,103 +354,103 @@ get_something_foreign = {
     
     random_in_list = {
         variable = temp
-        save_scope_as = $TARGET_SCOPE$
+        save_scope_as = $SCOPE_NAME$
     }
 }
 
 get_foreign_married_blacked_girl_scope = {
 	get_something_foreign = {
 		TRIGGER_KEY = does_blacked_ai_girl_has_white_guy_husband
-		TARGET_SCOPE = $SCOPE_NAME$
+		SCOPE_NAME = $SCOPE_NAME$
 	}
 }
 
 get_foreign_unmarried_pure_white_girl_scope = {
 	get_something_foreign = {
 		TRIGGER_KEY = is_unmarried_ai_pure_white_girl
-		TARGET_SCOPE = $SCOPE_NAME$
+		SCOPE_NAME = $SCOPE_NAME$
 	}
 }
 
 get_secret_haver_scope = {
 	get_something = {
 		TRIGGER_KEY = does_blacked_girl_white_husband_has_secret
-		TARGET_SCOPE = $SCOPE_NAME$
+		SCOPE_NAME = $SCOPE_NAME$
 	}
 }
 
 get_unmarried_pure_white_girl_scope = {
 	get_something = {
 		TRIGGER_KEY = is_unmarried_ai_pure_white_girl
-		TARGET_SCOPE = $SCOPE_NAME$
+		SCOPE_NAME = $SCOPE_NAME$
 	}
 }
 
 get_blacked_peasant_scope = {
 	get_something = {
 		TRIGGER_KEY = is_ai_blacked_peasant
-		TARGET_SCOPE = $SCOPE_NAME$
+		SCOPE_NAME = $SCOPE_NAME$
 	}
 }
 
 get_blacked_noble_scope = {
 	get_something = {
 		TRIGGER_KEY = is_ai_blacked_noble
-		TARGET_SCOPE = $SCOPE_NAME$
+		SCOPE_NAME = $SCOPE_NAME$
 	}
 }
 
 get_pure_whitegirl_scope = {
 	get_something = {
 		TRIGGER_KEY = is_ai_pure_white_girl
-		TARGET_SCOPE = $SCOPE_NAME$
+		SCOPE_NAME = $SCOPE_NAME$
 	}
 }
 
 get_unmarried_bbc_scope = {
 	get_something = {
 		TRIGGER_KEY = is_unmarried_ai_blackbull
-		TARGET_SCOPE = $SCOPE_NAME$
+		SCOPE_NAME = $SCOPE_NAME$
 	}
 }
 
 get_bbc_scope = {
 	get_something = {
 		TRIGGER_KEY = is_ai_blackbull
-		TARGET_SCOPE = $SCOPE_NAME$
+		SCOPE_NAME = $SCOPE_NAME$
 	}
 }
 
 get_blacked_girl_scope = {
 	get_something = {
 		TRIGGER_KEY = is_ai_blacked
-		TARGET_SCOPE = $SCOPE_NAME$
+		SCOPE_NAME = $SCOPE_NAME$
 	}
 }
 
 get_blacked_girl_with_eating_disorder_scope = {
 	get_something = {
 		TRIGGER_KEY = is_ai_blacked_has_eating_disorder
-		TARGET_SCOPE = $SCOPE_NAME$
+		SCOPE_NAME = $SCOPE_NAME$
 	}
 }
 
 get_just_or_zealous_bbc_scope = {
 	get_something = {
 		TRIGGER_KEY = is_ai_blackbull_just_or_zealous
-		TARGET_SCOPE = $SCOPE_NAME$
+		SCOPE_NAME = $SCOPE_NAME$
 	}
 }
 
 
 get_something = {
-	clear_variable_list = temp 
+	clear_saved_scope = $SCOPE_NAME$
 	every_courtier_or_guest = { # Player's Court
         limit = {
             $TRIGGER_KEY$ = yes
         }
         root = {
-			add_to_variable_list = {
+			add_to_variable_list = { 	
 				name = temp
 				target = prev
 			}
@@ -544,8 +544,9 @@ get_something = {
 	}
 	random_in_list = {
 		variable = temp
-		save_scope_as = $TARGET_SCOPE$
+		save_scope_as = $SCOPE_NAME$
 	}
+	clear_variable_list = temp 
 }
 
 get_wandering_curious_whitegirl_scope = {
@@ -908,8 +909,10 @@ get_hated_non_black_courtier_scope = {
 bno_have_sex_with_effects = {
 	if = {
 		limit = {
-			NOT = { is_male = yes }
-			NOT = { $PARTNER$ = { is_male = yes } }
+			NAND = {
+				is_a_male = yes
+				$PARTNER$ = { is_a_male = yes }
+			}
 		}
 		set_variable = {
 			name = recent_sex_partner
@@ -1347,13 +1350,7 @@ be_strongest = {
 	add_trait = physique_good_3
 }
 
-get_white_vassal_with_non_blacked_wife_scope = {
-	random_courtier_or_guest = {
-		limit = {
-			is_white_guy_with_pure_wife = yes
-		}
-		add_to_temporary_list = temp
-	}
+get_white_vassal_with_non_blacked_wife_scope = { 
 	if = {
 		limit = {
 			exists = liege
@@ -1365,18 +1362,9 @@ get_white_vassal_with_non_blacked_wife_scope = {
 			add_to_temporary_list = temp
 		}
 	}
-	if = {
-		limit = {
-			exists = liege
-		}
-		liege = {
-			random_courtier_or_guest = {
-				limit = {
-					is_white_guy_with_pure_wife = yes
-				}
-				add_to_temporary_list = temp
-			}
-		}
+	random_vassal = {
+		limit = {is_white_guy_with_pure_wife = yes}
+		add_to_temporary_list = temp
 	}
 	random_in_list = {
 		list = temp

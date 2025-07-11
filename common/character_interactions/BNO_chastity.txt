@@ -13,7 +13,7 @@ bno_chastity_interaction = {
 			NOT = { has_trait = bno_caged }
 			NOT = { has_trait = bno_castrated }
 			NOT = { has_trait = bno_bbc }
-			is_male = yes
+			is_a_male = yes
 		}
 		scope:actor = {
 			is_adult = yes
@@ -155,7 +155,7 @@ bno_castration_interaction = {
 			has_trait = bno_caged
 			NOT = { has_trait = bno_castrated }
 			NOT = { has_trait = bno_bbc }
-			is_male = yes
+			is_a_male = yes
 		}
 		scope:actor = {
 			is_adult = yes

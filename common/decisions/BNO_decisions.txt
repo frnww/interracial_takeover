@@ -1,6 +1,6 @@
 ﻿# decision file, assigning decision availabiltiy
 
-#decision for inviting foriegners
+#decision for inviting foreigners
 bno_events00 = {
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
@@ -307,5 +307,42 @@ bno_change_county_culture = {
 	ai_will_do = {
         base = 0
         bno_decision_modifier = yes
+	}
+}
+
+
+#decision for player african males to gain the BBC trait if they dont already have it. This is so players dont get forced out of desired erotic content.
+bno_realize_bbc_potential = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
+	}
+	sort_order = 10
+	decision_group_type = major
+	desc = bno_realize_bbc_potential.desc
+	selection_tooltip = bno_realize_bbc_potential_decision_tooltip
+	is_shown = {
+		is_ruler = yes
+		is_adult = yes
+		is_ai = no
+		OR = {
+			has_trait = bno_full_black
+			has_trait = bno_mostly_black
+			has_trait = bno_mixed
+			has_trait = bno_barely_mixed # even just slightly mixed PCs should have the chance to switch into BBC playstyle, I suppose.
+		} 
+		is_bbc = no
+		
+	}
+	cooldown = {
+		years = 5
+	}
+	cost = {
+		piety = 25
+	}
+	effect = {
+		add_trait = bno_bbc
+	}
+	ai_will_do = {
+		base = 0
 	}
 }
