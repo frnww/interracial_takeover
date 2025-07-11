@@ -96,6 +96,7 @@ bno_trait_maintenance.0006 = {
 	hidden = yes
 	trigger = {
 		has_game_rule = bno_mod_status_on
+		has_game_rule = bno_seeding_yes
 		is_ai = yes
 		bno_is_graphically_african = yes
 		NOR = {
