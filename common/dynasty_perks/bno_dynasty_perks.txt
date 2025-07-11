@@ -1,0 +1,134 @@
+﻿bno_embrace_african_1 = {
+    legacy = bno_embrace_african_track
+    
+    can_be_picked = {
+        is_bno_actor = yes
+    }
+
+    character_modifier = {
+        development_growth_factor = 0.5
+        monthly_county_control_growth_add = 0.25
+        levy_reinforcement_rate = 0.25
+        levy_reinforcement_rate_same_faith = 0.5
+    }
+
+    ai_chance = {
+        value = 10
+        if = {
+            limit = { can_start_new_legacy_track_trigger = no }
+            multiply = 0
+        }
+    }
+}
+
+bno_embrace_african_2 = {
+    legacy = bno_embrace_african_track
+    
+    can_be_picked = {
+        is_bno_actor = yes
+    }
+
+    character_modifier = {
+        knight_limit = 10
+        knight_effectiveness_mult = 0.5
+        men_at_arms_limit = 1
+        men_at_arms_cap = 1
+    }
+
+    ai_chance = {
+        value = 10
+        if = {
+            limit = { can_start_new_legacy_track_trigger = no }
+            multiply = 0
+        }
+    }
+}
+
+bno_embrace_african_3 = {
+    legacy = bno_embrace_african_track
+    
+    can_be_picked = {
+        is_bno_actor = yes
+    }
+
+    effect = {
+        every_directly_owned_province  = {
+            culture = {
+                add_culture_tradition = tradition_culture_blending
+            }
+        }
+        custom_description_no_bullet = {
+            #sex will gain dynasty prestige
+			text = bno_embrace_african_3_effect
+		}
+    }
+
+    character_modifier = {
+        max_learn_language_schemes_add = 1
+        learn_language_scheme_phase_duration_add = -10
+    }
+
+    ai_chance = {
+        value = 10
+        if = {
+            limit = { can_start_new_legacy_track_trigger = no }
+            multiply = 0
+        }
+    }
+}
+
+bno_embrace_african_4 = {
+    legacy = bno_embrace_african_track
+    
+    can_be_picked = {
+        is_bno_actor = yes
+    }
+
+    effect = {
+    }
+
+    character_modifier = {
+        owned_hostile_scheme_success_chance_add = 25
+        owned_personal_scheme_success_chance_add = 25
+        hostile_scheme_phase_duration_add = -10
+		personal_scheme_phase_duration_add = -10
+		seduce_scheme_phase_duration_add = -10
+        scheme_discovery_chance_mult = 0.25
+    }
+
+    ai_chance = {
+        value = 10
+        if = {
+            limit = { can_start_new_legacy_track_trigger = no }
+            multiply = 0
+        }
+    }
+}
+
+bno_embrace_african_5 = {
+    legacy = bno_embrace_african_track
+    
+    can_be_picked = {
+        is_bno_actor = yes
+    }
+
+    effect = {
+    }
+
+    character_modifier = {
+        owned_hostile_scheme_success_chance_add = 25
+        owned_personal_scheme_success_chance_add = 25
+        hostile_scheme_phase_duration_add = -10
+		personal_scheme_phase_duration_add = -10
+		seduce_scheme_phase_duration_add = -10
+        scheme_discovery_chance_mult = 0.25
+    }
+
+    ai_chance = {
+        value = 10
+        if = {
+            limit = { can_start_new_legacy_track_trigger = no }
+            multiply = 0
+        }
+    }
+}

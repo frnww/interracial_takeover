@@ -4,6 +4,14 @@
 	is_a_male = yes
 }
 
+is_bno_actor = {
+	OR = {
+        is_bbc = yes
+        is_slut = yes
+        has_trait = bno_whiteboi
+    }
+}
+
 is_a_male = {
 	OR = {
 		is_male = yes
