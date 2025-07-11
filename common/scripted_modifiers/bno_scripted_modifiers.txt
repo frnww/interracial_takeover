@@ -233,6 +233,12 @@ bno_white_girl_modifier_small = {
 	}
 }
 
+bno_bbc_trait_occurance_chance_modifier = {
+	modifier = {
+		add = 
+	}
+}
+
 bno_bbc_modifier = {
 	modifier = {
 		add = 100
