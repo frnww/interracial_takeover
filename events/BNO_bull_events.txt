@@ -423,6 +423,9 @@ bno_bull.0004 = {
 		bno_have_sex_with_effects = {
 			PARTNER = scope:target1
 		}
+		scope:target1 = {
+			bno_increase_sluttyness = yes
+		}
 	}
 
 	option = {

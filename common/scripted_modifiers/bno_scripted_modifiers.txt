@@ -120,29 +120,6 @@
 	}
 }
 
-bno_bbc_trait_occurance_chance_modifier = {
-	modifier = {
-		add = bno_bbc_very_rare_chance
-		has_game_rule = bno_bbc_very_rare_chance
-	}
-	modifier = {
-		add = bno_bbc_rare_chance
-		has_game_rule = bno_bbc_rare_chance
-	}
-	modifier = {
-		add = bno_bbc_uncommon_chance
-		has_game_rule = bno_bbc_uncommon_chance
-	}
-	modifier = {
-		add = bno_bbc_common_chance
-		has_game_rule = bno_bbc_common_chance
-	}
-	modifier = {
-		add = bno_bbc_very_common_chance
-		has_game_rule = bno_bbc_very_common_chance
-	}
-}
-
 bno_decision_modifier = {
 	modifier = {
         add = 25
@@ -253,6 +230,62 @@ bno_white_girl_modifier_small = {
 	modifier = {
 		add = 25
 		is_bno_mindless_bbc_slut = yes
+	}
+}
+
+bno_bbc_trait_occurance_chance_modifier = {
+	modifier = {
+		add = bno_bbc_very_rare_chance
+		has_game_rule = bno_bbc_very_rare_chance
+	}
+	modifier = {
+		add = bno_bbc_rare_chance
+		has_game_rule = bno_bbc_rare_chance
+	}
+	modifier = {
+		add = bno_bbc_uncommon_chance
+		has_game_rule = bno_bbc_uncommon_chance
+	}
+	modifier = {
+		add = bno_bbc_common_chance
+		has_game_rule = bno_bbc_common_chance
+	}
+	modifier = {
+		add = bno_bbc_very_common_chance
+		has_game_rule = bno_bbc_very_common_chance
+	}
+	modifier = {
+		add = bno_bbc_big_dick_good_3_chance
+		has_game_rule = bno_rarity_size
+		has_trait = dick_big_good_3
+	}
+	modifier = {
+		add = bno_bbc_big_dick_good_2_chance
+		has_game_rule = bno_rarity_size
+		has_trait = dick_big_good_2
+	}
+	modifier = {
+		add = bno_bbc_big_dick_good_1_chance
+		has_game_rule = bno_rarity_size
+		has_trait = dick_big_good_1
+	}
+	modifier = {
+		add = bno_bbc_trait_occurance_dicksize_modifier
+		factor = bno_bbc_full_black_multiplier
+		has_game_rule = bno_rarity_race
+		has_trait = bno_full_black
+	}
+	modifier = {
+		add = bno_bbc_trait_occurance_dicksize_modifier
+		factor = bno_bbc_mostly_black_multiplier
+		has_game_rule = bno_rarity_race
+		has_trait = bno_mostly_black
+	}
+	modifier = {
+		add = bno_bbc_trait_occurance_dicksize_modifier
+		factor = bno_bbc_mixed_multiplier
+		has_game_rule = bno_rarity_race
+		has_trait = bno_mixed
 	}
 }
 
