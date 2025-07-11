@@ -161,3 +161,69 @@ hidden_effect = {
 		}
 	}
 }
+
+# Special
+house_guard = {
+	type = heavy_infantry
+	can_recruit = {
+		exists = dynasty
+		dynasty = {
+			has_dynasty_perk = warfare_legacy_5
+		}
+		NOT = {
+			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
+		}
+	}
+	
+	damage = 40
+	toughness = 32
+	pursuit = 0
+	screen = 24
+	
+	counters = {
+		pikemen = 2
+		archers = 2
+	}
+	
+	buy_cost = { gold = 50 }
+	low_maintenance_cost = { gold = 0 }
+	high_maintenance_cost = { gold = 1 }
+	provision_cost = @provisions_cost_infantry_expensive
+	
+	max_regiments = 1
+	
+	stack = 100
+	ai_quality = { value = 100 }
+}
+
+warfare_legacy_5 = { # Private Army
+	legacy = warfare_legacy_track
+
+	character_modifier = {
+		men_at_arms_cap = 1
+	}
+	effect = {
+		custom_description_no_bullet = {
+			text = warfare_legacy_5_unlock_effect
+		}
+		custom_description_no_bullet = {
+			text = warfare_legacy_5_effect
+		}
+	}
+}
+
+warfare_legacy_5_unlock_effect = {
+	global = HOUSE_GUARD_UNLOCK_DESCRIPTION
+	first = HOUSE_GUARD_UNLOCK_DESCRIPTION
+	third = HOUSE_GUARD_UNLOCK_DESCRIPTION
+}
+
+warfare_legacy_5_effect = {
+	global = HOUSE_GUARD_DESCRIPTION
+	first = HOUSE_GUARD_DESCRIPTION
+	third = HOUSE_GUARD_DESCRIPTION
+}
+
+
+ HOUSE_GUARD_UNLOCK_DESCRIPTION:0 "Can recruit [GetMaA('house_guard').GetName] as [men_at_arms|E]"
+ HOUSE_GUARD_DESCRIPTION:1 "#weak Only one regiment of House Guard can be recruited#!"
