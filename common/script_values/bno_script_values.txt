@@ -17,7 +17,7 @@ bno_gold_amount = {
 }
 
 bno_random_xp_positive = {
-	value = { 1 10 }
+	value = { 5 15 }
 }
 
 bno_random_xp_negative = {
