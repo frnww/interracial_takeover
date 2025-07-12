@@ -32,3 +32,5 @@ bno_recruit_court_position_decision_desc: "A well-functioning [ROOT.Char.Custom(
 bno_recruit_court_position_decision_tooltip: "Search for a girl to fill a [court_position|E] or other necessary role in your [court|E] for a fee\n\n#weak For example, you may hire a [GetCourtPositionType('bno_bbc_worshipper_court_position').GetName]#!"
 bno_recruit_court_position_decision_confirm: "Call them here!"
 recruit_bbc_worshipper_cooldown_tt: "Recruiting a [GetCourtPositionType('bno_bbc_worshipper_court_position').GetName] is on cooldown for [GetGameTimeDifferenceForDiffDays( THIS.VarRemaining( 'recruit_bbc_worshipper_cooldown' ))]"
+hire_bbc_worshipper_decision_tooltip: "Your servants will suggest a number of suitable candidates for the position of [GetCourtPositionType('bno_bbc_worshipper_court_position').GetName()]"
+bno_recruit_court_position_decision_tt: "You will receive a random amount of suitable girls to serve by your side"

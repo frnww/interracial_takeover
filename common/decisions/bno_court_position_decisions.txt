@@ -30,7 +30,10 @@
             }
             is_valid = {
                 NOR = {
-                    employs_court_position = bno_bbc_worshipper_court_position
+                    any_court_position_holder = {
+                        type = bno_bbc_worshipper_court_position
+                        count > 2
+                    }
                     custom_tooltip = {
                         text = recruit_bbc_worshipper_cooldown_tt
                         has_character_flag = recruit_bbc_worshipper_cooldown
@@ -57,7 +60,7 @@
     }
 
     effect = {
-        custom_tooltip = recruit_court_position_decision_tt
+        custom_tooltip = bno_recruit_court_position_decision_tt
         hidden_effect = {
             custom_tooltip = recruit_court_position_decision_tooltip
             if = { # BBC Worshipper
