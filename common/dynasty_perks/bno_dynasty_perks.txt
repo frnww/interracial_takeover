@@ -47,6 +47,15 @@ bno_embrace_african_2 = {
     #Send Female or BBC Character to Pacify migrants
     #Trigger event for increased levies, control, or development
     effect = {
+        custom_description_no_bullet = {
+            text = bno_embrace_african_2_building_unlock
+        }
+        custom_description_no_bullet = {
+            text = bno_embrace_african_2_court_position_unlock
+        }
+        custom_description_no_bullet = {
+            text = bno_embrace_african_2_event_and_decision
+        }
         #Certain trait will appear more
         custom_description_no_bullet = {
 			text = bno_embrace_african_2_effect
@@ -73,8 +82,11 @@ bno_embrace_african_3 = {
         #cultural acceptance
         #dynasty prestige
         custom_description_no_bullet = {
-            #sex will gain dynasty prestige
 			text = bno_embrace_african_3_effect
+		}
+        custom_description_no_bullet = {
+            #sex will gain dynasty prestige
+			text = bno_embrace_african_3_sex_effect
 		}
     }
 
@@ -126,11 +138,11 @@ bno_embrace_african_5 = {
         #while having a BBC Diarch trigger some interesting events
         custom_description_no_bullet = {
             #custom MAA unlocked
-			text = bno_embrace_african_5_effect
+			text = bno_embrace_african_5_unlock_effect
 		}
         custom_description_no_bullet = {
             #custom MAA unlocked
-			text = bno_embrace_african_5_unlock_effect
+			text = bno_embrace_african_5_effect
 		}
     }
 

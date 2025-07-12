@@ -1,0 +1,89 @@
+﻿bno_bbc_worshipper_aptitude = {
+    value = 0
+    switch = {
+        trigger = has_trait
+        bno_curious = {
+            add = {
+                value = 10
+                desc = bno_court_position_trait_curious
+            }
+        }
+        bno_blacked = {
+            add = {
+                value = 20
+                desc = bno_court_position_trait_blacked
+            }
+        }
+        bno_snowbunny = {
+            add = {
+                value = 30
+                desc = bno_court_position_trait_snowbunny
+            }
+        }
+        bno_qos = {
+            add = {
+                value = 40
+                desc = bno_court_position_trait_qos
+            }
+        }
+        bno_mindless_bbc_slut = {
+            add = {
+                value = 50
+                desc = bno_court_position_trait_mindless
+            }
+        }
+    }
+    switch = {
+        trigger = has_trait
+        beauty_good_1 = {
+            multiply = {
+                value = 1.2
+                desc = bno_court_position_trait_beauty_good_1
+            }
+        }
+        beauty_good_2 = {
+            multiply = {
+                value = 1.4
+                desc = bno_court_position_trait_beauty_good_2
+            }
+        }
+        beauty_good_3 = {
+            multiply = {
+                value = 1.6
+                desc = bno_court_position_trait_beauty_good_3
+            }
+        }
+    }
+    switch = {
+        trigger = has_trait
+        tits_big_good_1 = {
+            multiply = {
+                value = 1.2
+                desc = bno_court_position_trait_tits_big_good_1
+            }
+        }
+        tits_big_good_2 = {
+            multiply = {
+                value = 1.4
+                desc = bno_court_position_trait_tits_big_good_2
+            }
+        }
+        tits_big_good_3 = {
+            multiply = {
+                value = 1.6
+                desc = bno_court_position_trait_tits_big_good_3
+            }
+        }
+    }
+    if = {
+        limit = { has_trait = fecund }
+        multiply = {
+            value = 1.2
+            desc = bno_court_position_trait_fecund
+        }
+    }
+}
+
+bno_bbc_worshipper_salary = {
+    value = 0
+}

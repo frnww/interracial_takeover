@@ -1,0 +1,83 @@
+﻿bno_bbc_worshipper = {
+    sort_order = 400
+    max_available_positions = 3
+    minimum_rank = county
+    skill = learning
+    
+    court_position_asset = {
+        animation = bno_sex_oral_love_1
+        background = "gfx/interface/illustrations/event_scenes/bedchamber.dds"
+    }
+    
+    opinion = {
+		value = 20
+	}
+
+	aptitude_level_breakpoints = { 20 40 60 80 }
+
+    aptitude = {
+        value = bno_bbc_worshipper_aptitude
+    }
+
+    is_shown = {
+        dynasty ?= {
+            has_dynasty_perk = bno_embrace_african_2
+        }
+    }
+
+    is_shown_character = {
+        scope:employee = {
+            is_imprisoned = no
+        }
+    }
+
+    valid_character = {
+        scope:employee = {
+            liege = scope:liege
+            is_landed = no
+            has_trait = bno_whitegirl
+        }
+    }
+
+    revoke_cost = {
+        prestige = {
+            value = major_court_position_prestige_revoke_cost
+        }
+    }
+
+    salary = {
+        round = no
+        gold = {
+            value = bno_bbc_worshipper_salary
+        }
+    }
+
+    scaling_employer_modifiers = {		
+		terrible = {}
+		poor = {}
+		average = {}
+		good = {}
+		excellent = {}
+	}
+
+    on_court_position_received = {
+        scope:employee = {
+            set_variable = {
+                name = sex_animation 
+                value = 46
+            }
+            add_character_flag = {
+                flag = sex_animation_event
+            }
+        }
+    } 
+
+    custom_scaling_employer_modifier_description = {		
+		terrible = loc_key_terrible
+		poor = loc_key_terrible_poor
+		average = loc_key_average
+		good = loc_key_good
+		excellent = loc_key_excellent
+		range = loc_key_range
+	}
+}
