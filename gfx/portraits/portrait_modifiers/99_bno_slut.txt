@@ -334,25 +334,3 @@ bno_smaller_waist = {
 		}
 	}
 }
-
-bno_wavy_hair = {
-	usage = game
-	bno_wavy_hair = {
-		dna_modifiers = {
-			accessory = {
-				mode = add
-				gene = hairstyles
-				template = indian_hairstyles_curly
-				range = { 0 1 } # For the randomness to work correctly
-			}
-		}
-		weight = {
-			base = 0
-			modifier = {
-				add = 1000
-				is_body_modification_ok = yes
-				has_trait = bno_pure_white
-			}
-		}
-	}
-}

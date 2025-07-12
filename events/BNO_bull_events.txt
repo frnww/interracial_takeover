@@ -39,8 +39,7 @@ bno_bull.0001 = {
 	cooldown = { months = { 24 36 } }
 	trigger = {
 		is_blackbull = yes
-		exists = liege
-		liege = {
+		liege ?= {
 			is_self_married_whiteguy = yes
 			NOT = { has_character_flag = bno_bull.0001 } #prevent cuck from getting spammed too much if he has many bbc courtiers
 			exists = primary_spouse

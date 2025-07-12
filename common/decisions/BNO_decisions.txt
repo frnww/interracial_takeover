@@ -1,6 +1,6 @@
 ﻿# decision file, assigning decision availabiltiy
 
-#decision for inviting foriegners
+#decision for inviting foreigners
 bno_events00 = {
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
@@ -330,9 +330,7 @@ bno_realize_bbc_potential = {
 			has_trait = bno_mixed
 			has_trait = bno_barely_mixed # even just slightly mixed PCs should have the chance to switch into BBC playstyle, I suppose.
 		} 
-		NOT = {
-			has_trait = bno_bbc
-		}
+		is_bbc = no
 		
 	}
 	cooldown = {

@@ -202,8 +202,6 @@ bno_bbc = {
 	
 	same_opinion = 25
 	opposite_opinion = 15
-	attraction_opinion = 15
-	spouse_opinion = 15
 	
 	ignore_negative_culture_opinion = yes
 	ignore_negative_opinion_of_culture = yes

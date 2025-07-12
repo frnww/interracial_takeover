@@ -1,4 +1,7 @@
 ﻿@cultural_maa_extra_ai_score = 80 # Equivalent to having 8 extra regiments beyond what the code scoring would indicate (see NEGATIVE_SCORE_PER_EXISTING_REGIMENT)
+@provisions_cost_infantry_cheap = 3
+@provisions_cost_infantry_expensive = 12
+
 bno_african_warriors = {
 	type = skirmishers
 	
@@ -28,8 +31,52 @@ bno_african_warriors = {
 	buy_cost = {gold = 100}
 	low_maintenance_cost = { gold = 0.5 }
 	high_maintenance_cost = { gold = 0.8 }
-	
+	provision_cost = @provisions_cost_infantry_cheap
+
 	stack = 250
 	ai_quality = { value = @cultural_maa_extra_ai_score }
 	icon = bno_african_warriors
+}
+# Special
+bno_ebony_elites = {
+	type = heavy_infantry
+	can_recruit = {
+		exists = dynasty
+		dynasty = {
+			has_dynasty_perk = bno_embrace_african_5
+		}
+	}
+	
+	damage = 100
+	toughness = 100
+	pursuit = 100
+	screen = 100
+
+	siege_tier = 5
+	siege_value = 10
+	
+	counters = {
+		pikemen = 10
+		archers = 10
+		skirmishers = 10
+		light_cavalry = 10
+		heavy_infantry = 10
+		siege_weapon = 10
+	}
+
+	terrain_bonus = {
+		taiga = { damage = 8 }
+		forest = { damage = 8 }
+		jungle = {damage = 8}
+	}
+	
+	buy_cost = { gold = 500 }
+	low_maintenance_cost = { gold = 0 }
+	high_maintenance_cost = { gold = 1 }
+	provision_cost = @provisions_cost_infantry_expensive
+	
+	max_regiments = 1
+	
+	stack = 100
+	ai_quality = { value = 100 }
 }

@@ -1,7 +1,22 @@
 ﻿is_blackbull = {
 	is_bbc = yes
-	is_male = yes
 	is_elligible_partner = yes
+	is_a_male = yes
+}
+
+is_bno_actor = {
+	OR = {
+        is_bbc = yes
+        is_slut = yes
+        has_trait = bno_whiteboi
+    }
+}
+
+is_a_male = {
+	OR = {
+		is_male = yes
+		is_a_futa = yes
+	}
 }
 
 does_blacked_girl_white_husband_has_secret = {
@@ -67,7 +82,7 @@ is_ai_blackbull_just_or_zealous = {
 does_wandering_male_exist = {
 	any_pool_character = {
 		province = location
-		is_male = yes
+		is_a_male = yes
 		is_elligible_partner = yes
 		count >= 1
 	}
@@ -194,8 +209,17 @@ is_married_ai_pure_white_girl_has_white_husband = {
 	}
 }
 
+is_a_futa = {
+	OR = {
+		has_trait = futa
+		has_trait = futa_genetic
+	}
+}
+
 is_a_girl = {
 	is_female = yes
+	is_a_futa = no
+	is_bbc = no
 	is_elligible_partner = yes
 }
 
@@ -406,7 +430,7 @@ is_ai_whiteguy = {
 	is_bbc = no
 	is_african = no
 	is_elligible_partner = yes
-	is_male = yes
+	is_a_male = yes
 	is_ai = yes
 }
 

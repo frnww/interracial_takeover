@@ -30,7 +30,7 @@ bno_cuck_travel.0001 = {
 			}
 			any_entourage_character = {
 				is_adult = yes
-				is_male = yes
+				is_a_male = yes
 				has_trait = bno_bbc
 			}
 		}
@@ -49,7 +49,7 @@ bno_cuck_travel.0001 = {
 				random_entourage_character = {
 					limit = {
 						is_adult = yes
-						is_male = yes
+						is_a_male = yes
 						has_trait = bno_bbc
 					}
 					save_scope_as = target2
