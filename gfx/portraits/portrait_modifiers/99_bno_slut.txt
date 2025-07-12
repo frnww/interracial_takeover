@@ -278,7 +278,7 @@ bno_bigger_butts = {
 			}
 			#Changes Hip Size
 			morph = {
-				mode = modify gene = gene_bs_hips_size
+				mode = modify gene = gene_bs_hips
 				value = {
 					add = {
 						value = var:bno_becoming_dark
@@ -304,7 +304,7 @@ bno_smaller_waist = {
 		dna_modifiers = {
 			#Changes Waist Size
 			morph = {
-				mode = modify gene = gene_bs_waist_size
+				mode = modify gene = gene_bs_waist
 				value = {
 					add = {
 						value = var:bno_becoming_dark
@@ -314,7 +314,7 @@ bno_smaller_waist = {
 				}
 			}
 			morph = {
-				mode = modify gene = gene_bs_shoulders_size
+				mode = modify gene = gene_bs_shoulders
 				value = {
 					add = {
 						value = var:bno_becoming_dark
