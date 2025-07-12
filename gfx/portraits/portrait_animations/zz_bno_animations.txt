@@ -1,8 +1,0 @@
-﻿bno_sex_oral_love_1 = {
-    default = {
-        default = { head = "sex_oral_love_1" torso = "sex_oral_love_1" }
-        portrait_modifier = {
-            animations = female_sex_oral_love_1
-        }
-    }
-}

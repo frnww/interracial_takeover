@@ -5,7 +5,7 @@
     skill = learning
     
     court_position_asset = {
-        animation = bno_sex_oral_love_1
+        animation = bno_sex_oral_love_2
         background = "gfx/interface/illustrations/event_scenes/bedchamber.dds"
     }
     
