@@ -358,7 +358,10 @@ bno_events.0006 = {
 		add_courtier = scope:target3
 	}
 }
-
+#Invite BBC Whore Decision
+bno_events.0007 = {
+	
+}
 
 # conversion event for 'convert to bbc' decision
 namespace = bbcconversion
